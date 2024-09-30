@@ -3,7 +3,7 @@
  * Pronamic
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2023 Pronamic
+ * @copyright 2005-2024 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\MemberPress
  */
@@ -68,7 +68,14 @@ class Pronamic {
 		$submission_helper = new SubmissionHelper( $submission );
 
 		// Total.
-		$total  = new Money();
+		$currency = \strtoupper( $submission_helper->get_value_by_tag_name_or_option( 'pronamic_pay_currency' ) );
+
+		if ( '' === $currency ) {
+			$currency = 'EUR';
+		}
+
+		$total = new Money( 0, $currency );
+
 		$parser = new Parser();
 
 		$tags = $submission_helper->get_tags_with_basetype_or_name_or_option( 'pronamic_pay_amount' );

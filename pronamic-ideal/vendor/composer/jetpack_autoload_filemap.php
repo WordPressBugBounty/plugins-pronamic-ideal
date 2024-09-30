@@ -7,7 +7,7 @@ $baseDir   = dirname($vendorDir);
 
 return array(
 	'509f66d930a3f0b7d9b65b22aa319565' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/includes/functions.php'
 	),
 );

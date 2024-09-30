@@ -1063,187 +1063,187 @@ return array(
 		'path'    => $baseDir . '/packages/pronamic/wp-number/src/Parser.php'
 	),
 	'Pronamic\\WordPress\\Pay\\AbstractDataStoreCPT' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/AbstractDataStoreCPT.php'
 	),
 	'Pronamic\\WordPress\\Pay\\AbstractGatewayIntegration' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/AbstractGatewayIntegration.php'
 	),
 	'Pronamic\\WordPress\\Pay\\AbstractIntegration' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/AbstractIntegration.php'
 	),
 	'Pronamic\\WordPress\\Pay\\AbstractPluginIntegration' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/AbstractPluginIntegration.php'
 	),
 	'Pronamic\\WordPress\\Pay\\ActionSchedulerController' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/ActionSchedulerController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Address' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Address.php'
 	),
 	'Pronamic\\WordPress\\Pay\\AddressHelper' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/AddressHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Admin\\AdminAboutPage' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Admin/AdminAboutPage.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Admin\\AdminDashboard' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Admin/AdminDashboard.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Admin\\AdminGatewayPostType' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Admin/AdminGatewayPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Admin\\AdminHealth' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Admin/AdminHealth.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Admin\\AdminModule' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Admin/AdminModule.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Admin\\AdminNotification' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Admin/AdminNotification.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Admin\\AdminPaymentBulkActions' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Admin/AdminPaymentBulkActions.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Admin\\AdminPaymentPostType' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Admin/AdminPaymentPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Admin\\AdminSettings' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Admin/AdminSettings.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Admin\\AdminSubscriptionPostType' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Admin/AdminSubscriptionPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Admin\\AdminTour' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Admin/AdminTour.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Admin\\Install' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Admin/Install.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Banks\\BankAccountDetails' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Banks/BankAccountDetails.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Banks\\BankTransferDetails' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Banks/BankTransferDetails.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Blocks\\BlocksModule' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Blocks/BlocksModule.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Cards' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Cards.php'
 	),
 	'Pronamic\\WordPress\\Pay\\ContactName' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/ContactName.php'
 	),
 	'Pronamic\\WordPress\\Pay\\ContactNameHelper' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/ContactNameHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Core\\Gateway' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Core/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Core\\GatewayConfig' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Core/GatewayConfig.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Core\\IdTrait' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Core/IdTrait.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Core\\ModeTrait' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Core/ModeTrait.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Core\\PaymentMethod' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Core/PaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Core\\PaymentMethods' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Core/PaymentMethods.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Core\\PaymentMethodsCollection' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Core/PaymentMethodsCollection.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Core\\SupportsTrait' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Core/SupportsTrait.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Core\\TimestampsTrait' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Core/TimestampsTrait.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Core\\Util' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Core/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Core\\VersionTrait' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Core/VersionTrait.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Core\\XML\\Util' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Core/XML/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Country' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Country.php'
 	),
 	'Pronamic\\WordPress\\Pay\\CreditCard' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/CreditCard.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Customer' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Customer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\CustomerHelper' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/CustomerHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Dependencies\\Dependencies' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Dependencies/Dependencies.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Dependencies\\Dependency' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Dependencies/Dependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Dependencies\\PhpDependency' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Dependencies/PhpDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Dependencies\\PhpExtensionDependency' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Dependencies/PhpExtensionDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Dependencies\\WordPressDependency' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Dependencies/WordPressDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Charitable\\BancontactGateway' => array(
@@ -1295,31 +1295,31 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay-extensions/charitable/src/SofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\ContactForm7Dependency' => array(
-		'version' => '3.5.1.0',
+		'version' => '3.6.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/ContactForm7Dependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Extension' => array(
-		'version' => '3.5.1.0',
+		'version' => '3.6.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Pronamic' => array(
-		'version' => '3.5.1.0',
+		'version' => '3.6.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/Pronamic.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\SubmissionHelper' => array(
-		'version' => '3.5.1.0',
+		'version' => '3.6.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/SubmissionHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Tags\\AmountTag' => array(
-		'version' => '3.5.1.0',
+		'version' => '3.6.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/Tags/AmountTag.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Tags\\IssuerTag' => array(
-		'version' => '3.5.1.0',
+		'version' => '3.6.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/Tags/IssuerTag.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Tags\\PaymentMethodTag' => array(
-		'version' => '3.5.1.0',
+		'version' => '3.6.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/Tags/PaymentMethodTag.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\CompanyNameController' => array(
@@ -1611,111 +1611,111 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Admin\\AdminSubscriptions' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Admin/AdminSubscriptions.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Admin\\AdminTransactions' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Admin/AdminTransactions.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Extension' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\ApplePayGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/ApplePayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\BancontactGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/BancontactGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\BankTransferGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/BankTransferGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\BitcoinGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/BitcoinGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\CreditCardGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/CreditCardGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\DirectDebitBancontactGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/DirectDebitBancontactGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\DirectDebitGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/DirectDebitGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\DirectDebitIDealGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/DirectDebitIDealGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\DirectDebitSofortGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/DirectDebitSofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\Gateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\GiropayGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/GiropayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\IDealGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/IDealGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\In3Gateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/In3Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\KlarnaPayLaterGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/KlarnaPayLaterGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\KlarnaPayNowGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/KlarnaPayNowGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\KlarnaPayOverTimeGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/KlarnaPayOverTimeGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\PayPalGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/PayPalGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\Przelewy24Gateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/Przelewy24Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\SofortGateway' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/SofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\MemberPress' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/MemberPress.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\MemberPressDependency' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/MemberPressDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Pronamic' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Pronamic.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\SubscriptionStatuses' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/SubscriptionStatuses.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Upgrade310' => array(
-		'version' => '4.8.0.0',
+		'version' => '4.8.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Upgrade310.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\NinjaForms\\Extension' => array(
@@ -1743,103 +1743,103 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay-extensions/ninjaforms/src/PaymentMethodsField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Extension' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\ApplePayGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/ApplePayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\BancontactGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/BancontactGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\BankTransferGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/BankTransferGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\BitcoinGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/BitcoinGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\CardGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/CardGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\CreditCardGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/CreditCardGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\DirectDebitBancontactGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/DirectDebitBancontactGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\DirectDebitGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/DirectDebitGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\DirectDebitIDealGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/DirectDebitIDealGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\DirectDebitSofortGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/DirectDebitSofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\EpsGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/EpsGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\Gateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\GiropayGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/GiropayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\IDealGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/IDealGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\PayPalGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/PayPalGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\SofortGateway' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/SofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\LengthUnit' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/LengthUnit.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\MembershipStatus' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/MembershipStatus.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\PaymentStatus' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/PaymentStatus.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\RestrictContentProDependency' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/RestrictContentProDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\SubscriptionUpdater' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/SubscriptionUpdater.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Upgrade216' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Upgrade216.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Upgrade450' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Upgrade450.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Util' => array(
-		'version' => '4.6.1.0',
+		'version' => '4.6.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\Extension' => array(
@@ -1891,35 +1891,35 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/WooCommerceSubscriptionsController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fields\\CachedCallbackOptions' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Fields/CachedCallbackOptions.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fields\\DateField' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Fields/DateField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fields\\Field' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Fields/Field.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fields\\IDealIssuerSelectField' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Fields/IDealIssuerSelectField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fields\\SelectField' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Fields/SelectField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fields\\SelectFieldOption' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Fields/SelectFieldOption.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fields\\SelectFieldOptionGroup' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Fields/SelectFieldOptionGroup.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fields\\TextField' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Fields/TextField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\Admin' => array(
@@ -1975,11 +1975,11 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay/fundraising/src/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\GatewayIntegrations' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/GatewayIntegrations.php'
 	),
 	'Pronamic\\WordPress\\Pay\\GatewayPostType' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/GatewayPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\AbstractPaymentRequest' => array(
@@ -2247,7 +2247,7 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay-gateways/ems-e-commerce/src/Statuses.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\GatewaysDataStoreCPT' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Gateways/GatewaysDataStoreCPT.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\IDealAdvancedV3\\Certificate' => array(
@@ -2939,231 +2939,231 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay-gateways/paypal/src/Variables.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gender' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Gender.php'
 	),
 	'Pronamic\\WordPress\\Pay\\HomeUrlController' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/HomeUrlController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\HouseNumber' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/HouseNumber.php'
 	),
 	'Pronamic\\WordPress\\Pay\\LicenseManager' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/LicenseManager.php'
 	),
 	'Pronamic\\WordPress\\Pay\\MergeTags\\MergeTag' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/MergeTags/MergeTag.php'
 	),
 	'Pronamic\\WordPress\\Pay\\MergeTags\\MergeTagsController' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/MergeTags/MergeTagsController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\MoneyJsonTransformer' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/MoneyJsonTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\PagesController' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/PagesController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\FailureReason' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/FailureReason.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\LegacyPaymentsDataStoreCPT' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/LegacyPaymentsDataStoreCPT.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\Payment' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/Payment.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\PaymentInfo' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/PaymentInfo.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\PaymentInfoHelper' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/PaymentInfoHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\PaymentInfoTrait' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/PaymentInfoTrait.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\PaymentLine' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/PaymentLine.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\PaymentLineType' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/PaymentLineType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\PaymentLines' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/PaymentLines.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\PaymentMergeTagsController' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/PaymentMergeTagsController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\PaymentPostType' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/PaymentPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\PaymentStatus' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/PaymentStatus.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\PaymentsDataStoreCPT' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/PaymentsDataStoreCPT.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\PaymentsModule' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/PaymentsModule.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\PaymentsPrivacy' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/PaymentsPrivacy.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\SourceTrait' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/SourceTrait.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Payments\\StatusChecker' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Payments/StatusChecker.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Plugin' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Plugin.php'
 	),
 	'Pronamic\\WordPress\\Pay\\PrivacyManager' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/PrivacyManager.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Privacy\\AnonymizedTrait' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Privacy/AnonymizedTrait.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Refunds\\Refund' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Refunds/Refund.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Refunds\\RefundLine' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Refunds/RefundLine.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Refunds\\RefundLines' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Refunds/RefundLines.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Region' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Region.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Settings' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Settings.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\AlignmentRule' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/AlignmentRule.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\Subscription' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/Subscription.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionHelper' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/SubscriptionHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionInterval' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/SubscriptionInterval.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionPeriod' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/SubscriptionPeriod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionPhase' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/SubscriptionPhase.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionPostType' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/SubscriptionPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionStatus' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/SubscriptionStatus.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionsCompletionController' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/SubscriptionsCompletionController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionsDataStoreCPT' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/SubscriptionsDataStoreCPT.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionsFollowUpPaymentsController' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/SubscriptionsFollowUpPaymentsController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionsModule' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/SubscriptionsModule.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionsNotificationsController' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/SubscriptionsNotificationsController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionsPrivacy' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Subscriptions/SubscriptionsPrivacy.php'
 	),
 	'Pronamic\\WordPress\\Pay\\TrackingModule' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/TrackingModule.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Upgrades\\Upgrade' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Upgrades/Upgrade.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Upgrades\\Upgrades' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Upgrades/Upgrades.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Util' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\VatNumbers\\VatNumber' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/VatNumbers/VatNumber.php'
 	),
 	'Pronamic\\WordPress\\Pay\\VatNumbers\\VatNumberValidationService' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/VatNumbers/VatNumberValidationService.php'
 	),
 	'Pronamic\\WordPress\\Pay\\VatNumbers\\VatNumberValidity' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/VatNumbers/VatNumberValidity.php'
 	),
 	'Pronamic\\WordPress\\Pay\\VatRates' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/VatRates.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Webhooks\\WebhookLogger' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Webhooks/WebhookLogger.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Webhooks\\WebhookRequestInfo' => array(
-		'version' => '4.22.0.0',
+		'version' => '4.22.1.0',
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Webhooks/WebhookRequestInfo.php'
 	),
 	'Pronamic\\WordPress\\Updater\\Plugin' => array(
