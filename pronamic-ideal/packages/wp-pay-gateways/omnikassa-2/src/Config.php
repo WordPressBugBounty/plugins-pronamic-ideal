@@ -3,7 +3,7 @@
  * Config
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2023 Pronamic
+ * @copyright 2005-2024 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Gateways\OmniKassa2
  */
@@ -69,6 +69,13 @@ final class Config extends GatewayConfig implements JsonSerializable {
 	 * @var string
 	 */
 	public $order_id = '';
+
+	/**
+	 * Skip hosted result page.
+	 *
+	 * @var bool
+	 */
+	public $skip_hosted_result_page = false;
 
 	/**
 	 * Construct config.

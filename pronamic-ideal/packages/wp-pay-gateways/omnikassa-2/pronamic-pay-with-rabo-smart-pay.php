@@ -4,7 +4,7 @@
  * Plugin URI: https://www.pronamic.eu/plugins/pronamic-pay-with-rabo-smart-pay/
  * Description:
  *
- * Version: 4.7.2
+ * Version: 4.8.0
  * Requires at least: 5.9
  * Requires PHP: 7.4
  *
@@ -19,7 +19,7 @@
  * GitHub URI: https://github.com/wp-pay-gateways/omnikassa-2
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2023 Pronamic
+ * @copyright 2005-2024 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Gateways\OmniKassa2
  */

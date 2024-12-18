@@ -3,7 +3,7 @@
  * Integration
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2023 Pronamic
+ * @copyright 2005-2024 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Gateways\OmniKassa2
  */
@@ -164,15 +164,44 @@ final class Integration extends AbstractGatewayIntegration {
 			'type'        => 'text',
 		];
 
+		// Skip hosted result page.
+		$code_field = \sprintf( '<code>%s</code>', 'skipHppResultPage' );
+
+		$fields[] = [
+			'classes'     => [ 'regular-text', 'code' ],
+			'description' => \sprintf(
+				/* translators: %s: <code>skipHppResultPage</code> */
+				\__(
+					'The Rabo Smart Pay %s field makes it possible to skip the hosted result page (also referred to as the "Success" or "Thank you" page).',
+					'pronamic-ideal'
+				),
+				$code_field
+			),
+			'label'       => \__( 'Skip hosted result page', 'pronamic-ideal' ),
+			'meta_key'    => '_pronamic_gateway_omnikassa_2_skip_hosted_result_page',
+			'section'     => 'advanced',
+			'title'       => \__( 'Skip hosted result page', 'pronamic-ideal' ),
+			'tooltip'     => \sprintf(
+				/* translators: %s: <code>skipHppResultPage</code> */
+				\__( 'This setting defines the Rabo Smart Pay %s field.', 'pronamic-ideal' ),
+				$code_field
+			),
+			'type'        => 'checkbox',
+		];
+
 		// Webhook.
 		$fields[] = [
 			'classes'  => [ 'large-text', 'code' ],
 			'readonly' => true,
 			'section'  => 'feedback',
 			'title'    => \__( 'Webhook URL', 'pronamic-ideal' ),
-			'tooltip'  => \__(
-				'The Webhook URL as sent with each transaction to receive automatic payment status updates on.',
-				'pronamic-ideal'
+			'tooltip'  => \sprintf(
+				/* translators: %s: payment provider name */
+				\__(
+					'Copy the Webhook URL to the %s dashboard to receive automatic transaction status updates.',
+					'pronamic-ideal'
+				),
+				\__( 'Rabo Smart Pay', 'pronamic-ideal' )
 			),
 			'type'     => 'text',
 			'value'    => \rest_url( self::REST_ROUTE_NAMESPACE . '/webhook/' . (string) \get_the_ID() ),
@@ -198,6 +227,10 @@ final class Integration extends AbstractGatewayIntegration {
 		$config->access_token             = $this->get_meta( $post_id, 'omnikassa_2_access_token' );
 		$config->access_token_valid_until = $this->get_meta( $post_id, 'omnikassa_2_access_token_valid_until' );
 		$config->order_id                 = $this->get_meta( $post_id, 'omnikassa_2_order_id' );
+
+		$skip_hosted_result_page = $this->get_meta( $post_id, 'omnikassa_2_skip_hosted_result_page' );
+
+		$config->skip_hosted_result_page = 1 === \intval( $skip_hosted_result_page );
 
 		return $config;
 	}

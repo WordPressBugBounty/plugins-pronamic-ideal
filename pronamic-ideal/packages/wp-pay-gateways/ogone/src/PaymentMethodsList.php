@@ -5,7 +5,7 @@ namespace Pronamic\WordPress\Pay\Gateways\Ingenico;
 /**
  * Title: Ingenico payment methods list (PMLIST parameter)
  * Description:
- * Copyright: 2005-2023 Pronamic
+ * Copyright: 2005-2024 Pronamic
  * Company: Pronamic
  *
  * @author  Remco Tolsma
@@ -16,14 +16,14 @@ class PaymentMethodsList {
 	/**
 	 * List
 	 *
-	 * @var array
+	 * @var array<string>
 	 */
 	private $data;
 
 	/**
 	 * Constructs and initialize a payment methods list
 	 *
-	 * @param array $data Data.
+	 * @param array<string> $data Data.
 	 */
 	public function __construct( array $data = [] ) {
 		$this->data = $data;

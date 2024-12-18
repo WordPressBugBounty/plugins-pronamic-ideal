@@ -4,16 +4,25 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc670c82ffad12b4722197c9491eb5381
+class ComposerStaticInit32b8f4035b41b2d6283318c0393f0877
 {
     public static $files = array (
         '509f66d930a3f0b7d9b65b22aa319565' => __DIR__ . '/../..' . '/packages/wp-pay/core/includes/functions.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'l' => 
+        array (
+            'libphonenumber\\' => 15,
+        ),
         'V' => 
         array (
             'VIISON\\AddressSplitter\\' => 23,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
         ),
         'P' => 
         array (
@@ -71,9 +80,17 @@ class ComposerStaticInitc670c82ffad12b4722197c9491eb5381
     );
 
     public static $prefixDirsPsr4 = array (
+        'libphonenumber\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src',
+        ),
         'VIISON\\AddressSplitter\\' => 
         array (
             0 => __DIR__ . '/..' . '/viison/address-splitter/src',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
         'Pronamic\\WpPayLogos\\' => 
         array (
@@ -1024,16 +1041,40 @@ class ComposerStaticInitc670c82ffad12b4722197c9491eb5381
         'Pronamic\\WordPress\\Pay\\Webhooks\\WebhookRequestInfo' => __DIR__ . '/../..' . '/packages/wp-pay/core/src/Webhooks/WebhookRequestInfo.php',
         'Pronamic\\WordPress\\Updater\\Plugin' => __DIR__ . '/../..' . '/packages/pronamic/pronamic-wp-updater/src/Plugin.php',
         'Pronamic\\WpPayLogos\\ImageService' => __DIR__ . '/..' . '/pronamic/wp-pay-logos/php/ImageService.php',
+        'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
         'VIISON\\AddressSplitter\\AddressSplitter' => __DIR__ . '/..' . '/viison/address-splitter/src/AddressSplitter.php',
         'VIISON\\AddressSplitter\\Exceptions\\SplittingException' => __DIR__ . '/..' . '/viison/address-splitter/src/Exceptions/SplittingException.php',
+        'libphonenumber\\CountryCodeSource' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/CountryCodeSource.php',
+        'libphonenumber\\CountryCodeToRegionCodeMap' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/CountryCodeToRegionCodeMap.php',
+        'libphonenumber\\DefaultMetadataLoader' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/DefaultMetadataLoader.php',
+        'libphonenumber\\MatchType' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/MatchType.php',
+        'libphonenumber\\Matcher' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/Matcher.php',
+        'libphonenumber\\MatcherAPIInterface' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/MatcherAPIInterface.php',
+        'libphonenumber\\MetadataLoaderInterface' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/MetadataLoaderInterface.php',
+        'libphonenumber\\MetadataSourceInterface' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/MetadataSourceInterface.php',
+        'libphonenumber\\MultiFileMetadataSourceImpl' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/MultiFileMetadataSourceImpl.php',
+        'libphonenumber\\NumberFormat' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/NumberFormat.php',
+        'libphonenumber\\NumberParseException' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/NumberParseException.php',
+        'libphonenumber\\PhoneMetadata' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/PhoneMetadata.php',
+        'libphonenumber\\PhoneNumber' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/PhoneNumber.php',
+        'libphonenumber\\PhoneNumberDesc' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/PhoneNumberDesc.php',
+        'libphonenumber\\PhoneNumberFormat' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/PhoneNumberFormat.php',
+        'libphonenumber\\PhoneNumberMatch' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/PhoneNumberMatch.php',
+        'libphonenumber\\PhoneNumberType' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/PhoneNumberType.php',
+        'libphonenumber\\PhoneNumberUtil' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/PhoneNumberUtil.php',
+        'libphonenumber\\RegexBasedMatcher' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/RegexBasedMatcher.php',
+        'libphonenumber\\ShortNumberCost' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/ShortNumberCost.php',
+        'libphonenumber\\ShortNumberInfo' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/ShortNumberInfo.php',
+        'libphonenumber\\ShortNumbersRegionCodeSet' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/ShortNumbersRegionCodeSet.php',
+        'libphonenumber\\ValidationResult' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src/ValidationResult.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc670c82ffad12b4722197c9491eb5381::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc670c82ffad12b4722197c9491eb5381::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitc670c82ffad12b4722197c9491eb5381::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit32b8f4035b41b2d6283318c0393f0877::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit32b8f4035b41b2d6283318c0393f0877::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit32b8f4035b41b2d6283318c0393f0877::$classMap;
 
         }, null, ClassLoader::class);
     }

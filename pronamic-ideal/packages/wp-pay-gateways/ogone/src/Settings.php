@@ -5,7 +5,7 @@ namespace Pronamic\WordPress\Pay\Gateways\Ingenico;
 /**
  * Title: Ingenico gateway settings
  * Description:
- * Copyright: 2005-2023 Pronamic
+ * Copyright: 2005-2024 Pronamic
  * Company: Pronamic
  *
  * @author  Remco Tolsma
@@ -16,7 +16,7 @@ class Settings {
 	/**
 	 * Fields.
 	 *
-	 * @return array
+	 * @return array<int, array<string, mixed>>
 	 */
 	public static function get_settings_fields() {
 		$fields = [];

@@ -256,6 +256,13 @@ class PaymentMethods {
 	const KBC = 'kbc';
 
 	/**
+	 * Constant for the Klarna payment method.
+	 *
+	 * @var string
+	 */
+	const KLARNA = 'klarna';
+
+	/**
 	 * Constant for the Klarna Pay Later payment method.
 	 *
 	 * Klarna Pay Later is not one specific payment method, but a category with a number of pay later payment methods.
@@ -488,6 +495,7 @@ class PaymentMethods {
 			self::IDEAL                   => __( 'iDEAL', 'pronamic-ideal' ),
 			self::IDEALQR                 => __( 'iDEAL QR', 'pronamic-ideal' ),
 			self::KBC                     => __( 'KBC/CBC Payment Button', 'pronamic-ideal' ),
+			self::KLARNA                  => __( 'Klarna', 'pronamic-ideal' ),
 			self::KLARNA_PAY_LATER        => __( 'Klarna Pay Later', 'pronamic-ideal' ),
 			self::KLARNA_PAY_NOW          => __( 'Klarna Pay Now', 'pronamic-ideal' ),
 			self::KLARNA_PAY_OVER_TIME    => __( 'Klarna Pay Over Time', 'pronamic-ideal' ),

@@ -15,7 +15,7 @@ use Pronamic\WordPress\Pay\Gateways\Ingenico\Security;
 /**
  * Title: Ingenico order standard client
  * Description:
- * Copyright: 2005-2023 Pronamic
+ * Copyright: 2005-2024 Pronamic
  * Company: Pronamic
  *
  * @author  Remco Tolsma
@@ -250,7 +250,7 @@ class Client {
 	/**
 	 * Get signature OUT
 	 *
-	 * @param array $fields Fields to calculate signature for.
+	 * @param array<string, string> $fields Fields to calculate signature for.
 	 * @return string
 	 */
 	public function get_signature_out( $fields ) {
@@ -265,7 +265,7 @@ class Client {
 	 * Get fields
 	 *
 	 * @since 1.2.1
-	 * @return array
+	 * @return array<string, string>
 	 */
 	public function get_fields() {
 		Security::sign_data( $this->data, $this->get_pass_phrase_in(), $this->hash_algorithm );
@@ -334,8 +334,8 @@ class Client {
 	/**
 	 * Verify request
 	 *
-	 * @param array $data Request data.
-	 * @return array|false
+	 * @param array<string, string> $data Request data.
+	 * @return array<string, scalar|null>|false
 	 */
 	public function verify_request( $data ) {
 		$result = false;

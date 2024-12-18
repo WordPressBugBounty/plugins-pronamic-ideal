@@ -6,7 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'libphonenumber\\' => array($vendorDir . '/giggsey/libphonenumber-for-php-lite/src'),
     'VIISON\\AddressSplitter\\' => array($vendorDir . '/viison/address-splitter/src'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Pronamic\\WpPayLogos\\' => array($vendorDir . '/pronamic/wp-pay-logos/php'),
     'Pronamic\\WordPress\\Updater\\' => array($baseDir . '/packages/pronamic/pronamic-wp-updater/src'),
     'Pronamic\\WordPress\\Pay\\Gateways\\PayPal\\' => array($baseDir . '/packages/wp-pay-gateways/paypal/src'),

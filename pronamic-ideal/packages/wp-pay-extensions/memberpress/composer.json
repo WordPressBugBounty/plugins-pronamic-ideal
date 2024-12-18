@@ -45,6 +45,9 @@
 			"bamarni/composer-bin-plugin": true,
 			"automattic/jetpack-autoloader": true
 		},
+		"platform": {
+			"php": "8.2"
+		},
 		"wp-slug": "pronamic-pay-memberpress"
 	},
 	"require": {
@@ -69,6 +72,7 @@
 		"yoast/phpunit-polyfills": "^1.0"
 	},
 	"scripts": {
+		"build": "vendor/bin/pronamic wp-build",
 		"ci": [
 			"@phplint",
 			"@phpcs",
@@ -85,6 +89,10 @@
 		"phpunit": "vendor/bin/phpunit",
 		"post-install-cmd": "echo 'Optionally run: composer bin all install'",
 		"post-update-cmd": "echo 'Optionally run: composer bin all update'",
-		"psalm": "vendor/bin/psalm"
+		"psalm": "vendor/bin/psalm",
+		"release": [
+			"@build",
+			"vendor/bin/pronamic release-to-github"
+		]
 	}
 }

@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '509f66d930a3f0b7d9b65b22aa319565' => $baseDir . '/packages/wp-pay/core/includes/functions.php',
+    '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
 );

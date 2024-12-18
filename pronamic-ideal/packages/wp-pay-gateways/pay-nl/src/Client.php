@@ -8,7 +8,7 @@ use stdClass;
 /**
  * Title: Pay.nl client
  * Description:
- * Copyright: 2005-2023 Pronamic
+ * Copyright: 2005-2024 Pronamic
  * Company: Pronamic
  *
  * @author  Remco Tolsma
@@ -90,6 +90,7 @@ class Client {
 		if ( is_wp_error( $response ) ) {
 			throw new \Exception(
 				\sprintf(
+					/* translators: %s: error message */
 					__( 'Unknown response from Pay.nl: "%s".', 'pronamic-ideal' ),
 					$response->get_error_message()
 				)

@@ -3,7 +3,7 @@
  * Gateway
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2023 Pronamic
+ * @copyright 2005-2024 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\WooCommerce
  */
@@ -33,7 +33,7 @@ use WC_Payment_Gateway;
 /**
  * Title: WooCommerce iDEAL gateway
  * Description:
- * Copyright: 2005-2023 Pronamic
+ * Copyright: 2005-2024 Pronamic
  * Company: Pronamic
  *
  * @link https://github.com/woocommerce/woocommerce/blob/3.5.3/includes/abstracts/abstract-wc-payment-gateway.php
@@ -145,9 +145,6 @@ class Gateway extends WC_Payment_Gateway {
 			);
 		}
 
-		// Load the form fields.
-		$this->init_form_fields();
-
 		// Load the settings.
 		$this->init_settings();
 
@@ -163,6 +160,9 @@ class Gateway extends WC_Payment_Gateway {
 		if ( empty( $this->config_id ) ) {
 			$this->config_id = \get_option( 'pronamic_pay_config_id' );
 		}
+
+		// Load the form fields.
+		$this->init_form_fields();
 
 		// Maybe support refunds (uses config ID setting).
 		$this->maybe_add_refunds_support();
@@ -357,6 +357,8 @@ class Gateway extends WC_Payment_Gateway {
 			],
 		];
 
+		$this->maybe_add_ideal_issuers_settings_field();
+
 		if ( isset( $this->gateway_args['icon'] ) ) {
 			$this->form_fields['icon']['default'] = $this->gateway_args['icon'];
 
@@ -380,6 +382,61 @@ class Gateway extends WC_Payment_Gateway {
 				}
 			}
 		}
+	}
+
+	/**
+	 * Get show iDEAL issuers default.
+	 * 
+	 * @return bool
+	 */
+	private function get_show_show_ideal_issuers_default() {
+		if ( '' === $this->config_id ) {
+			return false;
+		}
+
+		if ( '0' === $this->config_id ) {
+			return false;
+		}
+
+		$config_post = \get_post( (int) $this->config_id );
+
+		if ( null === $config_post ) {
+			return false;
+		}
+
+		$config_post_date = \get_post_datetime( $config_post );
+
+		if ( false === $config_post_date ) {
+			return false;
+		}
+
+		$default_disabled_from_date = new DateTime( '2025-01-01' );
+
+		if ( $config_post_date < $default_disabled_from_date ) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Maybe add settings field for showing iDEAL issuers in checkout.
+	 *
+	 * @return void
+	 */
+	private function maybe_add_ideal_issuers_settings_field() {
+		// Check iDEAL payment method.
+		if ( ! \in_array( $this->payment_method, [ PaymentMethods::IDEAL, PaymentMethods::DIRECT_DEBIT_IDEAL ], true ) ) {
+			return;
+		}
+
+		$this->form_fields['show_ideal_issuers'] = [
+			'type'        => 'checkbox',
+			'title'       => \__( 'Show iDEAL issuers', 'pronamic-ideal' ),
+			'label'       => \__( 'Show iDEAL issuer selection field if available', 'pronamic-ideal' ),
+			'description' => \__( 'With the introduction of the new iDEAL (2.0) in mid-2024, it is recommended to let customers select their bank on the new iDEAL payment screen. As a result, displaying iDEAL banks on your own website is discouraged.', 'pronamic-ideal' ),
+			'default'     => $this->get_show_show_ideal_issuers_default() ? 'yes' : 'no',
+		];
 	}
 
 	/**
@@ -545,7 +602,7 @@ class Gateway extends WC_Payment_Gateway {
 
 	/**
 	 * Store payment details.
-	 * 
+	 *
 	 * @link https://github.com/pronamic/pronamic.shop/issues/53
 	 * @param WC_Order $order   WooCommerce order.
 	 * @param Payment  $payment Pronamic payment.
@@ -1058,6 +1115,10 @@ class Gateway extends WC_Payment_Gateway {
 
 					case 'pronamic_pay_gender':
 						return '1' !== get_option( 'pronamic_pay_woocommerce_gender_field_enable' );
+				}
+
+				if ( \str_contains( $field->get_id(), 'ideal' ) && \str_contains( $field->get_id(), 'issuer' ) ) {
+					return 'yes' === $this->get_pronamic_option( 'show_ideal_issuers' );
 				}
 
 				return true;

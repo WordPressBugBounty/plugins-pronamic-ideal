@@ -3,7 +3,7 @@
  * Mollie gateway.
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2023 Pronamic
+ * @copyright 2005-2024 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -232,6 +232,7 @@ class Gateway extends Core_Gateway {
 		$this->register_payment_method( $payment_method_kbc );
 
 		// Klarna.
+		$this->register_payment_method( new PaymentMethod( PaymentMethods::KLARNA ) );
 		$this->register_payment_method( new PaymentMethod( PaymentMethods::KLARNA_PAY_LATER ) );
 		$this->register_payment_method( new PaymentMethod( PaymentMethods::KLARNA_PAY_NOW ) );
 		$this->register_payment_method( new PaymentMethod( PaymentMethods::KLARNA_PAY_OVER_TIME ) );
@@ -1018,6 +1019,7 @@ class Gateway extends Core_Gateway {
 			[
 				PaymentMethods::BILLIE,
 				PaymentMethods::IN3,
+				PaymentMethods::KLARNA,
 				PaymentMethods::KLARNA_PAY_NOW,
 				PaymentMethods::KLARNA_PAY_LATER,
 				PaymentMethods::KLARNA_PAY_OVER_TIME,

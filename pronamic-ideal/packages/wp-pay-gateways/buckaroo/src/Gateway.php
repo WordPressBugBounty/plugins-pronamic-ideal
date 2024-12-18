@@ -20,7 +20,7 @@ use WP_Error;
 /**
  * Title: Buckaroo gateway
  * Description:
- * Copyright: 2005-2023 Pronamic
+ * Copyright: 2005-2024 Pronamic
  * Company: Pronamic
  *
  * @author Remco Tolsma
@@ -138,8 +138,10 @@ class Gateway extends Core_Gateway {
 			$payment_method->set_status( 'inactive' );
 		}
 
-		if ( null !== $buckaroo_transaction_specifications->Services ) {
-			foreach ( $buckaroo_transaction_specifications->Services as $service ) {
+		$services = is_object( $buckaroo_transaction_specifications ) && property_exists( $buckaroo_transaction_specifications, 'Services' ) ? $buckaroo_transaction_specifications->Services : null;
+
+		if ( null !== $services ) {
+			foreach ( $services as $service ) {
 				$payment_method_id = PaymentMethods::from_buckaroo_to_pronamic( $service->Name );
 
 				if ( null === $payment_method_id ) {
@@ -742,12 +744,12 @@ class Gateway extends Core_Gateway {
 		/**
 		 * OK.
 		 */
-		return $object;
+		return (object) $object;
 	}
 
 	/**
 	 * Get software header.
-	 * 
+	 *
 	 * @link https://docs.buckaroo.io/docs/authentication
 	 * @link https://github.com/pronamic/wp-pronamic-pay-buckaroo/issues/9
 	 * @return string
