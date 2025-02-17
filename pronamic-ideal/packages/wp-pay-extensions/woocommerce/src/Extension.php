@@ -3,7 +3,7 @@
  * Extension
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\WooCommerce
  */
@@ -28,7 +28,7 @@ use WP_Post;
 /**
  * Title: WooCommerce iDEAL Add-On
  * Description:
- * Copyright: 2005-2024 Pronamic
+ * Copyright: 2005-2025 Pronamic
  * Company: Pronamic
  *
  * @author  Remco Tolsma
@@ -53,7 +53,7 @@ class Extension extends AbstractPluginIntegration {
 		$args = wp_parse_args(
 			$args,
 			[
-				'name'                => \__( 'WooCommerce', 'pronamic-ideal' ),
+				'name'                => 'WooCommerce',
 				'version_option_name' => 'pronamic_pay_woocommerce_version',
 			]
 		);
