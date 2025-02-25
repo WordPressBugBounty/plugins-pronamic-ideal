@@ -2754,17 +2754,17 @@
         },
         {
             "name": "wp-pay-gateways/mollie",
-            "version": "v4.14.0",
-            "version_normalized": "4.14.0.0",
+            "version": "v4.14.1",
+            "version_normalized": "4.14.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pronamic/wp-pronamic-pay-mollie.git",
-                "reference": "d7c48a4d59fe2a7c6ce4a52a9c3c7f974920ee9b"
+                "reference": "60e1b25d544d428a25399fbaf2104b76dc2a15d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-mollie/zipball/d7c48a4d59fe2a7c6ce4a52a9c3c7f974920ee9b",
-                "reference": "d7c48a4d59fe2a7c6ce4a52a9c3c7f974920ee9b",
+                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-mollie/zipball/60e1b25d544d428a25399fbaf2104b76dc2a15d0",
+                "reference": "60e1b25d544d428a25399fbaf2104b76dc2a15d0",
                 "shasum": ""
             },
             "require": {
@@ -2796,7 +2796,7 @@
                 "wp-phpunit/wp-phpunit": "^6.5",
                 "yoast/phpunit-polyfills": "^2.0"
             },
-            "time": "2025-02-14T13:37:25+00:00",
+            "time": "2025-02-25T14:15:31+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -3003,17 +3003,17 @@
         },
         {
             "name": "wp-pay-gateways/omnikassa-2",
-            "version": "v4.8.0",
-            "version_normalized": "4.8.0.0",
+            "version": "v4.9.0",
+            "version_normalized": "4.9.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay.git",
-                "reference": "2051ad0f0e4a66114e3b6235848edd45ed701834"
+                "reference": "fe18c0e9ee87df6f5656bbe4b74acb77e3d889f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-rabo-smart-pay/zipball/2051ad0f0e4a66114e3b6235848edd45ed701834",
-                "reference": "2051ad0f0e4a66114e3b6235848edd45ed701834",
+                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-rabo-smart-pay/zipball/fe18c0e9ee87df6f5656bbe4b74acb77e3d889f3",
+                "reference": "fe18c0e9ee87df6f5656bbe4b74acb77e3d889f3",
                 "shasum": ""
             },
             "require": {
@@ -3042,7 +3042,7 @@
                 "wp-phpunit/wp-phpunit": "^6.5",
                 "yoast/phpunit-polyfills": "^2.0"
             },
-            "time": "2024-12-17T13:53:16+00:00",
+            "time": "2025-02-25T14:08:52+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
