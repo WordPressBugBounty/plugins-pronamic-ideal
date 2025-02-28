@@ -1353,41 +1353,42 @@
         },
         {
             "name": "wp-pay-extensions/contact-form-7",
-            "version": "v3.7.0",
-            "version_normalized": "3.7.0.0",
+            "version": "v4.0.0",
+            "version_normalized": "4.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pronamic/wp-pronamic-pay-contact-form-7.git",
-                "reference": "cbcb22c39c905224ed7dc3ffa96505bb589020c5"
+                "reference": "1265998adc3d3c001531fd48ecdcc03a2c56fb7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-contact-form-7/zipball/cbcb22c39c905224ed7dc3ffa96505bb589020c5",
-                "reference": "cbcb22c39c905224ed7dc3ffa96505bb589020c5",
+                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-contact-form-7/zipball/1265998adc3d3c001531fd48ecdcc03a2c56fb7e",
+                "reference": "1265998adc3d3c001531fd48ecdcc03a2c56fb7e",
                 "shasum": ""
             },
             "require": {
+                "automattic/jetpack-autoloader": "^3.1",
                 "ext-json": "*",
                 "php": ">=8.1",
-                "wp-pay/core": "^4.22"
+                "wp-pay/core": "^4.25"
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.8",
-                "overtrue/phplint": "^9.0",
+                "overtrue/phplint": "^9.5",
                 "php-coveralls/php-coveralls": "^2.7",
                 "phpmd/phpmd": "^2.15",
-                "phpstan/phpstan": "^1.11",
+                "phpstan/phpstan": "^1.12",
                 "pronamic/pronamic-cli": "^1.1",
-                "pronamic/wp-coding-standards": "^2.2",
+                "pronamic/wp-coding-standards": "^2.3",
                 "roots/wordpress": "^6.4",
                 "szepeviktor/phpstan-wordpress": "^1.3",
                 "vimeo/psalm": "^5.25",
                 "wp-cli/wp-cli-bundle": "^2.10",
                 "wp-phpunit/wp-phpunit": "^6.4",
-                "wpackagist-plugin/contact-form-7": "^5.9",
+                "wpackagist-plugin/contact-form-7": "^6.0",
                 "yoast/phpunit-polyfills": "^2.0"
             },
-            "time": "2024-12-17T14:09:02+00:00",
+            "time": "2025-02-27T14:48:58+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {

@@ -3,7 +3,7 @@
  * Submission helper
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\ContactForm7
  */
@@ -16,7 +16,7 @@ use WPCF7_Submission;
 /**
  * Submission helper class
  */
-class SubmissionHelper {
+final class SubmissionHelper {
 	/**
 	 * Submission.
 	 *
@@ -142,9 +142,6 @@ class SubmissionHelper {
 	 * @return array<string>
 	 */
 	public function get_values_by_tag( $tag ) {
-		/**
-		 * Hidden fields.
-		 */
 		$hidden_fields = $this->get_hidden_fields();
 
 		if ( \in_array( $tag->name, $hidden_fields, true ) ) {

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit86445fe20dc353b373c6bf71e1a0f5f4
+class ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5
 {
     public static $files = array (
         '509f66d930a3f0b7d9b65b22aa319565' => __DIR__ . '/../..' . '/packages/wp-pay/core/includes/functions.php',
@@ -571,13 +571,13 @@ class ComposerStaticInit86445fe20dc353b373c6bf71e1a0f5f4
         'Pronamic\\WordPress\\Pay\\Extensions\\Charitable\\IDealGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/charitable/src/IDealGateway.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\Charitable\\PayPalGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/charitable/src/PayPalGateway.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\Charitable\\SofortGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/charitable/src/SofortGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\AmountTag' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src/AmountTag.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\ContactForm7Dependency' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src/ContactForm7Dependency.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Extension' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src/Extension.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\IssuerTag' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src/IssuerTag.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\PaymentMethodTag' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src/PaymentMethodTag.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Pronamic' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src/Pronamic.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\SubmissionHelper' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src/SubmissionHelper.php',
-        'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Tags\\AmountTag' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src/Tags/AmountTag.php',
-        'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Tags\\IssuerTag' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src/Tags/IssuerTag.php',
-        'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Tags\\PaymentMethodTag' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src/Tags/PaymentMethodTag.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\CompanyNameController' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/src/CompanyNameController.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\EasyDigitalDownloads' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/src/EasyDigitalDownloads.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\EasyDigitalDownloadsDependency' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/src/EasyDigitalDownloadsDependency.php',
@@ -1072,9 +1072,9 @@ class ComposerStaticInit86445fe20dc353b373c6bf71e1a0f5f4
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit86445fe20dc353b373c6bf71e1a0f5f4::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit86445fe20dc353b373c6bf71e1a0f5f4::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit86445fe20dc353b373c6bf71e1a0f5f4::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5::$classMap;
 
         }, null, ClassLoader::class);
     }

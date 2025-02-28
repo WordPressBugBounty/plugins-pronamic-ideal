@@ -3,7 +3,7 @@
  * Extension
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\ContactForm7
  */
@@ -12,6 +12,7 @@ namespace Pronamic\WordPress\Pay\Extensions\ContactForm7;
 
 use Pronamic\WordPress\Pay\AbstractPluginIntegration;
 use Pronamic\WordPress\Pay\Payments\Payment;
+use Pronamic\WordPress\Pay\Payments\PaymentStatus;
 use Pronamic\WordPress\Pay\Plugin;
 use Pronamic\WordPress\Pay\Subscriptions\Subscription;
 use WPCF7_ContactForm;
@@ -19,16 +20,9 @@ use WPCF7_MailTag;
 use WPCF7_Submission;
 
 /**
- * Title: WordPress pay extension Contact Form 7 extension
- * Description:
- * Copyright: 2005-2024 Pronamic
- * Company: Pronamic
- *
- * @author  Reüel van der Steege
- * @version 1.0.0
- * @since   1.0.0
+ * Extension class
  */
-class Extension extends AbstractPluginIntegration {
+final class Extension extends AbstractPluginIntegration {
 	/**
 	 * Slug
 	 *
@@ -47,7 +41,6 @@ class Extension extends AbstractPluginIntegration {
 			]
 		);
 
-		// Dependencies.
 		$dependencies = $this->get_dependencies();
 
 		$dependencies->add( new ContactForm7Dependency() );
@@ -67,8 +60,8 @@ class Extension extends AbstractPluginIntegration {
 		}
 
 		\add_filter( 'pronamic_payment_source_text_' . self::SLUG, [ $this, 'source_text' ], 10, 2 );
+		\add_filter( 'pronamic_payment_redirect_url_' . self::SLUG, [ $this, 'redirect_url' ], 10, 2 );
 
-		// Actions.
 		\add_action( 'wpcf7_init', [ $this, 'init' ] );
 	}
 
@@ -78,21 +71,18 @@ class Extension extends AbstractPluginIntegration {
 	 * @return void
 	 */
 	public function init() {
-		// Actions.
 		\add_action( 'wpcf7_before_send_mail', [ $this, 'before_send_mail' ], 10, 3 );
 		\add_action( 'wpcf7_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
 		\add_action( 'wpcf7_submit', [ $this, 'submit' ], 10, 2 );
 
-		// Filters.
 		\add_filter( 'wpcf7_collect_mail_tags', [ $this, 'collect_mail_tags' ] );
 		\add_filter( 'wpcf7_mail_tag_replaced', [ $this, 'replace_mail_tags' ], 10, 4 );
 		\add_filter( 'wpcf7_submission_result', [ $this, 'submission_result' ], 10, 2 );
 		\add_filter( 'wpcf7_flamingo_submit_if', [ $this, 'flamingo_submission_statuses' ] );
 
-		// Register tags.
-		new Tags\AmountTag();
-		new Tags\IssuerTag();
-		new Tags\PaymentMethodTag();
+		new AmountTag();
+		new IssuerTag();
+		new PaymentMethodTag();
 	}
 
 	/**
@@ -104,7 +94,6 @@ class Extension extends AbstractPluginIntegration {
 	 * @return void
 	 */
 	public function before_send_mail( WPCF7_ContactForm $form, &$abort, WPCF7_Submission $submission ) {
-		// Get gateway.
 		$value = \get_option( 'pronamic_pay_config_id' );
 
 		if ( ! \is_numeric( $value ) ) {
@@ -120,7 +109,6 @@ class Extension extends AbstractPluginIntegration {
 		}
 
 		try {
-			// Start payment.
 			$payment = Pronamic::get_submission_payment( $submission );
 
 			// Return on invalid payment.
@@ -282,7 +270,7 @@ class Extension extends AbstractPluginIntegration {
 	 * @return string
 	 */
 	public function source_text( $text, Payment $payment ) {
-		return __( 'Contact Form 7', 'pronamic-ideal' );
+		return \__( 'Contact Form 7', 'pronamic-ideal' );
 	}
 
 	/**
@@ -293,6 +281,40 @@ class Extension extends AbstractPluginIntegration {
 	 * @return string
 	 */
 	public function source_description( $description, Payment $payment ) {
-		return __( 'Contact Form 7 Entry', 'pronamic-ideal' );
+		return \__( 'Contact Form 7 Entry', 'pronamic-ideal' );
+	}
+
+	/**
+	 * Payment redirect URL filter.
+	 *
+	 * @link https://github.com/rocklobster-in/contact-form-7/blob/2f278f2de975141a152e62dcf036a86533f38151/includes/contact-form.php#L1128-L1171
+	 * @param string  $url     Redirect URL.
+	 * @param Payment $payment Payment.
+	 * @return string
+	 */
+	public function redirect_url( $url, Payment $payment ) {
+		if ( PaymentStatus::SUCCESS !== $payment->get_status() ) {
+			return $url;
+		}
+
+		$form_id = $payment->get_meta( 'contact_form_7_form_id' );
+
+		if ( ! \is_int( $form_id ) ) {
+			return $url;
+		}
+
+		$contact_form = \wpcf7_contact_form( $form_id );
+
+		if ( null === $contact_form ) {
+			return $url;
+		}
+
+		$pref_url = (string) $contact_form->pref( 'pronamic_pay_success_redirect_url' );
+
+		if ( '' === $pref_url ) {
+			return $url;
+		}
+
+		return $pref_url;
 	}
 }

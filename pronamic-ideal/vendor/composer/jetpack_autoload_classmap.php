@@ -1294,33 +1294,33 @@ return array(
 		'version' => '4.3.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/charitable/src/SofortGateway.php'
 	),
+	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\AmountTag' => array(
+		'version' => '4.0.0.0',
+		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/AmountTag.php'
+	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\ContactForm7Dependency' => array(
-		'version' => '3.7.0.0',
+		'version' => '4.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/ContactForm7Dependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Extension' => array(
-		'version' => '3.7.0.0',
+		'version' => '4.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/Extension.php'
 	),
+	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\IssuerTag' => array(
+		'version' => '4.0.0.0',
+		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/IssuerTag.php'
+	),
+	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\PaymentMethodTag' => array(
+		'version' => '4.0.0.0',
+		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/PaymentMethodTag.php'
+	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Pronamic' => array(
-		'version' => '3.7.0.0',
+		'version' => '4.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/Pronamic.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\SubmissionHelper' => array(
-		'version' => '3.7.0.0',
+		'version' => '4.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/SubmissionHelper.php'
-	),
-	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Tags\\AmountTag' => array(
-		'version' => '3.7.0.0',
-		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/Tags/AmountTag.php'
-	),
-	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Tags\\IssuerTag' => array(
-		'version' => '3.7.0.0',
-		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/Tags/IssuerTag.php'
-	),
-	'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Tags\\PaymentMethodTag' => array(
-		'version' => '3.7.0.0',
-		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/Tags/PaymentMethodTag.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\CompanyNameController' => array(
 		'version' => '4.3.6.0',
