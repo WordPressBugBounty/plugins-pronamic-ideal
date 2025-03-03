@@ -1353,17 +1353,17 @@
         },
         {
             "name": "wp-pay-extensions/contact-form-7",
-            "version": "v4.0.0",
-            "version_normalized": "4.0.0.0",
+            "version": "v4.0.1",
+            "version_normalized": "4.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pronamic/wp-pronamic-pay-contact-form-7.git",
-                "reference": "1265998adc3d3c001531fd48ecdcc03a2c56fb7e"
+                "reference": "e7df6723118642e59e97d9f847ce9a8476d5c8d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-contact-form-7/zipball/1265998adc3d3c001531fd48ecdcc03a2c56fb7e",
-                "reference": "1265998adc3d3c001531fd48ecdcc03a2c56fb7e",
+                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-contact-form-7/zipball/e7df6723118642e59e97d9f847ce9a8476d5c8d4",
+                "reference": "e7df6723118642e59e97d9f847ce9a8476d5c8d4",
                 "shasum": ""
             },
             "require": {
@@ -1388,7 +1388,7 @@
                 "wpackagist-plugin/contact-form-7": "^6.0",
                 "yoast/phpunit-polyfills": "^2.0"
             },
-            "time": "2025-02-27T14:48:58+00:00",
+            "time": "2025-03-03T08:57:33+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
