@@ -116,12 +116,10 @@ class AdminPaymentPostType {
 	 * @return void
 	 */
 	public function maybe_process_payment_action() {
-		// Current user.
 		if ( ! current_user_can( 'edit_payments' ) ) {
 			return;
 		}
 
-		// Screen.
 		$screen = get_current_screen();
 
 		if ( null === $screen ) {
@@ -140,7 +138,6 @@ class AdminPaymentPostType {
 			return;
 		}
 
-		// Status check action.
 		if ( filter_has_var( INPUT_GET, 'pronamic_pay_check_status' ) && check_admin_referer( 'pronamic_payment_check_status_' . $post_id ) ) {
 			try {
 				Plugin::update_payment( $payment, false );
@@ -164,21 +161,25 @@ class AdminPaymentPostType {
 	 * @return void
 	 */
 	public function maybe_display_anonymized_notice() {
-		// Current user.
-		if ( ! current_user_can( 'edit_payments' ) ) {
+		if ( ! \current_user_can( 'edit_payments' ) ) {
 			return;
 		}
 
-		// Screen.
-		$screen = get_current_screen();
+		$screen = \get_current_screen();
 
 		if ( null === $screen || 'post' !== $screen->base || 'pronamic_payment' !== $screen->post_type ) {
 			return;
 		}
 
-		$post_id = filter_input( INPUT_GET, 'post', FILTER_SANITIZE_NUMBER_INT );
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- This check is for display purposes only, no data modification occurs.
+		if ( ! \array_key_exists( 'post', $_GET ) ) {
+			return;
+		}
 
-		$payment = new Payment( (int) $post_id );
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- This check is for display purposes only, no data modification occurs.
+		$post_id = \absint( \wp_unslash( $_GET['post'] ) );
+
+		$payment = new Payment( $post_id );
 
 		if ( ! $payment->is_anonymized() ) {
 			return;
@@ -186,7 +187,7 @@ class AdminPaymentPostType {
 
 		$this->admin_notices[] = [
 			'type'    => 'info',
-			'message' => __( 'This payment has been anonymized. Personal details are not available anymore.', 'pronamic-ideal' ),
+			'message' => \__( 'This payment has been anonymized. Personal details are not available anymore.', 'pronamic-ideal' ),
 		];
 	}
 

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5
+class ComposerStaticInitacb0631d1087a9da2550e37cc911d211
 {
     public static $files = array (
         '509f66d930a3f0b7d9b65b22aa319565' => __DIR__ . '/../..' . '/packages/wp-pay/core/includes/functions.php',
@@ -34,7 +34,6 @@ class ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5
             'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\' => 45,
             'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\' => 39,
             'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\' => 41,
-            'Pronamic\\WordPress\\Pay\\Gateways\\Icepay\\' => 39,
             'Pronamic\\WordPress\\Pay\\Gateways\\IDeal\\' => 38,
             'Pronamic\\WordPress\\Pay\\Gateways\\IDealBasic\\' => 43,
             'Pronamic\\WordPress\\Pay\\Gateways\\IDealAdvancedV3\\' => 48,
@@ -123,10 +122,6 @@ class ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5
         'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\' => 
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src',
-        ),
-        'Pronamic\\WordPress\\Pay\\Gateways\\Icepay\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/packages/wp-pay-gateways/icepay/src',
         ),
         'Pronamic\\WordPress\\Pay\\Gateways\\IDeal\\' => 
         array (
@@ -364,50 +359,6 @@ class ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5
         'Composer\\Installers\\YawikInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/YawikInstaller.php',
         'Composer\\Installers\\ZendInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZendInstaller.php',
         'Composer\\Installers\\ZikulaInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZikulaInstaller.php',
-        'Icepay_Api_Base' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_base.php',
-        'Icepay_Api_Basic' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_basic.php',
-        'Icepay_Api_Logger' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_base.php',
-        'Icepay_Api_Pbm' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_pbm.php',
-        'Icepay_Api_Webservice' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_webservice.php',
-        'Icepay_Basic_Paymentmethod_Interface_Abstract' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_base.php',
-        'Icepay_Basicmode' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_basic.php',
-        'Icepay_Order' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_order.php',
-        'Icepay_Order_Address' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_order.php',
-        'Icepay_Order_Consumer' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_order.php',
-        'Icepay_Order_Helper' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_order.php',
-        'Icepay_Order_Product' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_order.php',
-        'Icepay_Order_VAT' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_order.php',
-        'Icepay_Parameter_Validation' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_base.php',
-        'Icepay_PaymentObject' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_base.php',
-        'Icepay_PaymentObject_Interface_Abstract' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_base.php',
-        'Icepay_Paymentmethod' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_base.php',
-        'Icepay_Paymentmethod_Creditcard' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/paymentmethods/creditcard.php',
-        'Icepay_Paymentmethod_Ddebit' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/paymentmethods/ddebit.php',
-        'Icepay_Paymentmethod_Directebank' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/paymentmethods/directebank.php',
-        'Icepay_Paymentmethod_Giropay' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/paymentmethods/giropay.php',
-        'Icepay_Paymentmethod_Ideal' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/paymentmethods/ideal.php',
-        'Icepay_Paymentmethod_Mistercash' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/paymentmethods/mistercash.php',
-        'Icepay_Paymentmethod_Paypal' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/paymentmethods/paypal.php',
-        'Icepay_Paymentmethod_Paysafecard' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/paymentmethods/paysafecard.php',
-        'Icepay_Paymentmethod_Phone' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/paymentmethods/phone.php',
-        'Icepay_Paymentmethod_Sms' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/paymentmethods/sms.php',
-        'Icepay_Paymentmethod_Wire' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/paymentmethods/wire.php',
-        'Icepay_PbmObject_Interface_Abstract' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_pbm.php',
-        'Icepay_Pbm_Object' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_pbm.php',
-        'Icepay_Postback' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_base.php',
-        'Icepay_Project_Helper' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_base.php',
-        'Icepay_Result' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_base.php',
-        'Icepay_StatusCode' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_base.php',
-        'Icepay_TransactionObject' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_base.php',
-        'Icepay_WebserviceTransaction_Interface_Abstract' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_base.php',
-        'Icepay_Webservice_AutoCapture' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_webservice.php',
-        'Icepay_Webservice_Base' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_webservice.php',
-        'Icepay_Webservice_Filtering' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_webservice.php',
-        'Icepay_Webservice_Pay' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_webservice.php',
-        'Icepay_Webservice_Paymentmethod' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_webservice.php',
-        'Icepay_Webservice_Paymentmethods' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_webservice.php',
-        'Icepay_Webservice_Refunds' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_webservice.php',
-        'Icepay_Webservice_Reporting' => __DIR__ . '/..' . '/pronamic/icepay-soap-api/src/icepay_api_webservice.php',
         'JsonSchema\\Constraints\\BaseConstraint' => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema/Constraints/BaseConstraint.php',
         'JsonSchema\\Constraints\\CollectionConstraint' => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema/Constraints/CollectionConstraint.php',
         'JsonSchema\\Constraints\\Constraint' => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Constraint.php',
@@ -775,7 +726,6 @@ class ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5
         'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentDetailsResponse' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/PaymentDetailsResponse.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentMethod' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/PaymentMethod.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentMethodDetails' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/PaymentMethodDetails.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentMethodIDealDetails' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/PaymentMethodIDealDetails.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentMethodIssuer' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/PaymentMethodIssuer.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentMethodType' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/PaymentMethodType.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentMethodsRequest' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/PaymentMethodsRequest.php',
@@ -851,11 +801,6 @@ class ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5
         'Pronamic\\WordPress\\Pay\\Gateways\\IDealBasic\\XML\\NotificationParser' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ideal-basic/src/XML/NotificationParser.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\IDeal\\AbstractIntegration' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ideal/src/AbstractIntegration.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\IDeal\\Statuses' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ideal/src/Statuses.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Icepay\\Config' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/icepay/src/Config.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Icepay\\DirectebankIssuers' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/icepay/src/DirectebankIssuers.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Icepay\\Gateway' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/icepay/src/Gateway.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Icepay\\Integration' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/icepay/src/Integration.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Icepay\\Listener' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/icepay/src/Listener.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\AbstractIntegration' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/AbstractIntegration.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\Brands' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/Brands.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\Config' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/Config.php',
@@ -916,8 +861,6 @@ class ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5
         'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\DirectTransactionResponseMessage' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/multisafepay/src/XML/DirectTransactionResponseMessage.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\GatewaysRequestMessage' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/multisafepay/src/XML/GatewaysRequestMessage.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\GatewaysResponseMessage' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/multisafepay/src/XML/GatewaysResponseMessage.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\IDealIssuersRequestMessage' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/multisafepay/src/XML/IDealIssuersRequestMessage.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\IDealIssuersResponseMessage' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/multisafepay/src/XML/IDealIssuersResponseMessage.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\Message' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/multisafepay/src/XML/Message.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\RedirectTransactionRequestMessage' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/multisafepay/src/XML/RedirectTransactionRequestMessage.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\RedirectTransactionResponseMessage' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/multisafepay/src/XML/RedirectTransactionResponseMessage.php',
@@ -1072,9 +1015,9 @@ class ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit7c3a20e25c5a1649dc0ceb98448d53a5::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitacb0631d1087a9da2550e37cc911d211::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitacb0631d1087a9da2550e37cc911d211::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitacb0631d1087a9da2550e37cc911d211::$classMap;
 
         }, null, ClassLoader::class);
     }

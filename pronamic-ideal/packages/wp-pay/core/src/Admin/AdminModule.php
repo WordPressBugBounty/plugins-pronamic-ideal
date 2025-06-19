@@ -366,6 +366,21 @@ class AdminModule {
 			true
 		);
 
+		/**
+		 * Clipboard feature.
+		 * 
+		 * @link https://github.com/WordPress/WordPress/blob/68e3310c024d7fceb84a5028e955ad163de6bd45/wp-includes/js/plupload/handlers.js#L364-L393
+		 * @link https://translate.wordpress.org/projects/wp/dev/nl/default/?filters%5Bstatus%5D=either&filters%5Boriginal_id%5D=10763746&filters%5Btranslation_id%5D=91929960
+		 * @link https://translate.wordpress.org/projects/wp/dev/nl/default/?filters%5Bstatus%5D=either&filters%5Boriginal_id%5D=6831324&filters%5Btranslation_id%5D=58732256
+		 */
+		\wp_register_script(
+			'pronamic-pay-admin-clipboard',
+			\plugins_url( '../../js/dist/admin-cb' . $min . '.js', __FILE__ ),
+			[ 'clipboard', 'jquery' ],
+			$this->plugin->get_version(),
+			true
+		);
+
 		// Enqueue.
 		wp_enqueue_style( 'pronamic-pay-admin' );
 		wp_enqueue_script( 'pronamic-pay-admin' );
@@ -777,7 +792,7 @@ class AdminModule {
 			'menu_title' => __( 'Settings', 'pronamic-ideal' ),
 			'capability' => 'manage_options',
 			'menu_slug'  => 'pronamic_pay_settings',
-			'function'   => function () {
+			'function'   => function (): void {
 				$this->render_page( 'settings' );
 			},
 		];
@@ -813,7 +828,7 @@ class AdminModule {
 			__( 'Pay', 'pronamic-ideal' ) . $pay_badge,
 			$minimum_capability,
 			'pronamic_ideal',
-			function () {
+			function (): void {
 				$this->render_page( 'dashboard' );
 			},
 			$menu_icon_url

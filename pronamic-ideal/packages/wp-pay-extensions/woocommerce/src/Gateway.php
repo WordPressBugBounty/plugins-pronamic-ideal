@@ -541,6 +541,8 @@ class Gateway extends WC_Payment_Gateway {
 		if ( \did_action( 'woocommerce_subscription_change_payment_method_via_pay_shortcode' ) ) {
 			$payment->set_meta( 'mollie_sequence_type', 'first' );
 
+			$payment->set_meta( 'woocommerce_subscription_change_payment_method', true );
+
 			/**
 			 * Use payment method minimum amount for verification payment.
 			 *
@@ -838,7 +840,7 @@ class Gateway extends WC_Payment_Gateway {
 			return $pronamic_subscriptions;
 		}
 
-		$woocommerce_subscriptions = \wcs_get_subscriptions_for_order( $order );
+		$woocommerce_subscriptions = \wcs_get_subscriptions_for_order( $order, [ 'order_type' => 'any' ] );
 
 		foreach ( $woocommerce_subscriptions as $woocommerce_subscription ) {
 			$pronamic_subscription = new Subscription();

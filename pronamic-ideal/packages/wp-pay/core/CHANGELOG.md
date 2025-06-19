@@ -6,6 +6,73 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 
 ## [Unreleased][unreleased]
 
+## [4.26.0] - 2025-06-19
+
+### Added
+
+- Added "Pay by Bank" payment method. ([6560cd4](https://github.com/pronamic/wp-pay-core/commit/6560cd4050d0016d069a371d65c75ea13f5441e4))
+
+### Changed
+
+- Marked `SubscriptionStatus::EXPIRED` officially declared as deprecated. ([f1f6f9c](https://github.com/pronamic/wp-pay-core/commit/f1f6f9cb194de941c2563373207c4110cfd169d7))
+- Improved subscription status changes with payment method changes (https://github.com/pronamic/pronamic.shop/issues/56). ([cbeaa01](https://github.com/pronamic/wp-pay-core/commit/cbeaa01d7e2699859df7e081d267bf4aa54765f5))
+- Improved documentation where nonce verification is not necessary or possible for WordPress.org plugin review team. ([ec442ab](https://github.com/pronamic/wp-pay-core/commit/ec442ab4b35506c0ef952e964b622436d53439ed))
+
+### Fixed
+
+- Fixed "Implicitly marking parameter as nullable is deprecated". ([1e75aeb](https://github.com/pronamic/wp-pay-core/commit/1e75aeb037fbc08a8a595702cdede9628822fa49))
+
+Full set of changes: [`4.25.4...4.26.0`][4.26.0]
+
+[4.26.0]: https://github.com/pronamic/wp-pay-core/compare/v4.25.4...v4.26.0
+
+## [4.25.4] - 2025-03-28
+
+### Commits
+
+- Sanitization for `register_setting()` #210 ([cd5bb34](https://github.com/pronamic/wp-pay-core/commit/cd5bb34d469ddc02936f41290c41fc044d4e07ac))
+
+Full set of changes: [`4.25.3...4.25.4`][4.25.4]
+
+[4.25.4]: https://github.com/pronamic/wp-pay-core/compare/v4.25.3...v4.25.4
+
+## [4.25.3] - 2025-03-27
+
+### Commits
+
+- For Jetpack Autoloader version 5 is WordPress 6.6 or higher required ([bbe9d74](https://github.com/pronamic/wp-pay-core/commit/bbe9d74c3b5d416df15184e2f136b963849b8e93))
+- Allow Jetpack Autoloader version 4 and 5, see https://github.com/pronamic/pronamic-pay-doneren-met-mollie/issues/11. ([5480bb6](https://github.com/pronamic/wp-pay-core/commit/5480bb64bddda55416c4a4ce4039b56f7987cb22))
+
+### Composer
+
+- Changed `automattic/jetpack-autoloader` from `^3.0` to `v5.0.5`.
+	Release notes: https://github.com/Automattic/jetpack-autoloader/releases/tag/v5.0.5
+
+Full set of changes: [`4.25.2...4.25.3`][4.25.3]
+
+[4.25.3]: https://github.com/pronamic/wp-pay-core/compare/v4.25.2...v4.25.3
+
+## [4.25.2] - 2025-03-14
+
+### Commits
+
+- Fixed #209 ([ffc7d85](https://github.com/pronamic/wp-pay-core/commit/ffc7d859c28382d04e9ce4d71167408a8c0426fb))
+
+Full set of changes: [`4.25.1...4.25.2`][4.25.2]
+
+[4.25.2]: https://github.com/pronamic/wp-pay-core/compare/v4.25.1...v4.25.2
+
+## [4.25.1] - 2025-03-14
+
+### Commits
+
+- Move clipboard script to JS files, see https://github.com/pronamic/wp-pay-core/issues/207 ([f1923ac](https://github.com/pronamic/wp-pay-core/commit/f1923acdb9169e2bf00928cf7bc66628e6cce6db))
+- Move actions links CSS to SASS file, inline is not allowed, see https://github.com/pronamic/wp-pay-core/issues/207 ([9995428](https://github.com/pronamic/wp-pay-core/commit/9995428f269798269e9e533c83575af7aa7afb0f))
+
+Full set of changes: [`4.25.0...4.25.1`][4.25.1]
+
+[4.25.1]: https://github.com/pronamic/wp-pay-core/compare/v4.25.0...v4.25.1
+
 ## [4.25.0] - 2025-02-14
 
 ### Commits

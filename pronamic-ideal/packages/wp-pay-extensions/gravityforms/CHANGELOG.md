@@ -7,6 +7,32 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 ## [Unreleased][unreleased]
 -
 
+## [4.10.1] - 2025-06-19
+
+### Commits
+
+- Allow Jetpack autoloader 3, 4 and 5 ([78ebc1a](https://github.com/pronamic/wp-pronamic-pay-gravityforms/commit/78ebc1adf44fa0f6bbd271f0a53a124d32e53e1a))
+
+### Composer
+
+- Changed `automattic/jetpack-autoloader` from `^3.0` to `v5.0.7`.
+	Release notes: https://github.com/Automattic/jetpack-autoloader/releases/tag/v5.0.7
+
+Full set of changes: [`4.10.0...4.10.1`][4.10.1]
+
+[4.10.1]: https://github.com/pronamic/wp-pronamic-pay-gravityforms/compare/v4.10.0...v4.10.1
+
+## [4.10.0] - 2025-06-19
+
+### Changed
+
+- Updated usage of `filter_*` functions. ([aaed06f](https://github.com/pronamic/wp-pronamic-pay-gravityforms/commit/aaed06f831893c8edf26695d0e89d93186b57453))
+- Use hash instead of nonce for redirect to payment confirmation. ([53dd567](https://github.com/pronamic/wp-pronamic-pay-gravityforms/commit/53dd5679b1490c0f3463fbb55fd8c7f13b59ec3a))
+
+Full set of changes: [`4.9.0...4.10.0`][4.10.0]
+
+[4.10.0]: https://github.com/pronamic/wp-pronamic-pay-gravityforms/compare/v4.9.0...v4.10.0
+
 ## [4.9.0] - 2025-02-14
 
 ### Commits

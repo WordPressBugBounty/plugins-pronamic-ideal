@@ -17,7 +17,6 @@ return array(
     'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\' => array($baseDir . '/packages/wp-pay-gateways/multisafepay/src'),
     'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\' => array($baseDir . '/packages/wp-pay-gateways/mollie/src'),
     'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\' => array($baseDir . '/packages/wp-pay-gateways/ogone/src'),
-    'Pronamic\\WordPress\\Pay\\Gateways\\Icepay\\' => array($baseDir . '/packages/wp-pay-gateways/icepay/src'),
     'Pronamic\\WordPress\\Pay\\Gateways\\IDeal\\' => array($baseDir . '/packages/wp-pay-gateways/ideal/src'),
     'Pronamic\\WordPress\\Pay\\Gateways\\IDealBasic\\' => array($baseDir . '/packages/wp-pay-gateways/ideal-basic/src'),
     'Pronamic\\WordPress\\Pay\\Gateways\\IDealAdvancedV3\\' => array($baseDir . '/packages/wp-pay-gateways/ideal-advanced-v3/src'),

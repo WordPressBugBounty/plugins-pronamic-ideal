@@ -4,8 +4,8 @@
  * Plugin URI: https://www.pronamic.eu/plugins/pronamic-pay-mollie/
  * Description: Extend the Pronamic Pay plugin with the Mollie gateway to receive payments through a variety of WordPress plugins.
  *
- * Version: 4.14.1
- * Requires at least: 5.9
+ * Version: 4.15.0
+ * Requires at least: 6.6
  * Requires PHP: 7.4
  *
  * Author: Pronamic
@@ -15,9 +15,6 @@
  * Domain Path: /languages/
  *
  * License: GPL-3.0-or-later
- *
- * Requires Plugins: pronamic-ideal
- * Depends: wp-pay/core
  *
  * GitHub URI: https://github.com/pronamic/wp-pronamic-pay-mollie
  *
@@ -51,7 +48,7 @@ add_filter(
 	function ( $gateways ) {
 		$gateways[] = new \Pronamic\WordPress\Pay\Gateways\Mollie\Integration(
 			[
-				'manual_url' => \__( 'https://www.pronamicpay.com/en/manuals/how-to-connect-mollie-to-wordpress-with-pronamic-pay/', 'pronamic-pay-with-mollie-for-gravity-forms' ),
+				'manual_url' => \__( 'https://www.pronamicpay.com/en/manuals/how-to-connect-mollie-to-wordpress-with-pronamic-pay/', 'pronamic-pay-mollie' ),
 			]
 		);
 

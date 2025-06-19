@@ -7,6 +7,73 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 ## [Unreleased][unreleased]
 -
 
+## [4.15.0] - 2025-06-19
+
+### Added
+
+- Added support for 'Pay by Bank' payment method. ([d704e72](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/d704e7208ddf4acdb6fb4de43a5ba51d0edd8ce0))
+
+### Changed
+
+- Follow Mollie recommendation VARCHAR(40) for API identifiers ([3237c99](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/3237c992868c1d0ec9f671f5a85a7efe29c87036))
+
+### Composer
+
+- Changed `pronamic/wp-mollie` from `^1.7` to `v1.9.0`.
+	Release notes: https://github.com/pronamic/wp-mollie/releases/tag/v1.9.0
+- Changed `wp-pay/core` from `^4.23` to `v4.26.0`.
+	Release notes: https://github.com/pronamic/wp-pay-core/releases/tag/v4.26.0
+
+Full set of changes: [`4.14.5...4.15.0`][4.15.0]
+
+[4.15.0]: https://github.com/pronamic/wp-pronamic-pay-mollie/compare/v4.14.5...v4.15.0
+
+## [4.14.5] - 2025-03-28
+
+### Commits
+
+- Modernize webhook controller with help from Rector. ([9cbec5e](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/9cbec5e73b6d70abca637c001a06875a927e325a))
+
+Full set of changes: [`4.14.4...4.14.5`][4.14.5]
+
+[4.14.5]: https://github.com/pronamic/wp-pronamic-pay-mollie/compare/v4.14.4...v4.14.5
+
+## [4.14.4] - 2025-03-27
+
+### Commits
+
+- For Jetpack Autoloader version 5 is WordPress 6.6 or higher required ([c437860](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/c4378604f106bfe51d785d2e7ac9b3f2104e9e34))
+- Allow Jetpack Autoloader version 4 and 5, see pronamic/pronamic-pay-doneren-met-mollie#11. ([0c0b93d](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/0c0b93d89a826e05de42ef6cbb70eb0c4cbef478))
+
+### Composer
+
+- Changed `automattic/jetpack-autoloader` from `^3.0` to `v5.0.5`.
+	Release notes: https://github.com/Automattic/jetpack-autoloader/releases/tag/v5.0.5
+
+Full set of changes: [`4.14.3...4.14.4`][4.14.4]
+
+[4.14.4]: https://github.com/pronamic/wp-pronamic-pay-mollie/compare/v4.14.3...v4.14.4
+
+## [4.14.3] - 2025-03-14
+
+### Removed
+
+- Removed inline CSS on WordPress admin user profile page for Mollie customers table.
+
+Full set of changes: [`4.14.2...4.14.3`][4.14.3]
+
+[4.14.3]: https://github.com/pronamic/wp-pronamic-pay-mollie/compare/v4.14.2...v4.14.3
+
+## [4.14.2] - 2025-03-14
+
+### Commits
+
+- Fixed text domain `pronamic-pay-mollie`, see https://github.com/pronamic/pronamic-pay-doneren-met-mollie/issues/8 ([09729e2](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/09729e20bd6bacbe1d3ebfdbdf8a5e435086815d))
+
+Full set of changes: [`4.14.1...4.14.2`][4.14.2]
+
+[4.14.2]: https://github.com/pronamic/wp-pronamic-pay-mollie/compare/v4.14.1...v4.14.2
+
 ## [4.14.1] - 2025-02-25
 
 ### Changed

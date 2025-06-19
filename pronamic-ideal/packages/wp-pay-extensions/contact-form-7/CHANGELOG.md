@@ -7,6 +7,31 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 ## [Unreleased][unreleased]
 -
 
+## [4.1.1] - 2025-06-19
+
+### Commits
+
+- Allow Jetpack autoload 3, 4 and 5. ([be7ae53](https://github.com/pronamic/wp-pronamic-pay-contact-form-7/commit/be7ae5379571828ccd5cb36c2618fe0b6cb432a8))
+
+### Composer
+
+- Changed `automattic/jetpack-autoloader` from `^3.1` to `v5.0.7`.
+	Release notes: https://github.com/Automattic/jetpack-autoloader/releases/tag/v5.0.7
+
+Full set of changes: [`4.1.0...4.1.1`][4.1.1]
+
+[4.1.1]: https://github.com/pronamic/wp-pronamic-pay-contact-form-7/compare/v4.1.0...v4.1.1
+
+## [4.1.0] - 2025-06-19
+
+### Changed
+
+- Use payment method option label if set. ([341c1ae](https://github.com/pronamic/wp-pronamic-pay-contact-form-7/commit/341c1aea16b6111dd5dfb71f96210f4002f24916))
+
+Full set of changes: [`4.0.1...4.1.0`][4.1.0]
+
+[4.1.0]: https://github.com/pronamic/wp-pronamic-pay-contact-form-7/compare/v4.0.1...v4.1.0
+
 ## [4.0.1] - 2025-03-03
 
 ### Fixed

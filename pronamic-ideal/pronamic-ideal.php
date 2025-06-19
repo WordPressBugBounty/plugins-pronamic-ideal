@@ -4,7 +4,7 @@
  * Plugin URI: https://www.pronamic.eu/plugins/pronamic-pay/
  * Description: The Pronamic Pay plugin adds payment methods like iDEAL, Bancontact, credit card and more to your WordPress site for a variety of payment providers.
  *
- * Version: 9.15.1
+ * Version: 9.16.0
  * Requires at least: 5.9
  * Requires PHP: 8.1
  *
@@ -214,9 +214,6 @@ add_filter(
 				'dashboard_url' => 'https://test.ipg-online.com/vt/login',
 			]
 		);
-
-		// ICEPAY.
-		$gateways[] = new \Pronamic\WordPress\Pay\Gateways\Icepay\Integration();
 
 		// iDEAL Simulator - iDEAL Professional / Advanced / Zelfbouw.
 		$gateways[] = new \Pronamic\WordPress\Pay\Gateways\IDealAdvancedV3\Integration(
