@@ -3,7 +3,7 @@
  * Gateway
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Gateways\Adyen
  */
@@ -30,7 +30,7 @@ class Gateway extends Core_Gateway {
 	 * @link https://www.npmjs.com/package/@adyen/adyen-web
 	 * @var string
 	 */
-	const SDK_VERSION = '5.27.0';
+	const SDK_VERSION = '6.16.0';
 
 	/**
 	 * Config.

@@ -3,7 +3,7 @@
  * Subscriptions follow-up payments controller
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Subscriptions
  */
@@ -25,13 +25,13 @@ class SubscriptionsFollowUpPaymentsController {
 	 * @return void
 	 */
 	public function setup() {
-		\add_action( 'init', [ $this, 'maybe_schedule_actions' ] );
+		\add_action( 'init', $this->maybe_schedule_actions( ... ) );
 
-		\add_action( 'pronamic_pay_schedule_follow_up_payments', [ $this, 'schedule_all' ] );
+		\add_action( 'pronamic_pay_schedule_follow_up_payments', $this->schedule_all( ... ) );
 
-		\add_action( 'pronamic_pay_schedule_subscriptions_follow_up_payment', [ $this, 'schedule_paged' ] );
+		\add_action( 'pronamic_pay_schedule_subscriptions_follow_up_payment', $this->schedule_paged( ... ) );
 
-		\add_action( 'pronamic_pay_create_subscription_follow_up_payment', [ $this, 'action_create_subscription_follow_up_payment' ] );
+		\add_action( 'pronamic_pay_create_subscription_follow_up_payment', $this->action_create_subscription_follow_up_payment( ... ) );
 
 		$this->cli();
 	}
@@ -190,9 +190,7 @@ class SubscriptionsFollowUpPaymentsController {
 
 		$posts = \array_filter(
 			$query->posts,
-			function ( $post ) {
-				return ( $post instanceof WP_Post );
-			}
+			fn( $post ) => $post instanceof WP_Post
 		);
 
 		$subscriptions = [];
@@ -351,7 +349,6 @@ class SubscriptionsFollowUpPaymentsController {
 	 * Get query start date for subscriptions that require a follow-up payment.
 	 *
 	 * @return \DateTimeImmutable
-	 * @throws \Exception Throws exception in case of error.
 	 */
 	private function get_follow_up_payment_query_start_date() {
 		return new \DateTimeImmutable( '-1 day', new \DateTimeZone( 'GMT' ) );
@@ -361,7 +358,6 @@ class SubscriptionsFollowUpPaymentsController {
 	 * Get query end date for subscriptions that require a follow-up payment.
 	 *
 	 * @return \DateTimeImmutable
-	 * @throws \Exception Throws exception in case of error.
 	 */
 	private function get_follow_up_payment_query_end_date() {
 		return new \DateTimeImmutable( 'now', new \DateTimeZone( 'GMT' ) );

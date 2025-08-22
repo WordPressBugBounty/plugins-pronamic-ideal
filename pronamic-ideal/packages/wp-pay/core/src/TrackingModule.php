@@ -3,7 +3,7 @@
  * Tracking module.
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -65,7 +65,7 @@ class TrackingModule {
 
 		foreach ( $plugins as $slug => $plugin ) {
 			foreach ( $extensions as $extension ) {
-				if ( false === \stristr( $slug, $extension ) ) {
+				if ( false === \stristr( $slug, (string) $extension ) ) {
 					continue;
 				}
 

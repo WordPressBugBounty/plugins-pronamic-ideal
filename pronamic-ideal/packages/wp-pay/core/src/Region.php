@@ -3,7 +3,7 @@
  * Region
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -20,7 +20,7 @@ use stdClass;
  * @version 2.1.6
  * @since   2.1.6
  */
-class Region {
+class Region implements \Stringable {
 	/**
 	 * Value.
 	 *
@@ -167,7 +167,7 @@ class Region {
 	 *
 	 * @return string
 	 */
-	public function __toString() {
+	public function __toString(): string {
 		if ( is_string( $this->value ) ) {
 			return $this->value;
 		}
@@ -180,16 +180,5 @@ class Region {
 		$values = array_filter( $values );
 
 		return implode( ' - ', $values );
-	}
-
-	/**
-	 * Anonymize.
-	 *
-	 * @return void
-	 */
-	public function anonymize() {
-		$this->set_value( PrivacyManager::anonymize_data( 'text', $this->get_value() ) );
-		$this->set_code( PrivacyManager::anonymize_data( 'text', $this->get_code() ) );
-		$this->set_name( PrivacyManager::anonymize_data( 'text', $this->get_name() ) );
 	}
 }

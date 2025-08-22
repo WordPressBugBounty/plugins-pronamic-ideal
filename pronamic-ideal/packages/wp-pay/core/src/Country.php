@@ -3,7 +3,7 @@
  * Country
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -20,7 +20,7 @@ use stdClass;
  * @version 2.2.6
  * @since   2.1.6
  */
-class Country {
+class Country implements \Stringable {
 	/**
 	 * Code.
 	 *
@@ -134,7 +134,7 @@ class Country {
 	 *
 	 * @return string
 	 */
-	public function __toString() {
+	public function __toString(): string {
 		$values = [
 			$this->code,
 			$this->name,
@@ -143,15 +143,5 @@ class Country {
 		$values = array_filter( $values );
 
 		return implode( ' - ', $values );
-	}
-
-	/**
-	 * Anonymize.
-	 *
-	 * @return void
-	 */
-	public function anonymize() {
-		$this->set_code( PrivacyManager::anonymize_data( 'text', $this->get_code() ) );
-		$this->set_name( PrivacyManager::anonymize_data( 'text', $this->get_name() ) );
 	}
 }

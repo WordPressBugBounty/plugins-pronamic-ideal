@@ -3,7 +3,7 @@
  * Line type transformer
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Gateways\Mollie
  */
@@ -17,7 +17,7 @@ use Pronamic\WordPress\Pay\Payments\PaymentLineType;
 /**
  * Line type transformer class
  *
- * @link https://docs.mollie.com/reference/v2/orders-api/create-order
+ * @link https://docs.mollie.com/reference/create-payment
  */
 class LineTypeTransformer {
 	/**
@@ -45,10 +45,6 @@ class LineTypeTransformer {
 			return null;
 		}
 
-		if ( isset( self::$map[ $payment_line_type ] ) ) {
-			return self::$map[ $payment_line_type ];
-		}
-
-		return null;
+		return self::$map[ $payment_line_type ] ?? null;
 	}
 }

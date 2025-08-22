@@ -3,7 +3,7 @@
  * Refund
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Refunds
  */
@@ -21,7 +21,7 @@ use WP_User;
 /**
  * Title: Refund
  * Description:
- * Copyright: 2005-2024 Pronamic
+ * Copyright: 2005-2025 Pronamic
  * Company: Pronamic
  *
  * @author  Reüel van der Steege
@@ -48,7 +48,7 @@ class Refund implements JsonSerializable {
 	 *
 	 * @var Payment Payment.
 	 */
-	private Payment $payment;
+	private readonly Payment $payment;
 
 	/**
 	 * Amount to refund.

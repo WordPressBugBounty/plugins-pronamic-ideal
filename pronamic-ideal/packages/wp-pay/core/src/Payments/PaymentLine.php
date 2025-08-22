@@ -3,7 +3,7 @@
  * Payment line
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Payments
  */
@@ -22,7 +22,7 @@ use Pronamic\WordPress\Pay\MoneyJsonTransformer;
  * @version 2.2.6
  * @since   2.1.0
  */
-class PaymentLine {
+class PaymentLine implements \Stringable {
 	/**
 	 * The ID.
 	 *
@@ -262,7 +262,7 @@ class PaymentLine {
 	 * @return void
 	 */
 	public function set_unit_price( Money $price = null ) {
-		$this->unit_price = ( null === $price ? null : $price );
+		$this->unit_price = ( $price ?? null );
 	}
 
 	/**
@@ -537,7 +537,7 @@ class PaymentLine {
 	 *
 	 * @return string
 	 */
-	public function __toString() {
+	public function __toString(): string {
 		$parts = [
 			$this->get_id(),
 			$this->get_description(),

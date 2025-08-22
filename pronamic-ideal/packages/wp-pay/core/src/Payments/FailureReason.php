@@ -3,7 +3,7 @@
  * Failure reason.
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -17,7 +17,7 @@ namespace Pronamic\WordPress\Pay\Payments;
  * @since   2.2.8
  * @version 2.2.8
  */
-class FailureReason {
+class FailureReason implements \Stringable {
 	/**
 	 * Code.
 	 *
@@ -120,7 +120,7 @@ class FailureReason {
 	 *
 	 * @return string
 	 */
-	public function __toString() {
+	public function __toString(): string {
 		$code    = $this->get_code();
 		$message = $this->get_message();
 

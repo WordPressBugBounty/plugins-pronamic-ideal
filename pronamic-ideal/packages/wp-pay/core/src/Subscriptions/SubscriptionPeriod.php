@@ -3,7 +3,7 @@
  * Subscription Period
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Subscriptions
  */
@@ -11,7 +11,6 @@
 namespace Pronamic\WordPress\Pay\Subscriptions;
 
 use Pronamic\WordPress\DateTime\DateTime;
-use Pronamic\WordPress\DateTime\DateTimeImmutable;
 use Pronamic\WordPress\Money\Money;
 use Pronamic\WordPress\Pay\MoneyJsonTransformer;
 use Pronamic\WordPress\Pay\Payments\Payment;
@@ -142,7 +141,7 @@ class SubscriptionPeriod {
 	/**
 	 * From JSON.
 	 *
-	 * @param object $json Subscription period JSON.
+	 * @param mixed $json Subscription period JSON.
 	 * @return SubscriptionPeriod
 	 * @throws \InvalidArgumentException Throws exception on invalid JSON.
 	 * @throws \Exception                Throws exception on problem.

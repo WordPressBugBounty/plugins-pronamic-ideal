@@ -3,7 +3,7 @@
  * Payment methods collection
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Core
  */
@@ -68,9 +68,7 @@ class PaymentMethodsCollection implements IteratorAggregate, Countable {
 
 			$items = \array_filter(
 				$items,
-				function ( $payment_method ) use ( $id_list ) {
-					return \in_array( $payment_method->get_id(), $id_list, true );
-				}
+				fn( $payment_method ) => \in_array( $payment_method->get_id(), $id_list, true )
 			);
 		}
 
@@ -79,9 +77,7 @@ class PaymentMethodsCollection implements IteratorAggregate, Countable {
 
 			$items = \array_filter(
 				$items,
-				function ( $payment_method ) use ( $status_list ) {
-					return \in_array( $payment_method->get_status(), $status_list, true );
-				}
+				fn( $payment_method ) => \in_array( $payment_method->get_status(), $status_list, true )
 			);
 		}
 
@@ -90,9 +86,7 @@ class PaymentMethodsCollection implements IteratorAggregate, Countable {
 
 			$items = \array_filter(
 				$items,
-				function ( $payment_method ) use ( $feature ) {
-					return $payment_method->supports( $feature );
-				}
+				fn( $payment_method ) => $payment_method->supports( $feature )
 			);
 		}
 

@@ -3,7 +3,7 @@
  * Payment Merge Tags Controller
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Gateways
  */
@@ -26,18 +26,14 @@ class PaymentMergeTagsController extends MergeTagsController {
 		$this->add_merge_tag(
 			new MergeTag(
 				'payment_id',
-				function () use ( $payment ) {
-					return $payment->get_id();
-				}
+				fn() => $payment->get_id()
 			)
 		);
 
 		$this->add_merge_tag(
 			new MergeTag(
 				'order_id',
-				function () use ( $payment ) {
-					return $payment->get_order_id();
-				}
+				fn() => $payment->get_order_id()
 			)
 		);
 

@@ -16,13 +16,11 @@ use Pronamic\WordPress\Money\TaxedMoney;
 use Pronamic\WordPress\Number\Number;
 use Pronamic\WordPress\Pay\Address;
 use Pronamic\WordPress\Pay\Core\Field;
-use Pronamic\WordPress\Pay\Customer;
 use Pronamic\WordPress\Pay\ContactName;
 use Pronamic\WordPress\Pay\Core\PaymentMethods;
 use Pronamic\WordPress\Pay\Payments\Payment;
 use Pronamic\WordPress\Pay\Payments\PaymentLines;
 use Pronamic\WordPress\Pay\Payments\PaymentLineType;
-use Pronamic\WordPress\Pay\Payments\PaymentStatus;
 use Pronamic\WordPress\Pay\Refunds\Refund;
 use Pronamic\WordPress\Pay\Plugin;
 use Pronamic\WordPress\Pay\Region;
@@ -111,7 +109,7 @@ class Gateway extends WC_Payment_Gateway {
 			]
 		);
 
-		$this->id = isset( $this->gateway_args['id'] ) ? $this->gateway_args['id'] : static::ID;
+		$this->id = $this->gateway_args['id'] ?? static::ID;
 
 		if ( isset( $this->gateway_args['payment_method'] ) ) {
 			$this->payment_method = $this->gateway_args['payment_method'];
@@ -176,7 +174,7 @@ class Gateway extends WC_Payment_Gateway {
 
 		add_action( $update_action, [ $this, 'process_admin_options' ] );
 
-		add_action( 'woocommerce_after_checkout_validation', [ $this, 'after_checkout_validation' ], 10, 2 );
+		add_action( 'woocommerce_after_checkout_validation', $this->after_checkout_validation( ... ), 10, 2 );
 
 		// Has fields?
 		if ( 'yes' === $this->enabled ) {
@@ -193,7 +191,7 @@ class Gateway extends WC_Payment_Gateway {
 		$this->maybe_add_subscriptions_support();
 
 		if ( $this->supports( 'subscriptions' ) ) {
-			\add_action( 'woocommerce_scheduled_subscription_payment_' . $this->id, [ $this, 'process_subscription_payment' ], 10, 2 );
+			\add_action( 'woocommerce_scheduled_subscription_payment_' . $this->id, $this->process_subscription_payment( ... ), 10, 2 );
 		}
 
 		$this->icon = $this->get_pronamic_icon_url();
@@ -386,7 +384,7 @@ class Gateway extends WC_Payment_Gateway {
 
 	/**
 	 * Get show iDEAL issuers default.
-	 * 
+	 *
 	 * @return bool
 	 */
 	private function get_show_show_ideal_issuers_default() {
@@ -462,7 +460,7 @@ class Gateway extends WC_Payment_Gateway {
 						[
 							'page'    => 'wc-settings',
 							'tab'     => 'checkout',
-							'section' => sanitize_title( __CLASS__ ),
+							'section' => sanitize_title( self::class ),
 						],
 						admin_url( 'admin.php' )
 					)
@@ -552,28 +550,33 @@ class Gateway extends WC_Payment_Gateway {
 			$total_amount = $payment->get_total_amount();
 
 			if ( $total_amount->is_zero() ) {
-				switch ( $payment->get_payment_method() ) {
-					case PaymentMethods::BANCONTACT:
-					case PaymentMethods::DIRECT_DEBIT_BANCONTACT:
-						$amount = 0.02;
-
-						break;
-					case PaymentMethods::DIRECT_DEBIT_SOFORT:
-					case PaymentMethods::SOFORT:
-						$amount = 0.10;
-
-						break;
-					case PaymentMethods::APPLE_PAY:
-					case PaymentMethods::CREDIT_CARD:
-					case PaymentMethods::PAYPAL:
-						$amount = 0.00;
-
-						break;
-					default:
-						$amount = 0.01;
-				}
+				$amount = match ( $payment->get_payment_method() ) {
+					PaymentMethods::BANCONTACT, PaymentMethods::DIRECT_DEBIT_BANCONTACT => 0.02,
+					PaymentMethods::DIRECT_DEBIT_SOFORT, PaymentMethods::SOFORT => 0.10,
+					PaymentMethods::APPLE_PAY, PaymentMethods::CARD, PaymentMethods::CREDIT_CARD, PaymentMethods::PAYPAL => 0.00,
+					default => 0.01,
+				};
 
 				$total_amount = new Money( $amount, $total_amount->get_currency() );
+
+				$lines = new PaymentLines();
+
+				$line = $lines->new_line();
+
+				// Set line properties.
+				$name = \sprintf(
+					/* translators: %s: order number */
+					\__( 'Change payment method for order %s', 'pronamic-ideal' ),
+					$order->get_order_number()
+				);
+
+				$line->set_type( PaymentLineType::DIGITAL );
+				$line->set_name( $name );
+				$line->set_quantity( 1 );
+				$line->set_unit_price( $total_amount );
+				$line->set_total_amount( $total_amount );
+
+				$payment->set_lines( $lines );
 
 				$payment->set_total_amount( $total_amount );
 			}

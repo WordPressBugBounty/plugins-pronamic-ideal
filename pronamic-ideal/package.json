@@ -1,6 +1,6 @@
 {
 	"name": "pronamic-pay",
-	"version": "9.16.0",
+	"version": "9.17.0",
 	"description": "The Pronamic Pay plugin adds payment methods like iDEAL, Bancontact, credit card and more to your WordPress site for a variety of payment providers.",
 	"author": {
 		"name": "Pronamic",
@@ -34,8 +34,8 @@
 		"last 2 versions"
 	],
 	"devDependencies": {
-		"@wordpress/env": "^9.9.0",
-		"@wordpress/scripts": "^29.0.0"
+		"@wordpress/env": "^10.29.0",
+		"@wordpress/scripts": "^30.22.0"
 	},
 	"private": true,
 	"prettier": "@wordpress/prettier-config",

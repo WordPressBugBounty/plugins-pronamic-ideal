@@ -3,7 +3,7 @@
  * Mollie resource.
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Mollie
  */
@@ -20,11 +20,4 @@ class ResourceType {
 	 * @var string
 	 */
 	const PAYMENTS = 'payments';
-
-	/**
-	 * Constant for orders.
-	 *
-	 * @var string
-	 */
-	const ORDERS = 'orders';
 }

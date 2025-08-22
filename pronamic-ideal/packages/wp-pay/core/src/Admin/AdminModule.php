@@ -3,7 +3,7 @@
  * Admin Module
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Admin
  */
@@ -11,17 +11,13 @@
 namespace Pronamic\WordPress\Pay\Admin;
 
 use Pronamic\WordPress\DateTime\DateTimeImmutable;
-use Pronamic\WordPress\Money\TaxedMoney;
 use Pronamic\WordPress\Number\Number;
-use Pronamic\WordPress\Money\Currency;
 use Pronamic\WordPress\Money\Money;
 use Pronamic\WordPress\Pay\Address;
-use Pronamic\WordPress\Pay\AddressHelper;
 use Pronamic\WordPress\Pay\ContactName;
 use Pronamic\WordPress\Pay\ContactNameHelper;
 use Pronamic\WordPress\Pay\Core\Util;
 use Pronamic\WordPress\Pay\CreditCard;
-use Pronamic\WordPress\Pay\Customer;
 use Pronamic\WordPress\Pay\CustomerHelper;
 use Pronamic\WordPress\Pay\Payments\Payment;
 use Pronamic\WordPress\Pay\Payments\PaymentLines;
@@ -89,14 +85,14 @@ class AdminModule {
 		$this->plugin = $plugin;
 
 		// Actions.
-		add_action( 'admin_init', [ $this, 'admin_init' ] );
-		add_action( 'admin_menu', [ $this, 'admin_menu' ] );
+		add_action( 'admin_init', $this->admin_init( ... ) );
+		add_action( 'admin_menu', $this->admin_menu( ... ) );
 
-		add_action( 'load-post.php', [ $this, 'maybe_test_payment' ] );
+		add_action( 'load-post.php', $this->maybe_test_payment( ... ) );
 
-		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_scripts' ] );
+		add_action( 'admin_enqueue_scripts', $this->enqueue_scripts( ... ) );
 
-		add_filter( 'parent_file', [ $this, 'admin_menu_parent_file' ] );
+		add_filter( 'parent_file', $this->admin_menu_parent_file( ... ) );
 
 		// Modules.
 		$this->settings  = new AdminSettings( $plugin );
@@ -276,12 +272,12 @@ class AdminModule {
 	 */
 	private function should_enqueue_scripts( $hook ) {
 		// Check if the hook contains the value 'pronamic_pay'.
-		if ( false !== strpos( $hook, 'pronamic_pay' ) ) {
+		if ( str_contains( $hook, 'pronamic_pay' ) ) {
 			return true;
 		}
 
 		// Check if the hook contains the value 'pronamic_ideal'.
-		if ( false !== strpos( $hook, 'pronamic_ideal' ) ) {
+		if ( str_contains( $hook, 'pronamic_ideal' ) ) {
 			return true;
 		}
 
@@ -368,7 +364,7 @@ class AdminModule {
 
 		/**
 		 * Clipboard feature.
-		 * 
+		 *
 		 * @link https://github.com/WordPress/WordPress/blob/68e3310c024d7fceb84a5028e955ad163de6bd45/wp-includes/js/plupload/handlers.js#L364-L393
 		 * @link https://translate.wordpress.org/projects/wp/dev/nl/default/?filters%5Bstatus%5D=either&filters%5Boriginal_id%5D=10763746&filters%5Btranslation_id%5D=91929960
 		 * @link https://translate.wordpress.org/projects/wp/dev/nl/default/?filters%5Bstatus%5D=either&filters%5Boriginal_id%5D=6831324&filters%5Btranslation_id%5D=58732256
@@ -406,16 +402,6 @@ class AdminModule {
 		if ( \array_key_exists( 'test_currency_code', $_POST ) ) {
 			$currency_code = \sanitize_text_field( \wp_unslash( $_POST['test_currency_code'] ) );
 		}
-
-		$value = array_key_exists( 'test_amount', $_POST ) ? \sanitize_text_field( \wp_unslash( $_POST['test_amount'] ) ) : '';
-
-		try {
-			$amount = Number::from_string( $value );
-		} catch ( \Exception $e ) {
-			\wp_die( \esc_html( $e->getMessage() ) );
-		}
-
-		$price = new TaxedMoney( $amount, $currency_code, 0, 0 );
 
 		/*
 		 * Payment.
@@ -492,46 +478,86 @@ class AdminModule {
 
 		$payment->set_customer( $customer );
 
-		// Billing address.
-		$address = AddressHelper::from_array(
-			[
-				'name'         => $name,
-				'email'        => $user->user_email,
-				'phone'        => null === $customer ? null : $customer->get_phone(),
-				'line_1'       => 'Billing Line 1',
-				'postal_code'  => '1234 AB',
-				'city'         => 'Billing City',
-				'country_code' => 'NL',
-			]
-		);
-
-		$payment->set_billing_address( $address );
-
-		$address = AddressHelper::from_array(
-			[
-				'name'         => $name,
-				'email'        => $user->user_email,
-				'phone'        => null === $customer ? null : $customer->get_phone(),
-				'line_1'       => 'Shipping Line 1',
-				'postal_code'  => '5678 XY',
-				'city'         => 'Shipping City',
-				'country_code' => 'NL',
-			]
-		);
-
-		$payment->set_shipping_address( $address );
-
 		// Lines.
+		$lines_data = \array_map(
+			function ( $item ) {
+				if ( ! \is_array( $item ) ) {
+					return [];
+				}
+
+				return \array_map( 'sanitize_text_field', $item );
+			},
+			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Input is sanitized, see code above.
+			\wp_unslash( $_POST['lines'] ?? [] )
+		);
+
 		$payment->lines = new PaymentLines();
 
-		$line = $payment->lines->new_line();
+		foreach ( $lines_data as $item ) {
+			$line = $payment->lines->new_line();
 
-		$line->set_name( __( 'Test', 'pronamic-ideal' ) );
-		$line->set_unit_price( $price );
-		$line->set_quantity( 1 );
-		$line->set_total_amount( $price );
+			try {
+				$value = $this->get_optional_value( $item, 'price' );
+
+				$amount = Number::from_mixed( $value );
+			} catch ( \Exception $e ) {
+				\wp_die( \esc_html( $e->getMessage() ) );
+			}
+
+			$quantity = $this->get_optional_value( $item, 'quantity' ) ?? 1;
+
+			$unit_price   = new Money( $amount, $currency_code );
+			$total_amount = $unit_price->multiply( $quantity );
+
+			$line->set_name( $this->get_optional_value( $item, 'name' ) );
+			$line->set_unit_price( $unit_price );
+			$line->set_quantity( (int) $quantity );
+			$line->set_total_amount( $total_amount );
+		}
 
 		$payment->set_total_amount( $payment->lines->get_amount() );
+
+		// Billing address.
+		$billing_data = \array_map( 'sanitize_text_field', \wp_unslash( $_POST['billing'] ?? [] ) );
+
+		$name = new ContactName();
+		$name->set_first_name( $this->get_optional_value( $billing_data, 'first_name' ) );
+		$name->set_last_name( $this->get_optional_value( $billing_data, 'last_name' ) );
+
+		$billing_address = new Address();
+		$billing_address->set_name( $name );
+		$billing_address->set_company_name( $this->get_optional_value( $billing_data, 'company' ) );
+		$billing_address->set_line_1( $this->get_optional_value( $billing_data, 'line_1' ) );
+		$billing_address->set_line_2( $this->get_optional_value( $billing_data, 'line_2' ) );
+		$billing_address->set_city( $this->get_optional_value( $billing_data, 'city' ) );
+		$billing_address->set_postal_code( $this->get_optional_value( $billing_data, 'postal_code' ) );
+		$billing_address->set_country_code( $this->get_optional_value( $billing_data, 'country_code' ) );
+		$billing_address->set_region( $this->get_optional_value( $billing_data, 'state' ) );
+		$billing_address->set_email( $this->get_optional_value( $billing_data, 'email' ) );
+		$billing_address->set_phone( $this->get_optional_value( $billing_data, 'phone' ) );
+
+		$payment->set_billing_address( $billing_address );
+
+		// Shipping address.
+		$shipping_data = \array_map( 'sanitize_text_field', \wp_unslash( $_POST['shipping'] ?? [] ) );
+
+		$name = new ContactName();
+		$name->set_first_name( $this->get_optional_value( $shipping_data, 'first_name' ) );
+		$name->set_last_name( $this->get_optional_value( $shipping_data, 'last_name' ) );
+
+		$shipping_address = new Address();
+		$shipping_address->set_name( $name );
+		$shipping_address->set_company_name( $this->get_optional_value( $shipping_data, 'company' ) );
+		$shipping_address->set_line_1( $this->get_optional_value( $shipping_data, 'line_1' ) );
+		$shipping_address->set_line_2( $this->get_optional_value( $shipping_data, 'line_2' ) );
+		$shipping_address->set_city( $this->get_optional_value( $shipping_data, 'city' ) );
+		$shipping_address->set_postal_code( $this->get_optional_value( $shipping_data, 'postal_code' ) );
+		$shipping_address->set_country_code( $this->get_optional_value( $shipping_data, 'country_code' ) );
+		$shipping_address->set_region( $this->get_optional_value( $shipping_data, 'state' ) );
+		$shipping_address->set_email( $this->get_optional_value( $shipping_data, 'email' ) );
+		$shipping_address->set_phone( $this->get_optional_value( $shipping_data, 'phone' ) );
+
+		$payment->set_shipping_address( $shipping_address );
 
 		// Subscription.
 		$test_subscription = \filter_input( \INPUT_POST, 'pronamic_pay_test_subscription', \FILTER_VALIDATE_BOOLEAN );
@@ -549,7 +575,7 @@ class AdminModule {
 				$subscription,
 				new DateTimeImmutable(),
 				new SubscriptionInterval( 'P' . $interval . Util::to_period( $interval_period ) ),
-				$price
+				$payment->get_total_amount()
 			);
 
 			// Ends on.
@@ -614,6 +640,27 @@ class AdminModule {
 	}
 
 	/**
+	 * Get an optional value from the data array.
+	 *
+	 * @param array<string, string> $data Data array.
+	 * @param string                $key  Key to retrieve the value for.
+	 * @return string|null
+	 */
+	private function get_optional_value( array $data, string $key ) {
+		if ( ! array_key_exists( $key, $data ) ) {
+			return null;
+		}
+
+		$value = $data[ $key ];
+
+		if ( '' === $value ) {
+			return null;
+		}
+
+		return $value;
+	}
+
+	/**
 	 * Admin menu parent file.
 	 *
 	 * @param string $parent_file Parent file for admin menu.
@@ -625,15 +672,10 @@ class AdminModule {
 		if ( null === $screen ) {
 			return $parent_file;
 		}
-
-		switch ( $screen->id ) {
-			case AdminGatewayPostType::POST_TYPE:
-			case AdminPaymentPostType::POST_TYPE:
-			case AdminSubscriptionPostType::POST_TYPE:
-				return 'pronamic_ideal';
-		}
-
-		return $parent_file;
+		return match ( $screen->id ) {
+			AdminGatewayPostType::POST_TYPE, AdminPaymentPostType::POST_TYPE, AdminSubscriptionPostType::POST_TYPE => 'pronamic_ideal',
+			default => $parent_file,
+		};
 	}
 
 	/**
@@ -741,7 +783,7 @@ class AdminModule {
 				continue;
 			}
 
-			$title = \array_key_exists( 'title', $badge ) && \is_string( $badge['title'] ) ? $badge['title'] : '';
+			$title = \is_string( $badge['title'] ) ? $badge['title'] : '';
 
 			$badge['html'] = \sprintf(
 				' <span class="awaiting-mod update-plugins count-%1$d" title="%2$s"><span class="processing-count">%1$d</span></span>',
@@ -801,7 +843,7 @@ class AdminModule {
 
 		try {
 			$menu_icon_url = $this->get_menu_icon_url();
-		} catch ( \Exception $e ) {
+		} catch ( \Exception ) {
 			// @todo Log.
 
 			/**
@@ -907,37 +949,14 @@ class AdminModule {
 	 * @return string
 	 */
 	public static function get_post_status_icon_class( $post_status ) {
-		switch ( $post_status ) {
-			case 'payment_pending':
-			case 'subscr_pending':
-				return 'pronamic-pay-icon-pending';
-
-			case 'payment_cancelled':
-			case 'subscr_cancelled':
-				return 'pronamic-pay-icon-cancelled';
-
-			case 'payment_completed':
-			case 'subscr_completed':
-				return 'pronamic-pay-icon-completed';
-
-			case 'payment_refunded':
-				return 'pronamic-pay-icon-refunded';
-
-			case 'payment_failed':
-			case 'subscr_failed':
-				return 'pronamic-pay-icon-failed';
-
-			case 'payment_on_hold':
-			case 'payment_expired':
-			case 'subscr_expired':
-			case 'subscr_on_hold':
-				return 'pronamic-pay-icon-on-hold';
-
-			case 'payment_authorized':
-			case 'payment_reserved':
-			case 'subscr_active':
-			default:
-				return 'pronamic-pay-icon-processing';
-		}
+		return match ( $post_status ) {
+			'payment_pending', 'subscr_pending' => 'pronamic-pay-icon-pending',
+			'payment_cancelled', 'subscr_cancelled' => 'pronamic-pay-icon-cancelled',
+			'payment_completed', 'subscr_completed' => 'pronamic-pay-icon-completed',
+			'payment_refunded' => 'pronamic-pay-icon-refunded',
+			'payment_failed', 'subscr_failed' => 'pronamic-pay-icon-failed',
+			'payment_on_hold', 'payment_expired', 'subscr_expired', 'subscr_on_hold' => 'pronamic-pay-icon-on-hold',
+			default => 'pronamic-pay-icon-processing',
+		};
 	}
 }

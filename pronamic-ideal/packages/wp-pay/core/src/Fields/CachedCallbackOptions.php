@@ -3,7 +3,7 @@
  * Cached callback options
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Core
  */
@@ -30,7 +30,7 @@ class CachedCallbackOptions implements IteratorAggregate {
 	/**
 	 * Callback.
 	 *
-	 * @var callable: array<SelectFieldOption|SelectFieldOptionGroup>
+	 * @var callable(): array<SelectFieldOption|SelectFieldOptionGroup>
 	 */
 	private $callback;
 

@@ -3,7 +3,7 @@
  * Widget Payment Status List
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -44,7 +44,7 @@ $url = \add_query_arg(
 				<a href="<?php echo \esc_url( \add_query_arg( 'post_status', $payment_status, $url ) ); ?>">
 					<?php
 
-					$count = isset( $counts->$payment_status ) ? $counts->$payment_status : 0;
+					$count = $counts->$payment_status ?? 0;
 
 					echo \wp_kses(
 						\sprintf(

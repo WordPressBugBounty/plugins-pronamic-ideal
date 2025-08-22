@@ -3,7 +3,7 @@
  * Meta Box Gateway Settings
  *
  * @author Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license GPL-3.0-or-later
  * @package Pronamic\WordPress\Pay
  * @var \Pronamic\WordPress\Pay\Plugin       $plugin     Plugin.
@@ -14,7 +14,6 @@
 
 use Pronamic\WordPress\Html\Element;
 use Pronamic\WordPress\Pay\Admin\AdminGatewayPostType;
-use Pronamic\WordPress\Pay\Util;
 use Pronamic\WordPress\Pay\Webhooks\WebhookRequestInfo;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -29,6 +28,17 @@ if ( null === $integration ) {
 
 $fields = $integration->get_settings_fields();
 
+/**
+ * PHPStan hint.
+ *
+ * @link https://phpstan.org/writing-php-code/phpdoc-types#array-shapes
+ * @link https://phpstan.org/writing-php-code/phpdoc-types#object-shapes
+ *
+ * @var array<string, object{
+ *     title: string,
+ *     fields: array<int, array<string, mixed>>
+ * }&\stdClass>
+ */
 $sections = [
 	'general'         => (object) [
 		'title'  => __( 'General', 'pronamic-ideal' ),
@@ -126,9 +136,7 @@ foreach ( $fields as $field_id => $field ) {
 
 $sections = array_filter(
 	$sections,
-	function ( $section ) {
-		return ! empty( $section->fields );
-	}
+	fn( $section ) => ! empty( $section->fields )
 );
 
 ?>

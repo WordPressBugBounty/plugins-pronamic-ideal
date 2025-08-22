@@ -3,7 +3,7 @@
  * Select field
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Core
  */
@@ -38,7 +38,7 @@ class SelectField extends Field {
 	/**
 	 * Set options.
 	 *
-	 * @param iterable<SelectFieldOption|SelectFieldOptionGroup|CachedCallbackOptions> $options Options.
+	 * @param iterable<SelectFieldOption|SelectFieldOptionGroup> $options Options.
 	 * @return void
 	 */
 	public function set_options( $options ) {

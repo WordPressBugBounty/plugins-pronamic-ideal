@@ -13,8 +13,10 @@ namespace Pronamic\WordPress\Pay\Extensions\WooCommerce;
 use Pronamic\WordPress\Pay\Payments\Payment;
 use Pronamic\WordPress\Pay\Payments\PaymentStatus;
 use Pronamic\WordPress\Pay\Subscriptions\Subscription;
+use WC_Order;
 use WC_Subscription;
 use WC_Subscriptions_Change_Payment_Gateway;
+use WP_Post;
 
 /**
  * WooCommerce Subscriptions controller class
@@ -46,11 +48,11 @@ class WooCommerceSubscriptionsController {
 	 * @return void
 	 */
 	public function setup() {
-		if ( \has_action( 'plugins_loaded', [ $this, 'plugins_loaded' ] ) ) {
+		if ( \has_action( 'plugins_loaded', $this->plugins_loaded( ... ) ) ) {
 			return;
 		}
 
-		\add_action( 'plugins_loaded', [ $this, 'plugins_loaded' ] );
+		\add_action( 'plugins_loaded', $this->plugins_loaded( ... ) );
 	}
 
 	/**
@@ -63,19 +65,19 @@ class WooCommerceSubscriptionsController {
 			return;
 		}
 
-		\add_filter( 'pronamic_subscription_source_text_' . Extension::SLUG, [ __CLASS__, 'subscription_source_text' ], 10, 2 );
-		\add_filter( 'pronamic_subscription_source_description_' . Extension::SLUG, [ __CLASS__, 'subscription_source_description' ], 10, 2 );
-		\add_filter( 'pronamic_subscription_source_url_' . Extension::SLUG, [ __CLASS__, 'subscription_source_url' ], 10, 2 );
+		\add_filter( 'pronamic_subscription_source_text_' . Extension::SLUG, self::subscription_source_text( ... ), 10, 2 );
+		\add_filter( 'pronamic_subscription_source_description_' . Extension::SLUG, self::subscription_source_description( ... ), 10, 2 );
+		\add_filter( 'pronamic_subscription_source_url_' . Extension::SLUG, self::subscription_source_url( ... ), 10, 2 );
 
 		\add_action( 'woocommerce_update_subscription', [ __NAMESPACE__ . '\SubscriptionUpdater', 'maybe_update_pronamic_subscription' ], 20, 1 );
 
-		\add_filter( 'woocommerce_subscriptions_update_payment_via_pay_shortcode', [ $this, 'maybe_dont_update_payment_method' ], 10, 2 );
+		\add_filter( 'woocommerce_subscriptions_update_payment_via_pay_shortcode', $this->maybe_dont_update_payment_method( ... ), 10, 2 );
 
 		if ( \is_admin() ) {
-			\add_action( 'add_meta_boxes', [ $this, 'maybe_add_pronamic_pay_meta_box_to_wc_subscription' ], 10, 2 );
+			\add_action( 'add_meta_boxes', $this->maybe_add_pronamic_pay_meta_box_to_wc_subscription( ... ), 10, 2 );
 		}
 
-		\add_action( 'pronamic_payment_status_update_' . Extension::SLUG, [ $this, 'status_update' ], 10, 1 );
+		\add_action( 'pronamic_payment_status_update_' . Extension::SLUG, $this->status_update( ... ), 10, 1 );
 	}
 
 	/**
@@ -252,7 +254,7 @@ class WooCommerceSubscriptionsController {
 		\add_meta_box(
 			'woocommerce-subscription-pronamic-pay',
 			\__( 'Pronamic Pay', 'pronamic-ideal' ),
-			function () use ( $subscription ) {
+			function () use ( $subscription ): void {
 				include __DIR__ . '/../views/admin-meta-box-woocommerce-subscription.php';
 			},
 			$post_type_or_screen_id,

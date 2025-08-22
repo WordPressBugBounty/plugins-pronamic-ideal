@@ -3,7 +3,7 @@
  * Pages Controller
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -20,9 +20,9 @@ class PagesController {
 	 * @return void
 	 */
 	public function setup() {
-		\add_action( 'init', [ $this, 'init' ] );
+		\add_action( 'init', $this->init( ... ) );
 
-		\add_action( 'admin_init', [ $this, 'admin_init' ] );
+		\add_action( 'admin_init', $this->admin_init( ... ) );
 	}
 
 	/**
@@ -57,7 +57,7 @@ class PagesController {
 		\add_settings_section(
 			'pronamic_pay_pages',
 			__( 'Payment Status Pages', 'pronamic-ideal' ),
-			[ $this, 'settings_section' ],
+			$this->settings_section( ... ),
 			'pronamic_pay'
 		);
 
@@ -65,7 +65,7 @@ class PagesController {
 			\add_settings_field(
 				$page['option_name'],
 				$page['post_title'],
-				[ $this, 'input_page' ],
+				$this->input_page( ... ),
 				'pronamic_pay',
 				'pronamic_pay_pages',
 				[
@@ -157,7 +157,7 @@ class PagesController {
 
 		try {
 			$this->create_pages( $pages );
-		} catch ( \Exception $e ) {
+		} catch ( \Exception ) {
 			$url_args = [
 				'page'    => 'pronamic_pay_settings',
 				'message' => 'pages-not-generated',

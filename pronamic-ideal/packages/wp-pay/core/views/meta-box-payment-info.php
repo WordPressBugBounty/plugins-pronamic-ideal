@@ -3,7 +3,7 @@
  * Meta Box Payment Info
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  * @var \Pronamic\WordPress\Pay\Plugin $plugin Plugin.
@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				$status_label = $payment->get_status_label();
 
-				echo \esc_html( ( null === $status_label ) ? '—' : $status_label );
+				echo \esc_html( $status_label ?? '—' );
 
 				printf(
 					' — %s',
@@ -192,8 +192,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			$payment_method = $payment->get_payment_method();
 
 			// Name.
-			$name = PaymentMethods::get_name( $payment_method );
-			$name = ( null === $name ) ? $payment_method : $name;
+			$name   = PaymentMethods::get_name( $payment_method );
+			$name ??= $payment_method;
 
 			$gateway = Plugin::get_gateway( (int) $payment->get_config_id() );
 
@@ -796,35 +796,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php endif ?>
 
-		<?php if ( null !== $payment->get_mode() ) : ?>
+		<tr>
+			<th scope="row">
+				<?php esc_html_e( 'Mode', 'pronamic-ideal' ); ?>
+			</th>
+			<td>
+				<?php
 
-			<tr>
-				<th scope="row">
-					<?php esc_html_e( 'Mode', 'pronamic-ideal' ); ?>
-				</th>
-				<td>
-					<?php
+				switch ( $payment->get_mode() ) {
+					case 'live':
+						esc_html_e( 'Live', 'pronamic-ideal' );
 
-					switch ( $payment->get_mode() ) {
-						case 'live':
-							esc_html_e( 'Live', 'pronamic-ideal' );
+						break;
+					case 'test':
+						esc_html_e( 'Test', 'pronamic-ideal' );
 
-							break;
-						case 'test':
-							esc_html_e( 'Test', 'pronamic-ideal' );
+						break;
+					default:
+						echo esc_html( $payment->get_mode() );
 
-							break;
-						default:
-							echo esc_html( $payment->get_mode() );
+						break;
+				}
 
-							break;
-					}
-
-					?>
-				</td>
-			</tr>
-
-		<?php endif ?>
+				?>
+			</td>
+		</tr>
 
 	<?php endif; ?>
 

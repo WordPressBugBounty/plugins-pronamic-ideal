@@ -3,7 +3,7 @@
  * Payment Post Type
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Admin
  */
@@ -11,7 +11,6 @@
 namespace Pronamic\WordPress\Pay\Admin;
 
 use Pronamic\WordPress\Pay\Core\PaymentMethods;
-use Pronamic\WordPress\Pay\Payments\Payment;
 use Pronamic\WordPress\Pay\Payments\PaymentPostType;
 use Pronamic\WordPress\Pay\Plugin;
 use WP_Post;
@@ -53,26 +52,25 @@ class AdminPaymentPostType {
 	public function __construct( $plugin ) {
 		$this->plugin = $plugin;
 
-		add_filter( 'request', [ $this, 'request' ] );
+		add_filter( 'request', $this->request( ... ) );
 
-		add_filter( 'manage_edit-' . self::POST_TYPE . '_columns', [ $this, 'columns' ] );
-		add_filter( 'manage_edit-' . self::POST_TYPE . '_sortable_columns', [ $this, 'sortable_columns' ] );
-		add_filter( 'list_table_primary_column', [ $this, 'primary_column' ], 10, 2 );
+		add_filter( 'manage_edit-' . self::POST_TYPE . '_columns', $this->columns( ... ) );
+		add_filter( 'manage_edit-' . self::POST_TYPE . '_sortable_columns', $this->sortable_columns( ... ) );
+		add_filter( 'list_table_primary_column', $this->primary_column( ... ), 10, 2 );
 
-		add_action( 'manage_' . self::POST_TYPE . '_posts_custom_column', [ $this, 'custom_columns' ], 10, 2 );
+		add_action( 'manage_' . self::POST_TYPE . '_posts_custom_column', $this->custom_columns( ... ), 10, 2 );
 
-		add_action( 'load-post.php', [ $this, 'maybe_process_payment_action' ] );
-		add_action( 'load-post.php', [ $this, 'maybe_display_anonymized_notice' ] );
+		add_action( 'load-post.php', $this->maybe_process_payment_action( ... ) );
 
-		add_action( 'admin_notices', [ $this, 'admin_notices' ] );
+		add_action( 'admin_notices', $this->admin_notices( ... ) );
 
-		add_action( 'add_meta_boxes', [ $this, 'add_meta_boxes' ] );
+		add_action( 'add_meta_boxes', $this->add_meta_boxes( ... ) );
 
-		add_filter( 'post_row_actions', [ $this, 'post_row_actions' ], 10, 2 );
+		add_filter( 'post_row_actions', $this->post_row_actions( ... ), 10, 2 );
 
-		add_filter( 'default_hidden_columns', [ $this, 'default_hidden_columns' ] );
+		add_filter( 'default_hidden_columns', $this->default_hidden_columns( ... ) );
 
-		add_filter( 'post_updated_messages', [ $this, 'post_updated_messages' ] );
+		add_filter( 'post_updated_messages', $this->post_updated_messages( ... ) );
 
 		// Bulk Actions.
 		new AdminPaymentBulkActions();
@@ -152,43 +150,6 @@ class AdminPaymentPostType {
 				'message' => __( 'Payment status updated.', 'pronamic-ideal' ),
 			];
 		}
-	}
-
-	/**
-	 * Maybe display anonymized notice.
-	 *
-	 * @link https://developer.wordpress.org/reference/functions/get_current_screen/
-	 * @return void
-	 */
-	public function maybe_display_anonymized_notice() {
-		if ( ! \current_user_can( 'edit_payments' ) ) {
-			return;
-		}
-
-		$screen = \get_current_screen();
-
-		if ( null === $screen || 'post' !== $screen->base || 'pronamic_payment' !== $screen->post_type ) {
-			return;
-		}
-
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- This check is for display purposes only, no data modification occurs.
-		if ( ! \array_key_exists( 'post', $_GET ) ) {
-			return;
-		}
-
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- This check is for display purposes only, no data modification occurs.
-		$post_id = \absint( \wp_unslash( $_GET['post'] ) );
-
-		$payment = new Payment( $post_id );
-
-		if ( ! $payment->is_anonymized() ) {
-			return;
-		}
-
-		$this->admin_notices[] = [
-			'type'    => 'info',
-			'message' => \__( 'This payment has been anonymized. Personal details are not available anymore.', 'pronamic-ideal' ),
-		];
 	}
 
 	/**
@@ -545,7 +506,7 @@ class AdminPaymentPostType {
 		add_meta_box(
 			'pronamic_payment',
 			__( 'Payment', 'pronamic-ideal' ),
-			[ $this, 'meta_box_info' ],
+			$this->meta_box_info( ... ),
 			$post_type,
 			'normal',
 			'high'
@@ -554,7 +515,7 @@ class AdminPaymentPostType {
 		add_meta_box(
 			'pronamic_payment_lines',
 			__( 'Payment Lines', 'pronamic-ideal' ),
-			[ $this, 'meta_box_lines' ],
+			$this->meta_box_lines( ... ),
 			$post_type,
 			'normal',
 			'high'
@@ -566,7 +527,7 @@ class AdminPaymentPostType {
 			\add_meta_box(
 				'pronamic_payment_subscription',
 				\__( 'Subscription', 'pronamic-ideal' ),
-				[ $this, 'meta_box_subscription' ],
+				$this->meta_box_subscription( ... ),
 				$post_type,
 				'normal',
 				'high'
@@ -576,7 +537,7 @@ class AdminPaymentPostType {
 		\add_meta_box(
 			'pronamic_payment_refunds',
 			\__( 'Refunds', 'pronamic-ideal' ),
-			[ $this, 'meta_box_refunds' ],
+			$this->meta_box_refunds( ... ),
 			$post_type,
 			'normal',
 			'high'
@@ -585,7 +546,7 @@ class AdminPaymentPostType {
 		add_meta_box(
 			'pronamic_payment_notes',
 			__( 'Notes', 'pronamic-ideal' ),
-			[ $this, 'meta_box_notes' ],
+			$this->meta_box_notes( ... ),
 			$post_type,
 			'normal',
 			'high'
@@ -594,7 +555,7 @@ class AdminPaymentPostType {
 		add_meta_box(
 			'pronamic_payment_update',
 			__( 'Update', 'pronamic-ideal' ),
-			[ $this, 'meta_box_update' ],
+			$this->meta_box_update( ... ),
 			$post_type,
 			'side',
 			'high'
@@ -717,7 +678,7 @@ class AdminPaymentPostType {
 		global $post;
 
 		// @link https://translate.wordpress.org/projects/wp/4.4.x/admin/nl/default?filters[status]=either&filters[original_id]=2352797&filters[translation_id]=37948900
-		$scheduled_date = date_i18n( __( 'M j, Y @ H:i', 'pronamic-ideal' ), strtotime( $post->post_date ) );
+		$scheduled_date = date_i18n( __( 'M j, Y @ H:i', 'pronamic-ideal' ), strtotime( (string) $post->post_date ) );
 
 		$messages[ self::POST_TYPE ] = [
 			0  => '', // Unused. Messages start at index 1.

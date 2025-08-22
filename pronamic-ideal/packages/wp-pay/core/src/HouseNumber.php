@@ -3,7 +3,7 @@
  * House number
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -20,7 +20,7 @@ use stdClass;
  * @version 2.2.6
  * @since   2.1.6
  */
-class HouseNumber {
+class HouseNumber implements \Stringable {
 	/**
 	 * Value.
 	 *
@@ -167,18 +167,7 @@ class HouseNumber {
 	 *
 	 * @return string
 	 */
-	public function __toString() {
+	public function __toString(): string {
 		return strval( $this->value );
-	}
-
-	/**
-	 * Anonymize.
-	 *
-	 * @return void
-	 */
-	public function anonymize() {
-		$this->set_value( PrivacyManager::anonymize_data( 'text', $this->get_value() ) );
-		$this->set_base( PrivacyManager::anonymize_data( 'text', $this->get_base() ) );
-		$this->set_addition( PrivacyManager::anonymize_data( 'text', $this->get_addition() ) );
 	}
 }

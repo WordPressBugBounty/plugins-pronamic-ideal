@@ -3,7 +3,7 @@
  * Action Scheduler Controller
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -20,7 +20,7 @@ class ActionSchedulerController {
 	 * @return void
 	 */
 	public function setup() {
-		\add_action( 'action_scheduler_begin_execute', [ $this, 'begin_execute' ], 10, 2 );
+		\add_action( 'action_scheduler_begin_execute', $this->begin_execute( ... ), 10, 2 );
 	}
 
 	/**

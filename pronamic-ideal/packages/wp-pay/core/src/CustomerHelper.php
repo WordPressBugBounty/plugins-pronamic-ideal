@@ -3,7 +3,7 @@
  * Customer helper
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -106,9 +106,7 @@ class CustomerHelper {
 		if ( null === $customer->get_user_agent() && isset( $_SERVER['HTTP_USER_AGENT'] ) ) {
 			$user_agent = \sanitize_text_field( \wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) );
 
-			if ( false !== $user_agent ) {
-				$customer->set_user_agent( $user_agent );
-			}
+			$customer->set_user_agent( $user_agent );
 		}
 
 		// User IP.
@@ -179,27 +177,6 @@ class CustomerHelper {
 	}
 
 	/**
-	 * Anonymize customer.
-	 *
-	 * @param Customer $customer Customer to anonymize.
-	 * @return void
-	 */
-	public static function anonymize_customer( Customer $customer ) {
-		$customer->set_gender( PrivacyManager::anonymize_data( 'text', $customer->get_gender() ) );
-		$customer->set_birth_date( null );
-		$customer->set_email( PrivacyManager::anonymize_data( 'email_mask', $customer->get_email() ) );
-		$customer->set_phone( PrivacyManager::anonymize_data( 'phone', $customer->get_phone() ) );
-		$customer->set_ip_address( PrivacyManager::anonymize_ip( $customer->get_ip_address() ) );
-		$customer->set_user_agent( PrivacyManager::anonymize_data( 'text', $customer->get_user_agent() ) );
-
-		$name = $customer->get_name();
-
-		if ( null !== $name ) {
-			ContactNameHelper::anonymize_name( $name );
-		}
-	}
-
-	/**
 	 * Create a customer from an array.
 	 *
 	 * @param array $data Data.
@@ -208,9 +185,7 @@ class CustomerHelper {
 	public static function from_array( $data ) {
 		$data = \array_filter(
 			$data,
-			function ( $value ) {
-				return ( null !== $value ) && ( '' !== $value );
-			}
+			fn( $value ) => ( null !== $value ) && ( '' !== $value )
 		);
 
 		if ( empty( $data ) ) {

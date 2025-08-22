@@ -3,7 +3,7 @@
  * Gateway Post Type
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -37,12 +37,12 @@ class GatewayPostType {
 		 *
 		 * @link https://github.com/WordPress/WordPress/blob/4.0/wp-includes/post.php#L167
 		 */
-		add_action( 'init', [ $this, 'register_gateway_post_type' ], 0 ); // Highest priority.
+		add_action( 'init', $this->register_gateway_post_type( ... ), 0 ); // Highest priority.
 
-		add_action( 'save_post_' . self::POST_TYPE, [ $this, 'maybe_set_default_gateway' ] );
+		add_action( 'save_post_' . self::POST_TYPE, $this->maybe_set_default_gateway( ... ) );
 
 		// REST API.
-		add_action( 'rest_api_init', [ $this, 'rest_api_init' ] );
+		add_action( 'rest_api_init', $this->rest_api_init( ... ) );
 	}
 
 	/**
@@ -165,10 +165,8 @@ class GatewayPostType {
 			'/gateways/(?P<config_id>\d+)',
 			[
 				'methods'             => 'GET',
-				'callback'            => [ $this, 'rest_api_gateway' ],
-				'permission_callback' => function () {
-					return \current_user_can( 'manage_options' );
-				},
+				'callback'            => $this->rest_api_gateway( ... ),
+				'permission_callback' => fn() => \current_user_can( 'manage_options' ),
 				'args'                => [
 					'config_id' => [
 						'description' => __( 'Gateway configuration ID.', 'pronamic-ideal' ),
@@ -183,10 +181,8 @@ class GatewayPostType {
 			'/gateways/(?P<config_id>\d+)/admin',
 			[
 				'methods'             => 'GET',
-				'callback'            => [ $this, 'rest_api_gateway_admin' ],
-				'permission_callback' => function () {
-					return current_user_can( 'manage_options' );
-				},
+				'callback'            => $this->rest_api_gateway_admin( ... ),
+				'permission_callback' => fn() => current_user_can( 'manage_options' ),
 				'args'                => [
 					'config_id'    => [
 						'description' => __( 'Gateway configuration ID.', 'pronamic-ideal' ),

@@ -3,14 +3,12 @@
  * Meta Box Gateway Config
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  * @var \Pronamic\WordPress\Pay\Plugin $plugin Plugin.
  * @var \WP_Post                       $post   Post.
  */
-
-use Pronamic\WordPress\Pay\Util;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -20,9 +18,7 @@ $integrations = iterator_to_array( $plugin->gateway_integrations );
 
 usort(
 	$integrations,
-	function ( $integration_a, $integration_b ) {
-		return strcasecmp( (string) $integration_a->get_name(), (string) $integration_b->get_name() );
-	}
+	fn( $integration_a, $integration_b ) => strcasecmp( (string) $integration_a->get_name(), (string) $integration_b->get_name() )
 );
 
 // Sections.
@@ -34,9 +30,7 @@ $gateway_id = get_post_meta( $config_id, '_pronamic_gateway_id', true );
 if ( empty( $gateway_id ) && 1 === count( $integrations ) ) {
 	$integration = reset( $integrations );
 
-	if ( false !== $integration ) {
-		$gateway_id = $integration->get_id();
-	}
+	$gateway_id = $integration->get_id();
 }
 
 ?>

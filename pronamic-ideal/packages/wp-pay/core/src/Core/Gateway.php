@@ -3,27 +3,22 @@
  * Gateway
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Core
  */
 
 namespace Pronamic\WordPress\Pay\Core;
 
-use Pronamic\WordPress\Html\Element;
 use Pronamic\WordPress\Pay\Core\Util as Core_Util;
 use Pronamic\WordPress\Pay\Fields\Field;
 use Pronamic\WordPress\Pay\Payments\Payment;
-use Pronamic\WordPress\Pay\Plugin;
 use Pronamic\WordPress\Pay\Refunds\Refund;
-use Pronamic\WordPress\Pay\Subscriptions\Subscription;
-use Pronamic\WordPress\Pay\Util as PayUtil;
-use WP_Error;
 
 /**
  * Title: Gateway
  * Description:
- * Copyright: 2005-2024 Pronamic
+ * Copyright: 2005-2025 Pronamic
  * Company: Pronamic
  *
  * @author  Remco Tolsma
@@ -288,7 +283,7 @@ abstract class Gateway {
 		$action_url = $payment->get_action_url();
 
 		if ( empty( $action_url ) ) {
-			throw new \Exception( 'Action URL is empty, can not redirect.' );
+			$action_url = $payment->get_return_redirect_url();
 		}
 
 		// Redirect, See Other.

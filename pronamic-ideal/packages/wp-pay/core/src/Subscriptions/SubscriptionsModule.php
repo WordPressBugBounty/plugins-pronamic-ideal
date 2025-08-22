@@ -3,7 +3,7 @@
  * Subscriptions Module
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Subscriptions
  */
@@ -21,7 +21,7 @@ use Pronamic\WordPress\Pay\Plugin;
 /**
  * Title: Subscriptions module
  * Description:
- * Copyright: 2005-2024 Pronamic
+ * Copyright: 2005-2025 Pronamic
  * Company: Pronamic
  *
  * @link https://woocommerce.com/2017/04/woocommerce-3-0-release/
@@ -39,13 +39,6 @@ class SubscriptionsModule {
 	public $plugin;
 
 	/**
-	 * Privacy.
-	 *
-	 * @var SubscriptionsPrivacy
-	 */
-	public $privacy;
-
-	/**
 	 * Construct and initialize a subscriptions module object.
 	 *
 	 * @param Plugin $plugin The plugin.
@@ -53,32 +46,29 @@ class SubscriptionsModule {
 	public function __construct( Plugin $plugin ) {
 		$this->plugin = $plugin;
 
-		// Subscriptions privacy exporters and erasers.
-		$this->privacy = new SubscriptionsPrivacy();
-
 		// Actions.
-		\add_action( 'wp_loaded', [ $this, 'maybe_handle_subscription_action' ] );
+		\add_action( 'wp_loaded', $this->maybe_handle_subscription_action( ... ) );
 
-		\add_action( 'init', [ $this, 'maybe_schedule_subscription_events' ] );
+		\add_action( 'init', $this->maybe_schedule_subscription_events( ... ) );
 
 		// Exclude subscription notes.
-		\add_filter( 'comments_clauses', [ $this, 'exclude_subscription_comment_notes' ], 10, 2 );
+		\add_filter( 'comments_clauses', $this->exclude_subscription_comment_notes( ... ), 10, 2 );
 
-		\add_action( 'pronamic_pay_pre_create_subscription', [ SubscriptionHelper::class, 'complement_subscription' ], 10, 1 );
-		\add_action( 'pronamic_pay_pre_create_payment', [ $this, 'complement_subscription_by_payment' ], 10, 1 );
+		\add_action( 'pronamic_pay_pre_create_subscription', SubscriptionHelper::complement_subscription( ... ), 10, 1 );
+		\add_action( 'pronamic_pay_pre_create_payment', $this->complement_subscription_by_payment( ... ), 10, 1 );
 
 		// Payment source filters.
-		\add_filter( 'pronamic_payment_source_text_subscription_payment_method_change', [ $this, 'source_text_subscription_payment_method_change' ] );
-		\add_filter( 'pronamic_payment_source_description_subscription_payment_method_change', [ $this, 'source_description_subscription_payment_method_change' ] );
+		\add_filter( 'pronamic_payment_source_text_subscription_payment_method_change', $this->source_text_subscription_payment_method_change( ... ) );
+		\add_filter( 'pronamic_payment_source_description_subscription_payment_method_change', $this->source_description_subscription_payment_method_change( ... ) );
 
 		// Listen to payment status changes so we can update related subscriptions.
-		\add_action( 'pronamic_payment_status_update', [ $this, 'payment_status_update' ] );
+		\add_action( 'pronamic_payment_status_update', $this->payment_status_update( ... ) );
 
 		// Listen to subscription status changes so we can log these in a note.
-		\add_action( 'pronamic_subscription_status_update', [ $this, 'log_subscription_status_update' ], 10, 4 );
+		\add_action( 'pronamic_subscription_status_update', $this->log_subscription_status_update( ... ), 10, 4 );
 
 		// REST API.
-		\add_action( 'rest_api_init', [ $this, 'rest_api_init' ] );
+		\add_action( 'rest_api_init', $this->rest_api_init( ... ) );
 
 		// Follow-up payments.
 		$follow_up_payments_controller = new SubscriptionsFollowUpPaymentsController();
@@ -244,7 +234,7 @@ class SubscriptionsModule {
 
 		try {
 			$subscription->add_note( $note );
-		} catch ( \Exception $e ) {
+		} catch ( \Exception ) {
 			return;
 		}
 	}
@@ -285,8 +275,7 @@ class SubscriptionsModule {
 			// phpcs:enable WordPress.Security.NonceVerification.Recommended
 			case 'cancel':
 				$this->handle_subscription_cancel( $subscription );
-
-				break;
+				// Handle subscription cancel will never return.
 			case 'renew':
 				$this->handle_subscription_renew( $subscription );
 
@@ -302,9 +291,9 @@ class SubscriptionsModule {
 	 * Handle cancel subscription action request.
 	 *
 	 * @param Subscription $subscription Subscription to cancel.
-	 * @return void
+	 * @return never
 	 */
-	private function handle_subscription_cancel( Subscription $subscription ) {
+	private function handle_subscription_cancel( Subscription $subscription ): never {
 		$this->maybe_cancel_subscription( $subscription );
 
 		require __DIR__ . '/../../views/subscription-cancel.php';
@@ -355,26 +344,6 @@ class SubscriptionsModule {
 	}
 
 	/**
-	 * Check if subscription should be renewed.
-	 *
-	 * @param Subscription $subscription Subscription.
-	 * @return bool
-	 */
-	private function should_renew( Subscription $subscription ) {
-		if ( ! \array_key_exists( 'pronamic_pay_renew_subscription_nonce', $_POST ) ) {
-			return false;
-		}
-
-		$nonce = \sanitize_key( $_POST['pronamic_pay_renew_subscription_nonce'] );
-
-		if ( ! wp_verify_nonce( $nonce, 'pronamic_pay_renew_subscription_' . $subscription->get_id() ) ) {
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
 	 * Handle renew subscription action request.
 	 *
 	 * @param Subscription $subscription Subscription to renew.
@@ -400,7 +369,27 @@ class SubscriptionsModule {
 			exit;
 		}
 
-		if ( $this->should_renew( $subscription ) ) {
+		if ( \array_key_exists( 'pronamic_pay_renew_subscription_nonce', $_POST ) ) {
+			$nonce      = \sanitize_key( $_POST['pronamic_pay_renew_subscription_nonce'] );
+			$start_date = '';
+			$end_date   = '';
+
+			if ( \array_key_exists( 'pronamic_pay_renew_subscription_start_date', $_POST ) ) {
+				$start_date = \sanitize_text_field( \wp_unslash( $_POST['pronamic_pay_renew_subscription_start_date'] ) );
+			}
+
+			if ( \array_key_exists( 'pronamic_pay_renew_subscription_end_date', $_POST ) ) {
+				$end_date = \sanitize_text_field( \wp_unslash( $_POST['pronamic_pay_renew_subscription_end_date'] ) );
+			}
+
+			$action = \sprintf( 'pronamic_pay_renew_subscription_%s_%s_%s', $subscription->get_id(), $start_date, $end_date );
+
+			if ( ! \wp_verify_nonce( $nonce, $action ) ) {
+				require __DIR__ . '/../../views/subscription-renew-failed.php';
+
+				exit;
+			}
+
 			try {
 				// Create payment.
 				$payment = $subscription->new_payment();
@@ -435,13 +424,11 @@ class SubscriptionsModule {
 				}
 
 				// Set payment period.
-				$renewal_period = $subscription->get_renewal_period();
+				$renewal_period = new SubscriptionPeriod( $current_phase, new \DateTime( $start_date ), new \DateTime( $end_date ), $current_phase->get_amount() );
 
-				if ( null !== $renewal_period ) {
-					$payment->set_total_amount( $renewal_period->get_amount() );
+				$payment->set_total_amount( $renewal_period->get_amount() );
 
-					$payment->add_period( $renewal_period );
-				}
+				$payment->add_period( $renewal_period );
 
 				// Start payment.
 				$payment = Plugin::start_payment( $payment );
@@ -533,24 +520,12 @@ class SubscriptionsModule {
 				 *
 				 * @link https://help.mollie.com/hc/en-us/articles/115000667365-What-are-the-minimum-and-maximum-amounts-per-payment-method-
 				 */
-				switch ( $payment->get_payment_method() ) {
-					case PaymentMethods::DIRECT_DEBIT_BANCONTACT:
-						$amount = 0.02;
-
-						break;
-					case PaymentMethods::DIRECT_DEBIT_SOFORT:
-						$amount = 0.10;
-
-						break;
-					case PaymentMethods::APPLE_PAY:
-					case PaymentMethods::CREDIT_CARD:
-					case PaymentMethods::PAYPAL:
-						$amount = 0.00;
-
-						break;
-					default:
-						$amount = 0.01;
-				}
+				$amount = match ( $payment->get_payment_method() ) {
+					PaymentMethods::DIRECT_DEBIT_BANCONTACT => 0.02,
+					PaymentMethods::DIRECT_DEBIT_SOFORT => 0.10,
+					PaymentMethods::APPLE_PAY, PaymentMethods::CARD, PaymentMethods::CREDIT_CARD, PaymentMethods::PAYPAL => 0.00,
+					default => 0.01,
+				};
 
 				$total_amount = new Money(
 					$amount,
@@ -699,10 +674,8 @@ class SubscriptionsModule {
 			'/subscriptions/(?P<subscription_id>\d+)',
 			[
 				'methods'             => 'GET',
-				'callback'            => [ $this, 'rest_api_subscription' ],
-				'permission_callback' => function () {
-					return \current_user_can( 'edit_payments' );
-				},
+				'callback'            => $this->rest_api_subscription( ... ),
+				'permission_callback' => fn() => \current_user_can( 'edit_payments' ),
 				'args'                => [
 					'subscription_id' => [
 						'description' => __( 'Subscription ID.', 'pronamic-ideal' ),
@@ -717,10 +690,8 @@ class SubscriptionsModule {
 			'/subscriptions/(?P<subscription_id>\d+)/phases/(?P<sequence_number>\d+)',
 			[
 				'methods'             => 'GET',
-				'callback'            => [ $this, 'rest_api_subscription_phase' ],
-				'permission_callback' => function () {
-					return \current_user_can( 'edit_payments' );
-				},
+				'callback'            => $this->rest_api_subscription_phase( ... ),
+				'permission_callback' => fn() => \current_user_can( 'edit_payments' ),
 				'args'                => [
 					'subscription_id' => [
 						'description' => __( 'Subscription ID.', 'pronamic-ideal' ),

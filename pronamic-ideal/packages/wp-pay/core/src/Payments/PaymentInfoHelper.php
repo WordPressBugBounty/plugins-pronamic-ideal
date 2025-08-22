@@ -3,20 +3,18 @@
  * Payment info helper
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
 
 namespace Pronamic\WordPress\Pay\Payments;
 
-use Pronamic\WordPress\DateTime\DateTime;
 use Pronamic\WordPress\Pay\Banks\BankAccountDetails;
 use Pronamic\WordPress\Pay\Banks\BankTransferDetails;
 use Pronamic\WordPress\Pay\Address;
 use Pronamic\WordPress\Pay\Customer;
 use Pronamic\WordPress\Pay\MoneyJsonTransformer;
-use Pronamic\WordPress\Pay\Plugin;
 
 /**
  * Payment info helper
@@ -113,15 +111,7 @@ class PaymentInfoHelper {
 			$object->bank_transfer_recipient_details = $bank_transfer_recipient_details->get_json();
 		}
 
-		$mode = $payment_info->get_mode();
-
-		if ( null !== $mode ) {
-			$object->mode = $mode;
-		}
-
-		if ( $payment_info->is_anonymized() ) {
-			$object->anonymized = $payment_info->is_anonymized();
-		}
+		$object->mode = $payment_info->get_mode();
 
 		$version = $payment_info->get_version();
 
@@ -227,10 +217,6 @@ class PaymentInfoHelper {
 
 		if ( isset( $json->mode ) ) {
 			$payment_info->set_mode( $json->mode );
-		}
-
-		if ( isset( $json->anonymized ) ) {
-			$payment_info->set_anonymized( $json->anonymized );
 		}
 
 		if ( isset( $json->version ) ) {

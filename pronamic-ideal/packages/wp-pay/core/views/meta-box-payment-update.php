@@ -3,7 +3,7 @@
  * Meta Box Payment Update
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -58,7 +58,7 @@ $post_author = empty( $post_author ) ? '-' : $post_author;
 
 			$status_label = $payment->get_status_label();
 
-			$status_label = ( null === $status_label ) ? '—' : $status_label;
+			$status_label ??= '—';
 
 			?>
 			<span id="pronamic-pay-post-status-display"><?php echo esc_html( $status_label ); ?></span>

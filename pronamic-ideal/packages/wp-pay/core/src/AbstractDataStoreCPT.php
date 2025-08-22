@@ -3,7 +3,7 @@
  * Abstract Data Store Custom Post Type
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Payments
  */
@@ -25,39 +25,11 @@ use Pronamic\WordPress\DateTime\DateTimeZone;
  */
 abstract class AbstractDataStoreCPT {
 	/**
-	 * Registered meta keys.
-	 *
-	 * @var array
-	 */
-	protected $meta = [];
-
-	/**
 	 * Meta key prefix.
 	 *
 	 * @var string
 	 */
 	public $meta_key_prefix = '';
-
-	/**
-	 * Register meta keys.
-	 *
-	 * @param string $meta_key Meta key to register.
-	 * @param array  $args     Settings for meta key.
-	 *
-	 * @return void
-	 */
-	protected function register_meta_key( $meta_key, $args ) {
-		$this->meta[ $meta_key ] = $args;
-	}
-
-	/**
-	 * Get registered meta.
-	 *
-	 * @return array
-	 */
-	public function get_registered_meta() {
-		return $this->meta;
-	}
 
 	/**
 	 * Get a prefixed meta key for the specified key.
@@ -121,7 +93,7 @@ abstract class AbstractDataStoreCPT {
 
 		try {
 			$date = new DateTime( $value, new DateTimeZone( 'UTC' ) );
-		} catch ( Exception $e ) {
+		} catch ( Exception ) {
 			$date = null;
 		}
 
@@ -205,7 +177,7 @@ abstract class AbstractDataStoreCPT {
 	public function get_meta_bool( $id, $key ) {
 		$meta_key = $this->get_meta_key( $key );
 
-		$value = get_post_meta( $id, $meta_key );
+		$value = get_post_meta( $id, $meta_key, false );
 
 		if ( empty( $value ) ) {
 			return null;

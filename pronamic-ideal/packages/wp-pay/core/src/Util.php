@@ -3,7 +3,7 @@
  * Util
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -11,10 +11,6 @@
 namespace Pronamic\WordPress\Pay;
 
 use DateInterval;
-use Pronamic\WordPress\Pay\Core\Util as Core_Util;
-use Pronamic\WordPress\Money\Money;
-use SimpleXMLElement;
-use WP_Error;
 
 /**
  * WordPress utility class
@@ -134,30 +130,17 @@ class Util {
 	 * @return string|null
 	 */
 	public static function format_interval( $interval, $period ) {
-		switch ( $period ) {
-			case 'D':
-			case 'day':
-			case 'days':
-				/* translators: %s: interval */
-				return sprintf( _n( 'Every %s day', 'Every %s days', $interval, 'pronamic-ideal' ), $interval );
-			case 'W':
-			case 'week':
-			case 'weeks':
-				/* translators: %s: interval */
-				return sprintf( _n( 'Every %s week', 'Every %s weeks', $interval, 'pronamic-ideal' ), $interval );
-			case 'M':
-			case 'month':
-			case 'months':
-				/* translators: %s: interval */
-				return sprintf( _n( 'Every %s month', 'Every %s months', $interval, 'pronamic-ideal' ), $interval );
-			case 'Y':
-			case 'year':
-			case 'years':
-				/* translators: %s: interval */
-				return sprintf( _n( 'Every %s year', 'Every %s years', $interval, 'pronamic-ideal' ), $interval );
-		}
-
-		return null;
+		return match ( $period ) {
+			/* translators: %s: interval */
+			'D', 'day', 'days' => sprintf( _n( 'Every %s day', 'Every %s days', $interval, 'pronamic-ideal' ), $interval ),
+			/* translators: %s: interval */
+			'W', 'week', 'weeks' => sprintf( _n( 'Every %s week', 'Every %s weeks', $interval, 'pronamic-ideal' ), $interval ),
+			/* translators: %s: interval */
+			'M', 'month', 'months' => sprintf( _n( 'Every %s month', 'Every %s months', $interval, 'pronamic-ideal' ), $interval ),
+			/* translators: %s: interval */
+			'Y', 'year', 'years' => sprintf( _n( 'Every %s year', 'Every %s years', $interval, 'pronamic-ideal' ), $interval ),
+			default => null,
+		};
 	}
 
 	/**
@@ -168,18 +151,13 @@ class Util {
 	 * @return string
 	 */
 	public static function to_interval_name( $interval_period ) {
-		switch ( $interval_period ) {
-			case 'D':
-				return 'days';
-			case 'W':
-				return 'weeks';
-			case 'M':
-				return 'months';
-			case 'Y':
-				return 'years';
-		}
-
-		return $interval_period;
+		return match ( $interval_period ) {
+			'D' => 'days',
+			'W' => 'weeks',
+			'M' => 'months',
+			'Y' => 'years',
+			default => $interval_period,
+		};
 	}
 
 	/**
@@ -236,66 +214,6 @@ class Util {
 
 		foreach ( $data as $name => $value ) {
 			$html .= sprintf( '<input type="hidden" name="%s" value="%s" />', esc_attr( $name ), esc_attr( $value ) );
-		}
-
-		return $html;
-	}
-
-	/**
-	 * Array to HTML attributes.
-	 *
-	 * @param array $attributes The key and value pairs to convert to HTML attributes.
-	 *
-	 * @return string
-	 */
-	public static function array_to_html_attributes( array $attributes ) {
-		$html = '';
-
-		foreach ( $attributes as $key => $value ) {
-			// Check boolean attribute.
-			if ( \is_bool( $value ) ) {
-				if ( $value ) {
-					$html .= sprintf( '%s ', $key );
-				}
-
-				continue;
-			}
-
-			$html .= sprintf( '%s="%s" ', $key, esc_attr( $value ) );
-		}
-
-		$html = trim( $html );
-
-		return $html;
-	}
-
-	/**
-	 * Select options grouped.
-	 *
-	 * @param array  $groups         The grouped select options.
-	 * @param string $selected_value The selected value.
-	 *
-	 * @return string
-	 */
-	public static function select_options_grouped( $groups, $selected_value = null ) {
-		$html = '';
-
-		if ( is_array( $groups ) ) {
-			foreach ( $groups as $group ) {
-				$optgroup = isset( $group['name'] ) && ! empty( $group['name'] );
-
-				if ( $optgroup ) {
-					$html .= '<optgroup label="' . $group['name'] . '">';
-				}
-
-				foreach ( $group['options'] as $value => $label ) {
-					$html .= '<option value="' . $value . '" ' . selected( $selected_value, $value, false ) . '>' . $label . '</option>';
-				}
-
-				if ( $optgroup ) {
-					$html .= '</optgroup>';
-				}
-			}
 		}
 
 		return $html;

@@ -3,7 +3,7 @@
  * Editor Blocks.
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -32,13 +32,7 @@ class BlocksModule {
 	 * @return void
 	 */
 	public function setup() {
-		global $wp_version;
-
-		add_filter( 'block_categories_all', [ $this, 'block_categories' ], 10 );
-
-		if ( \version_compare( $wp_version, '5.8', '<' ) ) {
-			add_filter( 'block_categories', [ $this, 'block_categories' ], 10 );
-		}
+		\add_filter( 'block_categories_all', $this->block_categories( ... ), 10 );
 	}
 
 	/**

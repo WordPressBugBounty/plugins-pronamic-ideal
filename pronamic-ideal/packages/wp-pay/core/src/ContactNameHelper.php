@@ -3,7 +3,7 @@
  * Contact name helper
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -64,9 +64,7 @@ class ContactNameHelper {
 
 			if ( \count( $names ) > 0 ) {
 				$initials = array_map(
-					function ( $name ) {
-						return self::string_to_uppercase( \mb_substr( $name, 0, 1 ) ) . '.';
-					},
+					fn( $name ) => self::string_to_uppercase( \mb_substr( (string) $name, 0, 1 ) ) . '.',
 					$names
 				);
 
@@ -99,19 +97,6 @@ class ContactNameHelper {
 	}
 
 	/**
-	 * Anonymize customer.
-	 *
-	 * @param ContactName $name Contact name to anonymize.
-	 * @return void
-	 */
-	public static function anonymize_name( ContactName $name ) {
-		$name->set_full_name( PrivacyManager::anonymize_data( 'text', $name->get_full_name() ) );
-		$name->set_first_name( PrivacyManager::anonymize_data( 'text', $name->get_first_name() ) );
-		$name->set_middle_name( PrivacyManager::anonymize_data( 'text', $name->get_middle_name() ) );
-		$name->set_last_name( PrivacyManager::anonymize_data( 'text', $name->get_last_name() ) );
-	}
-
-	/**
 	 * Create a contact name from an array.
 	 *
 	 * @param array $data Data.
@@ -120,9 +105,7 @@ class ContactNameHelper {
 	public static function from_array( $data ) {
 		$data = \array_filter(
 			$data,
-			function ( $value ) {
-				return ( null !== $value ) && ( '' !== $value );
-			}
+			fn( $value ) => ( null !== $value ) && ( '' !== $value )
 		);
 
 		if ( empty( $data ) ) {

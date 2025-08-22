@@ -3,7 +3,7 @@
  * Refund lines
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Payments
  */
@@ -26,7 +26,7 @@ use Pronamic\WordPress\Money\TaxedMoney;
  * @since      2.1.0
  * @implements \IteratorAggregate<int, RefundLine>
  */
-class RefundLines implements Countable, IteratorAggregate, JsonSerializable {
+class RefundLines implements Countable, IteratorAggregate, JsonSerializable, \Stringable {
 	/**
 	 * The lines.
 	 *
@@ -168,9 +168,7 @@ class RefundLines implements Countable, IteratorAggregate, JsonSerializable {
 			 * @param object $value Object.
 			 * @return PaymentLine
 			 */
-			function ( $value ) use ( $refund ) {
-				return RefundLine::from_json( $value, $refund );
-			},
+			fn( $value ) => RefundLine::from_json( $value, $refund ),
 			$json
 		);
 
@@ -186,7 +184,7 @@ class RefundLines implements Countable, IteratorAggregate, JsonSerializable {
 	 *
 	 * @return string
 	 */
-	public function __toString() {
+	public function __toString(): string {
 		$pieces = array_map( 'strval', $this->lines );
 
 		$string = implode( PHP_EOL, $pieces );

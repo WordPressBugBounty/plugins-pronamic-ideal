@@ -3,21 +3,17 @@
  * Util
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Core
  */
 
 namespace Pronamic\WordPress\Pay\Core;
 
-use Pronamic\WordPress\Money\Money;
-use Pronamic\WordPress\Pay\Plugin;
-use Pronamic\WordPress\Pay\Util as Pay_Util;
-
 /**
  * Title: WordPress utility class
  * Description:
- * Copyright: 2005-2024 Pronamic
+ * Copyright: 2005-2025 Pronamic
  * Company: Pronamic
  *
  * @author Remco Tolsma
@@ -54,7 +50,7 @@ class Util {
 	 * String to interval period (user input string).
 	 *
 	 * @since 2.0.3
-	 * @param string $interval Interval user input string.
+	 * @param mixed $interval Interval user input string.
 	 * @return string|null
 	 */
 	public static function string_to_interval_period( $interval ) {
@@ -102,19 +98,19 @@ class Util {
 	 * @return string
 	 */
 	public static function to_period( $period ) {
-		if ( false !== strpos( $period, 'day' ) || false !== strpos( $period, 'daily' ) ) {
+		if ( str_contains( $period, 'day' ) || str_contains( $period, 'daily' ) ) {
 			return 'D';
 		}
 
-		if ( false !== strpos( $period, 'week' ) ) {
+		if ( str_contains( $period, 'week' ) ) {
 			return 'W';
 		}
 
-		if ( false !== strpos( $period, 'month' ) ) {
+		if ( str_contains( $period, 'month' ) ) {
 			return 'M';
 		}
 
-		if ( false !== strpos( $period, 'year' ) ) {
+		if ( str_contains( $period, 'year' ) ) {
 			return 'Y';
 		}
 

@@ -3,7 +3,7 @@
  * Payment
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Mollie
  */
@@ -325,7 +325,7 @@ class Payment extends BaseResource {
 	 * @param PaymentDetails|null $details Details.
 	 * @return void
 	 */
-	public function set_details( PaymentDetails $details = null ) {
+	public function set_details( ?PaymentDetails $details = null ) {
 		$this->details = $details;
 	}
 
@@ -344,7 +344,7 @@ class Payment extends BaseResource {
 	 * @param Amount|null $amount_refunded Amount refunded.
 	 * @return void
 	 */
-	public function set_amount_refunded( Amount $amount_refunded = null ) {
+	public function set_amount_refunded( ?Amount $amount_refunded = null ) {
 		$this->amount_refunded = $amount_refunded;
 	}
 
@@ -363,7 +363,7 @@ class Payment extends BaseResource {
 	 * @param Amount|null $amount_charged_back Amount charged back.
 	 * @return void
 	 */
-	public function set_amount_charged_back( Amount $amount_charged_back = null ) {
+	public function set_amount_charged_back( ?Amount $amount_charged_back = null ) {
 		$this->amount_charged_back = $amount_charged_back;
 	}
 

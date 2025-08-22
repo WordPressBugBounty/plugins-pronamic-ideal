@@ -3,7 +3,7 @@
  * Page Dashboard
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -63,9 +63,7 @@ $container_index = 1;
 
 								$payment_posts = \array_filter(
 									$query->posts,
-									function ( $post ) {
-										return ( $post instanceof WP_Post );
-									}
+									fn( $post ) => $post instanceof WP_Post
 								);
 
 								if ( count( $payment_posts ) > 0 ) :
@@ -196,9 +194,7 @@ $container_index = 1;
 
 					$subscriptions_posts = \array_filter(
 						$query->posts,
-						function ( $post ) {
-							return ( $post instanceof WP_Post );
-						}
+						fn( $post ) => $post instanceof WP_Post
 					);
 
 					if ( count( $subscriptions_posts ) > 0 ) :

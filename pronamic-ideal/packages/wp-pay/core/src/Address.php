@@ -3,7 +3,7 @@
  * Address.
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -33,7 +33,7 @@ use stdClass;
  * @version 2.2.6
  * @since   2.1.0
  */
-class Address {
+class Address implements \Stringable {
 	/**
 	 * Contact name.
 	 *
@@ -413,7 +413,7 @@ class Address {
 	 * @param Country|null $country Country.
 	 * @return void
 	 */
-	public function set_country( $country ) {
+	public function set_country( ?Country $country ) {
 		$this->country = $country;
 	}
 
@@ -621,7 +621,7 @@ class Address {
 	 *
 	 * @return string
 	 */
-	public function __toString() {
+	public function __toString(): string {
 		$parts = [
 			$this->get_company_name(),
 			$this->get_name(),

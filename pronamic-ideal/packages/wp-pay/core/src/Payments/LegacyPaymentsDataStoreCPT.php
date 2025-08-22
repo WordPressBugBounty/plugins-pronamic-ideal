@@ -3,26 +3,24 @@
  * Legacy Payments Data Store Custom Post Type
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Payments
  */
 
 namespace Pronamic\WordPress\Pay\Payments;
 
-use Pronamic\WordPress\Money\TaxedMoney;
 use Pronamic\WordPress\Pay\Banks\BankAccountDetails;
 use Pronamic\WordPress\Pay\AbstractDataStoreCPT;
 use Pronamic\WordPress\Pay\Address;
 use Pronamic\WordPress\Pay\ContactName;
 use Pronamic\WordPress\Pay\Core\PaymentMethods;
 use Pronamic\WordPress\Pay\Customer;
-use Pronamic\WordPress\Pay\Plugin;
 
 /**
  * Title: Payments data store CPT
  * Description:
- * Copyright: 2005-2024 Pronamic
+ * Copyright: 2005-2025 Pronamic
  * Company: Pronamic
  *
  * @see     https://woocommerce.com/2017/04/woocommerce-3-0-release/

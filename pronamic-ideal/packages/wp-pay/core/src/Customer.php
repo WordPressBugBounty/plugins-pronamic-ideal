@@ -3,7 +3,7 @@
  * Contact.
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -20,7 +20,7 @@ use Pronamic\WordPress\Pay\VatNumbers\VatNumber;
  * @version 2.4.0
  * @since   2.1.0
  */
-class Customer {
+class Customer implements \Stringable {
 	/**
 	 * Contact name.
 	 *
@@ -413,7 +413,7 @@ class Customer {
 	 *
 	 * @return string
 	 */
-	public function __toString() {
+	public function __toString(): string {
 		$pieces = [
 			$this->get_name(),
 			$this->get_email(),

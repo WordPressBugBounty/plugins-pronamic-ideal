@@ -3,7 +3,7 @@
  * Admin Settings
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Admin
  */
@@ -12,7 +12,6 @@ namespace Pronamic\WordPress\Pay\Admin;
 
 use Pronamic\WordPress\Html\Element;
 use Pronamic\WordPress\Pay\Plugin;
-use Pronamic\WordPress\Pay\Util;
 
 /**
  * WordPress iDEAL admin
@@ -38,7 +37,7 @@ class AdminSettings {
 		$this->plugin = $plugin;
 
 		// Actions.
-		add_action( 'admin_init', [ $this, 'admin_init' ] );
+		add_action( 'admin_init', $this->admin_init( ... ) );
 	}
 
 	/**
@@ -60,7 +59,7 @@ class AdminSettings {
 		add_settings_field(
 			'pronamic_pay_config_id',
 			__( 'Default Gateway', 'pronamic-ideal' ),
-			[ $this, 'input_page' ],
+			$this->input_page( ... ),
 			'pronamic_pay',
 			'pronamic_pay_general',
 			[
@@ -74,7 +73,7 @@ class AdminSettings {
 		add_settings_field(
 			'pronamic_pay_uninstall_clear_data',
 			__( 'Remove Data', 'pronamic-ideal' ),
-			[ $this, 'input_checkbox' ],
+			$this->input_checkbox( ... ),
 			'pronamic_pay',
 			'pronamic_pay_general',
 			[
@@ -102,7 +101,7 @@ class AdminSettings {
 		\add_settings_field(
 			'pronamic_pay_debug_mode',
 			\__( 'Debug Mode', 'pronamic-ideal' ),
-			[ $this, 'input_checkbox' ],
+			$this->input_checkbox( ... ),
 			'pronamic_pay',
 			'pronamic_pay_general',
 			$debug_mode_args
@@ -111,7 +110,7 @@ class AdminSettings {
 		\add_settings_field(
 			'pronamic_pay_subscriptions_processing_disabled',
 			\__( 'Disable Recurring Payments', 'pronamic-ideal' ),
-			[ $this, 'input_checkbox' ],
+			$this->input_checkbox( ... ),
 			'pronamic_pay',
 			'pronamic_pay_general',
 			[
@@ -138,7 +137,7 @@ class AdminSettings {
 				add_settings_field(
 					$id,
 					$payment_method->get_name(),
-					[ $this, 'select_payment_method_status' ],
+					$this->select_payment_method_status( ... ),
 					'pronamic_pay',
 					'pronamic_pay_payment_methods',
 					[
@@ -258,9 +257,9 @@ class AdminSettings {
 		wp_dropdown_pages(
 			[
 				'name'             => esc_attr( $name ),
-				'post_type'        => esc_attr( isset( $args['post_type'] ) ? $args['post_type'] : 'page' ),
+				'post_type'        => esc_attr( $args['post_type'] ?? 'page' ),
 				'selected'         => esc_attr( $selected ),
-				'show_option_none' => esc_attr( isset( $args['show_option_none'] ) ? $args['show_option_none'] : __( '— Select a page —', 'pronamic-ideal' ) ),
+				'show_option_none' => esc_attr( $args['show_option_none'] ?? __( '— Select a page —', 'pronamic-ideal' ) ),
 				'class'            => 'regular-text',
 			]
 		);

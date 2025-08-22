@@ -3,7 +3,7 @@
  * Webhook logger
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -28,7 +28,7 @@ class WebhookLogger {
 	 * @return void
 	 */
 	public function setup() {
-		add_action( 'pronamic_pay_webhook_log_payment', [ $this, 'log_payment' ] );
+		add_action( 'pronamic_pay_webhook_log_payment', $this->log_payment( ... ) );
 	}
 
 	/**

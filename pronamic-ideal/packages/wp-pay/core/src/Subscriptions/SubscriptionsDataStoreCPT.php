@@ -3,7 +3,7 @@
  * Subscriptions Data Store CPT
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Subscriptions
  */
@@ -11,7 +11,6 @@
 namespace Pronamic\WordPress\Pay\Subscriptions;
 
 use Pronamic\WordPress\DateTime\DateTime;
-use Pronamic\WordPress\DateTime\DateTimeImmutable;
 use Pronamic\WordPress\DateTime\DateTimeZone;
 use Pronamic\WordPress\Money\Money;
 use Pronamic\WordPress\Pay\Customer;
@@ -48,8 +47,6 @@ class SubscriptionsDataStoreCPT extends LegacyPaymentsDataStoreCPT {
 	 */
 	public function __construct() {
 		$this->meta_key_prefix = '_pronamic_subscription_';
-
-		$this->register_meta();
 
 		$this->subscriptions = [];
 
@@ -142,11 +139,7 @@ class SubscriptionsDataStoreCPT extends LegacyPaymentsDataStoreCPT {
 			return null;
 		}
 
-		if ( isset( $this->status_map[ $meta_status ] ) ) {
-			return $this->status_map[ $meta_status ];
-		}
-
-		return null;
+		return $this->status_map[ $meta_status ] ?? null;
 	}
 
 	/**
@@ -207,7 +200,7 @@ class SubscriptionsDataStoreCPT extends LegacyPaymentsDataStoreCPT {
 						'Subscription %s',
 						$subscription->get_key()
 					),
-					'post_author'   => null === $customer_user_id ? 0 : $customer_user_id,
+					'post_author'   => $customer_user_id ?? 0,
 				]
 			),
 			true
@@ -291,11 +284,11 @@ class SubscriptionsDataStoreCPT extends LegacyPaymentsDataStoreCPT {
 	public function save( $subscription ) {
 		$id = $subscription->get_id();
 
-		\add_filter( 'wp_insert_post_data', [ $this, 'preserve_post_content' ], 5, 3 );
+		\add_filter( 'wp_insert_post_data', $this->preserve_post_content( ... ), 5, 3 );
 
 		$result = empty( $id ) ? $this->create( $subscription ) : $this->update( $subscription );
 
-		\remove_filter( 'wp_insert_post_data', [ $this, 'preserve_post_content' ], 5 );
+		\remove_filter( 'wp_insert_post_data', $this->preserve_post_content( ... ), 5 );
 
 		$this->update_post_meta( $subscription );
 
@@ -403,121 +396,6 @@ class SubscriptionsDataStoreCPT extends LegacyPaymentsDataStoreCPT {
 		}
 
 		return false;
-	}
-
-	/**
-	 * Register meta.
-	 *
-	 * @return void
-	 */
-	private function register_meta() {
-		$this->register_meta_key(
-			'config_id',
-			[
-				'label' => __( 'Config ID', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'source',
-			[
-				'label' => __( 'Source', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'source_id',
-			[
-				'label' => __( 'Source ID', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'currency',
-			[
-				'label' => __( 'Currency', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'amount',
-			[
-				'label' => __( 'Amount', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'frequency',
-			[
-				'label' => __( 'Frequency', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'interval',
-			[
-				'label' => __( 'Interval', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'interval_period',
-			[
-				'label' => __( 'Interval Period', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'transaction_id',
-			[
-				'label'           => __( 'Transaction ID', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'status',
-			[
-				'label' => __( 'Status', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'description',
-			[
-				'label'           => __( 'Description', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'email',
-			[
-				'label'           => __( 'Email', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'anonymize',
-			]
-		);
-
-		$this->register_meta_key(
-			'customer_name',
-			[
-				'label'           => __( 'Customer Name', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'payment_method',
-			[
-				'label'           => __( 'Payment Method', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
 	}
 
 	/**

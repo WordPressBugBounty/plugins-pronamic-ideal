@@ -3,7 +3,7 @@
  * Meta Box Subscription Update
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -11,9 +11,7 @@
 use Pronamic\WordPress\Html\Element;
 use Pronamic\WordPress\Pay\Plugin;
 use Pronamic\WordPress\Pay\Payments\PaymentStatus;
-use Pronamic\WordPress\Pay\Subscriptions\SubscriptionPostType;
 use Pronamic\WordPress\Pay\Subscriptions\SubscriptionStatus;
-use Pronamic\WordPress\Pay\Util;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -105,7 +103,7 @@ $post_author = empty( $post_author ) ? '-' : $post_author;
 					<a href="#pronamic-pay-post-status" class="cancel-pronamic-pay-post-status hide-if-no-js button-cancel"><?php esc_html_e( 'Cancel', 'pronamic-ideal' ); ?></a>
 				</div>
 
-				<?php if ( null !== $subscription && in_array( $subscription->get_status(), [ SubscriptionStatus::FAILURE, SubscriptionStatus::ON_HOLD ], true ) ) : ?>
+				<?php if ( \in_array( $subscription->get_status(), [ SubscriptionStatus::FAILURE, SubscriptionStatus::ON_HOLD ], true ) ) : ?>
 
 					<div id="pronamic-pay-post-status-notice" class="notice inline">
 						<p>

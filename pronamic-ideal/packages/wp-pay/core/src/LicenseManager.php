@@ -3,7 +3,7 @@
  * License Manager
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -50,14 +50,14 @@ class LicenseManager {
 	 */
 	public function __construct() {
 		// Actions.
-		\add_action( 'admin_init', [ $this, 'admin_init' ], 9 );
-		\add_action( 'admin_notices', [ $this, 'admin_notices' ] );
-		\add_action( 'pronamic_pay_license_check', [ $this, 'license_check_event' ] );
+		\add_action( 'admin_init', $this->admin_init( ... ), 9 );
+		\add_action( 'admin_notices', $this->admin_notices( ... ) );
+		\add_action( 'pronamic_pay_license_check', $this->license_check_event( ... ) );
 
 		// Filters.
-		\add_filter( sprintf( 'pre_update_option_%s', 'pronamic_pay_license_key' ), [ $this, 'pre_update_option_license_key' ], 10, 2 );
-		\add_filter( 'debug_information', [ $this, 'debug_information' ], 15 );
-		\add_filter( 'site_status_tests', [ $this, 'site_status_tests' ] );
+		\add_filter( sprintf( 'pre_update_option_%s', 'pronamic_pay_license_key' ), $this->pre_update_option_license_key( ... ), 10, 2 );
+		\add_filter( 'debug_information', $this->debug_information( ... ), 15 );
+		\add_filter( 'site_status_tests', $this->site_status_tests( ... ) );
 	}
 
 	/**
@@ -88,7 +88,7 @@ class LicenseManager {
 		\add_settings_field(
 			'pronamic_pay_license_key',
 			\__( 'Support License Key', 'pronamic-ideal' ),
-			[ $this, 'input_license_key' ],
+			$this->input_license_key( ... ),
 			'pronamic_pay',
 			'pronamic_pay_general',
 			[
@@ -403,19 +403,12 @@ class LicenseManager {
 	 */
 	public function get_formatted_license_status() {
 		$license_status = get_option( 'pronamic_pay_license_status' );
-
-		switch ( $license_status ) {
-			case 'valid':
-				return __( 'Valid', 'pronamic-ideal' );
-
-			case 'invalid':
-				return __( 'Invalid', 'pronamic-ideal' );
-
-			case 'site_inactive':
-				return __( 'Site Inactive', 'pronamic-ideal' );
-		}
-
-		return $license_status;
+		return match ( $license_status ) {
+			'valid' => __( 'Valid', 'pronamic-ideal' ),
+			'invalid' => __( 'Invalid', 'pronamic-ideal' ),
+			'site_inactive' => __( 'Site Inactive', 'pronamic-ideal' ),
+			default => $license_status,
+		};
 	}
 
 	/**
@@ -433,7 +426,7 @@ class LicenseManager {
 				$date = new DateTime( '@' . $timestamp, new DateTimeZone( 'UTC' ) );
 
 				$next_license_check = $date->format_i18n();
-			} catch ( \Exception $e ) {
+			} catch ( \Exception ) {
 				return $next_license_check;
 			}
 		}
@@ -498,7 +491,7 @@ class LicenseManager {
 		// Test valid license.
 		$status_tests['direct']['pronamic_pay_valid_license'] = [
 			'label' => \__( 'Pronamic Pay support license key test', 'pronamic-ideal' ),
-			'test'  => [ $this, 'test_valid_license' ],
+			'test'  => $this->test_valid_license( ... ),
 		];
 
 		return $status_tests;

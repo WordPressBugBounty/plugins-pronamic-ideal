@@ -3,7 +3,7 @@
  * Mollie transformer methods.
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -23,33 +23,45 @@ class MethodTransformer {
 	 * @var array<string>
 	 */
 	private static $map = [
+		PronamicMethod::ALMA                    => MollieMethod::ALMA,
 		PronamicMethod::APPLE_PAY               => MollieMethod::APPLE_PAY,
+		PronamicMethod::BANCOMAT_PAY            => MollieMethod::BANCOMAT_PAY,
 		PronamicMethod::BANCONTACT              => MollieMethod::BANCONTACT,
-		PronamicMethod::BANK_TRANSFER           => MollieMethod::BANKTRANSFER,
+		PronamicMethod::BELFIUS                 => MollieMethod::BELFIUS,
 		PronamicMethod::BILLIE                  => MollieMethod::BILLIE,
 		PronamicMethod::BLIK                    => MollieMethod::BLIK,
 		PronamicMethod::CARD                    => MollieMethod::CREDITCARD,
 		PronamicMethod::CREDIT_CARD             => MollieMethod::CREDITCARD,
-		PronamicMethod::DIRECT_DEBIT            => MollieMethod::DIRECT_DEBIT,
-		PronamicMethod::DIRECT_DEBIT_BANCONTACT => MollieMethod::DIRECT_DEBIT,
-		PronamicMethod::DIRECT_DEBIT_IDEAL      => MollieMethod::DIRECT_DEBIT,
-		PronamicMethod::DIRECT_DEBIT_SOFORT     => MollieMethod::DIRECT_DEBIT,
 		PronamicMethod::EPS                     => MollieMethod::EPS,
+		PronamicMethod::GIFT_CARD               => MollieMethod::GIFT_CARD,
 		PronamicMethod::GIROPAY                 => MollieMethod::GIROPAY,
-		PronamicMethod::KLARNA                  => MollieMethod::KLARNA,
-		PronamicMethod::KLARNA_PAY_LATER        => MollieMethod::KLARNA_PAY_LATER,
-		PronamicMethod::KLARNA_PAY_NOW          => MollieMethod::KLARNA_PAY_NOW,
-		PronamicMethod::KLARNA_PAY_OVER_TIME    => MollieMethod::KLARNA_SLICE_IT,
-		PronamicMethod::MYBANK                  => MollieMethod::MYBANK,
-		PronamicMethod::PAY_BY_BANK             => MollieMethod::PAY_BY_BANK,
-		PronamicMethod::PAYPAL                  => MollieMethod::PAYPAL,
-		PronamicMethod::PRZELEWY24              => MollieMethod::PRZELEWY24,
-		PronamicMethod::SOFORT                  => MollieMethod::SOFORT,
+		PronamicMethod::GOOGLE_PAY              => MollieMethod::CREDITCARD,
 		PronamicMethod::IDEAL                   => MollieMethod::IDEAL,
 		PronamicMethod::IN3                     => MollieMethod::IN3,
 		PronamicMethod::KBC                     => MollieMethod::KBC,
-		PronamicMethod::BELFIUS                 => MollieMethod::BELFIUS,
+		PronamicMethod::KLARNA                  => MollieMethod::KLARNA,
+		PronamicMethod::KLARNA_PAY_LATER        => MollieMethod::KLARNA,
+		PronamicMethod::KLARNA_PAY_NOW          => MollieMethod::KLARNA,
+		PronamicMethod::KLARNA_PAY_OVER_TIME    => MollieMethod::KLARNA,
+		PronamicMethod::MB_WAY                  => MollieMethod::MB_WAY,
+		PronamicMethod::MULTIBANCO              => MollieMethod::MULTIBANCO,
+		PronamicMethod::MYBANK                  => MollieMethod::MYBANK,
+		PronamicMethod::PAY_BY_BANK             => MollieMethod::PAY_BY_BANK,
+		PronamicMethod::PAYCONIQ                => MollieMethod::PAYCONIQ,
+		PronamicMethod::PAYPAL                  => MollieMethod::PAYPAL,
+		PronamicMethod::PAYSAFECARD             => MollieMethod::PAYSAFECARD,
+		PronamicMethod::POSTEPAY                => MollieMethod::CREDITCARD,
+		PronamicMethod::PRZELEWY24              => MollieMethod::PRZELEWY24,
+		PronamicMethod::SATISPAY                => MollieMethod::SATISPAY,
+		PronamicMethod::BANK_TRANSFER           => MollieMethod::BANKTRANSFER,
+		PronamicMethod::DIRECT_DEBIT            => MollieMethod::DIRECT_DEBIT,
+		PronamicMethod::DIRECT_DEBIT_BANCONTACT => MollieMethod::DIRECT_DEBIT,
+		PronamicMethod::DIRECT_DEBIT_IDEAL      => MollieMethod::DIRECT_DEBIT,
+		PronamicMethod::RIVERTY                 => MollieMethod::RIVERTY,
+		PronamicMethod::SWISH                   => MollieMethod::SWISH,
+		PronamicMethod::TRUSTLY                 => MollieMethod::TRUSTLY,
 		PronamicMethod::TWINT                   => MollieMethod::TWINT,
+		PronamicMethod::VOUCHERS                => MollieMethod::VOUCHERS,
 	];
 
 	/**
@@ -61,7 +73,7 @@ class MethodTransformer {
 	 * @param mixed       $fallback       Default payment method.
 	 * @return string|null
 	 */
-	public static function transform_wp_to_mollie( $payment_method, $fallback = null ) {
+	public static function transform_wp_to_mollie( $payment_method, mixed $fallback = null ) {
 		if ( ! \is_scalar( $payment_method ) ) {
 			return null;
 		}
@@ -107,9 +119,7 @@ class MethodTransformer {
 		return \array_keys(
 			\array_filter(
 				self::$map,
-				function ( $value ) use ( $method ) {
-					return ( $value === $method );
-				}
+				fn( $value ) => $value === $method
 			)
 		);
 	}

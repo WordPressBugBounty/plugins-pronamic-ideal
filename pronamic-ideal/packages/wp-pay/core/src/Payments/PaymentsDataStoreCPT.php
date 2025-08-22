@@ -3,7 +3,7 @@
  * Payments Data Store Custom Post Type
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Payments
  */
@@ -13,14 +13,13 @@ namespace Pronamic\WordPress\Pay\Payments;
 use Pronamic\WordPress\DateTime\DateTime;
 use Pronamic\WordPress\DateTime\DateTimeZone;
 use Pronamic\WordPress\Money\Money;
-use Pronamic\WordPress\Money\TaxedMoney;
 use Pronamic\WordPress\Pay\Customer;
 use Pronamic\WordPress\Pay\Subscriptions\SubscriptionPeriod;
 
 /**
  * Title: Payments data store CPT
  * Description:
- * Copyright: 2005-2024 Pronamic
+ * Copyright: 2005-2025 Pronamic
  * Company: Pronamic
  *
  * @see     https://woocommerce.com/2017/04/woocommerce-3-0-release/
@@ -49,8 +48,6 @@ class PaymentsDataStoreCPT extends LegacyPaymentsDataStoreCPT {
 	 */
 	public function __construct() {
 		$this->meta_key_prefix = '_pronamic_payment_';
-
-		$this->register_meta();
 
 		$this->payments = [];
 
@@ -142,11 +139,7 @@ class PaymentsDataStoreCPT extends LegacyPaymentsDataStoreCPT {
 			return null;
 		}
 
-		if ( isset( $this->status_map[ $meta_status ] ) ) {
-			return $this->status_map[ $meta_status ];
-		}
-
-		return null;
+		return $this->status_map[ $meta_status ] ?? null;
 	}
 
 	/**
@@ -208,7 +201,7 @@ class PaymentsDataStoreCPT extends LegacyPaymentsDataStoreCPT {
 						'Payment %s',
 						$payment->get_key()
 					),
-					'post_author'   => null === $customer_user_id ? 0 : $customer_user_id,
+					'post_author'   => $customer_user_id ?? 0,
 				]
 			),
 			true
@@ -282,11 +275,11 @@ class PaymentsDataStoreCPT extends LegacyPaymentsDataStoreCPT {
 	public function save( $payment ) {
 		$id = $payment->get_id();
 
-		\add_filter( 'wp_insert_post_data', [ $this, 'preserve_post_content' ], 5, 3 );
+		\add_filter( 'wp_insert_post_data', $this->preserve_post_content( ... ), 5, 3 );
 
 		$result = empty( $id ) ? $this->create( $payment ) : $this->update( $payment );
 
-		\remove_filter( 'wp_insert_post_data', [ $this, 'preserve_post_content' ], 5 );
+		\remove_filter( 'wp_insert_post_data', $this->preserve_post_content( ... ), 5 );
 
 		$this->update_post_meta( $payment );
 
@@ -377,305 +370,6 @@ class PaymentsDataStoreCPT extends LegacyPaymentsDataStoreCPT {
 		}
 
 		return null;
-	}
-
-	/**
-	 * Register meta.
-	 *
-	 * @return void
-	 */
-	private function register_meta() {
-		$this->register_meta_key(
-			'config_id',
-			[
-				'label' => __( 'Config ID', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'key',
-			[
-				'label' => __( 'Key', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'method',
-			[
-				'label'           => __( 'Method', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'currency',
-			[
-				'label'          => __( 'Currency', 'pronamic-ideal' ),
-				'privacy_export' => true,
-			]
-		);
-
-		$this->register_meta_key(
-			'amount',
-			[
-				'label'          => __( 'Amount', 'pronamic-ideal' ),
-				'privacy_export' => true,
-			]
-		);
-
-		$this->register_meta_key(
-			'issuer',
-			[
-				'label'           => __( 'Issuer', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'order_id',
-			[
-				'label'          => __( 'Order ID', 'pronamic-ideal' ),
-				'privacy_export' => true,
-			]
-		);
-
-		$this->register_meta_key(
-			'transaction_id',
-			[
-				'label' => __( 'Transaction ID', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'entrance_code',
-			[
-				'label'           => __( 'Entrance Code', 'pronamic-ideal' ),
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'action_url',
-			[
-				'label'           => __( 'Action URL', 'pronamic-ideal' ),
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'source',
-			[
-				'label' => __( 'Source', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'source_id',
-			[
-				'label' => __( 'Source ID', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'description',
-			[
-				'label'           => __( 'Description', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'language',
-			[
-				'label'           => __( 'Language', 'pronamic-ideal' ),
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'locale',
-			[
-				'label'           => __( 'Locale', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'email',
-			[
-				'label'           => __( 'Email', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'anonymize',
-			]
-		);
-
-		$this->register_meta_key(
-			'status',
-			[
-				'label'          => __( 'Status', 'pronamic-ideal' ),
-				'privacy_export' => true,
-			]
-		);
-
-		$this->register_meta_key(
-			'customer_name',
-			[
-				'label'           => __( 'Customer Name', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'address',
-			[
-				'label'           => __( 'Address', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'postal_code',
-			[
-				'label'           => __( 'Postal Code', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'city',
-			[
-				'label'           => __( 'City', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'country',
-			[
-				'label'           => __( 'Country', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'telephone_number',
-			[
-				'label'           => __( 'Telephone Number', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'consumer_name',
-			[
-				'label'           => __( 'Consumer Name', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'consumer_account_number',
-			[
-				'label'           => __( 'Consumer Account Number', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'consumer_iban',
-			[
-				'label'           => __( 'Consumer IBAN', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'consumer_bic',
-			[
-				'label'           => __( 'Consumer BIC', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'consumer_city',
-			[
-				'label'           => __( 'Consumer City', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'subscription_id',
-			[
-				'label'          => __( 'Subscription ID', 'pronamic-ideal' ),
-				'privacy_export' => true,
-			]
-		);
-
-		$this->register_meta_key(
-			'recurring_type',
-			[
-				'label'          => __( 'Recurring Type', 'pronamic-ideal' ),
-				'privacy_export' => true,
-			]
-		);
-
-		$this->register_meta_key(
-			'recurring',
-			[
-				'label' => __( 'Recurring', 'pronamic-ideal' ),
-			]
-		);
-
-		$this->register_meta_key(
-			'start_date',
-			[
-				'label'          => __( 'Start Date', 'pronamic-ideal' ),
-				'privacy_export' => true,
-			]
-		);
-
-		$this->register_meta_key(
-			'end_date',
-			[
-				'label'          => __( 'End Date', 'pronamic-ideal' ),
-				'privacy_export' => true,
-			]
-		);
-
-		$this->register_meta_key(
-			'user_agent',
-			[
-				'label'           => __( 'User Agent', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
-
-		$this->register_meta_key(
-			'user_ip',
-			[
-				'label'           => __( 'User IP', 'pronamic-ideal' ),
-				'privacy_export'  => true,
-				'privacy_erasure' => 'erase',
-			]
-		);
 	}
 
 	/**
@@ -809,7 +503,7 @@ class PaymentsDataStoreCPT extends LegacyPaymentsDataStoreCPT {
 		// Subscriptions.
 		$meta_key = $this->get_meta_key( 'subscription_id' );
 
-		$subscriptions_ids = \get_post_meta( $id, $meta_key );
+		$subscriptions_ids = \get_post_meta( $id, $meta_key, false );
 
 		foreach ( $payment->get_subscriptions() as $subscription ) {
 			$subscription_id = $subscription->get_id();

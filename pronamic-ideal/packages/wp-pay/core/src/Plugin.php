@@ -3,7 +3,7 @@
  * Plugin
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -141,13 +141,6 @@ class Plugin {
 	public $subscription_post_type;
 
 	/**
-	 * Privacy manager.
-	 *
-	 * @var PrivacyManager
-	 */
-	public $privacy_manager;
-
-	/**
 	 * Admin module.
 	 *
 	 * @var AdminModule
@@ -256,7 +249,7 @@ class Plugin {
 
 		// Backward compatibility.
 		self::$file    = $args['file'];
-		self::$dirname = dirname( self::$file );
+		self::$dirname = dirname( (string) self::$file );
 
 		// Options.
 		$this->options = $args['options'];
@@ -266,18 +259,18 @@ class Plugin {
 
 		$this->payment_methods = new PaymentMethodsCollection();
 
-		add_action( 'plugins_loaded', [ $this, 'plugins_loaded' ], 0 );
-		add_action( 'init', [ $this, 'register_payment_methods' ], 0 );
+		add_action( 'plugins_loaded', $this->plugins_loaded( ... ), 0 );
+		add_action( 'init', $this->register_payment_methods( ... ), 0 );
 
 		// Register styles.
-		add_action( 'init', [ $this, 'register_styles' ], 9 );
+		add_action( 'init', $this->register_styles( ... ), 9 );
 
 		// If WordPress is loaded check on returns and maybe redirect requests.
-		add_action( 'wp_loaded', [ $this, 'handle_returns' ], 100 );
-		add_action( 'wp_loaded', [ $this, 'maybe_redirect' ], 100 );
+		add_action( 'wp_loaded', $this->handle_returns( ... ), 100 );
+		add_action( 'wp_loaded', $this->maybe_redirect( ... ), 100 );
 
 		// Default date time format.
-		add_filter( 'pronamic_datetime_default_format', [ $this, 'datetime_format' ], 10, 1 );
+		add_filter( 'pronamic_datetime_default_format', $this->datetime_format( ... ), 10, 1 );
 
 		/**
 		 * Pronamic service URL.
@@ -508,24 +501,15 @@ class Plugin {
 
 		$gateway = $payment->get_gateway();
 
-		if ( null !== $gateway ) {
-			// Give gateway a chance to handle redirect.
-			$gateway->payment_redirect( $payment );
-
-			// Handle HTML form redirect.
-			if ( $gateway->is_html_form() ) {
-				$gateway->redirect( $payment );
-			}
+		if ( null === $gateway ) {
+			return;
 		}
 
-		// Redirect to payment action URL.
-		$action_url = $payment->get_action_url();
+		// Give gateway a chance to handle redirect.
+		$gateway->payment_redirect( $payment );
 
-		if ( ! empty( $action_url ) ) {
-			wp_redirect( $action_url );
-
-			exit;
-		}
+		// Redirect with gateway method (HTTP or form).
+		$gateway->redirect( $payment );
 	}
 
 	/**
@@ -566,9 +550,6 @@ class Plugin {
 		$this->gateway_post_type      = new GatewayPostType();
 		$this->payment_post_type      = new PaymentPostType();
 		$this->subscription_post_type = new SubscriptionPostType();
-
-		// Privacy Manager.
-		$this->privacy_manager = new PrivacyManager();
 
 		// Webhook Logger.
 		$this->webhook_logger = new WebhookLogger();
@@ -636,10 +617,10 @@ class Plugin {
 		$this->integrations = array_merge( $gateway_integrations, $this->plugin_integrations );
 
 		// Filters.
-		\add_filter( 'pronamic_payment_redirect_url', [ $this, 'payment_redirect_url' ], 10, 2 );
+		\add_filter( 'pronamic_payment_redirect_url', $this->payment_redirect_url( ... ), 10, 2 );
 
 		// Actions.
-		\add_action( 'pronamic_pay_pre_create_payment', [ __CLASS__, 'complement_payment' ], 10, 1 );
+		\add_action( 'pronamic_pay_pre_create_payment', self::complement_payment( ... ), 10, 1 );
 	}
 
 	/**
@@ -711,6 +692,11 @@ class Plugin {
 
 		$this->payment_methods->add( $payment_method_alipay );
 
+		// Alma.
+		$payment_method_alma = new PaymentMethod( PaymentMethods::ALMA );
+
+		$this->payment_methods->add( $payment_method_alma );
+
 		// American Express.
 		$payment_method_american_express = new PaymentMethod( PaymentMethods::AMERICAN_EXPRESS );
 
@@ -728,6 +714,11 @@ class Plugin {
 		];
 
 		$this->payment_methods->add( $payment_method_apple_pay );
+
+		// BANCOMAT Pay.
+		$payment_method_bancomat_pay = new PaymentMethod( PaymentMethods::BANCOMAT_PAY );
+
+		$this->payment_methods->add( $payment_method_bancomat_pay );
 
 		// Bancontact.
 		$payment_method_bancontact = new PaymentMethod( PaymentMethods::BANCONTACT );
@@ -916,6 +907,11 @@ class Plugin {
 
 		$this->payment_methods->add( $payment_method_focum );
 
+		// Gift Card.
+		$payment_method_gift_card = new PaymentMethod( PaymentMethods::GIFT_CARD );
+
+		$this->payment_methods->add( $payment_method_gift_card );
+
 		// IDEAL.
 		$payment_method_ideal = new PaymentMethod( PaymentMethods::IDEAL );
 
@@ -1032,10 +1028,20 @@ class Plugin {
 
 		$this->payment_methods->add( $payment_method_mb_way );
 
+		// Multibanco.
+		$payment_method_multibanco = new PaymentMethod( PaymentMethods::MULTIBANCO );
+
+		$this->payment_methods->add( $payment_method_multibanco );
+
 		// MyBank.
 		$payment_method_mybank = new PaymentMethod( PaymentMethods::MYBANK );
 
 		$this->payment_methods->add( $payment_method_mybank );
+
+		// Pay by Bank.
+		$payment_method_pay_by_bank = new PaymentMethod( PaymentMethods::PAY_BY_BANK );
+
+		$this->payment_methods->add( $payment_method_pay_by_bank );
 
 		// Payconiq.
 		$payment_method_payconiq = new PaymentMethod( PaymentMethods::PAYCONIQ );
@@ -1054,6 +1060,16 @@ class Plugin {
 		];
 
 		$this->payment_methods->add( $payment_method_paypal );
+
+		// Paysafecard.
+		$payment_method_paysafecard = new PaymentMethod( PaymentMethods::PAYSAFECARD );
+
+		$this->payment_methods->add( $payment_method_paysafecard );
+
+		// Postepay.
+		$payment_method_postepay = new PaymentMethod( PaymentMethods::POSTEPAY );
+
+		$this->payment_methods->add( $payment_method_postepay );
 
 		// Przelewy24.
 		$payment_method_przelewy24 = new PaymentMethod( PaymentMethods::PRZELEWY24 );
@@ -1087,6 +1103,11 @@ class Plugin {
 
 		$this->payment_methods->add( $payment_method_santander );
 
+		// Satispay.
+		$payment_method_satispay = new PaymentMethod( PaymentMethods::SATISPAY );
+
+		$this->payment_methods->add( $payment_method_satispay );
+
 		// SOFORT Banking.
 		$payment_method_sofort = new PaymentMethod( PaymentMethods::SOFORT );
 
@@ -1113,6 +1134,11 @@ class Plugin {
 		];
 
 		$this->payment_methods->add( $payment_method_swish );
+
+		// Trustly.
+		$payment_method_trustly = new PaymentMethod( PaymentMethods::TRUSTLY );
+
+		$this->payment_methods->add( $payment_method_trustly );
 
 		// TWINT.
 		$payment_method_twint = new PaymentMethod( PaymentMethods::TWINT );
@@ -1149,6 +1175,11 @@ class Plugin {
 		];
 
 		$this->payment_methods->add( $payment_method_visa );
+
+		// Vouchers.
+		$payment_method_vouchers = new PaymentMethod( PaymentMethods::VOUCHERS );
+
+		$this->payment_methods->add( $payment_method_vouchers );
 
 		PaymentMethods::maybe_update_active_payment_methods();
 	}
@@ -1639,7 +1670,7 @@ class Plugin {
 			if ( \property_exists( $data, 'risk_score' ) ) {
 				$payment->set_meta( 'pronamic_pay_risk_score', $data->risk_score );
 			}
-		} catch ( \Exception $e ) {
+		} catch ( \Exception ) {
 			return;
 		}
 	}

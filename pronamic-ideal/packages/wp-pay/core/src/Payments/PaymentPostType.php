@@ -3,7 +3,7 @@
  * Payment Post Type
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Payments
  */
@@ -13,7 +13,7 @@ namespace Pronamic\WordPress\Pay\Payments;
 /**
  * Title: WordPress iDEAL post types
  * Description:
- * Copyright: 2005-2024 Pronamic
+ * Copyright: 2005-2025 Pronamic
  * Company: Pronamic
  *
  * @author  Remco Tolsma
@@ -33,8 +33,8 @@ class PaymentPostType {
 		 *
 		 * @link https://github.com/WordPress/WordPress/blob/4.0/wp-includes/post.php#L167
 		 */
-		add_action( 'init', [ $this, 'register_payment_post_type' ], 0 ); // Highest priority.
-		add_action( 'init', [ $this, 'register_post_status' ], 9 );
+		add_action( 'init', $this->register_payment_post_type( ... ), 0 ); // Highest priority.
+		add_action( 'init', $this->register_post_status( ... ), 9 );
 	}
 
 	/**

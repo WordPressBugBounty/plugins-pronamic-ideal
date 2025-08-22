@@ -3,7 +3,7 @@
  * Bank transfer details
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2025 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -17,7 +17,7 @@ namespace Pronamic\WordPress\Pay\Banks;
  * @since   2.2.6
  * @version 2.2.6
  */
-class BankTransferDetails {
+class BankTransferDetails implements \Stringable {
 	/**
 	 * Bank account details.
 	 *
@@ -132,7 +132,7 @@ class BankTransferDetails {
 	 *
 	 * @return string
 	 */
-	public function __toString() {
+	public function __toString(): string {
 		$pieces = [
 			$this->get_bank_account(),
 			$this->get_reference(),
