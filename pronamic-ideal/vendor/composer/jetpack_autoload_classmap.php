@@ -2143,83 +2143,83 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay-gateways/ogone/src/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\AddressTransformer' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/AddressTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\Admin' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/Admin.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\CLI' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/CLI.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\CardField' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/CardField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\Config' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/Config.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\CustomerDataStore' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/CustomerDataStore.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\CustomerQuery' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/CustomerQuery.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\Gateway' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\Install' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/Install.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\Integration' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/Integration.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\LineTransformer' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/LineTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\LineTypeTransformer' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/LineTypeTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\LinesTransformer' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/LinesTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\LocaleTransformer' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/LocaleTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\MethodTransformer' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/MethodTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\ProfileDataStore' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/ProfileDataStore.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\RefundTransformer' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/RefundTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\ScriptsController' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/ScriptsController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\StatusTransformer' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/StatusTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\WebhookController' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.16.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/WebhookController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\Client' => array(
