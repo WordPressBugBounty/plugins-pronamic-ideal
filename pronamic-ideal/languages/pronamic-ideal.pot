@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Pronamic Pay 9.17.1\n"
+"Project-Id-Version: Pronamic Pay 9.17.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pronamic-ideal\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-08-26T08:29:46+00:00\n"
+"POT-Creation-Date: 2025-09-17T12:29:03+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pronamic-ideal\n"
@@ -2409,7 +2409,7 @@ msgstr ""
 #: packages/wp-pay-extensions/gravityforms/src/AdminPaymentFormPostType.php:124
 #: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:467
 #: packages/wp-pay-extensions/gravityforms/views/html-admin-feed-settings.php:134
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:833
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:847
 #: packages/wp-pay-extensions/ninjaforms/src/PaymentGateway.php:180
 #: packages/wp-pay-extensions/woocommerce/src/Gateway.php:331
 #: packages/wp-pay/core/src/Admin/AdminGatewayPostType.php:235
@@ -2991,7 +2991,7 @@ msgstr ""
 #: packages/wp-pay-extensions/gravityforms/src/Admin.php:63
 #: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:112
 #: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:297
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:728
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:742
 #: packages/wp-pay/core/src/Admin/AdminModule.php:870
 #: packages/wp-pay/core/views/form.php:46
 #: packages/wp-pay/core/views/subscription-mandate.php:271
@@ -3746,9 +3746,9 @@ msgstr ""
 #: packages/wp-pay-extensions/memberpress/src/Extension.php:646
 #: packages/wp-pay-extensions/memberpress/src/Extension.php:752
 #: packages/wp-pay-extensions/memberpress/src/Extension.php:780
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:461
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:529
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:583
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:475
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:543
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:597
 msgid "MemberPress"
 msgstr ""
 
@@ -3785,60 +3785,60 @@ msgstr ""
 msgid "Pronamic - %s"
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:226
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:240
 msgid "This gateway only supports one time payments."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:304
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:318
 msgid "Unable to process refund because payment does not exist."
 msgstr ""
 
 #. translators: %s: extension name
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:460
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:474
 #, php-format
 msgid "%s subscription on hold."
 msgstr ""
 
 #. translators: %s: extension name
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:528
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:542
 #, php-format
 msgid "%s subscription reactivated."
 msgstr ""
 
 #. translators: %s: extension name
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:582
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:596
 #, php-format
 msgid "%s subscription cancelled."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:680
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:694
 msgid "For admins only: check payment method settings in MemberPress."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:734
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:748
 msgid "JavaScript is disabled in your browser. You will not be able to complete your purchase until you either enable JavaScript in your browser, or switch to a browser that supports it."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:787
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:801
 msgid "For admins only: an error occurred while retrieving fields for the selected payment method. Please check payment method settings."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:892
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:906
 msgid "The payment method for this subscription can not be updated manually."
 msgstr ""
 
 #. translators: %s: mandate selection URL anchor
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:908
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:922
 #, php-format
 msgid "To update the payment method for this subscription, please visit the %s page."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:912
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:913
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:926
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:927
 msgid "payment method update"
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:921
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:935
 #: packages/wp-pay-extensions/restrict-content-pro/src/Extension.php:667
 #: packages/wp-pay-extensions/restrict-content-pro/src/Extension.php:668
 msgid "Update payment method"
@@ -4007,18 +4007,24 @@ msgstr ""
 msgid "Restrict Content Pro payment %s"
 msgstr ""
 
-#: packages/wp-pay-extensions/restrict-content-pro/src/Util.php:180
+#. translators: %s: Subscription name
+#: packages/wp-pay-extensions/restrict-content-pro/src/Util.php:170
+#, php-format
+msgid "Trial \"%s\""
+msgstr ""
+
+#: packages/wp-pay-extensions/restrict-content-pro/src/Util.php:199
 #: packages/wp-pay/core/views/meta-box-payment-lines.php:56
 msgid "Discount"
 msgstr ""
 
 #. translators: %s: Restrict Content Pro discount code
-#: packages/wp-pay-extensions/restrict-content-pro/src/Util.php:185
+#: packages/wp-pay-extensions/restrict-content-pro/src/Util.php:204
 #, php-format
 msgid "Discount code `%s`"
 msgstr ""
 
-#: packages/wp-pay-extensions/restrict-content-pro/src/Util.php:209
+#: packages/wp-pay-extensions/restrict-content-pro/src/Util.php:228
 msgid "Fees"
 msgstr ""
 

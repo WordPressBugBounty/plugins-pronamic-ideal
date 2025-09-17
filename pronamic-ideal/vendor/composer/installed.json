@@ -2,17 +2,17 @@
     "packages": [
         {
             "name": "automattic/jetpack-autoloader",
-            "version": "v5.0.9",
-            "version_normalized": "5.0.9.0",
+            "version": "v5.0.10",
+            "version_normalized": "5.0.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Automattic/jetpack-autoloader.git",
-                "reference": "c9e9b82cc515d9ed093fa0ff21245f277aeceb4e"
+                "reference": "f7e2142139b925fac0a167ed0cbc71e2592bd9a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Automattic/jetpack-autoloader/zipball/c9e9b82cc515d9ed093fa0ff21245f277aeceb4e",
-                "reference": "c9e9b82cc515d9ed093fa0ff21245f277aeceb4e",
+                "url": "https://api.github.com/repos/Automattic/jetpack-autoloader/zipball/f7e2142139b925fac0a167ed0cbc71e2592bd9a0",
+                "reference": "f7e2142139b925fac0a167ed0cbc71e2592bd9a0",
                 "shasum": ""
             },
             "require": {
@@ -20,12 +20,12 @@
                 "php": ">=7.2"
             },
             "require-dev": {
-                "automattic/jetpack-changelogger": "^6.0.5",
+                "automattic/jetpack-changelogger": "^6.0.7",
                 "automattic/phpunit-select-config": "^1.0.3",
                 "composer/composer": "^2.2",
                 "yoast/phpunit-polyfills": "^4.0.0"
             },
-            "time": "2025-07-28T19:49:50+00:00",
+            "time": "2025-09-15T14:36:53+00:00",
             "type": "composer-plugin",
             "extra": {
                 "class": "Automattic\\Jetpack\\Autoloader\\CustomAutoloaderPlugin",
@@ -64,7 +64,7 @@
                 "wordpress"
             ],
             "support": {
-                "source": "https://github.com/Automattic/jetpack-autoloader/tree/v5.0.9"
+                "source": "https://github.com/Automattic/jetpack-autoloader/tree/v5.0.10"
             },
             "install-path": "../automattic/jetpack-autoloader"
         },
@@ -219,17 +219,17 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php-lite",
-            "version": "9.0.12",
-            "version_normalized": "9.0.12.0",
+            "version": "9.0.14",
+            "version_normalized": "9.0.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php-lite.git",
-                "reference": "8bc6bb69bb4a43a71acf5631de8a9504387d3007"
+                "reference": "af794cc2ed18edeebadf5ffe08eb6add04275709"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php-lite/zipball/8bc6bb69bb4a43a71acf5631de8a9504387d3007",
-                "reference": "8bc6bb69bb4a43a71acf5631de8a9504387d3007",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php-lite/zipball/af794cc2ed18edeebadf5ffe08eb6add04275709",
+                "reference": "af794cc2ed18edeebadf5ffe08eb6add04275709",
                 "shasum": ""
             },
             "require": {
@@ -258,7 +258,7 @@
             "suggest": {
                 "giggsey/libphonenumber-for-php": "Use libphonenumber-for-php for geocoding, carriers, timezones and matching"
             },
-            "time": "2025-08-15T09:14:59+00:00",
+            "time": "2025-09-16T07:09:25+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1818,17 +1818,17 @@
         },
         {
             "name": "wp-pay-extensions/memberpress",
-            "version": "v4.8.3",
-            "version_normalized": "4.8.3.0",
+            "version": "v4.8.4",
+            "version_normalized": "4.8.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pronamic/wp-pronamic-pay-memberpress.git",
-                "reference": "e4166037ee7c35cc4b3e718d1647dd2723fb9971"
+                "reference": "c938b5d7e35af508ceaac874945ea05b142c7ffa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-memberpress/zipball/e4166037ee7c35cc4b3e718d1647dd2723fb9971",
-                "reference": "e4166037ee7c35cc4b3e718d1647dd2723fb9971",
+                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-memberpress/zipball/c938b5d7e35af508ceaac874945ea05b142c7ffa",
+                "reference": "c938b5d7e35af508ceaac874945ea05b142c7ffa",
                 "shasum": ""
             },
             "require": {
@@ -1852,7 +1852,7 @@
                 "wp-phpunit/wp-phpunit": "^6.1",
                 "yoast/phpunit-polyfills": "^1.0"
             },
-            "time": "2025-06-19T10:22:57+00:00",
+            "time": "2025-09-17T06:52:47+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -1973,17 +1973,17 @@
         },
         {
             "name": "wp-pay-extensions/restrict-content-pro",
-            "version": "v4.7.0",
-            "version_normalized": "4.7.0.0",
+            "version": "v4.7.1",
+            "version_normalized": "4.7.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro.git",
-                "reference": "49ddf5b46976d471cc4aa5976dc0abe6b2c5c641"
+                "reference": "146d4b1ca0537f2eb0ac860b0b209f6da253336e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-restrict-content-pro/zipball/49ddf5b46976d471cc4aa5976dc0abe6b2c5c641",
-                "reference": "49ddf5b46976d471cc4aa5976dc0abe6b2c5c641",
+                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-restrict-content-pro/zipball/146d4b1ca0537f2eb0ac860b0b209f6da253336e",
+                "reference": "146d4b1ca0537f2eb0ac860b0b209f6da253336e",
                 "shasum": ""
             },
             "require": {
@@ -2009,7 +2009,7 @@
                 "wpackagist-plugin/restrict-content": "^3.2",
                 "yoast/phpunit-polyfills": "^2.0"
             },
-            "time": "2025-08-22T10:04:42+00:00",
+            "time": "2025-09-17T07:17:08+00:00",
             "type": "wordpress-plugin",
             "extra": {
                 "installer-paths": {
@@ -2405,17 +2405,17 @@
         },
         {
             "name": "wp-pay-gateways/mollie",
-            "version": "v4.16.1",
-            "version_normalized": "4.16.1.0",
+            "version": "v4.16.2",
+            "version_normalized": "4.16.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pronamic/wp-pronamic-pay-mollie.git",
-                "reference": "0066a7ce534c56d07ef893515f5ca076bc6c70bb"
+                "reference": "9218668d189fe16360cae920f9e092befc83d080"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-mollie/zipball/0066a7ce534c56d07ef893515f5ca076bc6c70bb",
-                "reference": "0066a7ce534c56d07ef893515f5ca076bc6c70bb",
+                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-mollie/zipball/9218668d189fe16360cae920f9e092befc83d080",
+                "reference": "9218668d189fe16360cae920f9e092befc83d080",
                 "shasum": ""
             },
             "require": {
@@ -2448,7 +2448,7 @@
                 "wp-phpunit/wp-phpunit": "^6.5",
                 "yoast/phpunit-polyfills": "^4.0"
             },
-            "time": "2025-08-26T07:57:17+00:00",
+            "time": "2025-09-17T07:27:36+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
@@ -2900,17 +2900,17 @@
         },
         {
             "name": "wp-pay/core",
-            "version": "v4.27.0",
-            "version_normalized": "4.27.0.0",
+            "version": "v4.27.1",
+            "version_normalized": "4.27.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pronamic/wp-pay-core.git",
-                "reference": "2257c28d44fdb5ab1aadf3627fdc762a2d526787"
+                "reference": "4315a0253d68a5677bf6a1e73c6a8f028c36efe6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pronamic/wp-pay-core/zipball/2257c28d44fdb5ab1aadf3627fdc762a2d526787",
-                "reference": "2257c28d44fdb5ab1aadf3627fdc762a2d526787",
+                "url": "https://api.github.com/repos/pronamic/wp-pay-core/zipball/4315a0253d68a5677bf6a1e73c6a8f028c36efe6",
+                "reference": "4315a0253d68a5677bf6a1e73c6a8f028c36efe6",
                 "shasum": ""
             },
             "require": {
@@ -2948,7 +2948,7 @@
                 "wp-phpunit/wp-phpunit": "^6.1",
                 "yoast/phpunit-polyfills": "^4.0"
             },
-            "time": "2025-08-22T09:21:32+00:00",
+            "time": "2025-09-12T10:32:23+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
