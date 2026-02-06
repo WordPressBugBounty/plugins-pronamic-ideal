@@ -3,7 +3,7 @@
  * MemberPress subscription form
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\MemberPress
  */
@@ -34,9 +34,7 @@ $query = new WP_Query(
 
 $ps = array_filter(
 	$query->posts,
-	function ( $post ) {
-		return $post instanceof WP_Post;
-	}
+	fn( $post ) => $post instanceof WP_Post
 );
 
 $items = [];

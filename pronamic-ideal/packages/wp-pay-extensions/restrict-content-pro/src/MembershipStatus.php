@@ -3,7 +3,7 @@
  * Restrict Content Pro membership status
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\RestrictContent
  */
@@ -15,9 +15,7 @@ use Pronamic\WordPress\Pay\Subscriptions\SubscriptionStatus;
 /**
  * Restrict Content Pro membership status
  *
- * @link https://gitlab.com/pronamic-plugins/restrict-content-pro/blob/3.0.10/includes/admin/memberships/edit-membership.php#L105-112
- *
- * @author  Remco Tolsma
+ * @link    https://gitlab.com/pronamic-plugins/restrict-content-pro/blob/3.0.10/includes/admin/memberships/edit-membership.php#L105-112
  * @version 2.0.0
  * @since   1.0.0
  */
@@ -67,18 +65,13 @@ class MembershipStatus {
 	 * @return string|null Core subscription status.
 	 */
 	public static function to_core_subscription_status( $rcp_status ) {
-		switch ( $rcp_status ) {
-			case self::ACTIVE:
-				return SubscriptionStatus::ACTIVE;
-			case self::EXPIRED:
-				return SubscriptionStatus::COMPLETED;
-			case self::CANCELLED:
-				return SubscriptionStatus::CANCELLED;
-			case self::PENDING:
-				return SubscriptionStatus::OPEN;
-			default:
-				return null;
-		}
+		return match ( $rcp_status ) {
+			self::ACTIVE => SubscriptionStatus::ACTIVE,
+			self::EXPIRED => SubscriptionStatus::COMPLETED,
+			self::CANCELLED => SubscriptionStatus::CANCELLED,
+			self::PENDING => SubscriptionStatus::OPEN,
+			default => null,
+		};
 	}
 
 	/**
@@ -89,22 +82,13 @@ class MembershipStatus {
 	 * @return string|null
 	 */
 	public static function transform_from_pronamic( $status ) {
-		switch ( $status ) {
-			case SubscriptionStatus::ACTIVE:
-				return self::ACTIVE;
-			case SubscriptionStatus::CANCELLED:
-				return self::CANCELLED;
-			case SubscriptionStatus::EXPIRED:
-				return self::EXPIRED;
-			case SubscriptionStatus::FAILURE:
-			case SubscriptionStatus::ON_HOLD:
-			case SubscriptionStatus::OPEN:
-				return self::PENDING;
-			case SubscriptionStatus::COMPLETED:
-				// Restrict Content Pro does not have a corresponding status.
-				return null;
-			default:
-				return null;
-		}
+		return match ( $status ) {
+			SubscriptionStatus::ACTIVE => self::ACTIVE,
+			SubscriptionStatus::CANCELLED => self::CANCELLED,
+			SubscriptionStatus::EXPIRED => self::EXPIRED,
+			SubscriptionStatus::FAILURE, SubscriptionStatus::ON_HOLD, SubscriptionStatus::OPEN => self::PENDING,
+			SubscriptionStatus::COMPLETED => null,
+			default => null,
+		};
 	}
 }

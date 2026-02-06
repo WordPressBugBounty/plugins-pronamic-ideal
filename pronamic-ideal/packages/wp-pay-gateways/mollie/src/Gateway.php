@@ -3,7 +3,7 @@
  * Mollie gateway.
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -666,6 +666,15 @@ class Gateway extends Core_Gateway {
 
 		if ( null !== $lines ) {
 			$request->lines = $lines_transformer->transform_wp_to_mollie( $lines );
+
+			/**
+			 * Remove payment lines if they do not match the recurring payment amount.
+			 *
+			 * @link https://github.com/pronamic/wp-pronamic-pay-mollie/issues/100
+			 */
+			if ( 'recurring' === $sequence_type && $lines->get_amount()->get_value() !== $payment->get_total_amount()->get_value() ) {
+				$request->lines = null;
+			}
 		}
 
 		/**
@@ -1211,7 +1220,7 @@ class Gateway extends Core_Gateway {
 
 						$subscription->add_note(
 							\sprintf(
-							/* translators: 1: Mollie chargeback ID, 2: Mollie payment ID */
+								/* translators: 1: Mollie chargeback ID, 2: Mollie payment ID */
 								\__( 'Subscription put on hold due to chargeback `%1$s` of payment `%2$s`.', 'pronamic-ideal' ),
 								\esc_html( $mollie_chargeback->get_id() ),
 								\esc_html( $mollie_payment->get_id() )
@@ -1307,37 +1316,35 @@ class Gateway extends Core_Gateway {
 
 			$mandate = $this->client->get_mandate( $mandate_id, $customer_id );
 
-			if ( \is_object( $mandate ) ) {
-				$method_transformer = new MethodTransformer();
+			$method_transformer = new MethodTransformer();
 
-				$old_method = $subscription->get_payment_method();
-				$new_method = $payment_method;
+			$old_method = $subscription->get_payment_method();
+			$new_method = $payment_method;
 
-				if ( null === $payment_method && \property_exists( $mandate, 'method' ) ) {
-					$pronamic_methods = $method_transformer->from_mollie_to_pronamic( $mandate->method );
+			if ( null === $payment_method && \property_exists( $mandate, 'method' ) ) {
+				$pronamic_methods = $method_transformer->from_mollie_to_pronamic( $mandate->method );
 
-					$new_method = in_array( $old_method, $pronamic_methods, true ) ? $old_method : null;
+				$new_method = in_array( $old_method, $pronamic_methods, true ) ? $old_method : null;
 
-					$first_pronamic_method = reset( $pronamic_methods );
+				$first_pronamic_method = reset( $pronamic_methods );
 
-					if ( null === $new_method && false !== $first_pronamic_method ) {
-						$new_method = $first_pronamic_method;
-					}
+				if ( null === $new_method && false !== $first_pronamic_method ) {
+					$new_method = $first_pronamic_method;
 				}
+			}
 
-				if ( ! empty( $old_method ) && $old_method !== $new_method ) {
-					$subscription->set_payment_method( $new_method );
+			if ( ! empty( $old_method ) && $old_method !== $new_method ) {
+				$subscription->set_payment_method( $new_method );
 
-					// Add note.
-					$note = \sprintf(
-						/* translators: 1: old payment method, 2: new payment method */
-						\__( 'Payment method for subscription changed from "%1$s" to "%2$s".', 'pronamic-ideal' ),
-						\esc_html( (string) PaymentMethods::get_name( $old_method ) ),
-						\esc_html( (string) PaymentMethods::get_name( $new_method ) )
-					);
+				// Add note.
+				$note = \sprintf(
+					/* translators: 1: old payment method, 2: new payment method */
+					\__( 'Payment method for subscription changed from "%1$s" to "%2$s".', 'pronamic-ideal' ),
+					\esc_html( (string) PaymentMethods::get_name( $old_method ) ),
+					\esc_html( (string) PaymentMethods::get_name( $new_method ) )
+				);
 
-					$subscription->add_note( $note );
-				}
+				$subscription->add_note( $note );
 			}
 		} catch ( \Exception ) { // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedCatch
 			// Nothing to do.

@@ -6,6 +6,53 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][unreleased]
 
+## [4.9.0] - 2026-01-05
+
+### Commits
+
+- Added support for Adyen payment method Open banking / PaybyBank ([7aac0fb](https://github.com/pronamic/wp-pronamic-pay-adyen/commit/7aac0fb040f48ef0558e76d218898a8fe186e712))
+- Merge pull request #40 from pronamic/core-230-payment-line-quantity-type ([78e8356](https://github.com/pronamic/wp-pronamic-pay-adyen/commit/78e83560f2b4074556c4b23e8224818b05a6b5fe))
+- Use `Number::is_whole_number()` helper. ([a5663bb](https://github.com/pronamic/wp-pronamic-pay-adyen/commit/a5663bb9dfe0da1106fa57a5a42b3d930c36345d))
+- Updated for quantity `Number` (https://github.com/pronamic/wp-pay-core/issues/230). ([a10236e](https://github.com/pronamic/wp-pronamic-pay-adyen/commit/a10236ec1e959aa717962a5c842ab2876ee96471))
+
+### Composer
+
+- Added `pronamic/wp-number` `^1.4`.
+
+Full set of changes: [`4.8.0...4.9.0`][4.9.0]
+
+[4.9.0]: https://github.com/pronamic/wp-pronamic-pay-adyen/compare/v4.8.0...v4.9.0
+
+## [4.8.0] - 2025-11-11
+
+### Commits
+
+- Introduce a default country code config option ([8d64f84](https://github.com/pronamic/wp-pronamic-pay-adyen/commit/8d64f84801912083ed5306047f2f9fec51e5418b))
+- Since Adyen Web v6 the `countryCode` is a mandatory configuration property ([0228061](https://github.com/pronamic/wp-pronamic-pay-adyen/commit/0228061d12f3dcd81abcdefb7675685ae0e73329))
+- Updated to Web SDK version 6.22.0. ([a378637](https://github.com/pronamic/wp-pronamic-pay-adyen/commit/a378637a5635bb80d0f755b1389a3c08828f6edd))
+- Use `npm` for `Adyen/adyen-web` ([e0d42d3](https://github.com/pronamic/wp-pronamic-pay-adyen/commit/e0d42d3ef2e19a99f97255e4adf2aa279effe364))
+- npm install @adyen/adyen-web@latest --save ([4b78cce](https://github.com/pronamic/wp-pronamic-pay-adyen/commit/4b78cce28c2e706357b04ce03b83ce9ce09fb4fa))
+- Added this point we shoud not use translation functions. ([1be342b](https://github.com/pronamic/wp-pronamic-pay-adyen/commit/1be342b318c7afa25f0d8fec67df27b0a08aee1a))
+
+Full set of changes: [`4.7.0...4.8.0`][4.8.0]
+
+[4.8.0]: https://github.com/pronamic/wp-pronamic-pay-adyen/compare/v4.7.0...v4.8.0
+
+## [4.8.0-rc.1] - 2025-10-06
+
+### Added
+
+- Addded mandatory configuration property `countryCode`.
+- Added country code configuration option.
+
+### Changed
+
+- Use Adyen Web via `npm`.
+
+### Fixed
+
+- Configuration property "paymentMethodsConfiguration" is not a valid AdyenCheckout property.
+
 ## [4.7.0] - 2025-08-22
 
 ### Changed

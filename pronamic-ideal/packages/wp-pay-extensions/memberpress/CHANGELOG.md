@@ -5,7 +5,53 @@ All notable changes to this project will be documented in this file.
 This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a CHANGELOG](http://keepachangelog.com/).
 
 ## [Unreleased][unreleased]
--
+
+- Updated codebase to be compatible with PHP 8.2 (via Rector).
+
+## [4.10.0] - 2026-01-27
+
+### Added
+
+- Added checkout description setting.
+- Added minimum payment amount setting.
+
+### Commits
+
+- Require PHP 8.2 or higher ([6257141](https://github.com/pronamic/wp-pronamic-pay-memberpress/commit/62571416aa25a59422d398a53d2e7191720051b4))
+
+### Composer
+
+- Added `automattic/jetpack-autoloader` `^5.0`.
+- Changed `php` from `>=7.4` to `>=8.2`.
+
+Full set of changes: [`4.9.0...4.10.0`][4.10.0]
+
+[4.10.0]: https://github.com/pronamic/wp-pronamic-pay-memberpress/compare/v4.9.0...v4.10.0
+
+## [4.9.0] - 2026-01-05
+
+### Commits
+
+- Merge pull request #28 from pronamic/core-230-payment-line-quantity-type ([95c34d8](https://github.com/pronamic/wp-pronamic-pay-memberpress/commit/95c34d89146b0c75eb39d3f7459bbb65550e7cca))
+- Updated for quantity `Number` (https://github.com/pronamic/wp-pay-core/issues/230). ([389d456](https://github.com/pronamic/wp-pronamic-pay-memberpress/commit/389d456e629a2b38e0b67b8d507a3019d672a2ff))
+
+### Composer
+
+- Added `pronamic/wp-number` `^1.4`.
+
+Full set of changes: [`4.8.5...4.9.0`][4.9.0]
+
+[4.9.0]: https://github.com/pronamic/wp-pronamic-pay-memberpress/compare/v4.8.5...v4.9.0
+
+## [4.8.5] - 2025-11-11
+
+### Commits
+
+- Added this point we shoud not use translation functions. ([7bc90d5](https://github.com/pronamic/wp-pronamic-pay-memberpress/commit/7bc90d57b3cfff068c59e703a57afa32e7b1d9de))
+
+Full set of changes: [`4.8.4...4.8.5`][4.8.5]
+
+[4.8.5]: https://github.com/pronamic/wp-pronamic-pay-memberpress/compare/v4.8.4...v4.8.5
 
 ## [4.8.4] - 2025-09-17
 

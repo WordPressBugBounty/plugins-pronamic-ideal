@@ -3,7 +3,7 @@
  * Integration
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Gateways\OmniKassa2
  */
@@ -15,7 +15,6 @@ use Pronamic\WordPress\Pay\AbstractGatewayIntegration;
 /**
  * Integration
  *
- * @author  Remco Tolsma
  * @version 2.3.4
  * @since   1.0.0
  */
@@ -46,10 +45,7 @@ final class Integration extends AbstractGatewayIntegration {
 				'api_url'       => 'https://betalen.rabobank.nl/omnikassa-api/',
 				'dashboard_url' => 'https://bankieren.rabobank.nl/smartpay/dashboard/home',
 				'id'            => 'rabobank-omnikassa-2',
-				'manual_url'    => \__(
-					'https://www.pronamicpay.com/en/manuals/how-to-connect-rabo-smart-pay-to-wordpress-with-pronamic-pay/',
-					'pronamic-ideal'
-				),
+				'manual_url'    => 'https://www.pronamicpay.com/en/manuals/how-to-connect-rabo-smart-pay-to-wordpress-with-pronamic-pay/',
 				'name'          => 'Rabobank - Rabo Smart Pay',
 				'product_url'   => 'https://www.rabobank.nl/bedrijven/betalen/klanten-laten-betalen/rabo-smart-pay',
 				'provider'      => 'rabobank',

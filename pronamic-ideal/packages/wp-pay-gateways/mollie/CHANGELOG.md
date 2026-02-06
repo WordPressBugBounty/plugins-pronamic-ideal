@@ -7,6 +7,59 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 ## [Unreleased][unreleased]
 -
 
+## [4.19.0] - 2026-01-27
+
+### Commits
+
+- Removed payment lines if they do not match the recurring payment amount. ([c532a0e](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/c532a0e14183e98474b85575a40f115bd1c8caed))
+
+Full set of changes: [`4.18.0...4.19.0`][4.19.0]
+
+[4.19.0]: https://github.com/pronamic/wp-pronamic-pay-mollie/compare/v4.18.0...v4.19.0
+
+## [4.18.0] - 2026-01-05
+
+### Commits
+
+- Merge pull request #97 from pronamic/core-230-payment-line-quantity-type ([1597d11](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/1597d1143d9f9a4099f3d03e4ccc56efac5317d5))
+- Use `Number::is_whole_number()` helper. ([08485d3](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/08485d37299c7c00350663b4ff6c262f89005b59))
+- Updated for quantity `Number` (https://github.com/pronamic/wp-pay-core/issues/230). ([5c3779e](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/5c3779eb37a5127f924c3506ee42e9178aa5fcc1))
+
+### Composer
+
+- Added `pronamic/wp-number` `^1.4`.
+
+Full set of changes: [`4.17.0...4.18.0`][4.18.0]
+
+[4.18.0]: https://github.com/pronamic/wp-pronamic-pay-mollie/compare/v4.17.0...v4.18.0
+
+## [4.17.0] - 2025-11-17
+
+### Commits
+
+- Fix: Prevent 422 errors when incomplete billing addresses are sent to Mollie (#96) ([d02c076](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/d02c076f4a30a3d26b0e7dcea82ceaed619eea92))
+- Removed next payment delivery date. ([3ee1c68](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/3ee1c682fd94ccc4c4e54b40a67714728e28b3ca))
+
+### Composer
+
+- Changed `wp-pay/core` from `^4.27` to `v4.28.0`.
+	Release notes: https://github.com/pronamic/wp-pay-core/releases/tag/v4.28.0
+
+Full set of changes: [`4.16.3...4.17.0`][4.17.0]
+
+[4.17.0]: https://github.com/pronamic/wp-pronamic-pay-mollie/compare/v4.16.3...v4.17.0
+
+## [4.16.3] - 2025-11-11
+
+### Commits
+
+- Fixed indent. ([d0f3d15](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/d0f3d15879acdcf63a3e62585486f4013ac5609a))
+- Added this point we shoud not use translation functions. ([32bf457](https://github.com/pronamic/wp-pronamic-pay-mollie/commit/32bf457f0bd7a2800b6a87f5d9582ffad123598f))
+
+Full set of changes: [`4.16.2...4.16.3`][4.16.3]
+
+[4.16.3]: https://github.com/pronamic/wp-pronamic-pay-mollie/compare/v4.16.2...v4.16.3
+
 ## [4.16.2] - 2025-09-17
 
 ### Fixed

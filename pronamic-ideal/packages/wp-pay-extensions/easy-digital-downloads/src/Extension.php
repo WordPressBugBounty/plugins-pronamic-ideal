@@ -3,7 +3,7 @@
  * Easy Digital Downloads extension
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\EasyDigitalDownloads
  */
@@ -17,12 +17,8 @@ use Pronamic\WordPress\Pay\Payments\Payment;
 use Pronamic\WordPress\Pay\Plugin;
 
 /**
- * Title: Easy Digital Downloads extension
- * Description:
- * Copyright: 2005-2024 Pronamic
- * Company: Pronamic
+ * Easy Digital Downloads extension class
  *
- * @author  Remco Tolsma
  * @version 2.1.2
  * @since   1.0.0
  */
@@ -40,7 +36,7 @@ class Extension extends AbstractPluginIntegration {
 	public function __construct() {
 		parent::__construct(
 			[
-				'name' => __( 'Easy Digital Downloads', 'pronamic-ideal' ),
+				'name' => 'Easy Digital Downloads',
 			]
 		);
 

@@ -3,7 +3,7 @@
  * Subscription
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Subscriptions
  */
@@ -23,7 +23,6 @@ use Pronamic\WordPress\Pay\Payments\PaymentInfoHelper;
 /**
  * Subscription
  *
- * @author  Remco Tolsma
  * @version 2.7.1
  * @since   1.0.0
  */
@@ -453,35 +452,6 @@ class Subscription extends PaymentInfo implements \JsonSerializable {
 		}
 
 		$this->next_payment_date = ( null === $date ) ? null : DateTimeImmutable::create_from_interface( $date );
-	}
-
-	/**
-	 * Get the next payment delivery date of this subscription.
-	 *
-	 * @return DateTimeInterface|null
-	 */
-	public function get_next_payment_delivery_date() {
-		$next_payment_date = $this->get_next_payment_date();
-
-		// Check if there is next payment date.
-		if ( null === $next_payment_date ) {
-			return null;
-		}
-
-		$next_payment_delivery_date = clone $next_payment_date;
-
-		$subscription = $this;
-
-		/**
-		 * Filters the subscription next payment delivery date.
-		 *
-		 * @param DateTimeImmutable $next_payment_delivery_date Next payment delivery date.
-		 * @param Subscription      $subscription               Subscription.
-		 * @since unreleased
-		 */
-		$next_payment_delivery_date = \apply_filters( 'pronamic_pay_subscription_next_payment_delivery_date', $next_payment_delivery_date, $subscription );
-
-		return $next_payment_delivery_date;
 	}
 
 	/**

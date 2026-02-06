@@ -3,7 +3,7 @@
  * Extension
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\RestrictContent
  */
@@ -11,9 +11,7 @@
 namespace Pronamic\WordPress\Pay\Extensions\RestrictContent;
 
 use Pronamic\WordPress\DateTime\DateTime;
-use Pronamic\WordPress\DateTime\DateTimeImmutable;
 use Pronamic\WordPress\Pay\AbstractPluginIntegration;
-use Pronamic\WordPress\Pay\Core\PaymentMethods;
 use Pronamic\WordPress\Pay\Payments\PaymentStatus as Core_PaymentStatus;
 use Pronamic\WordPress\Pay\Payments\Payment;
 use Pronamic\WordPress\Pay\Subscriptions\Subscription;
@@ -48,7 +46,7 @@ class Extension extends AbstractPluginIntegration {
 		$args = wp_parse_args(
 			$args,
 			[
-				'name'                => \__( 'Restrict Content Pro', 'pronamic-ideal' ),
+				'name'                => 'Restrict Content Pro',
 				'slug'                => 'restrict-content-pro',
 				'version'             => '4.5.0',
 				'version_option_name' => 'pronamic_pay_restrictcontentpro_version',
@@ -75,26 +73,26 @@ class Extension extends AbstractPluginIntegration {
 	 * @return void
 	 */
 	public function setup() {
-		\add_filter( 'pronamic_payment_source_description', [ $this, 'payment_source_description' ], 10, 2 );
-		\add_filter( 'pronamic_payment_source_url', [ $this, 'payment_source_url' ], 10, 2 );
-		\add_filter( 'pronamic_subscription_source_description', [ $this, 'subscription_source_description' ], 10, 2 );
-		\add_filter( 'pronamic_subscription_source_url', [ $this, 'subscription_source_url' ], 10, 2 );
+		\add_filter( 'pronamic_payment_source_description', $this->payment_source_description( ... ), 10, 2 );
+		\add_filter( 'pronamic_payment_source_url', $this->payment_source_url( ... ), 10, 2 );
+		\add_filter( 'pronamic_subscription_source_description', $this->subscription_source_description( ... ), 10, 2 );
+		\add_filter( 'pronamic_subscription_source_url', $this->subscription_source_url( ... ), 10, 2 );
 
 		/*
 		 * The Restrict Content Pro plugin gets bootstrapped with priority `4`.
 		 *
 		 * @link https://gitlab.com/pronamic-plugins/restrict-content-pro/-/blob/3.3.3/restrict-content-pro.php#L119
 		 */
-		\add_action( 'plugins_loaded', [ $this, 'plugins_loaded' ], 5 );
+		\add_action( 'plugins_loaded', $this->plugins_loaded( ... ), 5 );
 
-		\add_action( 'rcp_after_membership_admin_update', [ $this, 'rcp_after_membership_admin_update' ] );
+		\add_action( 'rcp_after_membership_admin_update', $this->rcp_after_membership_admin_update( ... ) );
 
 		/*
 		 * Filter subscription details actions HTML.
 		 *
 		 * @link https://gitlab.com/pronamic-plugins/restrict-content-pro/-/blob/3.4.4/templates/subscription.php#L156-164
 		 */
-		\add_filter( 'rcp_subscription_details_actions', [ $this, 'rcp_subscription_details_actions' ], 10, 4 );
+		\add_filter( 'rcp_subscription_details_actions', $this->rcp_subscription_details_actions( ... ), 10, 4 );
 	}
 
 	/**
@@ -115,10 +113,10 @@ class Extension extends AbstractPluginIntegration {
 		 * @link https://gitlab.com/pronamic-plugins/restrict-content-pro/blob/3.2.3/includes/class-restrict-content-pro.php#L199-215
 		 * @link https://github.com/wp-pay/core/blob/2.2.0/src/Admin/Install.php#L65
 		 */
-		\add_action( 'admin_init', [ $this, 'admin_init_upgrades_executable' ], 4 );
+		\add_action( 'admin_init', $this->admin_init_upgrades_executable( ... ), 4 );
 
-		\add_filter( 'rcp_payment_gateways', [ $this, 'register_pronamic_gateways' ] );
-		\add_action( 'rcp_payments_settings', [ $this, 'payments_settings' ] );
+		\add_filter( 'rcp_payment_gateways', $this->register_pronamic_gateways( ... ) );
+		\add_action( 'rcp_payments_settings', $this->payments_settings( ... ) );
 
 		/**
 		 * We hook into membership status transitions with priority `9` as the default priority results in a conflicting
@@ -127,35 +125,34 @@ class Extension extends AbstractPluginIntegration {
 		 * @link https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/issues/26
 		 * @link https://github.com/stellarwp/restrict-content/blob/1b7914806e9703b6820d9073f0e6d965ebee7337/core/includes/customers/customer-actions.php#L15-L37
 		 */
-		\add_action( 'rcp_transition_membership_status', [ $this, 'rcp_transition_membership_status' ], 9, 3 );
+		\add_action( 'rcp_transition_membership_status', $this->rcp_transition_membership_status( ... ), 9, 3 );
 
-		\add_filter( 'rcp_membership_can_cancel', [ $this, 'rcp_membership_can_cancel' ], 10, 3 );
-		\add_filter( 'rcp_membership_payment_profile_cancelled', [ $this, 'rcp_membership_payment_profile_cancelled' ], 10, 5 );
+		\add_filter( 'rcp_membership_can_cancel', $this->rcp_membership_can_cancel( ... ), 10, 3 );
+		\add_filter( 'rcp_membership_payment_profile_cancelled', $this->rcp_membership_payment_profile_cancelled( ... ), 10, 5 );
 
-		\add_action( 'pronamic_payment_status_update_rcp_payment', [ $this, 'payment_status_update' ], 10, 1 );
-		\add_filter( 'pronamic_payment_redirect_url', [ $this, 'payment_redirect_url' ], 10, 2 );
-		\add_filter( 'pronamic_payment_source_text_rcp_payment', [ $this, 'payment_source_text' ], 10, 2 );
+		\add_action( 'pronamic_payment_status_update_rcp_payment', $this->payment_status_update( ... ), 10, 1 );
+		\add_filter( 'pronamic_payment_redirect_url', $this->payment_redirect_url( ... ), 10, 2 );
+		\add_filter( 'pronamic_payment_source_text_rcp_payment', $this->payment_source_text( ... ), 10, 2 );
 
-		\add_action( 'pronamic_subscription_status_update_rcp_membership', [ $this, 'subscription_status_update' ], 10, 1 );
-		\add_filter( 'pronamic_subscription_source_text_rcp_membership', [ $this, 'subscription_source_text' ], 10, 2 );
+		\add_action( 'pronamic_subscription_status_update_rcp_membership', $this->subscription_status_update( ... ), 10, 1 );
+		\add_filter( 'pronamic_subscription_source_text_rcp_membership', $this->subscription_source_text( ... ), 10, 2 );
 
-		\add_action( 'pronamic_pay_new_payment', [ $this, 'new_payment' ] );
-		\add_action( 'pronamic_pay_update_payment', [ $this, 'maybe_record_restrictcontentpro_payment_refund' ], 10, 1 );
+		\add_action( 'pronamic_pay_new_payment', $this->new_payment( ... ) );
+		\add_action( 'pronamic_pay_update_payment', $this->maybe_record_restrictcontentpro_payment_refund( ... ), 10, 1 );
 
-		\add_action( 'rcp_edit_payment_after', [ $this, 'rcp_edit_payment_after' ] );
+		\add_action( 'rcp_edit_payment_after', $this->rcp_edit_payment_after( ... ) );
 
-		\add_filter( 'rcp_gateway_subscription_id_url', [ $this, 'rcp_gateway_subscription_id_url' ], 10, 3 );
+		\add_filter( 'rcp_gateway_subscription_id_url', $this->rcp_gateway_subscription_id_url( ... ), 10, 3 );
 
-		\add_action( 'save_post_pronamic_pay_subscr', [ $this, 'maybe_update_membership_gateway' ] );
+		\add_action( 'save_post_pronamic_pay_subscr', $this->maybe_update_membership_gateway( ... ) );
 
 		/**
-		 * Filter the subscription next payment delivery date.
+		 * Filter Restrict Content Pro to query expired memberships up to an hour ago instead of current time,
+		 * to prevent RCP from sending an expiration email before the renewal payment has been created.
 		 *
-		 * Priority is set to 9 so payment gateways can override with priority 10.
-		 *
-		 * @link https://github.com/wp-pay-gateways/mollie/blob/2.1.4/src/Integration.php#L272-L344
+		 * @link https://gitlab.com/pronamic-plugins/restrict-content-pro/-/blob/3.4.4/includes/cron-functions.php#L47-106
 		 */
-		\add_filter( 'pronamic_pay_subscription_next_payment_delivery_date', [ $this, 'next_payment_delivery_date' ], 9, 2 );
+		\add_filter( 'rcp_check_for_expired_memberships_query_args', $this->expired_memberships_query_args( ... ) );
 	}
 
 	/**
@@ -771,12 +768,10 @@ class Extension extends AbstractPluginIntegration {
 	 * @return string
 	 */
 	public function payment_source_description( $description, Payment $payment ) {
-		switch ( $payment->source ) {
-			case 'rcp_payment':
-				return __( 'Restrict Content Pro Payment', 'pronamic-ideal' );
-			default:
-				return $description;
-		}
+		return match ( $payment->source ) {
+			'rcp_payment' => __( 'Restrict Content Pro Payment', 'pronamic-ideal' ),
+			default => $description,
+		};
 	}
 
 	/**
@@ -788,19 +783,17 @@ class Extension extends AbstractPluginIntegration {
 	 * @return string
 	 */
 	public function payment_source_url( $url, Payment $payment ) {
-		switch ( $payment->source ) {
-			case 'rcp_payment':
-				return add_query_arg(
-					[
-						'page'       => 'rcp-payments',
-						'view'       => 'edit-payment',
-						'payment_id' => $payment->source_id,
-					],
-					admin_url( 'admin.php' )
-				);
-			default:
-				return $url;
-		}
+		return match ( $payment->source ) {
+			'rcp_payment' => add_query_arg(
+				[
+					'page'       => 'rcp-payments',
+					'view'       => 'edit-payment',
+					'payment_id' => $payment->source_id,
+				],
+				admin_url( 'admin.php' )
+			),
+			default => $url,
+		};
 	}
 
 	/**
@@ -814,12 +807,10 @@ class Extension extends AbstractPluginIntegration {
 	 * @return string
 	 */
 	public function subscription_source_description( $description, Subscription $subscription ) {
-		switch ( $subscription->get_source() ) {
-			case 'rcp_membership':
-				return __( 'Restrict Content Pro Membership', 'pronamic-ideal' );
-			default:
-				return $description;
-		}
+		return match ( $subscription->get_source() ) {
+			'rcp_membership' => __( 'Restrict Content Pro Membership', 'pronamic-ideal' ),
+			default => $description,
+		};
 	}
 
 	/**
@@ -861,19 +852,17 @@ class Extension extends AbstractPluginIntegration {
 	 * @return string
 	 */
 	public function subscription_source_url( $url, Subscription $subscription ) {
-		switch ( $subscription->get_source() ) {
-			case 'rcp_membership':
-				return add_query_arg(
-					[
-						'page'          => 'rcp-members',
-						'view'          => 'edit',
-						'membership_id' => $subscription->get_source_id(),
-					],
-					admin_url( 'admin.php' )
-				);
-			default:
-				return $url;
-		}
+		return match ( $subscription->get_source() ) {
+			'rcp_membership' => add_query_arg(
+				[
+					'page'          => 'rcp-members',
+					'view'          => 'edit',
+					'membership_id' => $subscription->get_source_id(),
+				],
+				admin_url( 'admin.php' )
+			),
+			default => $url,
+		};
 	}
 
 	/**
@@ -1080,7 +1069,7 @@ class Extension extends AbstractPluginIntegration {
 	}
 
 	/**
-	 * Next payment delivery date.
+	 * Filter Restrict Content Pro expired memberships query arguments.
 	 *
 	 * The Restrict Content Pro will check for expired memberships on a daily base:
 	 *
@@ -1094,20 +1083,23 @@ class Extension extends AbstractPluginIntegration {
 	 * @link https://gitlab.com/pronamic-plugins/restrict-content-pro/-/blob/3.3.3/includes/email-functions.php#L328-348
 	 * @link https://gitlab.com/pronamic-plugins/restrict-content-pro/-/blob/3.3.3/includes/email-functions.php#L207-242
 	 *
-	 * @param DateTimeImmutable $next_payment_delivery_date Next payment delivery date.
-	 * @param Subscription      $subscription               Subscription.
-	 * @return DateTimeImmutable
+	 * @param array{'expiration_date_query'?: array{'before'?: string}} $args Expired memberships query arguments.
+	 * @return array{'expiration_date_query'?: array{'before'?: string}}
 	 */
-	public function next_payment_delivery_date( DateTimeImmutable $next_payment_delivery_date, Subscription $subscription ) {
-		if ( 'rcp_membership' !== $subscription->source ) {
-			return $next_payment_delivery_date;
+	public function expired_memberships_query_args( array $args ) {
+		if ( ! \array_key_exists( 'expiration_date_query', $args ) ) {
+			return $args;
 		}
 
-		$date = clone $next_payment_delivery_date;
+		if ( ! \array_key_exists( 'before', $args['expiration_date_query'] ) ) {
+			return $args;
+		}
 
-		$date = $date->modify( '-1 day' );
+		$hour_ago = ( new DateTime() )->modify( '-1 hour' );
 
-		return $date;
+		$args['expiration_date_query']['before'] = $hour_ago->get_local_date()->format( 'Y-m-d H:i:s' );
+
+		return $args;
 	}
 
 	/**

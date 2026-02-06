@@ -6,6 +6,52 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 
 ## [Unreleased][unreleased]
 
+## [4.30.0] - 2026-01-27
+
+### Commits
+
+- Removed extensions support test (#238) ([370ea4d](https://github.com/pronamic/wp-pay-core/commit/370ea4d0ec838cad8ca294b9fb46a865b4615c04))
+- Removed tracking module (#236) ([46fda16](https://github.com/pronamic/wp-pay-core/commit/46fda16ed115a2fb1e61fdea5ee475ff8d3e8d8f))
+
+Full set of changes: [`4.29.0...4.30.0`][4.30.0]
+
+[4.30.0]: https://github.com/pronamic/wp-pay-core/compare/v4.29.0...v4.30.0
+
+## [4.29.0] - 2026-01-05
+
+### Commits
+
+- 232 co branding ideal wero (#233) ([7d76697](https://github.com/pronamic/wp-pay-core/commit/7d76697aede46f9289721dbccc5f67d4e1aa72b7))
+- Added missing PostePay payment method name. ([1ba8327](https://github.com/pronamic/wp-pay-core/commit/1ba8327e3768fd6e08bf77e2a8c4b189451da7b4))
+- Accept mixed type quanity input for backwards compatability. ([8b75d82](https://github.com/pronamic/wp-pay-core/commit/8b75d82e414173176029f4b90cc9a1509e12264a))
+- Merge pull request #231 from pronamic/230-payment-line-quantity-type ([4290153](https://github.com/pronamic/wp-pay-core/commit/42901535352b66975894ce1a1d2035ed697e92df))
+- Handle exception for non-numerical value. ([ba1ac66](https://github.com/pronamic/wp-pay-core/commit/ba1ac6606f615c0b9862fd761063c6748c5b42db))
+- Use quantity `Number`. ([3fc52b8](https://github.com/pronamic/wp-pay-core/commit/3fc52b86bf8cec4f105fd4a1d93046c8d7a5f082))
+
+### Composer
+
+- Changed `pronamic/wp-pay-logos` from `^2.2` to `v2.3.2`.
+	Release notes: https://github.com/pronamic/wp-pay-logos/releases/tag/v2.3.2
+
+Full set of changes: [`4.28.0...4.29.0`][4.29.0]
+
+[4.29.0]: https://github.com/pronamic/wp-pay-core/compare/v4.28.0...v4.29.0
+
+## [4.28.0] - 2025-11-17
+
+### Removed
+
+- Removed next payment delivery date (https://github.com/pronamic/wp-pronamic-pay-mollie/issues/91). ([9885328](https://github.com/pronamic/wp-pay-core/commit/9885328b8eb11676a72e2c8bbb8890ec5a9e2071))
+
+### Composer
+
+- Changed `woocommerce/action-scheduler` from `^3.8` to `3.9.3`.
+	Release notes: https://github.com/woocommerce/action-scheduler/releases/tag/3.9.3
+
+Full set of changes: [`4.27.1...4.28.0`][4.28.0]
+
+[4.28.0]: https://github.com/pronamic/wp-pay-core/compare/v4.27.1...v4.28.0
+
 ## [4.27.1] - 2025-09-12
 
 ### Changed

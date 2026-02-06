@@ -3,7 +3,7 @@
  * Gravity Forms Dependency
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\GravityForms
  */
@@ -15,7 +15,6 @@ use Pronamic\WordPress\Pay\Dependencies\Dependency;
 /**
  * Gravity Forms Dependency
  *
- * @author  Reüel van der Steege
  * @version 2.2.0
  * @since   2.2.0
  */

@@ -3,7 +3,7 @@
  * Util
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\RestrictContent
  */
@@ -11,20 +11,18 @@
 namespace Pronamic\WordPress\Pay\Extensions\RestrictContent;
 
 use Pronamic\WordPress\Money\Money;
+use Pronamic\WordPress\Number\Number;
 use Pronamic\WordPress\Pay\Customer;
 use Pronamic\WordPress\Pay\ContactName;
 use Pronamic\WordPress\Pay\Payments\Payment;
 use Pronamic\WordPress\Pay\Payments\PaymentLines;
 use Pronamic\WordPress\Pay\Payments\PaymentLineType;
 use Pronamic\WordPress\Pay\Subscriptions\Subscription;
-use Pronamic\WordPress\Pay\Subscriptions\SubscriptionInterval;
-use Pronamic\WordPress\Pay\Subscriptions\SubscriptionPhase;
 use RCP_Payment_Gateway;
 
 /**
  * Util
  *
- * @author  Reüel van der Steege
  * @version 2.2.2
  * @since   1.0.0
  */
@@ -168,7 +166,7 @@ class Util {
 			$line->set_type( PaymentLineType::DIGITAL );
 			/* translators: %s: Subscription name */
 			$line->set_name( \sprintf( \__( 'Trial "%s"', 'pronamic-ideal' ), $gateway->subscription_name ) );
-			$line->set_quantity( 1 );
+			$line->set_quantity( new Number( 1 ) );
 			$line->set_unit_price( new Money( 0, $gateway->currency ) );
 			$line->set_total_amount( new Money( 0, $gateway->currency ) );
 			$line->set_product_url( null );
@@ -185,7 +183,7 @@ class Util {
 		$line->set_sku( null );
 		$line->set_type( PaymentLineType::DIGITAL );
 		$line->set_name( $gateway->subscription_name );
-		$line->set_quantity( 1 );
+		$line->set_quantity( new Number( 1 ) );
 		$line->set_unit_price( new Money( $gateway->payment->subtotal, $gateway->currency ) );
 		$line->set_total_amount( new Money( $gateway->payment->subtotal, $gateway->currency ) );
 		$line->set_product_url( null );
@@ -210,7 +208,7 @@ class Util {
 			$line->set_sku( null );
 			$line->set_type( PaymentLineType::DISCOUNT );
 			$line->set_name( $name );
-			$line->set_quantity( 1 );
+			$line->set_quantity( new Number( 1 ) );
 			$line->set_unit_price( new Money( -$gateway->discount, $gateway->currency ) );
 			$line->set_total_amount( new Money( -$gateway->discount, $gateway->currency ) );
 			$line->set_product_url( null );
@@ -219,16 +217,40 @@ class Util {
 		}
 
 		// Fees.
-		if ( \property_exists( $gateway->payment, 'fees' ) ) {
+		if ( \property_exists( $gateway->payment, 'fees' ) && $gateway->payment->fees > 0 ) {
 			$line = $lines->new_line();
 
 			$line->set_id( null );
 			$line->set_sku( null );
 			$line->set_type( PaymentLineType::FEE );
 			$line->set_name( __( 'Fees', 'pronamic-ideal' ) );
-			$line->set_quantity( 1 );
+			$line->set_quantity( new Number( 1 ) );
 			$line->set_unit_price( new Money( $gateway->payment->fees, $gateway->currency ) );
 			$line->set_total_amount( new Money( $gateway->payment->fees, $gateway->currency ) );
+			$line->set_product_url( null );
+			$line->set_image_url( null );
+			$line->set_product_category( null );
+		}
+
+		// Credits.
+		if ( \property_exists( $gateway->payment, 'credits' ) && $gateway->payment->credits > 0 ) {
+			$line = $lines->new_line();
+
+			// Make sure the applied credit does not exceed the total amount of the payment lines.
+			$credit = \min(
+				$gateway->payment->credits,
+				$lines->get_amount()->get_value()
+			);
+
+			$price = new Money( -$credit, $gateway->currency );
+
+			$line->set_id( null );
+			$line->set_sku( null );
+			$line->set_type( PaymentLineType::DISCOUNT );
+			$line->set_name( \__( 'Credits', 'pronamic-ideal' ) );
+			$line->set_quantity( new Number( 1 ) );
+			$line->set_unit_price( $price );
+			$line->set_total_amount( $price );
 			$line->set_product_url( null );
 			$line->set_image_url( null );
 			$line->set_product_category( null );

@@ -8,10 +8,9 @@ use Pronamic\WordPress\Pay\Payments\Payment;
 /**
  * Title: Pay.nl integration
  * Description:
- * Copyright: 2005-2024 Pronamic
+ * Copyright: 2005-2026 Pronamic
  * Company: Pronamic
  *
- * @author  Remco Tolsma
  * @version 2.0.4
  * @since   1.0.0
  */
@@ -32,7 +31,7 @@ class Integration extends AbstractGatewayIntegration {
 				'dashboard_url' => 'https://my.pay.nl/',
 				'register_url'  => 'https://www.pay.nl/registreren/?id=M-7393-3100',
 				'provider'      => 'pay_nl',
-				'manual_url'    => \__( 'https://www.pronamicpay.com/en/manuals/how-to-connect-pay-nl-to-wordpress-with-pronamic-pay/', 'pronamic-ideal' ),
+				'manual_url'    => 'https://www.pronamicpay.com/en/manuals/how-to-connect-pay-nl-to-wordpress-with-pronamic-pay/',
 			]
 		);
 

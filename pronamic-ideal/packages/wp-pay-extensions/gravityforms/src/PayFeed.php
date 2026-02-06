@@ -3,7 +3,7 @@
  * Pay feed
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\GravityForms
  */
@@ -14,11 +14,8 @@ use WP_Post;
 
 /**
  * Title: WordPress pay extension Gravity Forms pay feed
- * Description:
- * Copyright: 2005-2024 Pronamic
- * Company: Pronamic
+ * 
  *
- * @author   Remco Tolsma
  * @version  2.6.1
  * @since    1.4.4
  *

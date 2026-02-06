@@ -7,6 +7,31 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 ## [Unreleased][unreleased]
 -
 
+## [4.2.0] - 2026-01-05
+
+### Commits
+
+- Requires PHP 8.2. ([7d94810](https://github.com/pronamic/wp-pronamic-pay-contact-form-7/commit/7d94810d3f7610fecba6cb4fa8e14603f6ec1ba7))
+
+### Composer
+
+- Changed `php` from `>=8.1` to `>=8.2`.
+
+Full set of changes: [`4.1.2...4.2.0`][4.2.0]
+
+[4.2.0]: https://github.com/pronamic/wp-pronamic-pay-contact-form-7/compare/v4.1.2...v4.2.0
+
+## [4.1.2] - 2025-11-11
+
+### Commits
+
+- Removed unused import. ([008c440](https://github.com/pronamic/wp-pronamic-pay-contact-form-7/commit/008c44020cce70b37b0b1077278dfa6f69bd9d4e))
+- Added this point we shoud not use translation functions. ([efb6182](https://github.com/pronamic/wp-pronamic-pay-contact-form-7/commit/efb61824a773bc6dd79fa79c234d32a96904c4c4))
+
+Full set of changes: [`4.1.1...4.1.2`][4.1.2]
+
+[4.1.2]: https://github.com/pronamic/wp-pronamic-pay-contact-form-7/compare/v4.1.1...v4.1.2
+
 ## [4.1.1] - 2025-06-19
 
 ### Commits

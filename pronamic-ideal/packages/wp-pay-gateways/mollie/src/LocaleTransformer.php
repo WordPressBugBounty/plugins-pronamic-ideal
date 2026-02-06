@@ -3,7 +3,7 @@
  * Mollie transformer helper.
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -71,7 +71,7 @@ class LocaleTransformer {
 		$locale = \strtolower( $locale );
 
 		// Is supported?
-		$supported_lowercase = \array_map( 'strtolower', $supported );
+		$supported_lowercase = \array_map( \strtolower( ... ), $supported );
 
 		$search = \array_search( $locale, $supported_lowercase, true );
 

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitdcb140bd5f3b24a570df5aeac7296380
+class ComposerStaticInitbc1c0440923ca776328f6559286f9c37
 {
     public static $files = array (
         '509f66d930a3f0b7d9b65b22aa319565' => __DIR__ . '/../..' . '/packages/wp-pay/core/includes/functions.php',
@@ -12,19 +12,19 @@ class ComposerStaticInitdcb140bd5f3b24a570df5aeac7296380
     );
 
     public static $prefixLengthsPsr4 = array (
-        'l' => 
+        'l' =>
         array (
             'libphonenumber\\' => 15,
         ),
-        'V' => 
+        'V' =>
         array (
             'VIISON\\AddressSplitter\\' => 23,
         ),
-        'S' => 
+        'S' =>
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
         ),
-        'P' => 
+        'P' =>
         array (
             'Pronamic\\WpPayLogos\\' => 20,
             'Pronamic\\WordPress\\Updater\\' => 27,
@@ -33,7 +33,6 @@ class ComposerStaticInitdcb140bd5f3b24a570df5aeac7296380
             'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\' => 43,
             'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\' => 45,
             'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\' => 39,
-            'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\' => 41,
             'Pronamic\\WordPress\\Pay\\Gateways\\EMS\\ECommerce\\' => 46,
             'Pronamic\\WordPress\\Pay\\Gateways\\Buckaroo\\' => 41,
             'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\' => 38,
@@ -61,178 +60,174 @@ class ComposerStaticInitdcb140bd5f3b24a570df5aeac7296380
             'Pronamic\\PronamicPayAdminReports\\' => 33,
             'Pronamic\\IDealIssuers\\' => 22,
         ),
-        'J' => 
+        'J' =>
         array (
             'JsonSchema\\' => 11,
         ),
-        'C' => 
+        'C' =>
         array (
             'Composer\\Installers\\' => 20,
         ),
-        'A' => 
+        'A' =>
         array (
             'Automattic\\Jetpack\\Autoloader\\' => 30,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'libphonenumber\\' => 
+        'libphonenumber\\' =>
         array (
             0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php-lite/src',
         ),
-        'VIISON\\AddressSplitter\\' => 
+        'VIISON\\AddressSplitter\\' =>
         array (
             0 => __DIR__ . '/..' . '/viison/address-splitter/src',
         ),
-        'Symfony\\Polyfill\\Mbstring\\' => 
+        'Symfony\\Polyfill\\Mbstring\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
-        'Pronamic\\WpPayLogos\\' => 
+        'Pronamic\\WpPayLogos\\' =>
         array (
             0 => __DIR__ . '/..' . '/pronamic/wp-pay-logos/php',
         ),
-        'Pronamic\\WordPress\\Updater\\' => 
+        'Pronamic\\WordPress\\Updater\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/pronamic/pronamic-wp-updater/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Gateways\\PayPal\\' => 
+        'Pronamic\\WordPress\\Pay\\Gateways\\PayPal\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-gateways/paypal/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Gateways\\PayNL\\' => 
+        'Pronamic\\WordPress\\Pay\\Gateways\\PayNL\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-gateways/pay-nl/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\' => 
+        'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-gateways/omnikassa-2/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\' => 
+        'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-gateways/multisafepay/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\' => 
+        'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-gateways/mollie/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src',
-        ),
-        'Pronamic\\WordPress\\Pay\\Gateways\\EMS\\ECommerce\\' => 
+        'Pronamic\\WordPress\\Pay\\Gateways\\EMS\\ECommerce\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ems-e-commerce/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Gateways\\Buckaroo\\' => 
+        'Pronamic\\WordPress\\Pay\\Gateways\\Buckaroo\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-gateways/buckaroo/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\' => 
+        'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Fundraising\\' => 
+        'Pronamic\\WordPress\\Pay\\Fundraising\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay/fundraising/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Forms\\' => 
+        'Pronamic\\WordPress\\Pay\\Forms\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-pay-forms/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\' => 
+        'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-extensions/woocommerce/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\' => 
+        'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-extensions/restrict-content-pro/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Extensions\\NinjaForms\\' => 
+        'Pronamic\\WordPress\\Pay\\Extensions\\NinjaForms\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-extensions/ninjaforms/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\' => 
+        'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-extensions/memberpress/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\' => 
+        'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-extensions/gravityforms/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\' => 
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Extensions\\FormidableForms\\' => 
+        'Pronamic\\WordPress\\Pay\\Extensions\\FormidableForms\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-extensions/formidable-forms/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\' => 
+        'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-extensions/event-espresso/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\' => 
+        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\' => 
+        'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src',
         ),
-        'Pronamic\\WordPress\\Pay\\Extensions\\Charitable\\' => 
+        'Pronamic\\WordPress\\Pay\\Extensions\\Charitable\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay-extensions/charitable/src',
         ),
-        'Pronamic\\WordPress\\Pay\\' => 
+        'Pronamic\\WordPress\\Pay\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/wp-pay/core/src',
         ),
-        'Pronamic\\WordPress\\Number\\' => 
+        'Pronamic\\WordPress\\Number\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/pronamic/wp-number/src',
         ),
-        'Pronamic\\WordPress\\Money\\' => 
+        'Pronamic\\WordPress\\Money\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/pronamic/wp-money/src',
         ),
-        'Pronamic\\WordPress\\Mollie\\' => 
+        'Pronamic\\WordPress\\Mollie\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/pronamic/wp-mollie/src',
         ),
-        'Pronamic\\WordPress\\Http\\' => 
+        'Pronamic\\WordPress\\Http\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/pronamic/wp-http/src',
         ),
-        'Pronamic\\WordPress\\Html\\' => 
+        'Pronamic\\WordPress\\Html\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/pronamic/wp-html/src',
         ),
-        'Pronamic\\WordPress\\GravityFormsNL\\' => 
+        'Pronamic\\WordPress\\GravityFormsNL\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/pronamic/wp-gravityforms-nl/src',
         ),
-        'Pronamic\\WordPress\\DateTime\\' => 
+        'Pronamic\\WordPress\\DateTime\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/pronamic/wp-datetime/src',
         ),
-        'Pronamic\\PronamicPayAdminReports\\' => 
+        'Pronamic\\PronamicPayAdminReports\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/pronamic/pronamic-pay-admin-reports/php/classes',
         ),
-        'Pronamic\\IDealIssuers\\' => 
+        'Pronamic\\IDealIssuers\\' =>
         array (
             0 => __DIR__ . '/..' . '/pronamic/ideal-issuers/src',
         ),
-        'JsonSchema\\' => 
+        'JsonSchema\\' =>
         array (
             0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
         ),
-        'Composer\\Installers\\' => 
+        'Composer\\Installers\\' =>
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
         ),
-        'Automattic\\Jetpack\\Autoloader\\' => 
+        'Automattic\\Jetpack\\Autoloader\\' =>
         array (
             0 => __DIR__ . '/..' . '/automattic/jetpack-autoloader/src',
         ),
@@ -741,28 +736,6 @@ class ComposerStaticInitdcb140bd5f3b24a570df5aeac7296380
         'Pronamic\\WordPress\\Pay\\Gateways\\EMS\\ECommerce\\PaymentMethods' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ems-e-commerce/src/PaymentMethods.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\EMS\\ECommerce\\Statuses' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ems-e-commerce/src/Statuses.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\GatewaysDataStoreCPT' => __DIR__ . '/../..' . '/packages/wp-pay/core/src/Gateways/GatewaysDataStoreCPT.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\AbstractIntegration' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/AbstractIntegration.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\Brands' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/Brands.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\Config' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/Config.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\Data' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/Data.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\DataCustomerHelper' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/DataCustomerHelper.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\DataGeneralHelper' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/DataGeneralHelper.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\DataHelper' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/DataHelper.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\DataUrlHelper' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/DataUrlHelper.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\Error' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/Error.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\Ingenico' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/Ingenico.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\Listener' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/Listener.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\OrderStandard\\Client' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/OrderStandard/Client.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\OrderStandard\\Config' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/OrderStandard/Config.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\OrderStandard\\Gateway' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/OrderStandard/Gateway.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\OrderStandard\\Integration' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/OrderStandard/Integration.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\Parameters' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/Parameters.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\PaymentMethods' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/PaymentMethods.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\PaymentMethodsList' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/PaymentMethodsList.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\Security' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/Security.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\Settings' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/Settings.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\Statuses' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/Statuses.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\Util' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/ogone/src/Util.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\AddressTransformer' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/mollie/src/AddressTransformer.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\Admin' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/mollie/src/Admin.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\CLI' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/mollie/src/CLI.php',
@@ -907,7 +880,6 @@ class ComposerStaticInitdcb140bd5f3b24a570df5aeac7296380
         'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionsFollowUpPaymentsController' => __DIR__ . '/../..' . '/packages/wp-pay/core/src/Subscriptions/SubscriptionsFollowUpPaymentsController.php',
         'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionsModule' => __DIR__ . '/../..' . '/packages/wp-pay/core/src/Subscriptions/SubscriptionsModule.php',
         'Pronamic\\WordPress\\Pay\\Subscriptions\\SubscriptionsNotificationsController' => __DIR__ . '/../..' . '/packages/wp-pay/core/src/Subscriptions/SubscriptionsNotificationsController.php',
-        'Pronamic\\WordPress\\Pay\\TrackingModule' => __DIR__ . '/../..' . '/packages/wp-pay/core/src/TrackingModule.php',
         'Pronamic\\WordPress\\Pay\\Upgrades\\Upgrade' => __DIR__ . '/../..' . '/packages/wp-pay/core/src/Upgrades/Upgrade.php',
         'Pronamic\\WordPress\\Pay\\Upgrades\\Upgrades' => __DIR__ . '/../..' . '/packages/wp-pay/core/src/Upgrades/Upgrades.php',
         'Pronamic\\WordPress\\Pay\\Util' => __DIR__ . '/../..' . '/packages/wp-pay/core/src/Util.php',
@@ -1443,9 +1415,9 @@ class ComposerStaticInitdcb140bd5f3b24a570df5aeac7296380
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitdcb140bd5f3b24a570df5aeac7296380::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitdcb140bd5f3b24a570df5aeac7296380::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitdcb140bd5f3b24a570df5aeac7296380::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitbc1c0440923ca776328f6559286f9c37::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitbc1c0440923ca776328f6559286f9c37::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitbc1c0440923ca776328f6559286f9c37::$classMap;
 
         }, null, ClassLoader::class);
     }

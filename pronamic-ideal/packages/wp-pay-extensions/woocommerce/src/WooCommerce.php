@@ -3,7 +3,7 @@
  * WooCommerce
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\WooCommerce
  */
@@ -20,12 +20,8 @@ use WC_Subscriptions_Product;
 use WP_Term;
 
 /**
- * Title: WooCommerce
- * Description:
- * Copyright: 2005-2025 Pronamic
- * Company: Pronamic
+ * WooCommerce class
  *
- * @author  Remco Tolsma
  * @version 2.1.0
  * @since   1.0.0
  */

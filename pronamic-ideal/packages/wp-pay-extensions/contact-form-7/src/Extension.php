@@ -3,7 +3,7 @@
  * Extension
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\ContactForm7
  */
@@ -14,7 +14,6 @@ use Pronamic\WordPress\Pay\AbstractPluginIntegration;
 use Pronamic\WordPress\Pay\Payments\Payment;
 use Pronamic\WordPress\Pay\Payments\PaymentStatus;
 use Pronamic\WordPress\Pay\Plugin;
-use Pronamic\WordPress\Pay\Subscriptions\Subscription;
 use WPCF7_ContactForm;
 use WPCF7_MailTag;
 use WPCF7_Submission;
@@ -36,7 +35,7 @@ final class Extension extends AbstractPluginIntegration {
 	public function __construct() {
 		parent::__construct(
 			[
-				'name'    => __( 'Contact Form 7', 'pronamic-ideal' ),
+				'name'    => 'Contact Form 7',
 				'version' => '1.0.0',
 			]
 		);

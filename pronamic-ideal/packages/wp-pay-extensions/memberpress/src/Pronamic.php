@@ -3,7 +3,7 @@
  * Pronamic
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\MemberPress
  */
@@ -14,6 +14,7 @@ use MeprSubscription;
 use MeprTransaction;
 use Pronamic\WordPress\Money\Money;
 use Pronamic\WordPress\Money\TaxedMoney;
+use Pronamic\WordPress\Number\Number;
 use Pronamic\WordPress\Pay\AddressHelper;
 use Pronamic\WordPress\Pay\ContactName;
 use Pronamic\WordPress\Pay\Core\Util as Core_Util;
@@ -27,7 +28,6 @@ use Pronamic\WordPress\Pay\Subscriptions\SubscriptionPhase;
 /**
  * Pronamic
  *
- * @author  Remco Tolsma
  * @version 4.2.0
  * @since   2.0.5
  */
@@ -144,7 +144,7 @@ class Pronamic {
 
 		$line->set_id( $memberpress_product->ID );
 		$line->set_name( $memberpress_product->post_title );
-		$line->set_quantity( 1 );
+		$line->set_quantity( new Number( 1 ) );
 		$line->set_unit_price( $payment->get_total_amount() );
 		$line->set_total_amount( $payment->get_total_amount() );
 

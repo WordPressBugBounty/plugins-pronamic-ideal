@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-01-05
+
+### Commits
+
+- Merge pull request #4 from pronamic/core-230-payment-line-quantity-type ([540f1c7](https://github.com/pronamic/wp-pronamic-pay-forms/commit/540f1c714a82edd02d7cf682d69dd7ffcffa5ef8))
+- Updated for quantity `Number` (https://github.com/pronamic/wp-pay-core/issues/230). ([7735c5e](https://github.com/pronamic/wp-pronamic-pay-forms/commit/7735c5e08bf1170e0013af5ad22db0d07d6158fb))
+
+Full set of changes: [`1.1.4...1.2.0`][1.2.0]
+
+[1.2.0]: https://github.com/pronamic/wp-pronamic-pay-forms/compare/v1.1.4...v1.2.0
+
+## [1.1.4] - 2025-11-11
+
+### Commits
+
+- Added this point we shoud not use translation functions. ([04e053d](https://github.com/pronamic/wp-pronamic-pay-forms/commit/04e053d1944dea1aa421d67487ee2ffb07163c71))
+
+Full set of changes: [`1.1.3...1.1.4`][1.1.4]
+
+[1.1.4]: https://github.com/pronamic/wp-pronamic-pay-forms/compare/v1.1.3...v1.1.4
+
 ## [1.1.3] - 2024-12-17
 
 ### Commits

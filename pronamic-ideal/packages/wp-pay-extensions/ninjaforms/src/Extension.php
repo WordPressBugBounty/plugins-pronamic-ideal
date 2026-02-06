@@ -39,7 +39,7 @@ class Extension extends AbstractPluginIntegration {
 	public function __construct() {
 		parent::__construct(
 			[
-				'name' => __( 'Ninja Forms', 'pronamic-ideal' ),
+				'name' => 'Ninja Forms',
 			]
 		);
 

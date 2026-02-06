@@ -7,10 +7,9 @@ use Pronamic\WordPress\Pay\Core\PaymentMethods;
 /**
  * Title: Pay.nl payment methods
  * Description:
- * Copyright: 2005-2024 Pronamic
+ * Copyright: 2005-2026 Pronamic
  * Company: Pronamic
  *
- * @author  Reüel van der Steege
  * @version 2.0.1
  * @since   1.0.0
  * @link    https://admin.pay.nl/data/payment_profiles

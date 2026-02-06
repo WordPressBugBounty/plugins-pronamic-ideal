@@ -3,7 +3,7 @@
  * Gateway
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Gateways\OmniKassa2
  */
@@ -12,6 +12,7 @@ namespace Pronamic\WordPress\Pay\Gateways\OmniKassa2;
 
 use Pronamic\WordPress\Money\Money;
 use Pronamic\WordPress\Money\TaxedMoney;
+use Pronamic\WordPress\Number\Number;
 use Pronamic\WordPress\Pay\Core\Gateway as Core_Gateway;
 use Pronamic\WordPress\Pay\Core\PaymentMethod;
 use Pronamic\WordPress\Pay\Core\PaymentMethods;
@@ -22,7 +23,6 @@ use Pronamic\WordPress\Pay\Refunds\Refund;
 /**
  * Gateway
  *
- * @author  Remco Tolsma
  * @version 2.3.4
  * @since   1.0.0
  */
@@ -269,9 +269,28 @@ final class Gateway extends Core_Gateway {
 					$unit_price = new Money();
 				}
 
+				$quantity = $line->get_quantity();
+
+				if ( null === $quantity ) {
+					throw new \InvalidArgumentException( 'Payment line quantity is required.' );
+				}
+
+				$description = $line->get_description();
+
+				// Handle decimal quantities.
+				if ( ! $quantity->is_whole_number() ) {
+					$description = \sprintf(
+						'%s × %s',
+						$quantity->format_i18n_non_trailing_zeros(),
+						(string) $description
+					);
+
+					$quantity = new Number( 1 );
+				}
+
 				$item = $order_items->new_item(
 					DataHelper::sanitize_an( $name, 50 ),
-					(int) $line->get_quantity(),
+					$quantity->to_int(),
 					// The amount in cents, including VAT, of the item each, see below for more details.
 					MoneyTransformer::transform( $unit_price ),
 					ProductCategories::transform( $line->get_type() )
@@ -280,8 +299,6 @@ final class Gateway extends Core_Gateway {
 				$item->set_id( $line->get_id() );
 
 				// Description.
-				$description = $line->get_description();
-
 				if ( null !== $description ) {
 					$description = DataHelper::sanitize_an( $description, 100 );
 				}

@@ -3,7 +3,7 @@
  * Gateway
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\MemberPress
  */
@@ -20,9 +20,13 @@ use MeprTransactionsHelper;
 use MeprUser;
 use MeprUtils;
 use MeprView;
+use Pronamic\WordPress\Money\Money;
+use Pronamic\WordPress\Money\TaxedMoney;
+use Pronamic\WordPress\Number\Number;
 use Pronamic\WordPress\Pay\Core\PaymentMethods;
 use Pronamic\WordPress\Pay\Extensions\MemberPress\MemberPress;
 use Pronamic\WordPress\Pay\Extensions\MemberPress\Pronamic;
+use Pronamic\WordPress\Pay\Payments\Payment;
 use Pronamic\WordPress\Pay\Plugin;
 use Pronamic\WordPress\Pay\Refunds\Refund;
 use Pronamic\WordPress\Pay\Subscriptions\SubscriptionStatus;
@@ -30,7 +34,6 @@ use Pronamic\WordPress\Pay\Subscriptions\SubscriptionStatus;
 /**
  * WordPress pay MemberPress gateway
  *
- * @author  Remco Tolsma
  * @version 3.1.0
  * @since   1.0.0
  */
@@ -187,18 +190,19 @@ class Gateway extends MeprBaseRealGateway {
 
 		$this->settings = (object) array_merge(
 			[
-				'gateway'   => $this->class_alias,
-				'id'        => $this->generate_id(),
-				'label'     => '',
-				'use_label' => true,
-				'icon'      => $this->get_icon(),
-				'use_icon'  => true,
-				'desc'      => '',
-				'use_desc'  => true,
-				'config_id' => '',
-				'email'     => '',
-				'sandbox'   => false,
-				'debug'     => false,
+				'gateway'        => $this->class_alias,
+				'id'             => $this->generate_id(),
+				'label'          => '',
+				'use_label'      => true,
+				'icon'           => $this->get_icon(),
+				'use_icon'       => true,
+				'desc'           => '',
+				'use_desc'       => true,
+				'config_id'      => '',
+				'email'          => '',
+				'sandbox'        => false,
+				'debug'          => false,
+				'minimum_amount' => '',
 			],
 			(array) $this->settings
 		);
@@ -253,6 +257,8 @@ class Gateway extends MeprBaseRealGateway {
 
 		// Create Pronamic payment.
 		$payment = Pronamic::get_payment( $transaction );
+
+		$this->apply_minimum_amount_to_payment( $payment );
 
 		$payment->config_id = $config_id;
 
@@ -759,28 +765,38 @@ class Gateway extends MeprBaseRealGateway {
 	 * @return string
 	 */
 	public function spc_payment_fields() {
+		$output = '';
+
+		/**
+		 * Description.
+		 *
+		 * @link https://github.com/pronamic/memberpress/blob/3a428785b5a2b6b0581ec4080b98992aef2d5b1a/app/gateways/MeprArtificialGateway.php#L100-L108
+		 * @link https://github.com/pronamic/memberpress/blob/3a428785b5a2b6b0581ec4080b98992aef2d5b1a/app/gateways/MeprPayPalStandardGateway.php#L1026-L1036
+		 */
+		if ( $this->settings->use_desc ) {
+			$output = \wpautop( $this->settings->desc );
+		}
+
 		// Gateway.
 		$config_id = $this->get_config_id();
 
 		$gateway = Plugin::get_gateway( (int) $config_id );
 
 		if ( null === $gateway ) {
-			return '';
+			return $output;
 		}
 
 		$payment_method = $gateway->get_payment_method( (string) $this->payment_method );
 
 		if ( null === $payment_method ) {
-			return '';
+			return $output;
 		}
 
 		$fields = $payment_method->get_fields();
 
 		if ( empty( $fields ) ) {
-			return '';
+			return $output;
 		}
-
-		$output = '';
 
 		foreach ( $fields as $field ) {
 			try {
@@ -863,6 +879,45 @@ class Gateway extends MeprBaseRealGateway {
 					</select>
 				</td>
 			</tr>
+			<tr>
+				<?php
+
+				$name = sprintf(
+					'%s[%s][%s]',
+					$mepr_options->integrations_str,
+					$this->id,
+					'minimum_amount'
+				);
+
+				?>
+				<td>
+					<?php esc_html_e( 'Minimum Amount', 'pronamic-ideal' ); ?>
+				</td>
+				<td>
+					<input type="number" step="any" name="<?php echo esc_attr( $name ); ?>" value="<?php echo esc_attr( $this->settings->minimum_amount ); ?>" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<label><?php esc_html_e( 'Description', 'pronamic-ideal' ); ?></label><br/>
+					<?php
+
+					/**
+					 * Follow the MemberPress artificial (Offline Payment) gateway implementation.
+					 *
+					 * @link https://github.com/pronamic/memberpress/blob/3a428785b5a2b6b0581ec4080b98992aef2d5b1a/app/gateways/MeprArtificialGateway.php#L634-L638
+					 */
+					$name = sprintf(
+						'%s[%s][%s]',
+						$mepr_options->integrations_str,
+						$this->id,
+						'desc'
+					);
+
+					?>
+					<textarea name="<?php echo \esc_attr( $name ); ?>" rows="3" cols="45"><?php echo \esc_textarea( $this->settings->desc ); ?></textarea>
+				</td>
+			</tr>
 		</table>
 		<?php
 	}
@@ -876,7 +931,37 @@ class Gateway extends MeprBaseRealGateway {
 	 * @return string[]
 	 */
 	public function validate_options_form( $errors ) {
+		$mepr_options = MeprOptions::fetch();
+
+		$minimum_amount = isset( $_POST[ $mepr_options->integrations_str ][ $this->id ]['minimum_amount'] ) ? sanitize_text_field( wp_unslash( $_POST[ $mepr_options->integrations_str ][ $this->id ]['minimum_amount'] ) ) : '';
+
+		if ( '' !== $minimum_amount && ! is_numeric( $minimum_amount ) ) {
+			$errors[] = __( 'Minimum Amount must be a valid number.', 'pronamic-ideal' );
+		}
+
+		if ( '' !== $minimum_amount && $minimum_amount < 0 ) {
+			$errors[] = __( 'Minimum Amount must be greater than or equal to zero.', 'pronamic-ideal' );
+		}
+
 		return $errors;
+	}
+
+	/**
+	 * Validate and parse minimum amount.
+	 *
+	 * @param mixed $value Value to validate.
+	 * @return numeric-string|null Returns the validated numeric-string value or null if invalid.
+	 */
+	private function validate_minimum_amount( $value ) {
+		if ( ! is_numeric( $value ) ) {
+			return null;
+		}
+
+		if ( $value <= 0 ) {
+			return null;
+		}
+
+		return (string) $value;
 	}
 
 	/**
@@ -985,6 +1070,48 @@ class Gateway extends MeprBaseRealGateway {
 	 */
 	public function force_ssl() {
 		return false;
+	}
+
+	/**
+	 * Apply minimum amount adjustment to payment.
+	 *
+	 * @param Payment $payment Pronamic payment object.
+	 * @return void
+	 */
+	protected function apply_minimum_amount_to_payment( Payment $payment ) {
+		$minimum_amount = $this->validate_minimum_amount( $this->settings->minimum_amount );
+
+		if ( null === $minimum_amount ) {
+			return;
+		}
+
+		$current_total = $payment->get_total_amount();
+
+		if ( null === $current_total ) {
+			return;
+		}
+
+		$current_total_value = $current_total->get_value();
+
+		if ( $current_total_value >= $minimum_amount ) {
+			return;
+		}
+
+		$adjustment_amount = new TaxedMoney(
+			$minimum_amount - $current_total_value,
+			$current_total->get_currency(),
+			null,
+			$current_total instanceof TaxedMoney ? $current_total->get_tax_percentage() : null
+		);
+
+		$adjustment_line = $payment->lines->new_line();
+
+		$adjustment_line->set_name( \__( 'Minimum amount adjustment', 'pronamic-ideal' ) );
+		$adjustment_line->set_quantity( new Number( 1 ) );
+		$adjustment_line->set_unit_price( $adjustment_amount );
+		$adjustment_line->set_total_amount( $adjustment_amount );
+
+		$payment->set_total_amount( $payment->lines->get_amount() );
 	}
 
 	/**

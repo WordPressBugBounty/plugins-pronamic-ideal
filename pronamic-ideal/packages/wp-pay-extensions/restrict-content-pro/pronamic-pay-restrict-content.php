@@ -4,7 +4,7 @@
  * Plugin URI: https://www.pronamic.eu/plugins/pronamic-pay-restrict-content-pro/
  * Description: Extend the Pronamic Pay plugin with Restrict Content (Pro) support to receive payments through a variety of payment providers.
  *
- * Version: 4.7.1
+ * Version: 4.9.0
  * Requires at least: 4.7
  * Requires PHP: 8.1
  *
@@ -21,7 +21,7 @@
  * GitHub URI: https://github.com/wp-pay-extensions/restrict-content-pro
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\RestrictContentPro
  */

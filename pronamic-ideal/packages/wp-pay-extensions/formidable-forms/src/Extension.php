@@ -56,7 +56,7 @@ class Extension extends AbstractPluginIntegration {
 	public function __construct() {
 		parent::__construct(
 			[
-				'name' => __( 'Formidable Forms', 'pronamic-ideal' ),
+				'name' => 'Formidable Forms',
 			]
 		);
 
@@ -455,7 +455,7 @@ class Extension extends AbstractPluginIntegration {
 			 */
 			\add_filter(
 				'frm_success_filter',
-				function( $method, $form ) {
+				function ( $method, $form ) {
 					return 'message';
 				},
 				10,

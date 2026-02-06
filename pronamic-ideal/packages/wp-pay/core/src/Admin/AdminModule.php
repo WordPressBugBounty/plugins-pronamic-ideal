@@ -3,7 +3,7 @@
  * Admin Module
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Admin
  */
@@ -29,7 +29,6 @@ use Pronamic\WordPress\Pay\Subscriptions\SubscriptionPhase;
 /**
  * WordPress Pay admin
  *
- * @author  Remco Tolsma
  * @version 2.5.0
  * @since   1.0.0
  */
@@ -485,7 +484,7 @@ class AdminModule {
 					return [];
 				}
 
-				return \array_map( 'sanitize_text_field', $item );
+				return \array_map( sanitize_text_field( ... ), $item );
 			},
 			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Input is sanitized, see code above.
 			\wp_unslash( $_POST['lines'] ?? [] )
@@ -500,25 +499,25 @@ class AdminModule {
 				$value = $this->get_optional_value( $item, 'price' );
 
 				$amount = Number::from_mixed( $value );
+
+				$quantity = Number::from_mixed( $this->get_optional_value( $item, 'quantity' ) ?? 1 );
 			} catch ( \Exception $e ) {
 				\wp_die( \esc_html( $e->getMessage() ) );
 			}
-
-			$quantity = $this->get_optional_value( $item, 'quantity' ) ?? 1;
 
 			$unit_price   = new Money( $amount, $currency_code );
 			$total_amount = $unit_price->multiply( $quantity );
 
 			$line->set_name( $this->get_optional_value( $item, 'name' ) );
 			$line->set_unit_price( $unit_price );
-			$line->set_quantity( (int) $quantity );
+			$line->set_quantity( $quantity );
 			$line->set_total_amount( $total_amount );
 		}
 
 		$payment->set_total_amount( $payment->lines->get_amount() );
 
 		// Billing address.
-		$billing_data = \array_map( 'sanitize_text_field', \wp_unslash( $_POST['billing'] ?? [] ) );
+		$billing_data = \array_map( sanitize_text_field( ... ), \wp_unslash( $_POST['billing'] ?? [] ) );
 
 		$name = new ContactName();
 		$name->set_first_name( $this->get_optional_value( $billing_data, 'first_name' ) );
@@ -539,7 +538,7 @@ class AdminModule {
 		$payment->set_billing_address( $billing_address );
 
 		// Shipping address.
-		$shipping_data = \array_map( 'sanitize_text_field', \wp_unslash( $_POST['shipping'] ?? [] ) );
+		$shipping_data = \array_map( sanitize_text_field( ... ), \wp_unslash( $_POST['shipping'] ?? [] ) );
 
 		$name = new ContactName();
 		$name->set_first_name( $this->get_optional_value( $shipping_data, 'first_name' ) );

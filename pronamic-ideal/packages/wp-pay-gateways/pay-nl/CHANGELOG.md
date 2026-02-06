@@ -7,6 +7,30 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 ## [Unreleased][unreleased]
 -
 
+## [4.7.0] - 2026-01-05
+
+### Commits
+
+- Merge pull request #14 from pronamic/core-230-payment-line-quantity-type ([2790fed](https://github.com/pronamic/wp-pronamic-pay-pay-nl/commit/2790fed8a5d6c14444fee077e40a2fe26929dce8))
+- Oops, fix line `null` value. ([b1379d6](https://github.com/pronamic/wp-pronamic-pay-pay-nl/commit/b1379d6ef8b1e09410754fce54aeee48ef35606e))
+- Updated for quantity `Number` (https://github.com/pronamic/wp-pay-core/issues/230). ([4f8ea89](https://github.com/pronamic/wp-pronamic-pay-pay-nl/commit/4f8ea89a3870567dabc49af23e00c8a7221b1492))
+
+Full set of changes: [`4.6.1...4.7.0`][4.7.0]
+
+[4.7.0]: https://github.com/pronamic/wp-pronamic-pay-pay-nl/compare/v4.6.1...v4.7.0
+
+## [4.6.1] - 2025-11-11
+
+### Commits
+
+- Added wp-env config. ([c9f4bf8](https://github.com/pronamic/wp-pronamic-pay-pay-nl/commit/c9f4bf8cb11cf97ab66161613a4e0c905ab5838b))
+- Updated .gitignore. ([0826598](https://github.com/pronamic/wp-pronamic-pay-pay-nl/commit/0826598f36d360d56864dd5b4c60f95a63e24f49))
+- Added this point we shoud not use translation functions. ([82bf1a0](https://github.com/pronamic/wp-pronamic-pay-pay-nl/commit/82bf1a0d41347975e719b3e6b61ef22e892161df))
+
+Full set of changes: [`4.6.0...4.6.1`][4.6.1]
+
+[4.6.1]: https://github.com/pronamic/wp-pronamic-pay-pay-nl/compare/v4.6.0...v4.6.1
+
 ## [4.6.0] - 2025-06-19
 
 ### Removed

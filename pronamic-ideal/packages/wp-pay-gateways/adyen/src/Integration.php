@@ -3,7 +3,7 @@
  * Integration
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Gateways\Adyen
  */
@@ -44,10 +44,10 @@ class Integration extends AbstractGatewayIntegration {
 				'name'          => 'Adyen',
 				'mode'          => 'live',
 				'provider'      => 'adyen',
-				'url'           => \__( 'https://www.adyen.com/', 'pronamic-ideal' ),
-				'product_url'   => \__( 'https://www.adyen.com/pricing', 'pronamic-ideal' ),
+				'url'           => 'https://www.adyen.com/',
+				'product_url'   => 'https://www.adyen.com/',
 				'dashboard_url' => 'https://ca-live.adyen.com/ca/ca/login.shtml',
-				'manual_url'    => \__( 'https://www.pronamicpay.com/en/manuals/how-to-connect-adyen-to-wordpress-with-pronamic-pay/', 'pronamic-ideal' ),
+				'manual_url'    => 'https://www.pronamicpay.com/en/manuals/how-to-connect-adyen-to-wordpress-with-pronamic-pay/',
 				'supports'      => [
 					'webhook',
 					'webhook_log',
@@ -424,6 +424,17 @@ class Integration extends AbstractGatewayIntegration {
 			},
 		];
 
+		// Country code.
+		$fields[] = [
+			'section'  => 'general',
+			'meta_key' => '_pronamic_gateway_adyen_country_code',
+			'title'    => \__( 'Country code', 'pronamic-ideal' ),
+			'type'     => 'text',
+			'classes'  => [ 'regular-text', 'code' ],
+			'tooltip'  => \__( 'Country code used when it cannot be derived from the customer details.', 'pronamic-ideal' ),
+			'required' => true,
+		];
+
 		// Return fields.
 		return $fields;
 	}
@@ -457,6 +468,7 @@ class Integration extends AbstractGatewayIntegration {
 		$config->merchant_account         = $this->get_meta( $post_id, 'adyen_merchant_account' );
 		$config->client_key               = $this->get_meta( $post_id, 'adyen_client_key' );
 		$config->merchant_order_reference = $this->get_meta( $post_id, 'adyen_merchant_order_reference' );
+		$config->country_code             = $this->get_meta( $post_id, 'adyen_country_code' );
 
 		return $config;
 	}

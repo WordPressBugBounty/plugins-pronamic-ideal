@@ -3,7 +3,7 @@
  * Config
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Gateways\Adyen
  */
@@ -60,6 +60,13 @@ class Config extends GatewayConfig implements JsonSerializable {
 	public $client_key;
 
 	/**
+	 * Country code.
+	 *
+	 * @var string
+	 */
+	public $country_code = '';
+
+	/**
 	 * Get API key.
 	 *
 	 * @return string|null
@@ -99,6 +106,7 @@ class Config extends GatewayConfig implements JsonSerializable {
 			'merchant_account' => (string) $this->merchant_account,
 			'api_key'          => (string) $this->api_key,
 			'client_key'       => (string) $this->client_key,
+			'country_code'     => (string) $this->country_code,
 		];
 	}
 }

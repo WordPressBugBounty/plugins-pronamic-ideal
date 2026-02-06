@@ -3,7 +3,7 @@
  * Upgrade 2.1.6
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Upgrades
  */
@@ -19,7 +19,6 @@ use WP_Post;
 /**
  * Upgrade 2.1.6
  *
- * @author  Remco Tolsma
  * @version 2.1.6
  * @since   2.1.6
  */
@@ -30,7 +29,7 @@ class Upgrade216 extends Upgrade {
 	public function __construct() {
 		parent::__construct( '2.1.6' );
 
-		\add_action( 'pronamic_pay_restrictcontentpro_upgrade_2_1_6', [ $this, 'upgrade' ], 10, 1 );
+		\add_action( 'pronamic_pay_restrictcontentpro_upgrade_2_1_6', $this->upgrade( ... ), 10, 1 );
 
 		if ( \defined( '\WP_CLI' ) && \WP_CLI ) {
 			$this->cli_init();
@@ -66,7 +65,7 @@ class Upgrade216 extends Upgrade {
 		\WP_CLI::add_command(
 			'pronamic-pay restrict-content-pro upgrade-216 execute',
 			// phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed
-			function ( $args, $assoc_args ) {
+			function ( $args, $assoc_args ): void {
 				\WP_CLI::log( 'Upgrade 2.1.6' );
 
 				$this->upgrade();
@@ -79,7 +78,7 @@ class Upgrade216 extends Upgrade {
 		\WP_CLI::add_command(
 			'pronamic-pay restrict-content-pro upgrade-216 list-subscriptions',
 			// phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed
-			function ( $args, $assoc_args ) {
+			function ( $args, $assoc_args ): void {
 				\WP_CLI::log( 'Upgrade 2.1.6 - Subscriptions List' );
 
 				$posts = $this->get_subscription_posts();
@@ -94,7 +93,7 @@ class Upgrade216 extends Upgrade {
 		\WP_CLI::add_command(
 			'pronamic-pay restrict-content-pro upgrade-216 upgrade-subscriptions',
 			// phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed
-			function ( $args, $assoc_args ) {
+			function ( $args, $assoc_args ): void {
 				\WP_CLI::log( 'Upgrade 2.1.6 - Subscriptions' );
 
 				$this->upgrade_subscriptions(
@@ -114,7 +113,7 @@ class Upgrade216 extends Upgrade {
 		\WP_CLI::add_command(
 			'pronamic-pay restrict-content-pro upgrade-216 list-payments',
 			// phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed
-			function ( $args, $assoc_args ) {
+			function ( $args, $assoc_args ): void {
 				\WP_CLI::log( 'Upgrade 2.1.6 - Payments List' );
 
 				$posts = $this->get_payment_posts();
@@ -151,9 +150,7 @@ class Upgrade216 extends Upgrade {
 
 		$subscription_posts = \array_filter(
 			$query->posts,
-			function ( $subscription_post ) {
-				return ( $subscription_post instanceof WP_Post );
-			}
+			fn( $subscription_post ) => $subscription_post instanceof WP_Post
 		);
 
 		return $subscription_posts;
@@ -184,9 +181,7 @@ class Upgrade216 extends Upgrade {
 
 		$payment_posts = \array_filter(
 			$query->posts,
-			function ( $payment_post ) {
-				return ( $payment_post instanceof WP_Post );
-			}
+			fn( $payment_post ) => $payment_post instanceof WP_Post
 		);
 
 		return $payment_posts;
@@ -250,7 +245,7 @@ class Upgrade216 extends Upgrade {
 		$query_args = [];
 
 		if ( null !== $args['post__in'] ) {
-			$query_args['post__in'] = \explode( ',', $args['post__in'] );
+			$query_args['post__in'] = \explode( ',', (string) $args['post__in'] );
 		}
 
 		$subscription_posts = $this->get_subscription_posts( $query_args );

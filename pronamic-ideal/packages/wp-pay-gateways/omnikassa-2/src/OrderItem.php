@@ -3,7 +3,7 @@
  * Order item.
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Gateways\OmniKassa2
  */
@@ -15,7 +15,6 @@ use JsonSerializable;
 /**
  * Order item.
  *
- * @author  Reüel van der Steege
  * @version 2.1.10
  * @since   2.0.3
  */

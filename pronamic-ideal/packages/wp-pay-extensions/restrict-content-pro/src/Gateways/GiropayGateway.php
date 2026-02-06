@@ -3,7 +3,7 @@
  * Giropay gateway
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\RestrictContent
  */
@@ -15,7 +15,6 @@ use Pronamic\WordPress\Pay\Core\PaymentMethods;
 /**
  * Giropay gateway
  *
- * @author  Reüel van der Steege
  * @version 4.3.5
  * @since   4.3.5
  */

@@ -3,7 +3,7 @@
  * Gateway
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\RestrictContent
  */
@@ -16,12 +16,10 @@ use Pronamic\WordPress\Pay\Core\PaymentMethods;
 use Pronamic\WordPress\Pay\Extensions\RestrictContent\Util;
 use Pronamic\WordPress\Pay\Plugin;
 use RCP_Payment_Gateway;
-use RCP_Payments;
 
 /**
  * Gateway
  *
- * @author  Reüel van der Steege
  * @version 2.1.6
  * @since   1.0.0
  */

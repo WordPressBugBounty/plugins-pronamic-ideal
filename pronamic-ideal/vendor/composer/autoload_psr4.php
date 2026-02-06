@@ -16,7 +16,6 @@ return array(
     'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\' => array($baseDir . '/packages/wp-pay-gateways/omnikassa-2/src'),
     'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\' => array($baseDir . '/packages/wp-pay-gateways/multisafepay/src'),
     'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\' => array($baseDir . '/packages/wp-pay-gateways/mollie/src'),
-    'Pronamic\\WordPress\\Pay\\Gateways\\Ingenico\\' => array($baseDir . '/packages/wp-pay-gateways/ogone/src'),
     'Pronamic\\WordPress\\Pay\\Gateways\\EMS\\ECommerce\\' => array($baseDir . '/packages/wp-pay-gateways/ems-e-commerce/src'),
     'Pronamic\\WordPress\\Pay\\Gateways\\Buckaroo\\' => array($baseDir . '/packages/wp-pay-gateways/buckaroo/src'),
     'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\' => array($baseDir . '/packages/wp-pay-gateways/adyen/src'),

@@ -3,7 +3,7 @@
  * Payment data
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\GravityForms
  */
@@ -11,18 +11,13 @@
 namespace Pronamic\WordPress\Pay\Extensions\GravityForms;
 
 use GFCommon;
-use Pronamic\WordPress\Money\Money;
 use Pronamic\WordPress\Pay\Core\Util as Core_Util;
 use Pronamic\WordPress\Pay\CreditCard;
 use RGFormsModel;
 
 /**
  * Title: WordPress pay extension Gravity Forms payment data
- * Description:
- * Copyright: 2005-2024 Pronamic
- * Company: Pronamic
  *
- * @author  Remco Tolsma
  * @version 2.1.10
  * @since   1.0.1
  */

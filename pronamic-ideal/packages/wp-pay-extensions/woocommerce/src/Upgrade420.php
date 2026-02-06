@@ -3,7 +3,7 @@
  * Upgrade 4.2.0
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Upgrades
  */
@@ -17,7 +17,6 @@ use WP_Query;
 /**
  * Upgrade 4.2.0
  *
- * @author  Reüel van der Steege
  * @version 4.2.0
  * @since   4.2.0
  */

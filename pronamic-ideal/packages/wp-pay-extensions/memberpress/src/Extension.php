@@ -3,14 +3,13 @@
  * Extension
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\MemberPress
  */
 
 namespace Pronamic\WordPress\Pay\Extensions\MemberPress;
 
-use MeprDb;
 use MeprOptions;
 use MeprProduct;
 use MeprSubscription;
@@ -26,7 +25,6 @@ use Pronamic\WordPress\Pay\Subscriptions\SubscriptionStatus;
 /**
  * WordPress pay MemberPress extension
  *
- * @author  Remco Tolsma
  * @version 4.2.0
  * @since   1.0.0
  */
@@ -47,7 +45,7 @@ class Extension extends AbstractPluginIntegration {
 		$args = wp_parse_args(
 			$args,
 			[
-				'name'                => \__( 'MemberPress', 'pronamic-ideal' ),
+				'name'                => 'MemberPress',
 				'slug'                => 'memberpress',
 				'version_option_name' => 'pronamic_pay_memberpress_version',
 			]
@@ -72,8 +70,8 @@ class Extension extends AbstractPluginIntegration {
 	 * Setup.
 	 */
 	public function setup() {
-		\add_filter( 'pronamic_subscription_source_description_memberpress_subscription', [ $this, 'subscription_source_description' ], 10, 2 );
-		\add_filter( 'pronamic_payment_source_description_memberpress_transaction', [ $this, 'source_description' ], 10, 2 );
+		\add_filter( 'pronamic_subscription_source_description_memberpress_subscription', $this->subscription_source_description( ... ), 10, 2 );
+		\add_filter( 'pronamic_payment_source_description_memberpress_transaction', $this->source_description( ... ), 10, 2 );
 
 		// Check if dependencies are met and integration is active.
 		if ( ! $this->is_active() ) {
@@ -81,34 +79,34 @@ class Extension extends AbstractPluginIntegration {
 		}
 
 		// @link https://gitlab.com/pronamic/memberpress/blob/1.2.4/app/lib/MeprGatewayFactory.php#L48-50
-		\add_filter( 'mepr-gateway-paths', [ $this, 'gateway_paths' ] );
+		\add_filter( 'mepr-gateway-paths', $this->gateway_paths( ... ) );
 
-		\add_filter( 'pronamic_payment_redirect_url_memberpress_transaction', [ $this, 'redirect_url' ], 10, 2 );
-		\add_action( 'pronamic_payment_status_update_memberpress_transaction', [ $this, 'status_update' ], 10, 1 );
+		\add_filter( 'pronamic_payment_redirect_url_memberpress_transaction', $this->redirect_url( ... ), 10, 2 );
+		\add_action( 'pronamic_payment_status_update_memberpress_transaction', $this->status_update( ... ), 10, 1 );
 
-		\add_action( 'pronamic_payment_status_update', [ $this, 'maybe_update_memberpress_subscription_gateway' ], 10, 1 );
-		\add_action( 'pronamic_pay_new_payment', [ $this, 'maybe_create_memberpress_transaction' ], 10, 1 );
-		\add_action( 'pronamic_pay_update_payment', [ $this, 'maybe_record_memberpress_transaction_refund' ], 10, 1 );
+		\add_action( 'pronamic_payment_status_update', $this->maybe_update_memberpress_subscription_gateway( ... ), 10, 1 );
+		\add_action( 'pronamic_pay_new_payment', $this->maybe_create_memberpress_transaction( ... ), 10, 1 );
+		\add_action( 'pronamic_pay_update_payment', $this->maybe_record_memberpress_transaction_refund( ... ), 10, 1 );
 
-		\add_action( 'pronamic_subscription_status_update_memberpress_subscription', [ $this, 'subscription_status_update' ], 10, 1 );
-		\add_filter( 'pronamic_subscription_source_text_memberpress_subscription', [ $this, 'subscription_source_text' ], 10, 2 );
-		\add_filter( 'pronamic_subscription_source_url_memberpress_subscription', [ $this, 'subscription_source_url' ], 10, 2 );
+		\add_action( 'pronamic_subscription_status_update_memberpress_subscription', $this->subscription_status_update( ... ), 10, 1 );
+		\add_filter( 'pronamic_subscription_source_text_memberpress_subscription', $this->subscription_source_text( ... ), 10, 2 );
+		\add_filter( 'pronamic_subscription_source_url_memberpress_subscription', $this->subscription_source_url( ... ), 10, 2 );
 
-		\add_filter( 'pronamic_payment_source_text_memberpress_transaction', [ $this, 'source_text' ], 10, 2 );
-		\add_filter( 'pronamic_payment_source_url_memberpress_transaction', [ $this, 'source_url' ], 10, 2 );
+		\add_filter( 'pronamic_payment_source_text_memberpress_transaction', $this->source_text( ... ), 10, 2 );
+		\add_filter( 'pronamic_payment_source_url_memberpress_transaction', $this->source_url( ... ), 10, 2 );
 
-		\add_action( 'mepr_subscription_pre_delete', [ $this, 'subscription_pre_delete' ], 10, 1 );
+		\add_action( 'mepr_subscription_pre_delete', $this->subscription_pre_delete( ... ), 10, 1 );
 
-		\add_action( 'mepr_subscription_saved', [ $this, 'memberpress_subscription_saved' ], 10, 1 );
+		\add_action( 'mepr_subscription_saved', $this->memberpress_subscription_saved( ... ), 10, 1 );
 
 		// MemberPress subscription email parameters.
-		\add_filter( 'mepr_subscription_email_params', [ $this, 'subscription_email_params' ], 10, 2 );
-		\add_filter( 'mepr_transaction_email_params', [ $this, 'transaction_email_params' ], 10, 2 );
-		\add_filter( 'mepr_subscription_email_vars', [ $this, 'email_variables' ], 10 );
-		\add_filter( 'mepr_transaction_email_vars', [ $this, 'email_variables' ], 10 );
+		\add_filter( 'mepr_subscription_email_params', $this->subscription_email_params( ... ), 10, 2 );
+		\add_filter( 'mepr_transaction_email_params', $this->transaction_email_params( ... ), 10, 2 );
+		\add_filter( 'mepr_subscription_email_vars', $this->email_variables( ... ), 10 );
+		\add_filter( 'mepr_transaction_email_vars', $this->email_variables( ... ), 10 );
 
 		// Hide MemberPress columns for payments and subscriptions.
-		\add_action( 'registered_post_type', [ $this, 'post_type_columns_hide' ], 15, 1 );
+		\add_action( 'registered_post_type', $this->post_type_columns_hide( ... ), 15, 1 );
 
 		if ( \is_admin() ) {
 			$admin_subscriptions = new Admin\AdminSubscriptions();

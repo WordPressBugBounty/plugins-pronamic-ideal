@@ -8,10 +8,9 @@ use stdClass;
 /**
  * Title: Pay.nl client
  * Description:
- * Copyright: 2005-2024 Pronamic
+ * Copyright: 2005-2026 Pronamic
  * Company: Pronamic
  *
- * @author  Remco Tolsma
  * @version 2.0.4
  * @since   1.0.0
  */

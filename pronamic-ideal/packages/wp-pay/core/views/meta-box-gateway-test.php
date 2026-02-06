@@ -3,7 +3,7 @@
  * Meta Box Gateway Test
  *
  * @author Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license GPL-3.0-or-later
  * @package Pronamic\WordPress\Pay
  * @var \WP_Post $post WordPress post.
@@ -229,7 +229,7 @@ $payment_methods = $gateway->get_payment_methods(
 								<input type="text" name="<?php echo \esc_attr( \sprintf( $name, 'name' ) ); ?>" value="<?php echo \esc_attr( $line['name'] ); ?>" class="pronamic-pay-form-control" />
 							</td>
 							<td>
-								<input type="number" name="<?php echo \esc_attr( \sprintf( $name, 'quantity' ) ); ?>" value="<?php echo \esc_attr( (string) $line['quantity'] ); ?>" min="1" class="pronamic-pay-form-control" />
+								<input type="number" step="any" name="<?php echo \esc_attr( \sprintf( $name, 'quantity' ) ); ?>" value="<?php echo \esc_attr( (string) $line['quantity'] ); ?>" min="0" class="pronamic-pay-form-control" />
 							</td>
 							<td>
 								<input type="number" name="<?php echo \esc_attr( \sprintf( $name, 'price' ) ); ?>" value="<?php echo \esc_attr( $line['price'] ); ?>" step="any" class="pronamic-pay-form-control" />

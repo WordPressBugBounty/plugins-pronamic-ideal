@@ -3,7 +3,7 @@
  * Line type transformer
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Gateways\Mollie
  */
@@ -37,7 +37,7 @@ class LineTypeTransformer {
 	 * Transform WordPress payment line type to Mollie line type.
 	 *
 	 * @since 4.3.0
-	 * @param string $payment_line_type WordPress payment line type to transform to Mollie line type.
+	 * @param string|null $payment_line_type WordPress payment line type to transform to Mollie line type.
 	 * @return string|null
 	 */
 	public static function transform_wp_to_mollie( $payment_line_type ) {

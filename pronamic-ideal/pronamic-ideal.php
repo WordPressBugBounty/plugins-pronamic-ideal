@@ -4,7 +4,7 @@
  * Plugin URI: https://www.pronamic.eu/plugins/pronamic-pay/
  * Description: The Pronamic Pay plugin adds payment methods like iDEAL, Bancontact, credit card and more to your WordPress site for a variety of payment providers.
  *
- * Version: 9.17.2
+ * Version: 9.20.0
  * Requires at least: 5.9
  * Requires PHP: 8.2
  *
@@ -21,7 +21,7 @@
  * GitHub URI: https://github.com/pronamic/wp-pronamic-pay
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -148,22 +148,12 @@ add_filter(
 				return ( 'test' === $mode ) ? 'buckaroo-test' : 'buckaroo';
 			case 'ems-ecommerce':
 				return ( 'test' === $mode ) ? 'ems-ecommerce-test' : 'ems-ecommerce';
-			case 'ing-ideal-advanced-2022':
-				return ( 'test' === $mode ) ? 'ing-ideal-advanced-2022-sandbox' : 'ing-ideal-advanced-2022-production';
 			case 'multisafepay-connect':
 				return ( 'test' === $mode ) ? 'multisafepay-connect-test' : 'multisafepay-connect';
-			case 'ogone-directlink':
-				return ( 'test' === $mode ) ? 'ingenico-directlink-test' : 'ingenico-directlink';
-			case 'ogone-orderstandard':
-				return ( 'test' === $mode ) ? 'ingenico-orderstandard-test' : 'ingenico-orderstandard';
 			case 'paypal':
 				return ( 'test' === $mode ) ? 'paypal-sandbox' : 'paypal';
 			case 'rabobank-omnikassa-2':
 				return ( 'test' === $mode ) ? 'rabobank-omnikassa-2-sandbox' : 'rabobank-omnikassa-2';
-			case 'sisow-ideal':
-				$sisow_test_mode = get_post_meta( $post_id, '_pronamic_gateway_sisow_test_mode', true );
-
-				return ( 'test' === $mode || '' !== $sisow_test_mode ) ? 'sisow-buckaroo-test' : 'sisow-buckaroo';
 		}
 
 		return $value;
@@ -237,7 +227,7 @@ add_filter(
 		// Mollie.
 		$gateways[] = new \Pronamic\WordPress\Pay\Gateways\Mollie\Integration(
 			[
-				'manual_url' => \__( 'https://www.pronamicpay.com/en/manuals/how-to-connect-mollie-to-wordpress-with-pronamic-pay/', 'pronamic-ideal' ),
+				'manual_url' => 'https://www.pronamicpay.com/en/manuals/how-to-connect-mollie-to-wordpress-with-pronamic-pay/',
 			]
 		);
 
@@ -257,30 +247,6 @@ add_filter(
 				'name'    => 'MultiSafepay - Connect - Test',
 				'mode'    => 'test',
 				'api_url' => 'https://testapi.multisafepay.com/ewx/',
-			]
-		);
-
-		// Ingenico.
-		$is_utf8 = strcasecmp( get_bloginfo( 'charset' ), 'UTF-8' ) === 0;
-
-		// Ingenico - OrderStandard.
-		$gateways[] = new \Pronamic\WordPress\Pay\Gateways\Ingenico\OrderStandard\Integration(
-			[
-				'id'               => 'ingenico-orderstandard',
-				'name'             => 'Ingenico/Ogone - e-Commerce',
-				'mode'             => 'live',
-				'action_url'       => $is_utf8 ? 'https://secure.ogone.com/ncol/prod/orderstandard_utf8.asp' : 'https://secure.ogone.com/ncol/prod/orderstandard.asp',
-				'direct_query_url' => 'https://secure.ogone.com/ncol/prod/querydirect.asp',
-			]
-		);
-
-		$gateways[] = new \Pronamic\WordPress\Pay\Gateways\Ingenico\OrderStandard\Integration(
-			[
-				'id'               => 'ingenico-orderstandard-test',
-				'name'             => 'Ingenico/Ogone - e-Commerce - Test',
-				'mode'             => 'test',
-				'action_url'       => $is_utf8 ? 'https://secure.ogone.com/ncol/test/orderstandard_utf8.asp' : 'https://secure.ogone.com/ncol/test/orderstandard.asp',
-				'direct_query_url' => 'https://secure.ogone.com/ncol/test/querydirect.asp',
 			]
 		);
 

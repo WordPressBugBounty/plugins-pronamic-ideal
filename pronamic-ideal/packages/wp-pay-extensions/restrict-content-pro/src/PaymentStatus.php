@@ -3,7 +3,7 @@
  * Restrict Content Pro payment status
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\RestrictContent
  */
@@ -15,9 +15,7 @@ use Pronamic\WordPress\Pay\Payments\PaymentStatus as Core_PaymentStatus;
 /**
  * Restrict Content Pro payment status
  *
- * @link https://gitlab.com/pronamic-plugins/restrict-content-pro/blob/3.0.10/includes/admin/payments/edit-payment.php#L104-118
- *
- * @author  Remco Tolsma
+ * @link    https://gitlab.com/pronamic-plugins/restrict-content-pro/blob/3.0.10/includes/admin/payments/edit-payment.php#L104-118
  * @version 2.0.0
  * @since   1.0.0
  */
@@ -76,19 +74,13 @@ class PaymentStatus {
 	 * @return string|null Restrict Content Pro payment status.
 	 */
 	public static function from_core( $core_status ) {
-		switch ( $core_status ) {
-			case Core_PaymentStatus::OPEN:
-				return self::PENDING;
-			case Core_PaymentStatus::CANCELLED:
-				return self::FAILED;
-			case Core_PaymentStatus::EXPIRED:
-				return self::ABANDONED;
-			case Core_PaymentStatus::FAILURE:
-				return self::FAILED;
-			case Core_PaymentStatus::SUCCESS:
-				return self::COMPLETE;
-			default:
-				return null;
-		}
+		return match ( $core_status ) {
+			Core_PaymentStatus::OPEN => self::PENDING,
+			Core_PaymentStatus::CANCELLED => self::FAILED,
+			Core_PaymentStatus::EXPIRED => self::ABANDONED,
+			Core_PaymentStatus::FAILURE => self::FAILED,
+			Core_PaymentStatus::SUCCESS => self::COMPLETE,
+			default => null,
+		};
 	}
 }

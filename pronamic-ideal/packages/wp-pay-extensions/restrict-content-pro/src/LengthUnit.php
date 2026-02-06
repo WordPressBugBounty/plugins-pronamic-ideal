@@ -3,21 +3,17 @@
  * Restrict Content Pro length unit
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\RestrictContent
  */
 
 namespace Pronamic\WordPress\Pay\Extensions\RestrictContent;
 
-use Pronamic\WordPress\Pay\Payments\PaymentStatus as Core_PaymentStatus;
-
 /**
  * Restrict Content Pro length unit
  *
- * @link https://gitlab.com/pronamic-plugins/restrict-content-pro/blob/3.0.10/includes/admin/payments/edit-payment.php#L104-118
- *
- * @author  Remco Tolsma
+ * @link    https://gitlab.com/pronamic-plugins/restrict-content-pro/blob/3.0.10/includes/admin/payments/edit-payment.php#L104-118
  * @version 2.0.0
  * @since   1.0.0
  */
@@ -50,15 +46,11 @@ class LengthUnit {
 	 * @return string|null WordPress payment core unit.
 	 */
 	public static function to_core( $length_unit ) {
-		switch ( $length_unit ) {
-			case self::DAY:
-				return 'D';
-			case self::MONTH:
-				return 'M';
-			case self::YEAR:
-				return 'Y';
-			default:
-				return null;
-		}
+		return match ( $length_unit ) {
+			self::DAY => 'D',
+			self::MONTH => 'M',
+			self::YEAR => 'Y',
+			default => null,
+		};
 	}
 }

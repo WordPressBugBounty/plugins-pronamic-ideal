@@ -4,7 +4,7 @@
  * Plugin URI: https://www.pronamic.eu/plugins/pronamic-pay-woocommerce/
  * Description: Extend the Pronamic Pay plugin with WooCommerce support to receive payments through a variety of payment providers.
  *
- * Version: 4.13.0
+ * Version: 4.14.0
  * Requires at least: 5.9
  * Requires PHP: 7.4
  *
@@ -19,7 +19,7 @@
  * GitHub URI: https://github.com/pronamic/wp-pronamic-pay-woocommerce
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\WooCommerce
  */

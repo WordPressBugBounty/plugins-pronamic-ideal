@@ -3,7 +3,7 @@
  * Processor
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\GravityForms
  */
@@ -33,11 +33,7 @@ use Pronamic\WordPress\Pay\Subscriptions\SubscriptionPhase;
 
 /**
  * Title: WordPress pay extension Gravity Forms processor
- * Description:
- * Copyright: 2005-2024 Pronamic
- * Company: Pronamic
  *
- * @author  Remco Tolsma
  * @version 2.4.1
  * @since   1.0.0
  */
@@ -381,7 +377,7 @@ class Processor {
 					}
 
 					if ( array_key_exists( 'quantity', $product ) ) {
-						$line->set_quantity( intval( $product['quantity'] ) );
+						$line->set_quantity( Number::from_mixed( $product['quantity'] ) );
 					}
 
 					if ( array_key_exists( 'options', $product ) && is_array( $product['options'] ) ) {
@@ -400,7 +396,7 @@ class Processor {
 							}
 
 							// Quantity.
-							$line->set_quantity( null === $product_quantity ? 1 : $product_quantity );
+							$line->set_quantity( $product_quantity ?? new Number( 1 ) );
 
 							// Price.
 							if ( array_key_exists( 'price', $option ) ) {
@@ -435,7 +431,7 @@ class Processor {
 				$line = $payment->lines->new_line();
 
 				$line->set_type( PaymentLineType::SHIPPING );
-				$line->set_quantity( 1 );
+				$line->set_quantity( new Number( 1 ) );
 
 				if ( array_key_exists( 'id', $shipping ) ) {
 					$line->set_id( $shipping['id'] );

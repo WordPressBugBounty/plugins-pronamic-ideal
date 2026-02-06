@@ -3,7 +3,7 @@
  * Gateway
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\WooCommerce
  */
@@ -29,15 +29,11 @@ use WC_Order;
 use WC_Payment_Gateway;
 
 /**
- * Title: WooCommerce iDEAL gateway
- * Description:
- * Copyright: 2005-2025 Pronamic
- * Company: Pronamic
+ * Gateway class
  *
  * @link https://github.com/woocommerce/woocommerce/blob/3.5.3/includes/abstracts/abstract-wc-payment-gateway.php
  * @link https://github.com/woocommerce/woocommerce/blob/3.5.3/includes/abstracts/abstract-wc-settings-api.php
  *
- * @author  Remco Tolsma
  * @version 2.1.2
  * @since   1.0.0
  */
@@ -572,7 +568,7 @@ class Gateway extends WC_Payment_Gateway {
 
 				$line->set_type( PaymentLineType::DIGITAL );
 				$line->set_name( $name );
-				$line->set_quantity( 1 );
+				$line->set_quantity( new Number( 1 ) );
 				$line->set_unit_price( $total_amount );
 				$line->set_total_amount( $total_amount );
 

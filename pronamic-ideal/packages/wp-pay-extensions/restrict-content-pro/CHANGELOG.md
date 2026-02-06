@@ -7,6 +7,60 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 ## [Unreleased][unreleased]
 -
 
+## [4.9.0] - 2026-01-05
+
+### Commits
+
+- Merge pull request #35 from pronamic/core-230-payment-line-quantity-type ([085be2f](https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/commit/085be2f8fe13ff7efb2d7498ad30d7f67ff979bb))
+- Updated for quantity `Number` (https://github.com/pronamic/wp-pay-core/issues/230). ([e2d60f7](https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/commit/e2d60f79e700d93f38ac2f06b02fd90c8a3734f1))
+
+### Composer
+
+- Added `pronamic/wp-number` `^1.4`.
+
+Full set of changes: [`4.8.0...4.9.0`][4.9.0]
+
+[4.9.0]: https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/compare/v4.8.0...v4.9.0
+
+## [4.8.0] - 2025-11-17
+
+### Commits
+
+- Updated to PHP 8.2 or higher ([bca80bc](https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/commit/bca80bc66f0b0d064f509e3071945820e34bfa4b))
+- Removed next payment delivery date (https://github.com/pronamic/wp-pronamic-pay-mollie/issues/91). ([4d64378](https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/commit/4d6437894783a2c540c25f9984bf43725cc83dcb))
+
+### Composer
+
+- Changed `php` from `>=8.1` to `>=8.2`.
+- Changed `pronamic/wp-money` from `^2.2` to `v2.4.4`.
+	Release notes: https://github.com/pronamic/wp-money/releases/tag/v2.4.4
+- Changed `woocommerce/action-scheduler` from `^3.7` to `3.9.3`.
+	Release notes: https://github.com/woocommerce/action-scheduler/releases/tag/3.9.3
+- Changed `wp-pay-gateways/mollie` from `^4.10` to `v4.17.0`.
+	Release notes: https://github.com/pronamic/wp-pronamic-pay-mollie/releases/tag/v4.17.0
+- Changed `wp-pay/core` from `^4.17` to `v4.28.0`.
+	Release notes: https://github.com/pronamic/wp-pay-core/releases/tag/v4.28.0
+
+Full set of changes: [`4.7.2...4.8.0`][4.8.0]
+
+[4.8.0]: https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/compare/v4.7.2...v4.8.0
+
+## [4.7.2] - 2025-11-11
+
+### Commits
+
+- Merge pull request #33 from pronamic/32-add-discount-payment-line-for-credits ([2f1026b](https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/commit/2f1026b95b02512d6350a35ffc2c80fcfbaf7137))
+- Limit applied credit using numeric values instead of Number objects. ([a0ce9fd](https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/commit/a0ce9fd5e1afe254cb61e605e72cffd3d12df432))
+- Make sure the applied credit does not exceed the total amount of the payment lines. ([f2e231e](https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/commit/f2e231e860ee08e2262dbc4aca4f4c0356e2fa8e))
+- Thanks @gemini-code-assist. ([fa695ba](https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/commit/fa695baf6507bb72bccb002181bbdf823766c093))
+- Added discount payment line for credits. ([08656c6](https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/commit/08656c66ad2bc3e553580ec973e81b0c83a10cda))
+- Only add fee when applicable. ([8838d4b](https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/commit/8838d4bebc78f09a32edde7893ec9cba1a93ca82))
+- Added this point we shoud not use translation functions. ([659078c](https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/commit/659078c6c557eec9559c7cfe0f1199250d18866f))
+
+Full set of changes: [`4.7.1...4.7.2`][4.7.2]
+
+[4.7.2]: https://github.com/pronamic/wp-pronamic-pay-restrict-content-pro/compare/v4.7.1...v4.7.2
+
 ## [4.7.1] - 2025-09-17
 
 ### Fixed

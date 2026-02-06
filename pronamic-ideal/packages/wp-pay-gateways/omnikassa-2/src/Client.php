@@ -3,7 +3,7 @@
  * Client.
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Gateways\OmniKassa2
  */
@@ -15,7 +15,6 @@ use Pronamic\WordPress\Http\Facades\Http;
 /**
  * Client.
  *
- * @author  Remco Tolsma
  * @version 2.3.4
  * @since   1.0.0
  */

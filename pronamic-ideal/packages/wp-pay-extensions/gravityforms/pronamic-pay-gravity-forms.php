@@ -4,9 +4,9 @@
  * Plugin URI: https://www.pronamic.eu/plugins/pronamic-pay-gravityforms/
  * Description: Extend the Pronamic Pay plugin with Gravity Forms support to receive payments through a variety of payment providers.
  *
- * Version: 4.10.1
+ * Version: 4.11.0
  * Requires at least: 4.7
- * Requires PHP: 7.4
+ * Requires PHP: 8.1
  *
  * Author: Pronamic
  * Author URI: https://www.pronamic.eu/
@@ -21,7 +21,7 @@
  * GitHub URI: https://github.com/pronamic/wp-pronamic-pay-gravityforms
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\GravityForms
  */

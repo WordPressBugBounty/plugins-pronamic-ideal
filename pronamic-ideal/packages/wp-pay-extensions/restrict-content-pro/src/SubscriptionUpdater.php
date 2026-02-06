@@ -3,7 +3,7 @@
  * Subscription updater
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\RestrictContent
  */
@@ -30,21 +30,19 @@ class SubscriptionUpdater {
 	private $rcp_membership;
 
 	/**
-	 * Pronamic subscription.
-	 *
-	 * @var Subscription
-	 */
-	private $pronamic_subscription;
-
-	/**
 	 * Construct subscription updater.
 	 *
 	 * @param RCP_Membership $rcp_membership        Restrict Content membership.
 	 * @param Subscription   $pronamic_subscription Pronamic subscription.
 	 */
-	public function __construct( RCP_Membership $rcp_membership, Subscription $pronamic_subscription ) {
-		$this->rcp_membership        = $rcp_membership;
-		$this->pronamic_subscription = $pronamic_subscription;
+	public function __construct(
+		RCP_Membership $rcp_membership,
+		/**
+		 * Pronamic subscription.
+		 */
+		private readonly Subscription $pronamic_subscription
+	) {
+		$this->rcp_membership = $rcp_membership;
 	}
 
 	/**

@@ -3,7 +3,7 @@
  * Bitcoin gateway
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\MemberPress
  */
@@ -15,7 +15,6 @@ use Pronamic\WordPress\Pay\Core\PaymentMethods;
 /**
  * WordPress pay MemberPress Bitcoin gateway
  *
- * @author  Reüel van der Steege
  * @version 3.1.0
  * @since   1.0.5
  */

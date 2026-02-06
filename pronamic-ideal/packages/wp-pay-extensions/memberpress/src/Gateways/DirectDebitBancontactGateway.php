@@ -3,7 +3,7 @@
  * Direct Debit mandate via Bancontact gateway
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\MemberPress
  */
@@ -11,12 +11,10 @@
 namespace Pronamic\WordPress\Pay\Extensions\MemberPress\Gateways;
 
 use Pronamic\WordPress\Pay\Core\PaymentMethods;
-use Pronamic\WordPress\Pay\Plugin;
 
 /**
  * WordPress pay MemberPress Direct Debit mandate via Bancontact gateway
  *
- * @author  Reüel van der Steege
  * @version 3.1.0
  * @since   1.0.6
  */
