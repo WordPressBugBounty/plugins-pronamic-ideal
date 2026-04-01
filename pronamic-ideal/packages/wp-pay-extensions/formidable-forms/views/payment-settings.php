@@ -156,13 +156,13 @@ $fields = [
 	[
 		'id'          => 'pronamic_pay_order_id',
 		'label'       => __( 'Order ID', 'pronamic-ideal' ),
-		'description' => __( 'Enter an order ID, you can use Formidable Forms shortcodes.', 'pronamic-ideal' ),
+		'description' => __( 'Enter an order ID, you can use Formidable Forms shortcodes.', 'pronamic_ideal' ),
 		'callback'    => $callback_text_field,
 	],
 	[
 		'id'          => 'pronamic_pay_transaction_description',
 		'label'       => __( 'Transaction Description', 'pronamic-ideal' ),
-		'description' => __( 'Enter a transaction description, you can use Formidable Forms shortcodes.', 'pronamic-ideal' ),
+		'description' => __( 'Enter a transaction description, you can use Formidable Forms shortcodes.', 'pronamic_ideal' ),
 		'callback'    => $callback_text_field,
 	],
 	[

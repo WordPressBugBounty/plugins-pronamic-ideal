@@ -11,7 +11,7 @@
  * Author: Pronamic
  * Author URI: https://www.pronamic.eu/
  *
- * Text Domain: pronamic-ideal
+ * Text Domain: pronamic-pay-admin-reports
  * Domain Path: /languages/
  *
  * License: GPL-2.0-or-later

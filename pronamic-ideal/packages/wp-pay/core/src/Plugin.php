@@ -635,7 +635,7 @@ class Plugin {
 		 * @return string
 		 */
 		/* translators: %s: provider */
-		$bnpl_disclaimer_template = \__( 'You must be at least 18+ to use this service. If you pay on time, you will avoid additional costs and ensure that you can use %s services again in the future. By continuing, you accept the Terms and Conditions and confirm that you have read the Privacy Statement and Cookie Statement.', 'pronamic-ideal' );
+		$bnpl_disclaimer_template = \__( 'You must be at least 18+ to use this service. If you pay on time, you will avoid additional costs and ensure that you can use %s services again in the future. By continuing, you accept the Terms and Conditions and confirm that you have read the Privacy Statement and Cookie Statement.', 'pronamic_ideal' );
 
 		// AfterPay.nl.
 		$payment_method_afterpay_nl = new PaymentMethod( PaymentMethods::AFTERPAY_NL );
@@ -665,7 +665,7 @@ class Plugin {
 			 * @link https://en.wikipedia.org/wiki/Afterpay
 			 * @link https://docs.adyen.com/payment-methods/afterpaytouch
 			 */
-			'default' => \__( 'Afterpay is a popular buy now, pay later service in Australia, New Zealand, the United States, and Canada.', 'pronamic-ideal' ),
+			'default' => \__( 'Afterpay is a popular buy now, pay later service in Australia, New Zealand, the United States, and Canada.', 'pronamic_ideal' ),
 		];
 
 		$payment_method_afterpay_com->images = [
@@ -807,7 +807,7 @@ class Plugin {
 		$payment_method_card = new PaymentMethod( PaymentMethods::CARD );
 
 		$payment_method_card->descriptions = [
-			'default' => \__( 'The most popular payment method in the world. Offers customers a safe and trusted way to pay online. Customers can pay for their order quickly and easily with their card, without having to worry about their security. It is possible to charge a payment surcharge for card costs.', 'pronamic-ideal' ),
+			'default' => \__( 'The most popular payment method in the world. Offers customers a safe and trusted way to pay online. Customers can pay for their order quickly and easily with their card, without having to worry about their security. It is possible to charge a payment surcharge for card costs.', 'pronamic_ideal' ),
 		];
 
 		$payment_method_card->images = [
@@ -820,7 +820,7 @@ class Plugin {
 		$payment_method_credit_card = new PaymentMethod( PaymentMethods::CREDIT_CARD );
 
 		$payment_method_credit_card->descriptions = [
-			'default' => \__( 'The most popular payment method in the world. Offers customers a safe and trusted way to pay online. Customers can pay for their order quickly and easily with their credit card, without having to worry about their security. It is possible to charge a payment surcharge for credit card costs.', 'pronamic-ideal' ),
+			'default' => \__( 'The most popular payment method in the world. Offers customers a safe and trusted way to pay online. Customers can pay for their order quickly and easily with their credit card, without having to worry about their security. It is possible to charge a payment surcharge for credit card costs.', 'pronamic_ideal' ),
 		];
 
 		$payment_method_credit_card->images = [

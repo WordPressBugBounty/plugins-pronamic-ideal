@@ -15,7 +15,7 @@ if ( ! isset( $args ) ) {
 $args = wp_parse_args( $args, [] );
 
 /* translators: 1: Pronamic Pay plugin name, 2: documentation URL anchor */
-$description = __( 'Generate a tag for an issuer field. %1$s requires a field with the `pronamic_pay_amount` option, but payment method and issuer fields are optional in most cases. For step-by-step instructions on receiving payments with Contact Form 7, please see %2$s.', 'pronamic-ideal' );
+$description = __( 'Generate a tag for an issuer field. %1$s requires a field with the `pronamic_pay_amount` option, but payment method and issuer fields are optional in most cases. For step-by-step instructions on receiving payments with Contact Form 7, please see %2$s.', 'pronamic_ideal' );
 
 $desc_link = wpcf7_link( __( 'https://www.pronamic.eu/support/how-to-connect-contact-form-7-to-pronamic-pay/', 'pronamic-ideal' ), __( 'How to connect Contact Form 7 to Pronamic Pay', 'pronamic-ideal' ) );
 
@@ -103,7 +103,7 @@ $desc_link = wpcf7_link( __( 'https://www.pronamic.eu/support/how-to-connect-con
 
 			printf(
 				/* translators: %s: mail-tag placeholder HTML */
-				esc_html( __( 'To use the value input through this field in a mail field, you need to insert the corresponding mail-tag (%s) into the field on the Mail tab.', 'pronamic-ideal' ) ),
+				esc_html( __( 'To use the value input through this field in a mail field, you need to insert the corresponding mail-tag (%s) into the field on the Mail tab.', 'pronamic_ideal' ) ),
 				'<strong><span class="mail-tag"></span></strong>'
 			);
 

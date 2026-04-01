@@ -677,7 +677,7 @@ class AdminPaymentPostType {
 		global $post;
 
 		// @link https://translate.wordpress.org/projects/wp/4.4.x/admin/nl/default?filters[status]=either&filters[original_id]=2352797&filters[translation_id]=37948900
-		$scheduled_date = date_i18n( __( 'M j, Y @ H:i', 'pronamic-ideal' ), strtotime( (string) $post->post_date ) );
+		$scheduled_date = date_i18n( __( 'M j, Y @ H:i', 'pronamic_ideal' ), strtotime( (string) $post->post_date ) );
 
 		$messages[ self::POST_TYPE ] = [
 			0  => '', // Unused. Messages start at index 1.

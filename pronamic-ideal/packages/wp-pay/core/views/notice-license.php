@@ -43,7 +43,7 @@ $class = ( 'valid' === $data->license ) ? 'updated' : 'error';
 				]
 			);
 		} else {
-			\esc_html_e( 'There was a problem activating your license key, please try again or contact support.', 'pronamic-ideal' );
+			\esc_html_e( 'There was a problem activating your license key, please try again or contact support.', 'pronamic_ideal' );
 		}
 
 		?>

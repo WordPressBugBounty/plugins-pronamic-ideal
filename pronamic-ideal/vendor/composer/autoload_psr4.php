@@ -41,6 +41,7 @@ return array(
     'Pronamic\\WordPress\\GravityFormsNL\\' => array($baseDir . '/packages/pronamic/wp-gravityforms-nl/src'),
     'Pronamic\\WordPress\\DateTime\\' => array($baseDir . '/packages/pronamic/wp-datetime/src'),
     'Pronamic\\PronamicPayAdminReports\\' => array($baseDir . '/packages/pronamic/pronamic-pay-admin-reports/php/classes'),
+    'Pronamic\\PronamicForms\\' => array($baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4'),
     'Pronamic\\IDealIssuers\\' => array($vendorDir . '/pronamic/ideal-issuers/src'),
     'JsonSchema\\' => array($vendorDir . '/justinrainbow/json-schema/src/JsonSchema'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),

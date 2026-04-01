@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $action_url = $payment->get_action_url();
 
 if ( empty( $action_url ) ) {
-	esc_html_e( 'It is currently not possible to pay, please contact us for more information (error: no action URL found).', 'pronamic-ideal' );
+	esc_html_e( 'It is currently not possible to pay, please contact us for more information (error: no action URL found).', 'pronamic_ideal' );
 
 	return;
 }

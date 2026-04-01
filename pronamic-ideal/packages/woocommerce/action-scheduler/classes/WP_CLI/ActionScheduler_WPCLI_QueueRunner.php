@@ -66,7 +66,7 @@ class ActionScheduler_WPCLI_QueueRunner extends ActionScheduler_Abstract_QueueRu
 		// Check to make sure there aren't too many concurrent processes running.
 		if ( $this->has_maximum_concurrent_batches() ) {
 			if ( $force ) {
-				WP_CLI::warning( __( 'There are too many concurrent batches, but the run is forced to continue.', 'pronamic-ideal' ) );
+				WP_CLI::warning( __( 'There are too many concurrent batches, but the run is forced to continue.', 'action-scheduler' ) );
 			} else {
 				WP_CLI::error( __( 'There are too many concurrent batches.', 'pronamic-ideal' ) );
 			}

@@ -558,7 +558,7 @@ class PaymentMethods {
 			self::DIRECT_DEBIT_IDEAL      => sprintf(
 				/* translators: %s: payment method */
 				__( 'Direct Debit (mandate via %s)', 'pronamic-ideal' ),
-				__( 'iDEAL', 'pronamic-ideal' )
+				__( 'iDEAL | Wero', 'pronamic-ideal' )
 			),
 			self::DIRECT_DEBIT_SOFORT     => sprintf(
 				/* translators: %s: payment method */
@@ -570,7 +570,7 @@ class PaymentMethods {
 			self::GIFT_CARD               => __( 'Gift Card', 'pronamic-ideal' ),
 			self::GIROPAY                 => __( 'Giropay', 'pronamic-ideal' ),
 			self::GOOGLE_PAY              => __( 'Google Pay', 'pronamic-ideal' ),
-			self::IDEAL                   => __( 'iDEAL', 'pronamic-ideal' ),
+			self::IDEAL                   => __( 'iDEAL | Wero', 'pronamic-ideal' ),
 			self::IDEALQR                 => __( 'iDEAL QR', 'pronamic-ideal' ),
 			self::KBC                     => __( 'KBC/CBC Payment Button', 'pronamic-ideal' ),
 			self::KLARNA                  => __( 'Klarna', 'pronamic-ideal' ),
@@ -587,7 +587,7 @@ class PaymentMethods {
 			self::PAYPAL                  => __( 'PayPal', 'pronamic-ideal' ),
 			self::PAYSAFECARD             => __( 'Paysafecard', 'pronamic-ideal' ),
 			self::PAY_BY_BANK             => __( 'Pay by Bank', 'pronamic-ideal' ),
-			self::POSTEPAY				  => __( 'PostePay', 'pronamic-ideal' ),
+			self::POSTEPAY                => __( 'PostePay', 'pronamic-ideal' ),
 			self::PRZELEWY24              => __( 'Przelewy24', 'pronamic-ideal' ),
 			self::RIVERTY                 => __( 'Riverty', 'pronamic-ideal' ),
 			self::SANTANDER               => __( 'Santander', 'pronamic-ideal' ),
@@ -618,10 +618,12 @@ class PaymentMethods {
 	 */
 	public static function get_name( $method = null, $fallback = null ) {
 		// Get name from registered payment method.
-		$payment_method = pronamic_pay_plugin()->get_payment_methods()->get( $method );
+		if ( null !== $method ) {
+			$payment_method = pronamic_pay_plugin()->get_payment_methods()->get( $method );
 
-		if ( null !== $payment_method ) {
-			return $payment_method->get_name();
+			if ( null !== $payment_method ) {
+				return $payment_method->get_name();
+			}
 		}
 
 		// Fallback to static name.

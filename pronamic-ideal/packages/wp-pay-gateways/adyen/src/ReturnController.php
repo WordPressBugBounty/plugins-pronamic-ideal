@@ -320,7 +320,7 @@ class ReturnController {
 		$payment->add_note(
 			\sprintf(
 				/* translators: %s: Adyen payment result code. */
-				\__( 'Result code `%s` was received via the Adyen web drop-in, awaiting the webhook to update payment status.', 'pronamic-ideal' ),
+				\__( 'Result code `%s` was received via the Adyen web drop-in, awaiting the webhook to update payment status.', 'pronamic_ideal' ),
 				$result_code
 			)
 		);

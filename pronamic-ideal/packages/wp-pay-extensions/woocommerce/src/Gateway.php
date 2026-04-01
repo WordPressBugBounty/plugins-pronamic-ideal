@@ -293,7 +293,7 @@ class Gateway extends WC_Payment_Gateway {
 				'type'        => 'textarea',
 				'description' => $description_prefix . sprintf(
 					/* translators: %s: payment method title */
-					__( 'Give the customer instructions for paying via %s, and let them know that their order won\'t be shipping until the money is received.', 'pronamic-ideal' ),
+					__( 'Give the customer instructions for paying via %s, and let them know that their order won\'t be shipping until the money is received.', 'pronamic-pay-woocommerce' ),
 					$this->method_title
 				),
 				'default'     => '',
@@ -428,7 +428,7 @@ class Gateway extends WC_Payment_Gateway {
 			'type'        => 'checkbox',
 			'title'       => \__( 'Show iDEAL issuers', 'pronamic-ideal' ),
 			'label'       => \__( 'Show iDEAL issuer selection field if available', 'pronamic-ideal' ),
-			'description' => \__( 'With the introduction of the new iDEAL (2.0) in mid-2024, it is recommended to let customers select their bank on the new iDEAL payment screen. As a result, displaying iDEAL banks on your own website is discouraged.', 'pronamic-ideal' ),
+			'description' => \__( 'With the introduction of the new iDEAL (2.0) in mid-2024, it is recommended to let customers select their bank on the new iDEAL payment screen. As a result, displaying iDEAL banks on your own website is discouraged.', 'pronamic-pay-woocommerce' ),
 			'default'     => $this->get_show_show_ideal_issuers_default() ? 'yes' : 'no',
 		];
 	}
@@ -582,14 +582,13 @@ class Gateway extends WC_Payment_Gateway {
 		try {
 			$payment = Plugin::start_payment( $payment );
 		} catch ( \Exception $exception ) {
-			WooCommerce::add_notice( Plugin::get_default_error_message(), 'error' );
+			$message = $exception->getMessage() ?: Plugin::get_default_error_message();
 
-			/**
-			 * We will rethrow the exception so WooCommerce can also handle the exception.
-			 *
-			 * @link https://github.com/woocommerce/woocommerce/blob/3.7.1/includes/class-wc-checkout.php#L1129-L1131
-			 */
-			throw $exception;
+			WooCommerce::add_notice( $message, 'error' );
+
+			return [
+				'result' => 'failure',
+			];
 		}
 
 		$this->store_payment_details( $order, $payment );

@@ -203,7 +203,7 @@ class LicenseManager {
 			if ( '' === $license ) {
 				$notice = sprintf(
 				/* translators: 1: Pronamic Pay settings page URL, 2: The pronamicpay.com plugin page URL */
-					__( '<strong>Pronamic Pay</strong> — You have not entered a valid <a href="%1$s">support license key</a>, please <a href="%2$s" target="_blank">get your key at pronamicpay.com</a>.', 'pronamic-ideal' ),
+					__( '<strong>Pronamic Pay</strong> — You have not entered a valid <a href="%1$s">support license key</a>, please <a href="%2$s" target="_blank">get your key at pronamicpay.com</a>.', 'pronamic_ideal' ),
 					add_query_arg( 'page', 'pronamic_pay_settings', get_admin_url( null, 'admin.php' ) ),
 					'https://www.pronamicpay.com/'
 				);

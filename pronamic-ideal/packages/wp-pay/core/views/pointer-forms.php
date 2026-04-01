@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <h3><?php esc_html_e( 'Payment Forms', 'pronamic-ideal' ); ?></h3>
 
 <p>
-	<?php esc_html_e( 'On the payment forms page you can add, edit or delete simple payment forms.', 'pronamic-ideal' ); ?>
+	<?php esc_html_e( 'On the payment forms page you can add, edit or delete simple payment forms.', 'pronamic_ideal' ); ?>
 	<?php esc_html_e( 'Currently it’s not possible to adjust the form fields or styling of these forms.', 'pronamic-ideal' ); ?>
 	<?php
 

@@ -10,7 +10,6 @@
  * Requires at least: 6.5
  * Tested up to: 6.8
  * Requires PHP: 7.2
- * Text Domain: pronamic-ideal
  *
  * Copyright 2019 Automattic, Inc.  (https://automattic.com/contact/)
  *

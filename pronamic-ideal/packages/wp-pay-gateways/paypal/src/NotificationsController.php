@@ -79,14 +79,14 @@ class NotificationsController {
 					'txn_id'         => [
 						'description' => \__(
 							'The merchant\'s original transaction identification number for the payment from the buyer, against which the case was registered.',
-							'pronamic-ideal'
+							'pronamic_ideal'
 						),
 						'type'        => 'string',
 					],
 					'parent_txn_id'  => [
 						'description' => \__(
 							'In the case of a refund, reversal, or canceled reversal, this variable contains the `txn_id` of the original transaction.',
-							'pronamic-ideal'
+							'pronamic_ideal'
 						),
 						'type'        => 'string',
 
@@ -94,14 +94,14 @@ class NotificationsController {
 					'mc_currency'    => [
 						'description' => \__(
 							'For payment IPN notifications, this is the currency of the payment.',
-							'pronamic-ideal'
+							'pronamic_ideal'
 						),
 						'type'        => 'string',
 					],
 					'mc_gross'       => [
 						'description' => \__(
 							'Full amount of the customer\'s payment, before transaction fee is subtracted. Equivalent to payment_gross for USD payments. If this amount is negative, it signifies a refund or reversal, and either of those payment statuses can be for the full or partial amount of the original transaction.',
-							'pronamic-ideal'
+							'pronamic_ideal'
 						),
 						'type'        => 'string',
 					],

@@ -751,7 +751,7 @@ class Gateway extends MeprBaseRealGateway {
 
 				<noscript>
 					<p class="mepr_nojs">
-						<?php esc_html_e( 'JavaScript is disabled in your browser. You will not be able to complete your purchase until you either enable JavaScript in your browser, or switch to a browser that supports it.', 'pronamic-ideal' ); ?>
+						<?php esc_html_e( 'JavaScript is disabled in your browser. You will not be able to complete your purchase until you either enable JavaScript in your browser, or switch to a browser that supports it.', 'pronamic_ideal' ); ?>
 					</p>
 				</noscript>
 			</form>
@@ -1004,7 +1004,7 @@ class Gateway extends MeprBaseRealGateway {
 
 			$message = \sprintf(
 				/* translators: %s: mandate selection URL anchor */
-				\__( 'To update the payment method for this subscription, please visit the %s page.', 'pronamic-ideal' ),
+				\__( 'To update the payment method for this subscription, please visit the %s page.', 'pronamic_ideal' ),
 				\sprintf(
 					'<a href="%1$s" title="%2$s">%3$s</a>',
 					\esc_url( $url ),

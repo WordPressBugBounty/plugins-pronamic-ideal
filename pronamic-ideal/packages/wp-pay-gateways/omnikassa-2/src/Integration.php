@@ -133,7 +133,7 @@ final class Integration extends AbstractGatewayIntegration {
 					/* translators: %s: <code>merchantOrderId</code> */
 					\__(
 						'The Rabo Smart Pay %s field must consist strictly of 24 alphanumeric characters, other characters, such as ".", "@", " " (space), etc. are not allowed.',
-						'pronamic-ideal'
+						'pronamic_ideal'
 					),
 					$code_field
 				),

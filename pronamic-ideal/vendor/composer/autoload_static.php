@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitbc1c0440923ca776328f6559286f9c37
+class ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330
 {
     public static $files = array (
         '509f66d930a3f0b7d9b65b22aa319565' => __DIR__ . '/../..' . '/packages/wp-pay/core/includes/functions.php',
@@ -58,6 +58,7 @@ class ComposerStaticInitbc1c0440923ca776328f6559286f9c37
             'Pronamic\\WordPress\\GravityFormsNL\\' => 34,
             'Pronamic\\WordPress\\DateTime\\' => 28,
             'Pronamic\\PronamicPayAdminReports\\' => 33,
+            'Pronamic\\PronamicForms\\' => 23,
             'Pronamic\\IDealIssuers\\' => 22,
         ),
         'J' =>
@@ -214,6 +215,10 @@ class ComposerStaticInitbc1c0440923ca776328f6559286f9c37
         'Pronamic\\PronamicPayAdminReports\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/pronamic/pronamic-pay-admin-reports/php/classes',
+        ),
+        'Pronamic\\PronamicForms\\' =>
+        array (
+            0 => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4',
         ),
         'Pronamic\\IDealIssuers\\' =>
         array (
@@ -386,6 +391,20 @@ class ComposerStaticInitbc1c0440923ca776328f6559286f9c37
         'Pronamic\\IDealIssuers\\IDealIssuerCode' => __DIR__ . '/..' . '/pronamic/ideal-issuers/src/IDealIssuerCode.php',
         'Pronamic\\IDealIssuers\\IDealIssuerService' => __DIR__ . '/..' . '/pronamic/ideal-issuers/src/IDealIssuerService.php',
         'Pronamic\\IDealIssuers\\IDealIssuers' => __DIR__ . '/..' . '/pronamic/ideal-issuers/src/IDealIssuers.php',
+        'Pronamic\\PronamicForms\\BlockEditorController' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockEditorController.php',
+        'Pronamic\\PronamicForms\\BlockPatternCategoriesController' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockPatternCategoriesController.php',
+        'Pronamic\\PronamicForms\\BlockPatternsController' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockPatternsController.php',
+        'Pronamic\\PronamicForms\\BlockTypesController' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockTypesController.php',
+        'Pronamic\\PronamicForms\\BlockUpdater' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockUpdater.php',
+        'Pronamic\\PronamicForms\\BlockUpdaterCheckField' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockUpdaterCheckField.php',
+        'Pronamic\\PronamicForms\\BlockUpdaterFormField' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockUpdaterFormField.php',
+        'Pronamic\\PronamicForms\\FormSubmissionProcessor' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/FormSubmissionProcessor.php',
+        'Pronamic\\PronamicForms\\PayController' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/PayController.php',
+        'Pronamic\\PronamicForms\\PaymentMethodBlocksController' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/PaymentMethodBlocksController.php',
+        'Pronamic\\PronamicForms\\Plugin' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/Plugin.php',
+        'Pronamic\\PronamicForms\\PostTypesController' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/PostTypesController.php',
+        'Pronamic\\PronamicForms\\RenderFormBlockController' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/RenderFormBlockController.php',
+        'Pronamic\\PronamicForms\\RenderFormBlockUpdater' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/RenderFormBlockUpdater.php',
         'Pronamic\\PronamicPayAdminReports\\Plugin' => __DIR__ . '/../..' . '/packages/pronamic/pronamic-pay-admin-reports/php/classes/Plugin.php',
         'Pronamic\\WordPress\\DateTime\\DateTime' => __DIR__ . '/../..' . '/packages/pronamic/wp-datetime/src/DateTime.php',
         'Pronamic\\WordPress\\DateTime\\DateTimeImmutable' => __DIR__ . '/../..' . '/packages/pronamic/wp-datetime/src/DateTimeImmutable.php',
@@ -1415,9 +1434,9 @@ class ComposerStaticInitbc1c0440923ca776328f6559286f9c37
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitbc1c0440923ca776328f6559286f9c37::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitbc1c0440923ca776328f6559286f9c37::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitbc1c0440923ca776328f6559286f9c37::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330::$classMap;
 
         }, null, ClassLoader::class);
     }
