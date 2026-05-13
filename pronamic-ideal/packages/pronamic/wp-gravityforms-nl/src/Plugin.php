@@ -124,7 +124,7 @@ class Plugin {
 		}
 
 		// Load plugin text domain.
-		\load_plugin_textdomain( 'gravityforms-nl', false, $rel_path );
+		\load_plugin_textdomain( 'pronamic-ideal', false, $rel_path );
 	}
 
 	/**
@@ -168,7 +168,7 @@ class Plugin {
 
 		// Euro currency definition.
 		$euro = [
-			'name'               => __( 'Euro', 'gravityforms-nl' ),
+			'name'               => __( 'Euro', 'pronamic-ideal' ),
 			'symbol_left'        => '€',
 			'symbol_right'       => '',
 			'symbol_padding'     => ' ',
@@ -202,10 +202,10 @@ class Plugin {
 	 */
 	public function gform_address_types( $address_types ) {
 		$address_types['dutch'] = [
-			'label'       => \apply_filters( 'pronamic_gravityforms_nl_address_label', _x( 'Dutch', 'Dutch address type', 'gravityforms-nl' ) ),
-			'country'     => \apply_filters( 'pronamic_gravityforms_nl_address_country', _x( 'Netherlands', 'Dutch address type', 'gravityforms-nl' ) ),
-			'zip_label'   => \apply_filters( 'pronamic_gravityforms_nl_address_zip_label', _x( 'Postal Code', 'Dutch address type', 'gravityforms-nl' ) ),
-			'state_label' => \apply_filters( 'pronamic_gravityforms_nl_address_state_label', _x( 'Province', 'Dutch address type', 'gravityforms-nl' ) ),
+			'label'       => \apply_filters( 'pronamic_gravityforms_nl_address_label', _x( 'Dutch', 'Dutch address type', 'pronamic-ideal' ) ),
+			'country'     => \apply_filters( 'pronamic_gravityforms_nl_address_country', _x( 'Netherlands', 'Dutch address type', 'pronamic-ideal' ) ),
+			'zip_label'   => \apply_filters( 'pronamic_gravityforms_nl_address_zip_label', _x( 'Postal Code', 'Dutch address type', 'pronamic-ideal' ) ),
+			'state_label' => \apply_filters( 'pronamic_gravityforms_nl_address_state_label', _x( 'Province', 'Dutch address type', 'pronamic-ideal' ) ),
 			'states'      => \array_merge( [ '' ], \apply_filters( 'pronamic_gravityforms_nl_address_states', self::get_dutch_provinces() ) ),
 		];
 
@@ -219,18 +219,18 @@ class Plugin {
 	 */
 	public static function get_dutch_provinces() {
 		return [
-			__( 'Drenthe', 'gravityforms-nl' ),
-			__( 'Flevoland', 'gravityforms-nl' ),
-			__( 'Friesland', 'gravityforms-nl' ),
-			__( 'Gelderland', 'gravityforms-nl' ),
-			__( 'Groningen', 'gravityforms-nl' ),
-			__( 'Limburg', 'gravityforms-nl' ),
-			__( 'Noord-Brabant', 'gravityforms-nl' ),
-			__( 'Noord-Holland', 'gravityforms-nl' ),
-			__( 'Overijssel', 'gravityforms-nl' ),
-			__( 'Utrecht', 'gravityforms-nl' ),
-			__( 'Zeeland', 'gravityforms-nl' ),
-			__( 'Zuid-Holland', 'gravityforms-nl' ),
+			__( 'Drenthe', 'pronamic-ideal' ),
+			__( 'Flevoland', 'pronamic-ideal' ),
+			__( 'Friesland', 'pronamic-ideal' ),
+			__( 'Gelderland', 'pronamic-ideal' ),
+			__( 'Groningen', 'pronamic-ideal' ),
+			__( 'Limburg', 'pronamic-ideal' ),
+			__( 'Noord-Brabant', 'pronamic-ideal' ),
+			__( 'Noord-Holland', 'pronamic-ideal' ),
+			__( 'Overijssel', 'pronamic-ideal' ),
+			__( 'Utrecht', 'pronamic-ideal' ),
+			__( 'Zeeland', 'pronamic-ideal' ),
+			__( 'Zuid-Holland', 'pronamic-ideal' ),
 		];
 	}
 

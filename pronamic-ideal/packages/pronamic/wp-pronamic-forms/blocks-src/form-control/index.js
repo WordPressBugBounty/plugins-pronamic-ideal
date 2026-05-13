@@ -81,47 +81,47 @@ registerBlockType( metadata.name, {
 		return (
 			<div { ...blockProps }>
 				<InspectorControls>
-					<PanelBody title={ __( 'Settings', 'pronamic-ideal' ) }>
+					<PanelBody title={ __( 'Settings', 'pronamic-forms' ) }>
 						<SelectControl
-							label={ __( 'Type', 'pronamic-ideal' ) }
+							label={ __( 'Type', 'pronamic-forms' ) }
 							value={ attributes.type }
 							options={ [
 								{
-									label: __( 'Text', 'pronamic-ideal' ),
+									label: __( 'Text', 'pronamic-forms' ),
 									value: 'text',
 								},
 								{
-									label: __( 'Textarea', 'pronamic-ideal' ),
+									label: __( 'Textarea', 'pronamic-forms' ),
 									value: 'textarea',
 								},
 								{
-									label: __( 'Password', 'pronamic-ideal' ),
+									label: __( 'Password', 'pronamic-forms' ),
 									value: 'password',
 								},
 								{
-									label: __( 'URL', 'pronamic-ideal' ),
+									label: __( 'URL', 'pronamic-forms' ),
 									value: 'url',
 								},
 								{
 									label: __(
 										'Email address',
-										'pronamic-ideal'
+										'pronamic-forms'
 									),
 									value: 'email',
 								},
 								{
 									label: __(
 										'Telephone number',
-										'pronamic-ideal'
+										'pronamic-forms'
 									),
 									value: 'tel',
 								},
 								{
-									label: __( 'Checkbox', 'pronamic-ideal' ),
+									label: __( 'Checkbox', 'pronamic-forms' ),
 									value: 'checkbox',
 								},
 								{
-									label: __( 'Radio', 'pronamic-ideal' ),
+									label: __( 'Radio', 'pronamic-forms' ),
 									value: 'radio',
 								},
 							] }
@@ -134,10 +134,10 @@ registerBlockType( metadata.name, {
 
 						<CheckboxControl
 							__nextHasNoMarginBottom
-							label={ __( 'Required', 'pronamic-ideal' ) }
+							label={ __( 'Required', 'pronamic-forms' ) }
 							help={ __(
 								'Select this option to make the input required.',
-								'pronamic-ideal'
+								'pronamic-forms'
 							) }
 							checked={ required }
 							onChange={ ( newVal ) => {
@@ -153,10 +153,10 @@ registerBlockType( metadata.name, {
 							<TextControl
 								__nextHasNoMarginBottom
 								__next40pxDefaultSize
-								label={ __( 'Placeholder', 'pronamic-ideal' ) }
+								label={ __( 'Placeholder', 'pronamic-forms' ) }
 								help={ __(
 									'Text that appears in the form element when no value has been entered.',
-									'pronamic-ideal'
+									'pronamic-forms'
 								) }
 								value={ placeholder }
 								onChange={ ( newVal ) => {
@@ -174,7 +174,7 @@ registerBlockType( metadata.name, {
 						__nextHasNoMarginBottom
 						__next40pxDefaultSize
 						autoComplete="off"
-						label={ __( 'Name', 'pronamic-ideal' ) }
+						label={ __( 'Name', 'pronamic-forms' ) }
 						value={ name }
 						onChange={ ( value ) => {
 							setAttributes( {
@@ -187,7 +187,7 @@ registerBlockType( metadata.name, {
 						__nextHasNoMarginBottom
 						__next40pxDefaultSize
 						autoComplete="off"
-						label={ __( 'Value', 'pronamic-ideal' ) }
+						label={ __( 'Value', 'pronamic-forms' ) }
 						value={ value }
 						onChange={ ( value ) => {
 							setAttributes( {
@@ -200,7 +200,7 @@ registerBlockType( metadata.name, {
 						__nextHasNoMarginBottom
 						__next40pxDefaultSize
 						autoComplete="off"
-						label={ __( 'Reference', 'pronamic-ideal' ) }
+						label={ __( 'Reference', 'pronamic-forms' ) }
 						value={ reference }
 						onChange={ ( value ) => {
 							setAttributes( {

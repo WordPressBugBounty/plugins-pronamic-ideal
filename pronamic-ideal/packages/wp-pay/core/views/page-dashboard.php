@@ -333,7 +333,7 @@ $container_index = 1;
 
 							<div class="inside">
 								<p>
-									<?php esc_html_e( "Please follow the tour, read the 'What is new' and 'Getting Started' pages before contacting us. Also, check the Site Health page for any issues.", 'pronamic_ideal' ); ?>
+									<?php esc_html_e( "Please follow the tour, read the 'What is new' and 'Getting Started' pages before contacting us. Also, check the Site Health page for any issues.", 'pronamic-ideal' ); ?>
 								</p>
 
 								<?php

@@ -42,13 +42,13 @@ registerBlockType( metadata.name, {
 		return (
 			<div { ...blockProps }>
 				<InspectorControls>
-					<PanelBody title={ __( 'Settings', 'pronamic-ideal' ) }>
+					<PanelBody title={ __( 'Settings', 'pronamic-forms' ) }>
 						<CheckboxControl
 							__nextHasNoMarginBottom
-							label={ __( 'Required', 'pronamic-ideal' ) }
+							label={ __( 'Required', 'pronamic-forms' ) }
 							help={ __(
 								'Select this option to make the input required.',
-								'pronamic-ideal'
+								'pronamic-forms'
 							) }
 							checked={ required }
 							onChange={ ( value ) => {
@@ -65,7 +65,7 @@ registerBlockType( metadata.name, {
 						__nextHasNoMarginBottom
 						__next40pxDefaultSize
 						autoComplete="off"
-						label={ __( 'Name', 'pronamic-ideal' ) }
+						label={ __( 'Name', 'pronamic-forms' ) }
 						value={ attributes.name }
 						onChange={ ( value ) => {
 							setAttributes( {
@@ -78,7 +78,7 @@ registerBlockType( metadata.name, {
 						__nextHasNoMarginBottom
 						__next40pxDefaultSize
 						autoComplete="off"
-						label={ __( 'Reference', 'pronamic-ideal' ) }
+						label={ __( 'Reference', 'pronamic-forms' ) }
 						value={ attributes.reference }
 						onChange={ ( value ) => {
 							setAttributes( {
@@ -95,7 +95,7 @@ registerBlockType( metadata.name, {
 						onChange={ ( value ) =>
 							setAttributes( { label: value } )
 						}
-						placeholder={ __( 'Enter label…', 'pronamic-ideal' ) }
+						placeholder={ __( 'Enter label…', 'pronamic-forms' ) }
 					/>
 				</div>
 
@@ -150,19 +150,19 @@ registerBlockType( metadata.name, {
 	variations: [
 		{
 			name: 'pronamic-form-radio-field-subscription-frequency',
-			title: __( 'Subscription frequency choice field', 'pronamic-ideal' ),
+			title: __( 'Subscription frequency choice field', 'pronamic-forms' ),
 			keywords: [
-				__( 'frequency', 'pronamic-ideal' ),
-				__( 'interval', 'pronamic-ideal' ),
-				__( 'recurrence', 'pronamic-ideal' ),
-				__( 'subscription', 'pronamic-ideal' ),
-				__( 'Once', 'pronamic-ideal' ),
-				__( 'Monthly', 'pronamic-ideal' ),
-				__( 'Yearly', 'pronamic-ideal' ),
-				__( 'Annual', 'pronamic-ideal' ),
+				__( 'frequency', 'pronamic-forms' ),
+				__( 'interval', 'pronamic-forms' ),
+				__( 'recurrence', 'pronamic-forms' ),
+				__( 'subscription', 'pronamic-forms' ),
+				__( 'Once', 'pronamic-forms' ),
+				__( 'Monthly', 'pronamic-forms' ),
+				__( 'Yearly', 'pronamic-forms' ),
+				__( 'Annual', 'pronamic-forms' ),
 			],
 			attributes: {
-				label: __( 'Frequency', 'pronamic-ideal' ),
+				label: __( 'Frequency', 'pronamic-forms' ),
 				reference: 'pronamic_pay_subscription_frequency',
 				required: true,
 			},
@@ -170,7 +170,7 @@ registerBlockType( metadata.name, {
 				[
 					'pronamic/form-radio-option',
 					{
-						label: __( 'Once', 'pronamic-ideal' ),
+						label: __( 'Once', 'pronamic-forms' ),
 						reference: 'pronamic_pay_subscription_frequency',
 						value: 'once',
 					}
@@ -178,7 +178,7 @@ registerBlockType( metadata.name, {
 				[
 					'pronamic/form-radio-option',
 					{
-						label: __( 'Monthly', 'pronamic-ideal' ),
+						label: __( 'Monthly', 'pronamic-forms' ),
 						reference: 'pronamic_pay_subscription_frequency',
 						value: 'monthly',
 					}
@@ -186,7 +186,7 @@ registerBlockType( metadata.name, {
 				[
 					'pronamic/form-radio-option',
 					{
-						label: __( 'Yearly', 'pronamic-ideal' ),
+						label: __( 'Yearly', 'pronamic-forms' ),
 						reference: 'pronamic_pay_subscription_frequency',
 						value: 'yearly',
 					}
@@ -194,7 +194,7 @@ registerBlockType( metadata.name, {
 			],
 			example: {
 				attributes: {
-					label: __( 'Frequency', 'pronamic-ideal' ),
+					label: __( 'Frequency', 'pronamic-forms' ),
 				},
 			},
 			scope: [ 'block', 'inserter', 'transform' ],

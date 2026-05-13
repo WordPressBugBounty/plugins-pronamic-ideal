@@ -231,7 +231,7 @@ trait DateTimeTrait {
 	 */
 	public function format_i18n( $format = null ) {
 		if ( \is_null( $format ) ) {
-			$format = \_x( 'D j M Y \a\t H:i', 'default datetime format', 'pronamic-datetime' );
+			$format = \_x( 'D j M Y \a\t H:i', 'default datetime format', 'pronamic-ideal' );
 
 			$format = \apply_filters( 'pronamic_datetime_default_format', $format );
 		}

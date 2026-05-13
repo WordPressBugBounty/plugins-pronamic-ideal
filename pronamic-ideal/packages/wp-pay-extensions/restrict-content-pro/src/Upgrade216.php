@@ -356,7 +356,7 @@ class Upgrade216 extends Upgrade {
 					$subscription->add_note(
 						\sprintf(
 							/* translators: %s: Potential WordPress user ID. */
-							__( 'Since Restrict Content Pro 3 a subscription must be linked to a Restrict Content Pro membership. Unfortunately, this subscription could not be linked to a Restrict Content Pro membership based on the source ID %s. That is why this subscription has been put on hold so that it can be corrected manually.', 'pronamic_ideal' ),
+							__( 'Since Restrict Content Pro 3 a subscription must be linked to a Restrict Content Pro membership. Unfortunately, this subscription could not be linked to a Restrict Content Pro membership based on the source ID %s. That is why this subscription has been put on hold so that it can be corrected manually.', 'pronamic-ideal' ),
 							$subscription_source_id
 						)
 					);

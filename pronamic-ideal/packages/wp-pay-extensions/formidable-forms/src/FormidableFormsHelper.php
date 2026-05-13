@@ -3,7 +3,7 @@
  * Formidable Forms Helper
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2024 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay\Extensions\FormidableForms
  */
@@ -37,7 +37,7 @@ class FormidableFormsHelper {
 		if ( \class_exists( '\FrmProAppHelper' ) ) {
 			$settings = FrmProAppHelper::get_settings();
 
-			$currency = \trim( $settings->currency );
+			$currency = \trim( (string) $settings->currency );
 		}
 
 		// Check empty currency.
@@ -223,7 +223,7 @@ class FormidableFormsHelper {
 				$money = $parser->parse( $value );
 
 				$amount = $amount->add( $money );
-			} catch ( \Exception $e ) {
+			} catch ( \Exception ) {
 				continue;
 			}
 		}

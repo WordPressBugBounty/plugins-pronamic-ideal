@@ -189,7 +189,7 @@ final class PayController {
 				true
 			)
 				&&
-			! \array_key_exists( 'checked', $attributes )
+			true !== ( $attributes['checked'] ?? false )
 		) {
 			return;
 		}
@@ -346,7 +346,7 @@ final class PayController {
 	 * @return string
 	 */
 	private function payment_source_description() {
-		return \__( 'Pronamic Forms Entry', 'pronamic-pay-doneren-met-mollie' );
+		return \__( 'Pronamic Forms Entry', 'pronamic-ideal' );
 	}
 
 	/**
@@ -375,7 +375,7 @@ final class PayController {
 	 * @return string
 	 */
 	private function subscription_source_description() {
-		return \__( 'Pronamic Forms Entry', 'pronamic-pay-doneren-met-mollie' );
+		return \__( 'Pronamic Forms Entry', 'pronamic-ideal' );
 	}
 
 	/**

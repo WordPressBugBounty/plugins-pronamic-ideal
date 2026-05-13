@@ -22,7 +22,7 @@ $gateway = Plugin::get_gateway( $post->ID );
 if ( null === $gateway ) {
 	printf(
 		'<em>%s</em>',
-		esc_html( __( 'Please save the entered account details of your payment provider, to make a test payment.', 'pronamic_ideal' ) )
+		esc_html( __( 'Please save the entered account details of your payment provider, to make a test payment.', 'pronamic-ideal' ) )
 	);
 
 	return;

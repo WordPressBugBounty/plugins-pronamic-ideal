@@ -30,10 +30,10 @@ registerBlockType( metadata.name, {
 		return (
 			<div { ...blockProps }>
 				<InspectorControls>
-					<PanelBody title={ __( 'Settings', 'pronamic-ideal' ) }>
+					<PanelBody title={ __( 'Settings', 'pronamic-forms' ) }>
 						<TextControl
 							autoComplete="off"
-							label={ __( 'Payment amount', 'pronamic-ideal' ) }
+							label={ __( 'Payment amount', 'pronamic-forms' ) }
 							value={ paymentAmount }
 							onChange={ ( newVal ) => {
 								setAttributes( {

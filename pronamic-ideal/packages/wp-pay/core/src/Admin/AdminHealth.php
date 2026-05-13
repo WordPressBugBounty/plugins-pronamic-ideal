@@ -305,7 +305,7 @@ class AdminHealth {
 		$result = [
 			'test'        => 'pronamic_pay_hashing_algorithms',
 			'label'       => __( 'SHA1 hashing algorithm is available', 'pronamic-ideal' ),
-			'description' => sprintf( '<p>%s</p>', __( 'Payment gateways often use the SHA1 hashing algorithm, therefore Pronamic Pay advises to enable this hashing algorithm.', 'pronamic_ideal' ) ),
+			'description' => sprintf( '<p>%s</p>', __( 'Payment gateways often use the SHA1 hashing algorithm, therefore Pronamic Pay advises to enable this hashing algorithm.', 'pronamic-ideal' ) ),
 			'badge'       => [
 				'label' => __( 'Payments', 'pronamic-ideal' ),
 				'color' => 'blue',

@@ -642,7 +642,7 @@ class Extension extends AbstractPluginIntegration {
 				$payment->add_note(
 					\sprintf(
 						/* translators: 1: Refund PSP ID, 2: error message */
-						\__( 'Unable to create WooCommerce refund for "%1$s", due to the following error: "%2$s".', 'pronamic-pay-woocommerce' ),
+						\__( 'Unable to create WooCommerce refund for "%1$s", due to the following error: "%2$s".', 'pronamic-ideal' ),
 						$refund->psp_id,
 						$error_message
 					)

@@ -35,7 +35,7 @@ $phase = $subscription->get_display_phase();
 			<?php esc_html_e( 'Date', 'pronamic-ideal' ); ?>
 		</th>
 		<td>
-			<?php the_time( __( 'l jS \o\f F Y, h:ia', 'pronamic_ideal' ) ); ?>
+			<?php the_time( __( 'l jS \o\f F Y, h:ia', 'pronamic-ideal' ) ); ?>
 		</td>
 	</tr>
 	<tr>

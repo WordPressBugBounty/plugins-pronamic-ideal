@@ -123,7 +123,7 @@ class ActionScheduler_WPCommentCleaner {
 
 		$notice = sprintf(
 			/* translators: 1: next cleanup message 2: github issue URL */
-			__( 'Action Scheduler has migrated data to custom tables; however, orphaned log entries exist in the WordPress Comments table. %1$s <a href="%2$s">Learn more &raquo;</a>', 'action-scheduler' ),
+			__( 'Action Scheduler has migrated data to custom tables; however, orphaned log entries exist in the WordPress Comments table. %1$s <a href="%2$s">Learn more &raquo;</a>', 'pronamic-ideal' ),
 			$next_cleanup_message,
 			'https://github.com/woocommerce/action-scheduler/issues/368'
 		);

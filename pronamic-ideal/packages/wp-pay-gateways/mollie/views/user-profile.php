@@ -99,7 +99,7 @@ if ( empty( $customers ) ) {
 <p class="description">
 	<?php
 
-	esc_html_e( 'Mollie offers the possibility to register payers as a customer within the Mollie payment platform. This functionality remembers payment preferences to make future payments easier. The Mollie customers can be linked to WordPress users. This is a list of Mollie customers associated with this WordPress user. For subscriptions, a Mollie customer mandate can be used for recurring payments.', 'pronamic_ideal' );
+	esc_html_e( 'Mollie offers the possibility to register payers as a customer within the Mollie payment platform. This functionality remembers payment preferences to make future payments easier. The Mollie customers can be linked to WordPress users. This is a list of Mollie customers associated with this WordPress user. For subscriptions, a Mollie customer mandate can be used for recurring payments.', 'pronamic-ideal' );
 
 	?>
 </p>

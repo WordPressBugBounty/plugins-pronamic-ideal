@@ -107,7 +107,7 @@ class NotificationsController {
 				'rest_forbidden_context',
 				sprintf(
 					/* translators: %s: Help URL. */
-					__( 'HTTP Authorization header is missing, read %s for more information.', 'pronamic_ideal' ),
+					__( 'HTTP Authorization header is missing, read %s for more information.', 'pronamic-ideal' ),
 					'https://www.wp-pay.org/http-authorization-header-missing/'
 				),
 				[ 'status' => rest_authorization_required_code() ]
@@ -122,7 +122,7 @@ class NotificationsController {
 		return new WP_Error(
 			'rest_forbidden_context',
 			/* translators: Translate 'notification' the same as in the Adyen dashboard. */
-			_x( 'Sorry, you are not allowed to post Adyen notifications.', 'Adyen', 'pronamic_ideal' ),
+			_x( 'Sorry, you are not allowed to post Adyen notifications.', 'Adyen', 'pronamic-ideal' ),
 			[ 'status' => rest_authorization_required_code() ]
 		);
 	}

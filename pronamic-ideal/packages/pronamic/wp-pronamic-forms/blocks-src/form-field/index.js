@@ -56,13 +56,13 @@ registerBlockType( metadata.name, {
 		return (
 			<div { ...blockProps }>
 				<InspectorControls>
-					<PanelBody title={ __( 'Settings', 'pronamic-ideal' ) }>
+					<PanelBody title={ __( 'Settings', 'pronamic-forms' ) }>
 						<CheckboxControl
 							__nextHasNoMarginBottom
-							label={ __( 'Required', 'pronamic-ideal' ) }
+							label={ __( 'Required', 'pronamic-forms' ) }
 							help={ __(
 								'Select this option to make the input required.',
-								'pronamic-ideal'
+								'pronamic-forms'
 							) }
 							checked={ required }
 							onChange={ ( value ) => {
@@ -78,10 +78,10 @@ registerBlockType( metadata.name, {
 							<TextControl
 								__nextHasNoMarginBottom
 								__next40pxDefaultSize
-								label={ __( 'Placeholder', 'pronamic-ideal' ) }
+								label={ __( 'Placeholder', 'pronamic-forms' ) }
 								help={ __(
 									'Text that appears in the form element when no value has been entered.',
-									'pronamic-ideal'
+									'pronamic-forms'
 								) }
 								value={ attributes.placeholder }
 								onChange={ ( value ) => {
@@ -98,7 +98,7 @@ registerBlockType( metadata.name, {
 							__nextHasNoMarginBottom
 							__next40pxDefaultSize
 							autoComplete="off"
-							label={ __( 'Name', 'pronamic-ideal' ) }
+							label={ __( 'Name', 'pronamic-forms' ) }
 							value={ attributes.name }
 							onChange={ ( value ) => {
 								setAttributes( {
@@ -111,7 +111,7 @@ registerBlockType( metadata.name, {
 							__nextHasNoMarginBottom
 							__next40pxDefaultSize
 							autoComplete="off"
-							label={ __( 'Value', 'pronamic-ideal' ) }
+							label={ __( 'Value', 'pronamic-forms' ) }
 							value={ attributes.value }
 							onChange={ ( value ) => {
 								setAttributes( {
@@ -124,7 +124,7 @@ registerBlockType( metadata.name, {
 							__nextHasNoMarginBottom
 							__next40pxDefaultSize
 							autoComplete="off"
-							label={ __( 'Reference', 'pronamic-ideal' ) }
+							label={ __( 'Reference', 'pronamic-forms' ) }
 							value={ attributes.reference }
 							onChange={ ( value ) => {
 								setAttributes( {
@@ -142,7 +142,7 @@ registerBlockType( metadata.name, {
 						onChange={ ( value ) =>
 							setAttributes( { label: value } )
 						}
-						placeholder={ __( 'Enter label…', 'pronamic-ideal' ) }
+						placeholder={ __( 'Enter label…', 'pronamic-forms' ) }
 					/>
 				</div>
 
@@ -211,7 +211,7 @@ registerBlockType( metadata.name, {
 	variations: [
 		{
 			name: 'pronamic-form-field-text',
-			title: __( 'Single-line text field', 'pronamic-ideal' ),
+			title: __( 'Single-line text field', 'pronamic-forms' ),
 			/**
 			 * Icon.
 			 *
@@ -237,7 +237,7 @@ registerBlockType( metadata.name, {
 		},
 		{
 			name: 'pronamic-form-field-textarea',
-			title: __( 'Multi-line text field', 'pronamic-ideal' ),
+			title: __( 'Multi-line text field', 'pronamic-forms' ),
 			/**
 			 * Icon.
 			 *
@@ -255,7 +255,7 @@ registerBlockType( metadata.name, {
 			example: {
 				attributes: {
 					label: 'Message',
-					value: __( 'Multi-line\ntext', 'pronamic-ideal' ),
+					value: __( 'Multi-line\ntext', 'pronamic-forms' ),
 				},
 			},
 			scope: [ 'block', 'inserter', 'transform' ],
@@ -263,7 +263,7 @@ registerBlockType( metadata.name, {
 		},
 		{
 			name: 'pronamic-form-field-url',
-			title: __( 'URL field', 'pronamic-ideal' ),
+			title: __( 'URL field', 'pronamic-forms' ),
 			/**
 			 * Icon.
 			 *
@@ -288,8 +288,8 @@ registerBlockType( metadata.name, {
 			},
 			example: {
 				attributes: {
-					label: __( 'Website', 'pronamic-ideal' ),
-					value: __( 'https://www.example.com/', 'pronamic-ideal' ),
+					label: __( 'Website', 'pronamic-forms' ),
+					value: __( 'https://www.example.com/', 'pronamic-forms' ),
 				},
 			},
 			scope: [ 'block', 'inserter', 'transform' ],
@@ -297,7 +297,7 @@ registerBlockType( metadata.name, {
 		},
 		{
 			name: 'pronamic-form-field-telephone-number',
-			title: __( 'Telephone number field', 'pronamic-ideal' ),
+			title: __( 'Telephone number field', 'pronamic-forms' ),
 			/**
 			 * Icon.
 			 *
@@ -315,8 +315,8 @@ registerBlockType( metadata.name, {
 			},
 			example: {
 				attributes: {
-					label: __( 'Telephone number', 'pronamic-ideal' ),
-					value: __( '555-0100', 'pronamic-ideal' ),
+					label: __( 'Telephone number', 'pronamic-forms' ),
+					value: __( '555-0100', 'pronamic-forms' ),
 				},
 			},
 			scope: [ 'block', 'inserter', 'transform' ],
@@ -324,7 +324,7 @@ registerBlockType( metadata.name, {
 		},
 		{
 			name: 'pronamic-form-field-email',
-			title: __( 'Email address field', 'pronamic-ideal' ),
+			title: __( 'Email address field', 'pronamic-forms' ),
 			/**
 			 * Icon.
 			 *
@@ -342,8 +342,8 @@ registerBlockType( metadata.name, {
 			},
 			example: {
 				attributes: {
-					label: __( 'Email address', 'pronamic-ideal' ),
-					value: __( 'john.doe@example.com', 'pronamic-ideal' ),
+					label: __( 'Email address', 'pronamic-forms' ),
+					value: __( 'john.doe@example.com', 'pronamic-forms' ),
 				},
 			},
 			scope: [ 'block', 'inserter', 'transform' ],
@@ -351,7 +351,7 @@ registerBlockType( metadata.name, {
 		},
 		{
 			name: 'pronamic-form-field-password',
-			title: __( 'Password field', 'pronamic-ideal' ),
+			title: __( 'Password field', 'pronamic-forms' ),
 			/**
 			 * Icon.
 			 *
@@ -368,7 +368,7 @@ registerBlockType( metadata.name, {
 			},
 			example: {
 				attributes: {
-					label: __( 'Password', 'pronamic-ideal' ),
+					label: __( 'Password', 'pronamic-forms' ),
 					value: 'password',
 				},
 			},
@@ -377,7 +377,7 @@ registerBlockType( metadata.name, {
 		},
 		{
 			name: 'pronamic-form-field-payment-amount',
-			title: __( 'Payment amount field', 'pronamic-ideal' ),
+			title: __( 'Payment amount field', 'pronamic-forms' ),
 			/**
 			 * Icon.
 			 *
@@ -395,7 +395,7 @@ registerBlockType( metadata.name, {
 			},
 			example: {
 				attributes: {
-					label: __( 'Payment amount', 'pronamic-ideal' ),
+					label: __( 'Payment amount', 'pronamic-forms' ),
 					value: '10',
 				},
 			},

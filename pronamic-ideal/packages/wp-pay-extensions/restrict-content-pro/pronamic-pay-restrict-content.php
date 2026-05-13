@@ -4,7 +4,7 @@
  * Plugin URI: https://www.pronamic.eu/plugins/pronamic-pay-restrict-content-pro/
  * Description: Extend the Pronamic Pay plugin with Restrict Content (Pro) support to receive payments through a variety of payment providers.
  *
- * Version: 4.9.0
+ * Version: 4.10.1
  * Requires at least: 4.7
  * Requires PHP: 8.1
  *
@@ -68,7 +68,7 @@ add_filter(
 	function ( $gateways ) {
 		$gateways[] = new \Pronamic\WordPress\Pay\Gateways\Mollie\Integration(
 			[
-				'manual_url' => \__( 'https://www.pronamicpay.com/en/manuals/how-to-connect-mollie-to-wordpress-with-pronamic-pay/', 'pronamic-pay-with-mollie-for-contact-form-7' ),
+				'manual_url' => \__( 'https://www.pronamicpay.com/en/manuals/how-to-connect-mollie-to-wordpress-with-pronamic-pay/', 'pronamic-ideal' ),
 			]
 		);
 

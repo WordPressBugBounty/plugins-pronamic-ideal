@@ -505,7 +505,7 @@ AND `group_id` = %d
 							throw new \RuntimeException(
 								sprintf(
 									/* translators: %s: provided value type */
-									__( 'The value type for the JSON partial matching is not supported. Must be either integer, boolean, double or string. %s type provided.', 'action-scheduler' ),
+									__( 'The value type for the JSON partial matching is not supported. Must be either integer, boolean, double or string. %s type provided.', 'pronamic-ideal' ),
 									$value_type
 								)
 							);

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330
+class ComposerStaticInitb9a60d6a551e6f84a6d88012a7b2d2b9
 {
     public static $files = array (
         '509f66d930a3f0b7d9b65b22aa319565' => __DIR__ . '/../..' . '/packages/wp-pay/core/includes/functions.php',
@@ -28,7 +28,6 @@ class ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330
         array (
             'Pronamic\\WpPayLogos\\' => 20,
             'Pronamic\\WordPress\\Updater\\' => 27,
-            'Pronamic\\WordPress\\Pay\\Gateways\\PayPal\\' => 39,
             'Pronamic\\WordPress\\Pay\\Gateways\\PayNL\\' => 38,
             'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\' => 43,
             'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\' => 45,
@@ -57,6 +56,7 @@ class ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330
             'Pronamic\\WordPress\\Html\\' => 24,
             'Pronamic\\WordPress\\GravityFormsNL\\' => 34,
             'Pronamic\\WordPress\\DateTime\\' => 28,
+            'Pronamic\\PronamicPayDefaultPaymentMethods\\' => 42,
             'Pronamic\\PronamicPayAdminReports\\' => 33,
             'Pronamic\\PronamicForms\\' => 23,
             'Pronamic\\IDealIssuers\\' => 22,
@@ -95,10 +95,6 @@ class ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330
         'Pronamic\\WordPress\\Updater\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/pronamic/pronamic-wp-updater/src',
-        ),
-        'Pronamic\\WordPress\\Pay\\Gateways\\PayPal\\' =>
-        array (
-            0 => __DIR__ . '/../..' . '/packages/wp-pay-gateways/paypal/src',
         ),
         'Pronamic\\WordPress\\Pay\\Gateways\\PayNL\\' =>
         array (
@@ -211,6 +207,10 @@ class ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330
         'Pronamic\\WordPress\\DateTime\\' =>
         array (
             0 => __DIR__ . '/../..' . '/packages/pronamic/wp-datetime/src',
+        ),
+        'Pronamic\\PronamicPayDefaultPaymentMethods\\' =>
+        array (
+            0 => __DIR__ . '/../..' . '/packages/pronamic/pronamic-pay-default-payment-methods/psr-4',
         ),
         'Pronamic\\PronamicPayAdminReports\\' =>
         array (
@@ -406,6 +406,7 @@ class ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330
         'Pronamic\\PronamicForms\\RenderFormBlockController' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/RenderFormBlockController.php',
         'Pronamic\\PronamicForms\\RenderFormBlockUpdater' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/RenderFormBlockUpdater.php',
         'Pronamic\\PronamicPayAdminReports\\Plugin' => __DIR__ . '/../..' . '/packages/pronamic/pronamic-pay-admin-reports/php/classes/Plugin.php',
+        'Pronamic\\PronamicPayDefaultPaymentMethods\\Plugin' => __DIR__ . '/../..' . '/packages/pronamic/pronamic-pay-default-payment-methods/psr-4/Plugin.php',
         'Pronamic\\WordPress\\DateTime\\DateTime' => __DIR__ . '/../..' . '/packages/pronamic/wp-datetime/src/DateTime.php',
         'Pronamic\\WordPress\\DateTime\\DateTimeImmutable' => __DIR__ . '/../..' . '/packages/pronamic/wp-datetime/src/DateTimeImmutable.php',
         'Pronamic\\WordPress\\DateTime\\DateTimeInterface' => __DIR__ . '/../..' . '/packages/pronamic/wp-datetime/src/DateTimeInterface.php',
@@ -644,6 +645,7 @@ class ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330
         'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\Gateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/Gateway.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\GiropayGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/GiropayGateway.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\IDealGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/IDealGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\PayByBankGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/PayByBankGateway.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\PayPalGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/PayPalGateway.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\SofortGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/SofortGateway.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\LengthUnit' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/restrict-content-pro/src/LengthUnit.php',
@@ -848,14 +850,6 @@ class ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330
         'Pronamic\\WordPress\\Pay\\Gateways\\PayNL\\ProductTypes' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/pay-nl/src/ProductTypes.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\PayNL\\Statuses' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/pay-nl/src/Statuses.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\PayNL\\Util' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/pay-nl/src/Util.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\PayPal\\Client' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/paypal/src/Client.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\PayPal\\Config' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/paypal/src/Config.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\PayPal\\Gateway' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/paypal/src/Gateway.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\PayPal\\Integration' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/paypal/src/Integration.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\PayPal\\NotificationValidationStatuses' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/paypal/src/NotificationValidationStatuses.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\PayPal\\NotificationsController' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/paypal/src/NotificationsController.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\PayPal\\Statuses' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/paypal/src/Statuses.php',
-        'Pronamic\\WordPress\\Pay\\Gateways\\PayPal\\Variables' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/paypal/src/Variables.php',
         'Pronamic\\WordPress\\Pay\\Gender' => __DIR__ . '/../..' . '/packages/wp-pay/core/src/Gender.php',
         'Pronamic\\WordPress\\Pay\\HomeUrlController' => __DIR__ . '/../..' . '/packages/wp-pay/core/src/HomeUrlController.php',
         'Pronamic\\WordPress\\Pay\\HouseNumber' => __DIR__ . '/../..' . '/packages/wp-pay/core/src/HouseNumber.php',
@@ -1434,9 +1428,9 @@ class ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit5bb4f080c39579c0bd54d1b5572bb330::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitb9a60d6a551e6f84a6d88012a7b2d2b9::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitb9a60d6a551e6f84a6d88012a7b2d2b9::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitb9a60d6a551e6f84a6d88012a7b2d2b9::$classMap;
 
         }, null, ClassLoader::class);
     }

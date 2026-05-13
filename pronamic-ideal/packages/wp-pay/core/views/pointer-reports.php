@@ -17,5 +17,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <p>
 	<?php esc_html_e( 'The Pronamic Pay reports page shows you an graph of all the payments of this year.', 'pronamic-ideal' ); ?>
-	<?php esc_html_e( 'You can see the number of successful payments and the total amount of pending, successful, cancelled and failed payments.', 'pronamic_ideal' ); ?>
+	<?php esc_html_e( 'You can see the number of successful payments and the total amount of pending, successful, cancelled and failed payments.', 'pronamic-ideal' ); ?>
 </p>

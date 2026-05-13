@@ -20,14 +20,14 @@ registerBlockType( metadata.name, {
 		return (
 			<div { ...blockProps }>
 				<InspectorControls>
-					<PanelBody title={ __( 'Settings', 'pronamic-ideal' ) }>
+					<PanelBody title={ __( 'Settings', 'pronamic-forms' ) }>
 						<SelectControl
-							label={ __( 'HTML element', 'pronamic-ideal' ) }
+							label={ __( 'HTML element', 'pronamic-forms' ) }
 							options={ [
 								{
 									label: __(
 										'Default (<label>)',
-										'pronamic-ideal'
+										'pronamic-forms'
 									),
 									value: 'label',
 								},
@@ -42,7 +42,7 @@ registerBlockType( metadata.name, {
 						{ 'label' === tagName && (
 							<TextControl
 								autoComplete="off"
-								label={ __( 'For', 'pronamic-ideal' ) }
+								label={ __( 'For', 'pronamic-forms' ) }
 								value={ attributes.htmlFor }
 								onChange={ ( value ) => {
 									setAttributes( { htmlFor: value } );
@@ -56,7 +56,7 @@ registerBlockType( metadata.name, {
 					tagName="label"
 					value={ attributes.content }
 					onChange={ ( val ) => setAttributes( { content: val } ) }
-					placeholder={ __( 'Enter label…', 'pronamic-ideal' ) }
+					placeholder={ __( 'Enter label…', 'pronamic-forms' ) }
 				/>
 			</div>
 		);

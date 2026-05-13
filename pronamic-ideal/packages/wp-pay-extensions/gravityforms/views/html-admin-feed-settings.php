@@ -134,7 +134,7 @@ function _pronamic_pay_gravityforms_dropdown_input( $form, $args ) {
 							<?php esc_html_e( 'Configuration', 'pronamic-ideal' ); ?>
 						</label>
 
-						<span class="dashicons dashicons-editor-help pronamic-pay-tip" title="<?php esc_attr_e( 'Gateway configuration, created via <strong>Pay » Configurations</strong>.', 'pronamic_ideal' ); ?>"></span>
+						<span class="dashicons dashicons-editor-help pronamic-pay-tip" title="<?php esc_attr_e( 'Gateway configuration, created via <strong>Pay » Configurations</strong>.', 'pronamic-ideal' ); ?>"></span>
 					</th>
 					<td>
 						<?php
@@ -401,7 +401,7 @@ function _pronamic_pay_gravityforms_dropdown_input( $form, $args ) {
 
 		<div class="pronamic-pay-tab">
 			<div class="pronamic-pay-tab-block">
-				<?php esc_html_e( 'Set Gravity Forms confirmations, pages or URLs to redirect to after a payment with the mentioned status.', 'pronamic_ideal' ); ?>
+				<?php esc_html_e( 'Set Gravity Forms confirmations, pages or URLs to redirect to after a payment with the mentioned status.', 'pronamic-ideal' ); ?>
 			</div>
 
 			<table class="pronamic-pay-table-striped form-table pronamic-gf-links-tab">
@@ -796,7 +796,7 @@ function _pronamic_pay_gravityforms_dropdown_input( $form, $args ) {
 							<p>
 								<?php
 
-								esc_html_e( 'The payment date can be aligned to a fixed day of the week, month, or year. An additional subscription phase is added at the beginning of the subscription to achieve this, resulting in one extra period being added to the configured number of periods. Optionally, the amount of this alignment phase can be prorated.', 'pronamic_ideal' );
+								esc_html_e( 'The payment date can be aligned to a fixed day of the week, month, or year. An additional subscription phase is added at the beginning of the subscription to achieve this, resulting in one extra period being added to the configured number of periods. Optionally, the amount of this alignment phase can be prorated.', 'pronamic-ideal' );
 
 								?>
 							</p>

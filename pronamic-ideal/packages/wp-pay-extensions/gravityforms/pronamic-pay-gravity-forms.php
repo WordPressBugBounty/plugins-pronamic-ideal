@@ -4,7 +4,7 @@
  * Plugin URI: https://www.pronamic.eu/plugins/pronamic-pay-gravityforms/
  * Description: Extend the Pronamic Pay plugin with Gravity Forms support to receive payments through a variety of payment providers.
  *
- * Version: 4.12.0
+ * Version: 4.12.1
  * Requires at least: 4.7
  * Requires PHP: 8.2
  *
@@ -66,7 +66,7 @@ if ( class_exists( \Pronamic\WordPress\Pay\Gateways\Mollie\Integration::class ) 
 		function ( $gateways ) {
 			$gateways[] = new \Pronamic\WordPress\Pay\Gateways\Mollie\Integration(
 				[
-					'manual_url' => \__( 'https://www.pronamicpay.com/en/manuals/how-to-connect-mollie-to-wordpress-with-pronamic-pay/', 'pronamic-pay-gravity-forms' ),
+					'manual_url' => \__( 'https://www.pronamicpay.com/en/manuals/how-to-connect-mollie-to-wordpress-with-pronamic-pay/', 'pronamic-ideal' ),
 				]
 			);
 

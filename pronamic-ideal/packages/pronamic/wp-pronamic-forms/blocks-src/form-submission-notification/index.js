@@ -64,10 +64,10 @@ registerBlockType( metadata.name, {
 	variations: [
 		{
 			name: 'pronamic-form-submission-success',
-			title: __( 'Form submission success', 'pronamic-ideal' ),
+			title: __( 'Form submission success', 'pronamic-forms' ),
 			description: __(
 				'Success message for form submissions.',
-				'pronamic-ideal'
+				'pronamic-forms'
 			),
 			attributes: {
 				type: 'success',
@@ -91,7 +91,7 @@ registerBlockType( metadata.name, {
 					{
 						content: __(
 							'Your form has been submitted successfully.',
-							'pronamic-ideal'
+							'pronamic-forms'
 						),
 					},
 				],
@@ -102,10 +102,10 @@ registerBlockType( metadata.name, {
 		},
 		{
 			name: 'pronamic-form-submission-error',
-			title: __( 'Form submission error', 'pronamic-ideal' ),
+			title: __( 'Form submission error', 'pronamic-forms' ),
 			description: __(
 				'Error/failure message for form submissions.',
-				'pronamic-ideal'
+				'pronamic-forms'
 			),
 			attributes: {
 				type: 'error',
@@ -129,7 +129,7 @@ registerBlockType( metadata.name, {
 					{
 						content: __(
 							'There was an error submitting your form.',
-							'pronamic-ideal'
+							'pronamic-forms'
 						),
 					},
 				],

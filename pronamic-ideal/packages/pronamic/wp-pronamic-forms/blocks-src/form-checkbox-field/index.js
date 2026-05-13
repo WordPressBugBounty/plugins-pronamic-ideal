@@ -45,13 +45,13 @@ registerBlockType( metadata.name, {
 		return (
 			<div { ...blockProps }>
 				<InspectorControls>
-					<PanelBody title={ __( 'Settings', 'pronamic-ideal' ) }>
+					<PanelBody title={ __( 'Settings', 'pronamic-forms' ) }>
 						<CheckboxControl
 							__nextHasNoMarginBottom
-							label={ __( 'Required', 'pronamic-ideal' ) }
+							label={ __( 'Required', 'pronamic-forms' ) }
 							help={ __(
 								'Select this option to make the input required.',
-								'pronamic-ideal'
+								'pronamic-forms'
 							) }
 							checked={ required }
 							onChange={ ( value ) => {
@@ -67,7 +67,7 @@ registerBlockType( metadata.name, {
 							__nextHasNoMarginBottom
 							__next40pxDefaultSize
 							autoComplete="off"
-							label={ __( 'Name', 'pronamic-ideal' ) }
+							label={ __( 'Name', 'pronamic-forms' ) }
 							value={ attributes.name }
 							onChange={ ( value ) => {
 								setAttributes( {
@@ -80,7 +80,7 @@ registerBlockType( metadata.name, {
 							__nextHasNoMarginBottom
 							__next40pxDefaultSize
 							autoComplete="off"
-							label={ __( 'Reference', 'pronamic-ideal' ) }
+							label={ __( 'Reference', 'pronamic-forms' ) }
 							value={ attributes.reference }
 							onChange={ ( value ) => {
 								setAttributes( {
@@ -98,7 +98,7 @@ registerBlockType( metadata.name, {
 						onChange={ ( value ) =>
 							setAttributes( { label: value } )
 						}
-						placeholder={ __( 'Enter label…', 'pronamic-ideal' ) }
+						placeholder={ __( 'Enter label…', 'pronamic-forms' ) }
 					/>
 				</div>
 

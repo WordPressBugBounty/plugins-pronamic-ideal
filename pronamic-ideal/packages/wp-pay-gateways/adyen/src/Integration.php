@@ -234,7 +234,7 @@ class Integration extends AbstractGatewayIntegration {
 			'title'    => _x( 'Merchant Account', 'adyen', 'pronamic-ideal' ),
 			'type'     => 'text',
 			'classes'  => [ 'regular-text', 'code' ],
-			'tooltip'  => __( 'The merchant account identifier, with which you want to process the transaction.', 'pronamic_ideal' ),
+			'tooltip'  => __( 'The merchant account identifier, with which you want to process the transaction.', 'pronamic-ideal' ),
 			'required' => true,
 		];
 
@@ -294,7 +294,7 @@ class Integration extends AbstractGatewayIntegration {
 				'title'       => _x( 'API Live URL Prefix', 'adyen', 'pronamic-ideal' ),
 				'type'        => 'text',
 				'classes'     => [ 'regular-text', 'code' ],
-				'tooltip'     => __( 'The unique prefix for the live API URL, as mentioned at <strong>Account » API URLs</strong> in the Adyen dashboard.', 'pronamic_ideal' ),
+				'tooltip'     => __( 'The unique prefix for the live API URL, as mentioned at <strong>Account » API URLs</strong> in the Adyen dashboard.', 'pronamic-ideal' ),
 				'description' => sprintf(
 					'<a href="%s" target="_blank">%s</a>',
 					esc_url( 'https://docs.adyen.com/developers/development-resources/live-endpoints#liveurlprefix' ),

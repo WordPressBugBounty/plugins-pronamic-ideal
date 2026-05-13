@@ -272,11 +272,11 @@ class ActionScheduler_AdminView extends ActionScheduler_AdminView_Deprecated {
 					// translators: %s is the Action Scheduler version.
 					'<h2>' . sprintf( __( 'About Action Scheduler %s', 'pronamic-ideal' ), $as_version ) . '</h2>' .
 					'<p>' .
-						__( 'Action Scheduler is a scalable, traceable job queue for background processing large sets of actions. Action Scheduler works by triggering an action hook to run at some time in the future. Scheduled actions can also be scheduled to run on a recurring schedule.', 'action-scheduler' ) .
+						__( 'Action Scheduler is a scalable, traceable job queue for background processing large sets of actions. Action Scheduler works by triggering an action hook to run at some time in the future. Scheduled actions can also be scheduled to run on a recurring schedule.', 'pronamic-ideal' ) .
 					'</p>' .
 					'<h3>' . esc_html__( 'Source', 'pronamic-ideal' ) . '</h3>' .
 					'<p>' .
-						esc_html__( 'Action Scheduler is currently being loaded from the following location. This can be useful when debugging, or if requested by the support team.', 'action-scheduler' ) .
+						esc_html__( 'Action Scheduler is currently being loaded from the following location. This can be useful when debugging, or if requested by the support team.', 'pronamic-ideal' ) .
 					'</p>' .
 					'<p>' . $as_source_markup . '</p>' .
 					'<h3>' . esc_html__( 'WP CLI', 'pronamic-ideal' ) . '</h3>' .
@@ -298,7 +298,7 @@ class ActionScheduler_AdminView extends ActionScheduler_AdminView_Deprecated {
 					'<h2>' . __( 'Scheduled Action Columns', 'pronamic-ideal' ) . '</h2>' .
 					'<ul>' .
 					sprintf( '<li><strong>%1$s</strong>: %2$s</li>', __( 'Hook', 'pronamic-ideal' ), __( 'Name of the action hook that will be triggered.', 'pronamic-ideal' ) ) .
-					sprintf( '<li><strong>%1$s</strong>: %2$s</li>', __( 'Status', 'pronamic-ideal' ), __( 'Action statuses are Pending, Complete, Canceled, Failed', 'action-scheduler' ) ) .
+					sprintf( '<li><strong>%1$s</strong>: %2$s</li>', __( 'Status', 'pronamic-ideal' ), __( 'Action statuses are Pending, Complete, Canceled, Failed', 'pronamic-ideal' ) ) .
 					sprintf( '<li><strong>%1$s</strong>: %2$s</li>', __( 'Arguments', 'pronamic-ideal' ), __( 'Optional data array passed to the action hook.', 'pronamic-ideal' ) ) .
 					sprintf( '<li><strong>%1$s</strong>: %2$s</li>', __( 'Group', 'pronamic-ideal' ), __( 'Optional action group.', 'pronamic-ideal' ) ) .
 					sprintf( '<li><strong>%1$s</strong>: %2$s</li>', __( 'Recurrence', 'pronamic-ideal' ), __( 'The action\'s schedule frequency.', 'pronamic-ideal' ) ) .

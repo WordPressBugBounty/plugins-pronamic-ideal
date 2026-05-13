@@ -3,7 +3,7 @@
  * Formidable Forms payment settings.
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2025 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-3.0-or-later
  * @package   Pronamic\WordPress\Pay
  */
@@ -14,7 +14,7 @@ use Pronamic\WordPress\Pay\Plugin;
 /**
  * Title: Formidable Forms payment settings
  * Description:
- * Copyright: 2005-2024 Pronamic
+ * Copyright: 2005-2026 Pronamic
  * Company: Pronamic
  *
  * @link https://github.com/wp-premium/formidable-paypal/blob/3.02/views/settings/_payment_settings.php
@@ -24,7 +24,7 @@ use Pronamic\WordPress\Pay\Plugin;
  * @since 1.0.0
  */
 
-$callback_text_field = function ( $field ) use ( $instance, $payment_action ) {
+$callback_text_field = function ( $field ) use ( $instance, $payment_action ): void {
 	$id = $field['id'];
 
 	$current = '';
@@ -45,7 +45,7 @@ $fields = [
 	[
 		'id'       => 'pronamic_pay_amount_field',
 		'label'    => __( 'Amount', 'pronamic-ideal' ),
-		'callback' => function ( $field ) use ( $form_fields, $instance, $payment_action ) {
+		'callback' => function ( $field ) use ( $form_fields, $instance, $payment_action ): void {
 			$id = $field['id'];
 
 			$current = '';
@@ -82,7 +82,7 @@ $fields = [
 	[
 		'id'       => 'pronamic_pay_payment_method_field',
 		'label'    => __( 'Payment method', 'pronamic-ideal' ),
-		'callback' => function ( $field ) use ( $form_fields, $instance, $payment_action ) {
+		'callback' => function ( $field ) use ( $form_fields, $instance, $payment_action ): void {
 			$id = $field['id'];
 
 			$current = '';
@@ -123,7 +123,7 @@ $fields = [
 	[
 		'id'       => 'pronamic_pay_config_id',
 		'label'    => __( 'Payment Gateway Configuration', 'pronamic-ideal' ),
-		'callback' => function ( $field ) use ( $instance, $payment_action ) {
+		'callback' => function ( $field ) use ( $instance, $payment_action ): void {
 			$id = $field['id'];
 
 			$current = '';
@@ -156,19 +156,19 @@ $fields = [
 	[
 		'id'          => 'pronamic_pay_order_id',
 		'label'       => __( 'Order ID', 'pronamic-ideal' ),
-		'description' => __( 'Enter an order ID, you can use Formidable Forms shortcodes.', 'pronamic_ideal' ),
+		'description' => __( 'Enter an order ID, you can use Formidable Forms shortcodes.', 'pronamic-ideal' ),
 		'callback'    => $callback_text_field,
 	],
 	[
 		'id'          => 'pronamic_pay_transaction_description',
 		'label'       => __( 'Transaction Description', 'pronamic-ideal' ),
-		'description' => __( 'Enter a transaction description, you can use Formidable Forms shortcodes.', 'pronamic_ideal' ),
+		'description' => __( 'Enter a transaction description, you can use Formidable Forms shortcodes.', 'pronamic-ideal' ),
 		'callback'    => $callback_text_field,
 	],
 	[
 		'id'       => 'pronamic_pay_delay_notifications',
 		'label'    => __( 'Notifications', 'pronamic-ideal' ),
-		'callback' => function ( $field ) use ( $instance, $payment_action ) {
+		'callback' => function ( $field ) use ( $instance, $payment_action ): void {
 			$id = $field['id'];
 
 			$current = '';

@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Pronamic DateTime load plugin text domain.
  */
 function pronamic_datetime_load_plugin_textdomain() {
-	load_plugin_textdomain( 'pronamic-datetime', false, basename( __DIR__ ) . '/languages' );
+	load_plugin_textdomain( 'pronamic-ideal', false, basename( __DIR__ ) . '/languages' );
 }
 
 add_action( 'init', 'pronamic_datetime_load_plugin_textdomain' );

@@ -43,12 +43,12 @@ registerBlockType( metadata.name, {
 		return (
 			<div { ...blockProps }>
 				<InspectorControls>
-					<PanelBody title={ __( 'Settings', 'pronamic-ideal' ) }>
+					<PanelBody title={ __( 'Settings', 'pronamic-forms' ) }>
 						<TextControl
 							__nextHasNoMarginBottom
 							__next40pxDefaultSize
 							autoComplete="off"
-							label={ __( 'Value', 'pronamic-ideal' ) }
+							label={ __( 'Value', 'pronamic-forms' ) }
 							value={ attributes.value }
 							onChange={ ( newValue ) => {
 								setAttributes( {
@@ -58,7 +58,7 @@ registerBlockType( metadata.name, {
 						/>
 
 						<NumberControl
-							label={ __( 'Payment amount', 'pronamic-ideal' ) }
+							label={ __( 'Payment amount', 'pronamic-forms' ) }
 							onChange={ ( val ) =>
 								setAttributes( { paymentAmount: val } )
 							}
@@ -78,7 +78,7 @@ registerBlockType( metadata.name, {
 						__nextHasNoMarginBottom
 						__next40pxDefaultSize
 						autoComplete="off"
-						label={ __( 'Reference', 'pronamic-ideal' ) }
+						label={ __( 'Reference', 'pronamic-forms' ) }
 						value={ attributes.reference }
 						onChange={ ( value ) => {
 							setAttributes( {
@@ -100,7 +100,7 @@ registerBlockType( metadata.name, {
 					tagName="label"
 					value={ attributes.label }
 					onChange={ ( val ) => setAttributes( { label: val } ) }
-					placeholder={ __( 'Enter label…', 'pronamic-ideal' ) }
+					placeholder={ __( 'Enter label…', 'pronamic-forms' ) }
 				/>
 			</div>
 		);
@@ -137,13 +137,13 @@ registerBlockType( metadata.name, {
 		 */
 		{
 			name: 'pronamic-form-radio-option-subscription-frequency-once',
-			title: __( 'One-time payment', 'pronamic-ideal' ),
+			title: __( 'One-time payment', 'pronamic-forms' ),
 			keywords: [
-				__( 'frequency', 'pronamic-ideal' ),
-				__( 'interval', 'pronamic-ideal' ),
-				__( 'recurrence', 'pronamic-ideal' ),
-				__( 'subscription', 'pronamic-ideal' ),
-				__( 'Once', 'pronamic-ideal' ),
+				__( 'frequency', 'pronamic-forms' ),
+				__( 'interval', 'pronamic-forms' ),
+				__( 'recurrence', 'pronamic-forms' ),
+				__( 'subscription', 'pronamic-forms' ),
+				__( 'Once', 'pronamic-forms' ),
 			],
 			attributes: {
 				reference: 'pronamic_pay_subscription_frequency',
@@ -151,7 +151,7 @@ registerBlockType( metadata.name, {
 			},
 			example: {
 				attributes: {
-					label: __( 'Once', 'pronamic-ideal' ),
+					label: __( 'Once', 'pronamic-forms' ),
 				},
 			},
 			scope: [ 'block', 'inserter', 'transform' ],
@@ -161,14 +161,14 @@ registerBlockType( metadata.name, {
 			name: 'pronamic-form-radio-option-subscription-frequency-monthly',
 			title: __(
 				'Monthly payment',
-				'pronamic-ideal'
+				'pronamic-forms'
 			),
 			keywords: [
-				__( 'frequency', 'pronamic-ideal' ),
-				__( 'interval', 'pronamic-ideal' ),
-				__( 'recurrence', 'pronamic-ideal' ),
-				__( 'subscription', 'pronamic-ideal' ),
-				__( 'Monthly', 'pronamic-ideal' ),
+				__( 'frequency', 'pronamic-forms' ),
+				__( 'interval', 'pronamic-forms' ),
+				__( 'recurrence', 'pronamic-forms' ),
+				__( 'subscription', 'pronamic-forms' ),
+				__( 'Monthly', 'pronamic-forms' ),
 			],
 			attributes: {
 				reference: 'pronamic_pay_subscription_frequency',
@@ -176,7 +176,7 @@ registerBlockType( metadata.name, {
 			},
 			example: {
 				attributes: {
-					label: __( 'Monthly', 'pronamic-ideal' ),
+					label: __( 'Monthly', 'pronamic-forms' ),
 				},
 			},
 			scope: [ 'block', 'inserter', 'transform' ],
@@ -186,15 +186,15 @@ registerBlockType( metadata.name, {
 			name: 'pronamic-form-radio-option-subscription-frequency-yearly',
 			title: __(
 				'Yearly payment',
-				'pronamic-ideal'
+				'pronamic-forms'
 			),
 			keywords: [
-				__( 'frequency', 'pronamic-ideal' ),
-				__( 'interval', 'pronamic-ideal' ),
-				__( 'recurrence', 'pronamic-ideal' ),
-				__( 'subscription', 'pronamic-ideal' ),
-				__( 'Yearly', 'pronamic-ideal' ),
-				__( 'Annual', 'pronamic-ideal' ),
+				__( 'frequency', 'pronamic-forms' ),
+				__( 'interval', 'pronamic-forms' ),
+				__( 'recurrence', 'pronamic-forms' ),
+				__( 'subscription', 'pronamic-forms' ),
+				__( 'Yearly', 'pronamic-forms' ),
+				__( 'Annual', 'pronamic-forms' ),
 			],
 			attributes: {
 				reference: 'pronamic_pay_subscription_frequency',
@@ -202,7 +202,7 @@ registerBlockType( metadata.name, {
 			},
 			example: {
 				attributes: {
-					label: __( 'Yearly', 'pronamic-ideal' ),
+					label: __( 'Yearly', 'pronamic-forms' ),
 				},
 			},
 			scope: [ 'block', 'inserter', 'transform' ],

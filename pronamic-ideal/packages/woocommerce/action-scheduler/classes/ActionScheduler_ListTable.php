@@ -663,7 +663,7 @@ class ActionScheduler_ListTable extends ActionScheduler_Abstract_ListTable {
 	 * Get the text to display in the search box on the list table.
 	 */
 	protected function get_search_box_button_text() {
-		return __( 'Search hook, args and claim ID', 'action-scheduler' );
+		return __( 'Search hook, args and claim ID', 'pronamic-ideal' );
 	}
 
 	/**

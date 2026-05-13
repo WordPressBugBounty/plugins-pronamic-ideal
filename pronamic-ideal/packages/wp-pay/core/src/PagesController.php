@@ -82,7 +82,7 @@ class PagesController {
 	 */
 	public function settings_section() {
 		echo '<p>';
-		\esc_html_e( 'The page an user will get redirected to after payment, based on the payment status.', 'pronamic_ideal' );
+		\esc_html_e( 'The page an user will get redirected to after payment, based on the payment status.', 'pronamic-ideal' );
 		echo '</p>';
 
 		$pages = $this->get_pages();

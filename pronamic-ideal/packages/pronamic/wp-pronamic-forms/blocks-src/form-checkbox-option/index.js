@@ -41,7 +41,7 @@ registerBlockType( metadata.name, {
 		return (
 			<div { ...blockProps }>
 				<InspectorControls>
-					<PanelBody title={ __( 'Settings', 'pronamic-ideal' ) }>
+					<PanelBody title={ __( 'Settings', 'pronamic-forms' ) }>
 						<TextControl
 							__nextHasNoMarginBottom
 							__next40pxDefaultSize
@@ -56,7 +56,7 @@ registerBlockType( metadata.name, {
 						/>
 
 						<NumberControl
-							label={ __( 'Payment amount', 'pronamic-ideal' ) }
+							label={ __( 'Payment amount', 'pronamic-forms' ) }
 							onChange={ ( val ) =>
 								setAttributes( { paymentAmount: val } )
 							}
@@ -83,7 +83,7 @@ registerBlockType( metadata.name, {
 					tagName="label"
 					value={ attributes.label }
 					onChange={ ( val ) => setAttributes( { label: val } ) }
-					placeholder={ __( 'Enter label…', 'pronamic-ideal' ) }
+					placeholder={ __( 'Enter label…', 'pronamic-forms' ) }
 				/>
 			</div>
 		);
