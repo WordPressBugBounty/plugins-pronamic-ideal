@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb9a60d6a551e6f84a6d88012a7b2d2b9
+class ComposerStaticInite6db3dc645fefa59768335dc39902180
 {
     public static $files = array (
         '509f66d930a3f0b7d9b65b22aa319565' => __DIR__ . '/../..' . '/packages/wp-pay/core/includes/functions.php',
@@ -453,6 +453,7 @@ class ComposerStaticInitb9a60d6a551e6f84a6d88012a7b2d2b9
         'Pronamic\\WordPress\\Mollie\\Statuses' => __DIR__ . '/../..' . '/packages/pronamic/wp-mollie/src/Statuses.php',
         'Pronamic\\WordPress\\Money\\Currencies' => __DIR__ . '/../..' . '/packages/pronamic/wp-money/src/Currencies.php',
         'Pronamic\\WordPress\\Money\\Currency' => __DIR__ . '/../..' . '/packages/pronamic/wp-money/src/Currency.php',
+        'Pronamic\\WordPress\\Money\\CurrencyMismatchException' => __DIR__ . '/../..' . '/packages/pronamic/wp-money/src/CurrencyMismatchException.php',
         'Pronamic\\WordPress\\Money\\Money' => __DIR__ . '/../..' . '/packages/pronamic/wp-money/src/Money.php',
         'Pronamic\\WordPress\\Money\\Parser' => __DIR__ . '/../..' . '/packages/pronamic/wp-money/src/Parser.php',
         'Pronamic\\WordPress\\Money\\TaxedMoney' => __DIR__ . '/../..' . '/packages/pronamic/wp-money/src/TaxedMoney.php',
@@ -1428,9 +1429,9 @@ class ComposerStaticInitb9a60d6a551e6f84a6d88012a7b2d2b9
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb9a60d6a551e6f84a6d88012a7b2d2b9::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb9a60d6a551e6f84a6d88012a7b2d2b9::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitb9a60d6a551e6f84a6d88012a7b2d2b9::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInite6db3dc645fefa59768335dc39902180::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInite6db3dc645fefa59768335dc39902180::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInite6db3dc645fefa59768335dc39902180::$classMap;
 
         }, null, ClassLoader::class);
     }

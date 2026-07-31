@@ -220,6 +220,7 @@ return array(
     'Pronamic\\WordPress\\Mollie\\Statuses' => $baseDir . '/packages/pronamic/wp-mollie/src/Statuses.php',
     'Pronamic\\WordPress\\Money\\Currencies' => $baseDir . '/packages/pronamic/wp-money/src/Currencies.php',
     'Pronamic\\WordPress\\Money\\Currency' => $baseDir . '/packages/pronamic/wp-money/src/Currency.php',
+    'Pronamic\\WordPress\\Money\\CurrencyMismatchException' => $baseDir . '/packages/pronamic/wp-money/src/CurrencyMismatchException.php',
     'Pronamic\\WordPress\\Money\\Money' => $baseDir . '/packages/pronamic/wp-money/src/Money.php',
     'Pronamic\\WordPress\\Money\\Parser' => $baseDir . '/packages/pronamic/wp-money/src/Parser.php',
     'Pronamic\\WordPress\\Money\\TaxedMoney' => $baseDir . '/packages/pronamic/wp-money/src/TaxedMoney.php',
