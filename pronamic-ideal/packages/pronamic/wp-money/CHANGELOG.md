@@ -7,6 +7,20 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 ## [Unreleased][unreleased]
 -
 
+## [2.5.0] - 2026-09-21
+
+### Added
+
+- Added an optional currency argument to `Parser::parse()`, allowing amounts to be parsed in currencies other than EUR.
+
+### Changed
+
+- Updated the copyright year to 2026.
+
+Full set of changes: [`2.4.5...2.5.0`][2.5.0]
+
+[2.5.0]: https://github.com/pronamic/wp-money/compare/v2.4.5...v2.5.0
+
 ## [2.4.5] - 2026-07-31
 
 ### Commits
@@ -180,7 +194,7 @@ Full set of changes: [`2.0.3...2.1.0`][2.1.0]
 ## 1.0.0
 - First release.
 
-[unreleased]: https://github.com/pronamic/wp-money/compare/v2.4.5...HEAD
+[unreleased]: https://github.com/pronamic/wp-money/compare/v2.5.0...HEAD
 [2.0.3]: https://github.com/pronamic/wp-money/compare/2.0.2...2.0.3
 [2.0.2]: https://github.com/pronamic/wp-money/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/pronamic/wp-money/compare/2.0.0...2.0.1

@@ -28,7 +28,7 @@ return array(
     'Pronamic\\WordPress\\Pay\\Extensions\\Give\\' => array($baseDir . '/packages/wp-pay-extensions/give/src'),
     'Pronamic\\WordPress\\Pay\\Extensions\\FormidableForms\\' => array($baseDir . '/packages/wp-pay-extensions/formidable-forms/src'),
     'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\' => array($baseDir . '/packages/wp-pay-extensions/event-espresso/src'),
-    'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\' => array($baseDir . '/packages/wp-pay-extensions/easy-digital-downloads/src'),
+    'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\' => array($baseDir . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4'),
     'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\' => array($baseDir . '/packages/wp-pay-extensions/contact-form-7/src'),
     'Pronamic\\WordPress\\Pay\\Extensions\\Charitable\\' => array($baseDir . '/packages/wp-pay-extensions/charitable/src'),
     'Pronamic\\WordPress\\Pay\\' => array($baseDir . '/packages/wp-pay/core/src'),

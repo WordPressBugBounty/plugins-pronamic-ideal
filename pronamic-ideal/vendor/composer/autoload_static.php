@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInite6db3dc645fefa59768335dc39902180
+class ComposerStaticInita8be091b36e145dd4e0cc0614ebbacb2
 {
     public static $files = array (
         '509f66d930a3f0b7d9b65b22aa319565' => __DIR__ . '/../..' . '/packages/wp-pay/core/includes/functions.php',
@@ -166,7 +166,7 @@ class ComposerStaticInite6db3dc645fefa59768335dc39902180
         ),
         'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\' =>
         array (
-            0 => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/src',
+            0 => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4',
         ),
         'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\' =>
         array (
@@ -426,6 +426,7 @@ class ComposerStaticInite6db3dc645fefa59768335dc39902180
         'Pronamic\\WordPress\\Mollie\\Address' => __DIR__ . '/../..' . '/packages/pronamic/wp-mollie/src/Address.php',
         'Pronamic\\WordPress\\Mollie\\Amount' => __DIR__ . '/../..' . '/packages/pronamic/wp-mollie/src/Amount.php',
         'Pronamic\\WordPress\\Mollie\\AmountTransformer' => __DIR__ . '/../..' . '/packages/pronamic/wp-mollie/src/AmountTransformer.php',
+        'Pronamic\\WordPress\\Mollie\\BankTransferPaymentRequest' => __DIR__ . '/../..' . '/packages/pronamic/wp-mollie/src/BankTransferPaymentRequest.php',
         'Pronamic\\WordPress\\Mollie\\BaseResource' => __DIR__ . '/../..' . '/packages/pronamic/wp-mollie/src/BaseResource.php',
         'Pronamic\\WordPress\\Mollie\\Chargeback' => __DIR__ . '/../..' . '/packages/pronamic/wp-mollie/src/Chargeback.php',
         'Pronamic\\WordPress\\Mollie\\Client' => __DIR__ . '/../..' . '/packages/pronamic/wp-mollie/src/Client.php',
@@ -526,13 +527,13 @@ class ComposerStaticInite6db3dc645fefa59768335dc39902180
         'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\PaymentMethodTag' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src/PaymentMethodTag.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\Pronamic' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src/Pronamic.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\ContactForm7\\SubmissionHelper' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/contact-form-7/src/SubmissionHelper.php',
-        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\CompanyNameController' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/src/CompanyNameController.php',
-        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\EasyDigitalDownloads' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/src/EasyDigitalDownloads.php',
-        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\EasyDigitalDownloadsDependency' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/src/EasyDigitalDownloadsDependency.php',
-        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\Extension' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/src/Extension.php',
-        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\Gateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/src/Gateway.php',
-        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\PurchaseDataHelper' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/src/PurchaseDataHelper.php',
-        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\RefundsManager' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/src/RefundsManager.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\CompanyNameController' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/CompanyNameController.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\EasyDigitalDownloads' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/EasyDigitalDownloads.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\EasyDigitalDownloadsDependency' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/EasyDigitalDownloadsDependency.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\Extension' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/Extension.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\Gateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/Gateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\PurchaseDataHelper' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/PurchaseDataHelper.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\RefundsManager' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/RefundsManager.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\AddOn' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/event-espresso/src/AddOn.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\AlipayGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/event-espresso/src/AlipayGateway.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\AlipayPaymentMethod' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/event-espresso/src/AlipayPaymentMethod.php',
@@ -577,6 +578,58 @@ class ComposerStaticInite6db3dc645fefa59768335dc39902180
         'Pronamic\\WordPress\\Pay\\Extensions\\FormidableForms\\PaymentMethodSelectFieldType' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/formidable-forms/src/PaymentMethodSelectFieldType.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Extension' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Extension.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\GatewayRepository' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/GatewayRepository.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\GatewaySettings' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/GatewaySettings.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\AfterpayComGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/AfterpayComGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\AlipayGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/AlipayGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\AmericanExpressGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/AmericanExpressGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\ApplePayGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/ApplePayGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BancontactGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/BancontactGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BankTransferGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/BankTransferGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BelfiusGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/BelfiusGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BillieGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/BillieGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BillinkGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/BillinkGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BitcoinGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/BitcoinGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BlikGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/BlikGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BunqGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/BunqGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\CapayableGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/CapayableGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\CardGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/CardGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\CreditCardGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/CreditCardGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\DirectDebitBancontactGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/DirectDebitBancontactGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\DirectDebitGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/DirectDebitGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\DirectDebitIDealGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/DirectDebitIDealGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\DirectDebitSofortGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/DirectDebitSofortGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\EpsGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/EpsGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\FocumGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/FocumGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\GiropayGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/GiropayGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\GooglePayGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/GooglePayGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\IDealGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/IDealGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\IDealQrGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/IDealQrGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\In3Gateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/In3Gateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\KbcGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/KbcGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\KlarnaGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/KlarnaGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\KlarnaPayLaterGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/KlarnaPayLaterGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\KlarnaPayNowGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/KlarnaPayNowGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\KlarnaPayOverTimeGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/KlarnaPayOverTimeGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\MaestroGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/MaestroGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\MastercardGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/MastercardGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\MbWayGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/MbWayGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\MobilepayGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/MobilepayGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\MybankGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/MybankGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\PayByBankGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/PayByBankGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\PayPalGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/PayPalGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\PayconiqGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/PayconiqGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\PronamicPayGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/PronamicPayGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\Przelewy24Gateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/Przelewy24Gateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\RivertyGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/RivertyGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\SantanderGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/SantanderGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\SofortGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/SofortGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\SpraypayGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/SpraypayGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\SwishGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/SwishGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\TwintGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/TwintGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\VPayGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/VPayGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\VippsGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/VippsGateway.php',
+        'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\VisaGateway' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/Gateways/VisaGateway.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\Give\\GiveDependency' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/GiveDependency.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\Give\\GiveHelper' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/give/src/GiveHelper.php',
         'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Admin' => __DIR__ . '/../..' . '/packages/wp-pay-extensions/gravityforms/src/Admin.php',
@@ -1429,9 +1482,9 @@ class ComposerStaticInite6db3dc645fefa59768335dc39902180
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInite6db3dc645fefa59768335dc39902180::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInite6db3dc645fefa59768335dc39902180::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInite6db3dc645fefa59768335dc39902180::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInita8be091b36e145dd4e0cc0614ebbacb2::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInita8be091b36e145dd4e0cc0614ebbacb2::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInita8be091b36e145dd4e0cc0614ebbacb2::$classMap;
 
         }, null, ClassLoader::class);
     }

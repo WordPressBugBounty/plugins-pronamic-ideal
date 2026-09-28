@@ -166,12 +166,16 @@ class Util {
 	 * This helper function was created to fix an issue with `method_exists` calls
 	 * and non existing classes.
 	 *
-	 * @param string $class_name  Class name to check for the specified method.
-	 * @param string $method_name Method name to check for existence.
+	 * @param string|null $class_name  Class name to check for the specified method.
+	 * @param string|null $method_name Method name to check for existence.
 	 *
 	 * @return boolean
 	 */
 	public static function class_method_exists( $class_name, $method_name ) {
+		if ( ! is_string( $class_name ) || ! is_string( $method_name ) ) {
+			return false;
+		}
+
 		return class_exists( $class_name ) && method_exists( $class_name, $method_name );
 	}
 }

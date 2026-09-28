@@ -1,9 +1,16 @@
 {
 	"name": "wp-pay-extensions/give",
 	"description": "Give driver for the WordPress payment processing library.",
-	"keywords": ["wordpress", "wp", "pay", "give", "extension", "pronamic"],
+	"keywords": [
+		"wordpress",
+		"wp",
+		"pay",
+		"give",
+		"extension",
+		"pronamic"
+	],
 	"homepage": "http://www.wp-pay.org/extensions/give/",
-	"license": "GPL-3.0-or-later",
+	"license": "GPL-2.0-or-later",
 	"type": "wordpress-plugin",
 	"authors": [
 		{
@@ -32,45 +39,48 @@
 	"config": {
 		"sort-packages": true,
 		"allow-plugins": {
+			"automattic/jetpack-autoloader": true,
+			"bamarni/composer-bin-plugin": true,
 			"composer/installers": true,
 			"dealerdirect/phpcodesniffer-composer-installer": true,
-			"roots/wordpress-core-installer": true,
-			"bamarni/composer-bin-plugin": true,
-			"automattic/jetpack-autoloader": true
+			"phpstan/extension-installer": true,
+			"roots/wordpress-core-installer": true
 		},
 		"platform": {
-			"php": "8.1"
+			"php": "8.2"
 		}
 	},
-	"repositories":[
+	"repositories": [
 		{
+			"name": "wp-packages",
 			"type": "composer",
-			"url": "https://wpackagist.org",
-			"only": [
-				"wpackagist-plugin/*"
-			]
+			"url": "https://repo.wp-packages.org"
 		}
 	],
 	"require": {
-		"php": ">=7.4",
-		"wp-pay/core": "^4.6"
+		"php": ">=8.2",
+		"automattic/jetpack-autoloader": "^5.0",
+		"wp-pay/core": "^4.35"
 	},
 	"require-dev": {
 		"bamarni/composer-bin-plugin": "^1.4",
 		"php-coveralls/php-coveralls": "^2.5",
 		"phpmd/phpmd": "^2.7",
-		"phpstan/phpstan": "^1.11",
+		"phpstan/extension-installer": "^1.4",
+		"phpstan/phpstan": "^2.2",
 		"pronamic/pronamic-cli": "^1.0",
-		"pronamic/wp-coding-standards": "^1.3",
-		"roots/wordpress": "^6.0",
-		"szepeviktor/phpstan-wordpress": "^1.3",
-		"vimeo/psalm": "^5.25",
+		"pronamic/wp-coding-standards": "^2.3",
+		"rector/rector": "^2.6",
+		"roots/wordpress-no-content": "^6.9",
+		"szepeviktor/phpstan-wordpress": "^2.0",
+		"vimeo/psalm": "^5.26",
 		"wp-phpunit/wp-phpunit": "^6.1",
-		"wpackagist-plugin/give": "^2.9",
+		"wp-plugin/give": "^4.16",
 		"yoast/phpunit-polyfills": "^1.0"
 	},
 	"scripts": {
 		"coveralls": "vendor/bin/php-coveralls -v",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"phpcbf": "XDEBUG_MODE=off vendor/bin/phpcbf",
 		"phpcs": "XDEBUG_MODE=off vendor/bin/phpcs -s -v",
 		"phplint": "find src tests -name '*.php' | xargs -n 1 -P 4 php -l",
@@ -79,6 +89,7 @@
 		"phpunit": "vendor/bin/phpunit",
 		"post-install-cmd": "echo 'Optionally run: composer bin all install'",
 		"post-update-cmd": "echo 'Optionally run: composer bin all update'",
-		"psalm": "vendor/bin/psalm"
+		"psalm": "vendor/bin/psalm",
+		"rector": "vendor/bin/rector"
 	}
 }
