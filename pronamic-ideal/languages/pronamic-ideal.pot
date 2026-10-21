@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Pronamic Pay 11.0.0\n"
+"Project-Id-Version: Pronamic Pay 11.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pronamic-ideal\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-28T11:09:47+00:00\n"
+"POT-Creation-Date: 2026-10-21T15:30:39+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pronamic-ideal\n"
@@ -1136,7 +1136,7 @@ msgstr ""
 #: packages/pronamic/wp-pronamic-forms/patterns/donation-form.php:27
 #: packages/wp-pay-extensions/contact-form-7/views/issuer-tag-generator.php:59
 #: packages/wp-pay-extensions/contact-form-7/views/payment-method-tag-generator.php:71
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:471
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:475
 #: packages/wp-pay-gateways/mollie/views/page-customer.php:152
 #: packages/wp-pay-gateways/mollie/views/user-profile.php:46
 #: packages/wp-pay/core/views/meta-box-gateway-test.php:191
@@ -2807,9 +2807,9 @@ msgstr ""
 #: packages/wp-pay-extensions/give/src/GatewaySettings.php:108
 #: packages/wp-pay-extensions/gravityforms/src/AdminPaymentFormPostType.php:59
 #: packages/wp-pay-extensions/gravityforms/src/AdminPaymentFormPostType.php:120
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:473
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:477
 #: packages/wp-pay-extensions/gravityforms/views/html-admin-feed-settings.php:134
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:863
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:865
 #: packages/wp-pay-extensions/ninjaforms/src/PaymentGateway.php:180
 #: packages/wp-pay-extensions/woocommerce/src/Gateway.php:327
 #: packages/wp-pay/core/src/Admin/AdminGatewayPostType.php:234
@@ -3089,7 +3089,7 @@ msgid "Checkout Label"
 msgstr ""
 
 #: packages/wp-pay-extensions/easy-digital-downloads/psr-4/Gateway.php:196
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:902
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:904
 #: packages/wp-pay-extensions/woocommerce/src/Gateway.php:292
 #: packages/wp-pay-gateways/adyen/views/checkout-drop-in.php:62
 #: packages/wp-pay/core/src/Admin/AdminPaymentPostType.php:192
@@ -3292,7 +3292,7 @@ msgstr ""
 
 #: packages/wp-pay-extensions/formidable-forms/views/payment-settings.php:164
 #: packages/wp-pay-extensions/gravityforms/src/AdminPaymentFormPostType.php:60
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:472
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:476
 #: packages/wp-pay-extensions/gravityforms/views/html-admin-feed-settings.php:221
 #: packages/wp-pay-extensions/ninjaforms/src/PaymentGateway.php:204
 msgid "Transaction Description"
@@ -3360,7 +3360,7 @@ msgstr ""
 #: packages/wp-pay-extensions/gravityforms/src/Admin.php:59
 #: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:128
 #: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:303
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:748
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:750
 #: packages/wp-pay/core/src/Admin/AdminModule.php:871
 #: packages/wp-pay/core/views/form.php:46
 #: packages/wp-pay/core/views/subscription-mandate.php:271
@@ -3614,51 +3614,51 @@ msgstr ""
 msgid "Pay Feeds"
 msgstr ""
 
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:488
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:492
 msgid "Default pay feed"
 msgstr ""
 
 #. translators: 1: <a href="new feed URL">, 2: </a>
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:540
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:544
 #, php-format
 msgid "This form doesn’t have any pay feeds. Let’s go %1$screate one%2$s."
 msgstr ""
 
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:566
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:570
 #: packages/wp-pay/core/src/PagesController.php:222
 msgid "Payment Completed"
 msgstr ""
 
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:567
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:571
 msgid "Payment Failed"
 msgstr ""
 
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:568
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:572
 msgid "Payment Pending"
 msgstr ""
 
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:571
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:575
 msgid "Subscription Created"
 msgstr ""
 
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:572
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:576
 #: packages/wp-pay/core/src/PagesController.php:267
 msgid "Subscription Canceled"
 msgstr ""
 
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:573
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:577
 msgid "Subscription Expired"
 msgstr ""
 
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:574
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:578
 msgid "Subscription Renewal Notice"
 msgstr ""
 
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:575
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:579
 msgid "Subscription Payment Added"
 msgstr ""
 
-#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:576
+#: packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php:580
 msgid "Subscription Payment Failed"
 msgstr ""
 
@@ -4116,9 +4116,9 @@ msgstr ""
 #: packages/wp-pay-extensions/memberpress/src/Extension.php:644
 #: packages/wp-pay-extensions/memberpress/src/Extension.php:750
 #: packages/wp-pay-extensions/memberpress/src/Extension.php:778
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:481
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:549
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:603
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:483
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:551
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:605
 msgid "MemberPress"
 msgstr ""
 
@@ -4139,78 +4139,78 @@ msgstr ""
 msgid "MemberPress Subscription"
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:244
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:246
 msgid "This gateway only supports one time payments."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:324
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:326
 msgid "Unable to process refund because payment does not exist."
 msgstr ""
 
 #. translators: %s: extension name
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:480
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:482
 #, php-format
 msgid "%s subscription on hold."
 msgstr ""
 
 #. translators: %s: extension name
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:548
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:550
 #, php-format
 msgid "%s subscription reactivated."
 msgstr ""
 
 #. translators: %s: extension name
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:602
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:604
 #, php-format
 msgid "%s subscription cancelled."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:700
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:702
 msgid "For admins only: check payment method settings in MemberPress."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:754
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:756
 msgid "JavaScript is disabled in your browser. You will not be able to complete your purchase until you either enable JavaScript in your browser, or switch to a browser that supports it."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:817
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:819
 msgid "For admins only: an error occurred while retrieving fields for the selected payment method. Please check payment method settings."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:894
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:896
 msgid "Minimum Amount"
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:939
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:941
 msgid "Minimum Amount must be a valid number."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:943
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:945
 msgid "Minimum Amount must be greater than or equal to zero."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:991
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:993
 msgid "The payment method for this subscription can not be updated manually."
 msgstr ""
 
 #. translators: %s: mandate selection URL anchor
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:1007
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:1009
 #, php-format
 msgid "To update the payment method for this subscription, please visit the %s page."
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:1011
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:1012
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:1013
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:1014
 msgid "payment method update"
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:1020
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:1022
 #: packages/wp-pay-extensions/restrict-content-pro/src/Extension.php:665
 #: packages/wp-pay-extensions/restrict-content-pro/src/Extension.php:666
 msgid "Update payment method"
 msgstr ""
 
-#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:1109
+#: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:1111
 msgid "Minimum amount adjustment"
 msgstr ""
 

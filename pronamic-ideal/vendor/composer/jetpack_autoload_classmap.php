@@ -1619,187 +1619,187 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/GiveHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Admin' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Admin.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\AdminPaymentFormPostType' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/AdminPaymentFormPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Entry' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Entry.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Extension' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\FeedsDB' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/FeedsDB.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Fields' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Fields.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\GravityForms' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/GravityForms.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\GravityFormsDependency' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/GravityFormsDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\IssuersField' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/IssuersField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\LeadProperties' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/LeadProperties.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Links' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Links.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PayFeed' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PayFeed.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentAddOn' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentData' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentData.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentFormPostType' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentFormPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentMethodsField' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentMethodsField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentStatuses' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentStatuses.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Processor' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Processor.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Util' => array(
-		'version' => '4.13.0.0',
+		'version' => '4.13.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Admin\\AdminSubscriptions' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Admin/AdminSubscriptions.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Admin\\AdminTransactions' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Admin/AdminTransactions.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Extension' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\ApplePayGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/ApplePayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\BancontactGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/BancontactGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\BankTransferGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/BankTransferGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\BitcoinGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/BitcoinGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\CreditCardGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/CreditCardGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\DirectDebitBancontactGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/DirectDebitBancontactGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\DirectDebitGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/DirectDebitGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\DirectDebitIDealGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/DirectDebitIDealGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\DirectDebitSofortGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/DirectDebitSofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\Gateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\GiropayGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/GiropayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\IDealGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/IDealGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\In3Gateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/In3Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\KlarnaPayLaterGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/KlarnaPayLaterGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\KlarnaPayNowGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/KlarnaPayNowGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\KlarnaPayOverTimeGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/KlarnaPayOverTimeGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\PayPalGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/PayPalGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\Przelewy24Gateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/Przelewy24Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\SofortGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/SofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\MemberPress' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/MemberPress.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\MemberPressDependency' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/MemberPressDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Pronamic' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Pronamic.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\SubscriptionStatuses' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/SubscriptionStatuses.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Upgrade310' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Upgrade310.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\NinjaForms\\Extension' => array(
@@ -2927,7 +2927,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-shutdown-handler.php'
 	),
 	'Symfony\\Polyfill\\Mbstring\\Mbstring' => array(
-		'version' => '1.38.2.0',
+		'version' => '1.43.0.0',
 		'path'    => $vendorDir . '/symfony/polyfill-mbstring/Mbstring.php'
 	),
 	'VIISON\\AddressSplitter\\AddressSplitter' => array(
@@ -2947,2067 +2947,2067 @@ return array(
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-version-selector.php'
 	),
 	'libphonenumber\\CountryCodeSource' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/CountryCodeSource.php'
 	),
 	'libphonenumber\\CountryCodeToRegionCodeMap' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/CountryCodeToRegionCodeMap.php'
 	),
 	'libphonenumber\\MatchType' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/MatchType.php'
 	),
 	'libphonenumber\\Matcher' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/Matcher.php'
 	),
 	'libphonenumber\\MatcherAPIInterface' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/MatcherAPIInterface.php'
 	),
 	'libphonenumber\\MetadataSourceInterface' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/MetadataSourceInterface.php'
 	),
 	'libphonenumber\\MultiFileMetadataSourceImpl' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/MultiFileMetadataSourceImpl.php'
 	),
 	'libphonenumber\\NumberFormat' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/NumberFormat.php'
 	),
 	'libphonenumber\\NumberParseException' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/NumberParseException.php'
 	),
 	'libphonenumber\\PhoneMetadata' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/PhoneMetadata.php'
 	),
 	'libphonenumber\\PhoneNumber' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/PhoneNumber.php'
 	),
 	'libphonenumber\\PhoneNumberDesc' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/PhoneNumberDesc.php'
 	),
 	'libphonenumber\\PhoneNumberFormat' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/PhoneNumberFormat.php'
 	),
 	'libphonenumber\\PhoneNumberMatch' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/PhoneNumberMatch.php'
 	),
 	'libphonenumber\\PhoneNumberType' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/PhoneNumberType.php'
 	),
 	'libphonenumber\\PhoneNumberUtil' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/PhoneNumberUtil.php'
 	),
 	'libphonenumber\\RegexBasedMatcher' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/RegexBasedMatcher.php'
 	),
 	'libphonenumber\\ShortNumberCost' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/ShortNumberCost.php'
 	),
 	'libphonenumber\\ShortNumberInfo' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/ShortNumberInfo.php'
 	),
 	'libphonenumber\\ShortNumbersRegionCodeSet' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/ShortNumbersRegionCodeSet.php'
 	),
 	'libphonenumber\\ValidationResult' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/ValidationResult.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_800' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_800.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_808' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_808.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_870' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_870.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_878' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_878.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_881' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_881.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_882' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_882.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_883' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_883.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_888' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_888.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_979' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_979.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AC.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AD.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AF.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AG.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AI.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AL.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AO.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AS.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AT.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AU.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AW.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AX' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AX.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_AZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_AZ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BA.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BB' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BB.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BD.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BF.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BG.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BH.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BI.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BJ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BJ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BL.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BN.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BO.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BQ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BQ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BS.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BT.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BW.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BY.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_BZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_BZ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CA.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CC.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CD.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CF.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CG.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CH.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CI.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CK.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CL.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CN.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CO.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CU.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CV' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CV.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CW.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CX' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CX.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CY.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_CZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_CZ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_DE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_DE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_DJ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_DJ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_DK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_DK.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_DM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_DM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_DO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_DO.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_DZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_DZ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_EC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_EC.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_EE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_EE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_EG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_EG.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_EH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_EH.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_ER' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_ER.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_ES' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_ES.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_ET' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_ET.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_FI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_FI.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_FJ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_FJ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_FK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_FK.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_FM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_FM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_FO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_FO.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_FR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_FR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GA.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GB' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GB.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GD.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GF.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GG.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GH.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GI.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GL.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GN.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GP' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GP.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GQ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GQ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GT.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GU.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GW.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_GY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_GY.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_HK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_HK.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_HN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_HN.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_HR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_HR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_HT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_HT.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_HU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_HU.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_ID' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_ID.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_IE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_IE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_IL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_IL.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_IM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_IM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_IN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_IN.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_IO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_IO.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_IQ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_IQ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_IR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_IR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_IS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_IS.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_IT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_IT.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_JE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_JE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_JM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_JM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_JO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_JO.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_JP' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_JP.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_KE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_KE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_KG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_KG.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_KH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_KH.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_KI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_KI.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_KM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_KM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_KN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_KN.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_KP' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_KP.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_KR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_KR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_KW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_KW.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_KY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_KY.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_KZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_KZ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_LA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_LA.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_LB' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_LB.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_LC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_LC.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_LI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_LI.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_LK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_LK.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_LR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_LR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_LS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_LS.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_LT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_LT.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_LU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_LU.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_LV' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_LV.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_LY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_LY.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MA.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MC.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MD.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_ME' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_ME.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MF.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MG.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MH.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MK.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_ML' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_ML.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MN.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MO.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MP' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MP.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MQ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MQ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MS.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MT.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MU.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MV' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MV.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MW.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MX' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MX.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MY.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_MZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_MZ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_NA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_NA.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_NC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_NC.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_NE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_NE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_NF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_NF.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_NG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_NG.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_NI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_NI.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_NL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_NL.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_NO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_NO.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_NP' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_NP.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_NR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_NR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_NU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_NU.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_NZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_NZ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_OM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_OM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_PA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_PA.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_PE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_PE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_PF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_PF.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_PG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_PG.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_PH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_PH.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_PK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_PK.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_PL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_PL.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_PM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_PM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_PR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_PR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_PS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_PS.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_PT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_PT.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_PW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_PW.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_PY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_PY.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_QA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_QA.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_RE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_RE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_RO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_RO.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_RS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_RS.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_RU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_RU.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_RW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_RW.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SA.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SB' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SB.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SC.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SD.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SG.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SH.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SI.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SJ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SJ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SK.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SL.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SN.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SO.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SS.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_ST' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_ST.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SV' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SV.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SX' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SX.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SY.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_SZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_SZ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TA.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TC.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TD.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TG.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TH.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TJ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TJ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TK.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TL.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TN.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TO.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TR.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TT.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TV' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TV.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TW.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_TZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_TZ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_UA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_UA.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_UG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_UG.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_US' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_US.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_UY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_UY.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_UZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_UZ.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_VA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_VA.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_VC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_VC.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_VE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_VE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_VG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_VG.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_VI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_VI.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_VN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_VN.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_VU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_VU.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_WF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_WF.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_WS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_WS.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_XK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_XK.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_YE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_YE.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_YT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_YT.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_ZA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_ZA.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_ZM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_ZM.php'
 	),
 	'libphonenumber\\data\\PhoneNumberMetadata_ZW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/PhoneNumberMetadata_ZW.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AC.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AD.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AF.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AG.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AI.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AL.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AO.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AS.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AT.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AU.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AW.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AX' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AX.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_AZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_AZ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BA.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BB' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BB.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BD.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BF.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BG.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BH.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BI.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BJ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BJ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BL.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BN.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BO.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BQ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BQ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BS.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BT.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BW.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BY.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_BZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_BZ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CA.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CC.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CD.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CF.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CG.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CH.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CI.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CK.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CL.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CN.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CO.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CU.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CV' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CV.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CW.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CX' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CX.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CY.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_CZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_CZ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_DE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_DE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_DJ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_DJ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_DK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_DK.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_DM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_DM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_DO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_DO.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_DZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_DZ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_EC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_EC.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_EE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_EE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_EG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_EG.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_EH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_EH.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_ER' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_ER.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_ES' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_ES.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_ET' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_ET.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_FI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_FI.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_FJ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_FJ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_FK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_FK.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_FM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_FM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_FO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_FO.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_FR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_FR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GA.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GB' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GB.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GD.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GF.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GG.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GH.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GI.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GL.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GN.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GP' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GP.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GT.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GU.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GW.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_GY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_GY.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_HK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_HK.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_HN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_HN.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_HR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_HR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_HT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_HT.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_HU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_HU.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_ID' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_ID.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_IE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_IE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_IL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_IL.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_IM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_IM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_IN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_IN.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_IQ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_IQ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_IR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_IR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_IS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_IS.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_IT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_IT.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_JE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_JE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_JM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_JM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_JO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_JO.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_JP' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_JP.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_KE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_KE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_KG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_KG.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_KH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_KH.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_KI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_KI.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_KM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_KM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_KN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_KN.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_KP' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_KP.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_KR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_KR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_KW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_KW.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_KY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_KY.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_KZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_KZ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_LA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_LA.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_LB' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_LB.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_LC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_LC.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_LI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_LI.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_LK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_LK.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_LR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_LR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_LS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_LS.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_LT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_LT.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_LU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_LU.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_LV' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_LV.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_LY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_LY.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MA.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MC.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MD.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_ME' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_ME.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MF.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MG.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MH.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MK.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_ML' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_ML.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MN.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MO.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MP' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MP.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MQ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MQ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MS.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MT.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MU.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MV' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MV.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MW.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MX' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MX.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MY.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_MZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_MZ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_NA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_NA.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_NC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_NC.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_NE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_NE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_NF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_NF.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_NG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_NG.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_NI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_NI.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_NL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_NL.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_NO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_NO.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_NP' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_NP.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_NR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_NR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_NU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_NU.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_NZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_NZ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_OM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_OM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_PA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_PA.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_PE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_PE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_PF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_PF.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_PG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_PG.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_PH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_PH.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_PK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_PK.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_PL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_PL.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_PM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_PM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_PR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_PR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_PS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_PS.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_PT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_PT.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_PW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_PW.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_PY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_PY.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_QA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_QA.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_RE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_RE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_RO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_RO.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_RS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_RS.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_RU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_RU.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_RW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_RW.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SA.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SB' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SB.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SC.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SD.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SG.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SH.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SI.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SJ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SJ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SK.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SL.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SN.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SO.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SS.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_ST' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_ST.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SV' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SV.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SX' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SX.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SY.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_SZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_SZ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TC.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TD' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TD.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TG.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TH' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TH.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TJ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TJ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TL' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TL.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TN.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TO' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TO.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TR' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TR.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TT.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TV' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TV.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TW.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_TZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_TZ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_UA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_UA.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_UG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_UG.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_US' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_US.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_UY' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_UY.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_UZ' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_UZ.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_VA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_VA.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_VC' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_VC.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_VE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_VE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_VG' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_VG.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_VI' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_VI.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_VN' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_VN.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_VU' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_VU.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_WF' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_WF.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_WS' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_WS.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_XK' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_XK.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_YE' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_YE.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_YT' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_YT.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_ZA' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_ZA.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_ZM' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_ZM.php'
 	),
 	'libphonenumber\\data\\ShortNumberMetadata_ZW' => array(
-		'version' => '9.0.40.0',
+		'version' => '9.0.41.0',
 		'path'    => $vendorDir . '/giggsey/libphonenumber-for-php-lite/src/data/ShortNumberMetadata_ZW.php'
 	),
 );

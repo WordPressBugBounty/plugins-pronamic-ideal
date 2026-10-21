@@ -218,17 +218,17 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php-lite",
-            "version": "9.0.40",
-            "version_normalized": "9.0.40.0",
+            "version": "9.0.41",
+            "version_normalized": "9.0.41.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php-lite.git",
-                "reference": "314fdac61038421a74bc794555ba9e9fc537eb31"
+                "reference": "6ffb41a259c950d6f4df5596e32917f631052910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php-lite/zipball/314fdac61038421a74bc794555ba9e9fc537eb31",
-                "reference": "314fdac61038421a74bc794555ba9e9fc537eb31",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php-lite/zipball/6ffb41a259c950d6f4df5596e32917f631052910",
+                "reference": "6ffb41a259c950d6f4df5596e32917f631052910",
                 "shasum": ""
             },
             "require": {
@@ -257,7 +257,7 @@
             "suggest": {
                 "giggsey/libphonenumber-for-php": "Use libphonenumber-for-php for geocoding, carriers, timezones and matching"
             },
-            "time": "2026-09-24T13:47:31+00:00",
+            "time": "2026-10-08T08:51:54+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1141,17 +1141,17 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.38.2",
-            "version_normalized": "1.38.2.0",
+            "version": "v1.43.0",
+            "version_normalized": "1.43.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6"
+                "reference": "4d5d331bf731e0aedbc6b2f5e61135b7b7996a72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
-                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/4d5d331bf731e0aedbc6b2f5e61135b7b7996a72",
+                "reference": "4d5d331bf731e0aedbc6b2f5e61135b7b7996a72",
                 "shasum": ""
             },
             "require": {
@@ -1164,7 +1164,7 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2026-05-27T06:59:30+00:00",
+            "time": "2026-09-24T15:19:04+00:00",
             "type": "library",
             "extra": {
                 "thanks": {
@@ -1205,7 +1205,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.38.2"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.43.0"
             },
             "funding": [
                 {
@@ -1838,17 +1838,17 @@
         },
         {
             "name": "wp-pay-extensions/gravityforms",
-            "version": "v4.13.0",
-            "version_normalized": "4.13.0.0",
+            "version": "v4.13.1",
+            "version_normalized": "4.13.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pronamic/wp-pronamic-pay-gravityforms.git",
-                "reference": "976a00adcd81c2bfe8b36a3dc84dd17e7f729342"
+                "reference": "3fa8d9fed1f77651b7ecd420a8fb5e17b7d1cecc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-gravityforms/zipball/976a00adcd81c2bfe8b36a3dc84dd17e7f729342",
-                "reference": "976a00adcd81c2bfe8b36a3dc84dd17e7f729342",
+                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-gravityforms/zipball/3fa8d9fed1f77651b7ecd420a8fb5e17b7d1cecc",
+                "reference": "3fa8d9fed1f77651b7ecd420a8fb5e17b7d1cecc",
                 "shasum": ""
             },
             "require": {
@@ -1883,7 +1883,7 @@
                 "wp-phpunit/wp-phpunit": "^6.4",
                 "yoast/phpunit-polyfills": "^2.0"
             },
-            "time": "2026-07-31T17:38:25+00:00",
+            "time": "2026-10-21T08:44:07+00:00",
             "type": "wordpress-plugin",
             "extra": {
                 "installer-paths": {
@@ -1945,17 +1945,17 @@
         },
         {
             "name": "wp-pay-extensions/memberpress",
-            "version": "v4.11.0",
-            "version_normalized": "4.11.0.0",
+            "version": "v4.11.1",
+            "version_normalized": "4.11.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pronamic/wp-pronamic-pay-memberpress.git",
-                "reference": "d96abbe0490e17e7b59e5a06618d798a9fd6dacb"
+                "reference": "34354da2dbbb76405b5e2504428f0baf78790732"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-memberpress/zipball/d96abbe0490e17e7b59e5a06618d798a9fd6dacb",
-                "reference": "d96abbe0490e17e7b59e5a06618d798a9fd6dacb",
+                "url": "https://api.github.com/repos/pronamic/wp-pronamic-pay-memberpress/zipball/34354da2dbbb76405b5e2504428f0baf78790732",
+                "reference": "34354da2dbbb76405b5e2504428f0baf78790732",
                 "shasum": ""
             },
             "require": {
@@ -1982,7 +1982,7 @@
                 "wp-phpunit/wp-phpunit": "^6.1",
                 "yoast/phpunit-polyfills": "^1.0"
             },
-            "time": "2026-07-31T17:51:25+00:00",
+            "time": "2026-10-21T13:42:00+00:00",
             "type": "wordpress-plugin",
             "installation-source": "dist",
             "autoload": {
