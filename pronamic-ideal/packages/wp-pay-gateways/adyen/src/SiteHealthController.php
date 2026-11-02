@@ -37,30 +37,83 @@ class SiteHealthController {
 	 * @return void
 	 */
 	public function setup() {
-		add_filter( 'site_status_tests', [ $this, 'site_status_tests' ] );
+		add_filter( 'site_status_tests', $this->site_status_tests( ... ) );
 
 		$prefix = 'health-check-';
 		$action = 'pronamic-pay-adyen-http-authorization-test';
 
-		add_action( 'wp_ajax_' . $prefix . $action, [ $this, 'wp_ajax_health_check_http_authorization_test' ] );
+		add_action( 'wp_ajax_' . $prefix . $action, $this->wp_ajax_health_check_http_authorization_test( ... ) );
 
-		add_action( 'rest_api_init', [ $this, 'rest_api_init' ] );
+		add_action( 'rest_api_init', $this->rest_api_init( ... ) );
 	}
 
 	/**
 	 * Site status tests.
 	 *
 	 * @link https://make.wordpress.org/core/2019/04/25/site-health-check-in-5-2/
-	 * @param array<string, array<string, array<string, string>>> $tests Tests.
-	 * @return array<string, array<string, array<string, string>>>
+	 * @param array<string, array<string, array<string, string|callable>>> $tests Tests.
+	 * @return array<string, array<string, array<string, string|callable>>>
 	 */
 	public function site_status_tests( $tests ) {
+		$tests['direct']['pronamic_pay_adyen_webhook_authentication'] = [
+			'label' => __( 'Adyen webhook authentication', 'pronamic-ideal' ),
+			'test'  => $this->get_webhook_authentication_test( ... ),
+		];
+
 		$tests['async']['pronamic_pay_adyen_http_authorization_test'] = [
 			'label' => __( 'HTTP Authorization header test', 'pronamic-ideal' ),
 			'test'  => 'pronamic-pay-adyen-http-authorization-test',
 		];
 
 		return $tests;
+	}
+
+	/**
+	 * Get webhook authentication test.
+	 *
+	 * @return array<string, string|array<string, string>>
+	 */
+	public function get_webhook_authentication_test() {
+		$result = [
+			'label'       => __( 'Adyen webhook authentication is configured', 'pronamic-ideal' ),
+			'status'      => 'good',
+			'badge'       => [
+				'label' => __( 'Payments', 'pronamic-ideal' ),
+				'color' => 'blue',
+			],
+			'description' => sprintf(
+				'<p>%s</p>',
+				__( 'Adyen notifications are only processed when they are authenticated with HTTP Basic authentication or an HMAC signature.', 'pronamic-ideal' )
+			),
+			'actions'     => '',
+			'test'        => 'pronamic_pay_adyen_webhook_authentication',
+		];
+
+		$posts = Integration::get_configurations_without_webhook_authentication();
+
+		if ( empty( $posts ) ) {
+			return $result;
+		}
+
+		$result['status'] = 'critical';
+		$result['label']  = __( 'Adyen webhook authentication is not configured', 'pronamic-ideal' );
+
+		$items = \array_map(
+			fn( $post ) => \sprintf(
+				'<li><a href="%s">%s</a></li>',
+				\esc_url( (string) \get_edit_post_link( $post ) ),
+				\esc_html( \get_the_title( $post ) )
+			),
+			$posts
+		);
+
+		$result['description'] .= sprintf(
+			'<p>%s</p><ul>%s</ul>',
+			\esc_html__( 'Adyen notifications are rejected. Set an HMAC key in the following Adyen configurations, or configure HTTP Basic authentication on the Pronamic Pay settings page:', 'pronamic-ideal' ),
+			\implode( '', $items )
+		);
+
+		return $result;
 	}
 
 	/**

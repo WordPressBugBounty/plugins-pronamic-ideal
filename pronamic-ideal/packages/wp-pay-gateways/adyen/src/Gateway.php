@@ -26,18 +26,13 @@ class Gateway extends Core_Gateway {
 	/**
 	 * Web SDK version.
 	 *
+	 * Should match the `@adyen/adyen-web` version in `package-lock.json`.
+	 *
 	 * @link https://docs.adyen.com/developers/checkout/web-sdk/release-notes-web-sdk
 	 * @link https://www.npmjs.com/package/@adyen/adyen-web
 	 * @var string
 	 */
-	const SDK_VERSION = '6.22.0';
-
-	/**
-	 * Config.
-	 *
-	 * @var Config
-	 */
-	private $config;
+	const SDK_VERSION = '6.48.0';
 
 	/**
 	 * Client.
@@ -51,10 +46,13 @@ class Gateway extends Core_Gateway {
 	 *
 	 * @param Config $config Config.
 	 */
-	public function __construct( Config $config ) {
+	public function __construct(
+		/**
+		 * Config.
+		 */
+		private readonly Config $config
+	) {
 		parent::__construct();
-
-		$this->config = $config;
 
 		$this->set_method( self::METHOD_HTTP_REDIRECT );
 
@@ -63,7 +61,7 @@ class Gateway extends Core_Gateway {
 			'webhook',
 		];
 
-		$this->client = new Client( $config );
+		$this->client = new Client( $this->config );
 
 		// Methods.
 		$this->register_payment_method( new PaymentMethod( PaymentMethods::AFTERPAY_COM ) );
@@ -93,15 +91,24 @@ class Gateway extends Core_Gateway {
 	}
 
 	/**
+	 * Get config.
+	 *
+	 * @return Config
+	 */
+	public function get_config() {
+		return $this->config;
+	}
+
+	/**
 	 * Get payment methods.
 	 *
-	 * @param array $args Query arguments.
+	 * @param array<string, mixed> $args Query arguments.
 	 * @return PaymentMethodsCollection
 	 */
 	public function get_payment_methods( array $args = [] ): PaymentMethodsCollection {
 		try {
 			$this->maybe_enrich_payment_methods();
-		} catch ( \Exception $e ) {
+		} catch ( \Exception ) {
 			// No problem.
 		}
 
@@ -112,9 +119,16 @@ class Gateway extends Core_Gateway {
 	 * Maybe enrich payment methods.
 	 *
 	 * @return void
+	 * @throws \Exception Throws exception when the config cannot be JSON encoded.
 	 */
 	private function maybe_enrich_payment_methods() {
-		$cache_key = 'pronamic_pay_adyen_payment_methods_' . \md5( \wp_json_encode( $this->config ) );
+		$config_json = \wp_json_encode( $this->config );
+
+		if ( false === $config_json ) {
+			throw new \Exception( 'Unable to JSON encode Adyen config.' );
+		}
+
+		$cache_key = 'pronamic_pay_adyen_payment_methods_' . \md5( $config_json );
 
 		$adyen_payment_methods = \get_transient( $cache_key );
 
@@ -298,29 +312,33 @@ class Gateway extends Core_Gateway {
 			exit;
 		}
 
-		// Endpoint.
-		$endpoint = new Endpoint( $this->config->environment, $this->config->api_live_url_prefix );
-
 		$asset = include __DIR__ . '/../js/dist/checkout-drop-in.asset.php';
 
 		\wp_register_script(
 			'pronamic-pay-adyen-checkout-drop-in',
+			// @phpstan-ignore argument.type (The plugins_url() function never returns an empty string.)
 			\plugins_url( '../js/dist/checkout-drop-in.js', __FILE__ ),
 			$asset['dependencies'],
 			$asset['version'],
 			true
 		);
 
-		// Register styles.
-		$url_stylesheet = $endpoint->get_web_url( self::SDK_VERSION, 'adyen.css' );
-
+		/**
+		 * Adyen Web stylesheet.
+		 *
+		 * The stylesheet is bundled from the `@adyen/adyen-web` npm package,
+		 * so it always matches the bundled Adyen Web JavaScript.
+		 *
+		 * @link https://github.com/pronamic/wp-pronamic-pay-adyen/issues/45
+		 */
 		\wp_register_style(
 			'pronamic-pay-adyen-checkout',
-			$url_stylesheet,
+			\plugins_url( '../js/dist/checkout-drop-in.css', __FILE__ ),
 			[],
-			// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- Version is part of URL.
-			null
+			$asset['version']
 		);
+
+		\wp_style_add_data( 'pronamic-pay-adyen-checkout', 'rtl', 'replace' );
 
 		/**
 		 * Adyen checkout configuration.
@@ -391,10 +409,17 @@ class Gateway extends Core_Gateway {
 					\rest_url( Integration::REST_ROUTE_NAMESPACE . '/error/' . $payment_id )
 				),
 				'autoSubmit'            => $this->can_auto_submit( $payment_method_type ),
+				'i18n'                  => [
+					'errorTitle'   => \__( 'Payment error', 'pronamic-ideal' ),
+					'errorText'    => \__( 'Unfortunately, an error occurred while processing your payment.', 'pronamic-ideal' ),
+					'errorMessage' => \__( 'Message', 'pronamic-ideal' ),
+					'errorCode'    => \__( 'Code', 'pronamic-ideal' ),
+					'continue'     => \__( 'Continue', 'pronamic-ideal' ),
+				],
 			]
 		);
 
-		\add_action( 'pronamic_pay_adyen_checkout_head', [ $this, 'checkout_head' ] );
+		\add_action( 'pronamic_pay_adyen_checkout_head', $this->checkout_head( ... ) );
 
 		Core_Util::no_cache();
 

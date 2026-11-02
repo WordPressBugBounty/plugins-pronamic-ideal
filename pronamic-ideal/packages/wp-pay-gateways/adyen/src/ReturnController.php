@@ -27,7 +27,7 @@ class ReturnController {
 	 */
 	public function setup() {
 		// Actions.
-		\add_action( 'rest_api_init', [ $this, 'rest_api_init' ] );
+		\add_action( 'rest_api_init', $this->rest_api_init( ... ) );
 	}
 
 	/**
@@ -50,9 +50,7 @@ class ReturnController {
 			[
 				'methods'             => 'GET',
 				'callback'            => [ $this, 'rest_api_adyen_return' ],
-				'permission_callback' => function () {
-					return true;
-				},
+				'permission_callback' => fn() => true,
 				'args'                => [
 					'payment_id'     => [
 						'description' => __( 'Payment ID.', 'pronamic-ideal' ),
@@ -92,7 +90,7 @@ class ReturnController {
 			[
 				'methods'             => 'GET',
 				'callback'            => [ $this, 'rest_api_adyen_redirect' ],
-				'permission_callback' => [ $this, 'rest_api_adyen_redirect_permission' ],
+				'permission_callback' => $this->rest_api_adyen_redirect_permission( ... ),
 				'args'                => [
 					'payment_id' => [
 						'description' => __( 'Payment ID.', 'pronamic-ideal' ),
@@ -121,9 +119,9 @@ class ReturnController {
 			Integration::REST_ROUTE_NAMESPACE,
 			'/error/(?P<payment_id>\d+)',
 			[
-				'methods'             => 'GET',
+				'methods'             => 'POST',
 				'callback'            => [ $this, 'rest_api_adyen_error' ],
-				'permission_callback' => [ $this, 'rest_api_adyen_error_permission' ],
+				'permission_callback' => $this->rest_api_adyen_error_permission( ... ),
 				'args'                => [
 					'payment_id' => [
 						'description' => __( 'Payment ID.', 'pronamic-ideal' ),
@@ -199,18 +197,6 @@ class ReturnController {
 				sprintf(
 					/* translators: %s: Gateway configuration ID */
 					__( 'Could not find gateway with ID `%s`.', 'pronamic-ideal' ),
-					$config_id
-				),
-				$config_id
-			);
-		}
-
-		if ( ! isset( $gateway->client ) ) {
-			return new WP_Error(
-				'pronamic-pay-adyen-client-not-found',
-				sprintf(
-					/* translators: %s: Gateway configuration ID */
-					__( 'Could not find client in gateway with ID `%s`.', 'pronamic-ideal' ),
 					$config_id
 				),
 				$config_id
@@ -307,9 +293,13 @@ class ReturnController {
 		/**
 		 * Result code.
 		 *
+		 * The result code is passed by the browser, the status is only used
+		 * to determine the return redirect URL and is not saved. The webhook
+		 * updates the payment status.
+		 *
 		 * @link https://docs.adyen.com/online-payments/payment-result-codes
 		 */
-		$result_code = $request->get_param( 'resultCode' );
+		$result_code = (string) $request->get_param( 'resultCode' );
 
 		$status = ResultCode::transform( $result_code );
 
@@ -321,7 +311,7 @@ class ReturnController {
 			\sprintf(
 				/* translators: %s: Adyen payment result code. */
 				\__( 'Result code `%s` was received via the Adyen web drop-in, awaiting the webhook to update payment status.', 'pronamic-ideal' ),
-				$result_code
+				\esc_html( $result_code )
 			)
 		);
 
@@ -409,13 +399,13 @@ class ReturnController {
 			\sprintf(
 				/* translators: %s: Adyen error name. */
 				\__( 'An `%s` error occurred while processing payment.', 'pronamic-ideal' ),
-				$error_name
+				\esc_html( (string) $error_name )
 			)
 		);
 
 		$note .= sprintf(
 			'<blockquote>%s</blockquote>',
-			$error_message
+			\esc_html( (string) $error_message )
 		);
 
 		$payment->add_note( $note );
@@ -427,10 +417,13 @@ class ReturnController {
 		}
 
 		/**
-		 * 303 See Other.
-		 *
-		 * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/303
+		 * The checkout page shows the error to the customer, so return the
+		 * return URL instead of redirecting.
 		 */
-		return new \WP_REST_Response( null, 303, [ 'Location' => $payment->get_return_redirect_url() ] );
+		return new \WP_REST_Response(
+			[
+				'return_url' => $payment->get_return_redirect_url(),
+			]
+		);
 	}
 }

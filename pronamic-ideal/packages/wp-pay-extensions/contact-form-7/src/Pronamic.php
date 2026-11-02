@@ -14,10 +14,12 @@ use Pronamic\WordPress\Pay\Core\Gateway;
 use Pronamic\WordPress\Pay\Plugin;
 use Pronamic\WordPress\Money\Money;
 use Pronamic\WordPress\Money\Parser;
+use Pronamic\WordPress\Number\Number;
 use Pronamic\WordPress\Pay\Address;
 use Pronamic\WordPress\Pay\Customer;
 use Pronamic\WordPress\Pay\ContactName;
 use Pronamic\WordPress\Pay\Payments\Payment;
+use Pronamic\WordPress\Pay\Payments\PaymentLines;
 use WPCF7_FormTagsManager;
 use WPCF7_Submission;
 
@@ -144,6 +146,22 @@ final class Pronamic {
 		$payment->set_source( 'contact-form-7' );
 
 		/**
+		 * Lines.
+		 *
+		 * Some payment methods, such as Klarna, require payment lines.
+		 *
+		 * @link https://github.com/pronamic/wp-pronamic-pay-contact-form-7/issues/35
+		 */
+		$payment->lines = new PaymentLines();
+
+		$line = $payment->lines->new_line();
+
+		$line->set_name( $description );
+		$line->set_quantity( new Number( 1 ) );
+		$line->set_unit_price( $total );
+		$line->set_total_amount( $total );
+
+		/**
 		 * Contact Form 7 form ID.
 		 *
 		 * @link https://github.com/pronamic/wp-pronamic-pay-contact-form-7/issues/9
@@ -158,9 +176,11 @@ final class Pronamic {
 		$contact_name->set_first_name( $submission_helper->get_value_by_tag_name_or_option( 'pronamic_pay_first_name' ) );
 		$contact_name->set_last_name( $submission_helper->get_value_by_tag_name_or_option( 'pronamic_pay_last_name' ) );
 
+		$email = $submission_helper->get_value_by_tag_name_or_option_or_basetype( 'pronamic_pay_email', 'email' );
+
 		$customer = new Customer();
 		$customer->set_name( $contact_name );
-		$customer->set_email( $submission_helper->get_value_by_tag_name_or_option_or_basetype( 'pronamic_pay_email', 'email' ) );
+		$customer->set_email( $email );
 
 		$payment->set_customer( $customer );
 
@@ -168,6 +188,17 @@ final class Pronamic {
 		$address = new Address();
 
 		$address->set_name( $contact_name );
+
+		/**
+		 * Email.
+		 *
+		 * Some payment methods, such as Klarna, require a billing address email.
+		 *
+		 * @link https://github.com/pronamic/wp-pronamic-pay-contact-form-7/issues/36
+		 */
+		if ( '' !== $email ) {
+			$address->set_email( $email );
+		}
 
 		$billing_address  = clone $address;
 		$shipping_address = clone $address;
@@ -181,6 +212,7 @@ final class Pronamic {
 			'country_code',
 			'company_name',
 			'coc_number',
+			'email',
 		];
 
 		foreach ( $address_fields as $field ) {

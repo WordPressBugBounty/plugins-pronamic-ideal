@@ -4,7 +4,7 @@
  * Plugin URI: https://www.pronamic.eu/plugins/pronamic-forms/
  * Description: Pronamic Forms is a powerful WordPress plugin and library that allows you to create and manage customizable forms, powered by WordPress blocks and new WordPress APIs like the Interactivity and HTML APIs. Easily build forms for donations, orders, and more using Gutenberg blocks, and handle payments seamlessly with the Pronamic Pay platform.
  *
- * Version: 2.1.0
+ * Version: 2.1.1
  * Requires at least: 6.7
  * Requires PHP: 8.2
  *
@@ -17,7 +17,7 @@
  * License: GPL-2.0-or-later
  *
  * @author    Pronamic <info@pronamic.eu>
- * @copyright 2005-2023 Pronamic
+ * @copyright 2005-2026 Pronamic
  * @license   GPL-2.0-or-later
  * @package   Pronamic\PronamicForms
  */
@@ -42,11 +42,4 @@ if ( \file_exists( $autoload_path ) ) {
 /**
  * Bootstrap.
  */
-add_action(
-	'init',
-	function () {
-		load_plugin_textdomain( 'pronamic-ideal', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-	}
-);
-
 Plugin::instance();

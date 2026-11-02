@@ -37,7 +37,7 @@ class PaymentRequestHelper {
 		$merchant_order_reference = $payment->format_string( $config->get_merchant_order_reference() );
 
 		if ( '' === $merchant_order_reference ) {
-			$merchant_order_reference = $payment->get_id();
+			$merchant_order_reference = (string) $payment->get_id();
 		}
 
 		/**
@@ -171,9 +171,7 @@ class PaymentRequestHelper {
 
 				$quantity = $line->get_quantity();
 
-				if ( null === $quantity ) {
-					$quantity = new Number( 0 );
-				}
+				$quantity ??= new Number( 0 );
 
 				// Handle decimal quantities.
 				if ( ! $quantity->is_whole_number() ) {
@@ -286,6 +284,7 @@ class PaymentRequestHelper {
 		 * @link https://docs.adyen.com/api-explorer/#/PaymentSetupAndVerificationService/v51/payments__reqParam_metadata
 		 * @link https://docs.adyen.com/api-explorer/#/PaymentSetupAndVerificationService/v41/paymentSession__reqParam_metadata
 		 */
+		// @phpstan-ignore function.alreadyNarrowedType (Third-party filter callbacks may return a non-array.)
 		if ( ! \is_array( $metadata ) ) {
 			throw new \Exception( 'Adyen metadata must be an array.' );
 		}

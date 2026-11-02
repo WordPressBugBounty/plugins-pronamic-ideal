@@ -53,7 +53,7 @@
 	"require": {
 		"php": ">=8.2",
 		"ext-intl": "*",
-		"automattic/jetpack-autoloader": "^3.0 || ^4.0 || ^5.0",
+		"automattic/jetpack-autoloader": "^3.0 || ^4.0 || ^5.0 || ^6.0",
 		"justinrainbow/json-schema": "^5.2",
 		"pronamic/wp-http": "^1.2",
 		"pronamic/wp-money": "^2.2",
@@ -68,30 +68,28 @@
 		"phpstan/phpstan": "^2.1",
 		"pronamic/pronamic-cli": "^1.1",
 		"pronamic/wp-coding-standards": "^2.1",
-		"roots/wordpress": "^6.0",
+		"rector/rector": "^2.6",
+		"roots/wordpress": "^6.9",
 		"sirbrillig/phpcs-import-detection": "^1.2",
 		"sirbrillig/phpcs-variable-analysis": "^2.8",
 		"szepeviktor/phpstan-wordpress": "^2.0",
-		"vimeo/psalm": "^5.25",
 		"wp-cli/dist-archive-command": "*",
 		"wp-cli/wp-cli-bundle": "*",
 		"wp-phpunit/wp-phpunit": "^6.1",
+		"wp-plugin/sqlite-database-integration": "^3.1",
 		"yoast/phpunit-polyfills": "^4.0"
 	},
 	"scripts": {
 		"build": [
-			"rm -rf ./build",
-			"mkdir ./build",
-			"mkdir ./build/stage-1",
-			"mkdir ./build/stage-2",
 			"npm run build",
+			"rm -rf ./build/stage-1",
 			"rsync --recursive --verbose --exclude-from=.distignore --exclude=/vendor/ ./ ./build/stage-1/",
 			"composer install --no-dev --prefer-dist --optimize-autoloader --working-dir=./build/stage-1/",
-			"rsync --recursive --verbose --exclude-from=.distignore ./build/stage-1/ ./build/stage-2/",
-			"vendor/bin/wp i18n make-pot ./build/stage-2/ --slug=pronamic-pay-adyen --exclude=js/dist/*.js",
-			"vendor/bin/wp i18n make-json ./build/stage-2/languages/*.po",
-			"vendor/bin/wp i18n make-mo ./build/stage-2/languages/",
-			"vendor/bin/wp dist-archive ./build/stage-2/ --plugin-dirname=pronamic-pay-adyen"
+			"rsync --recursive --delete --delete-excluded --verbose --exclude-from=.distignore ./build/stage-1/ ./build/pronamic-pay-adyen/",
+			"vendor/bin/wp i18n make-pot ./build/pronamic-pay-adyen/ --slug=pronamic-pay-adyen --exclude=js/dist/*.js",
+			"vendor/bin/wp i18n make-json ./build/pronamic-pay-adyen/languages/*.po",
+			"vendor/bin/wp i18n make-mo ./build/pronamic-pay-adyen/languages/",
+			"vendor/bin/wp dist-archive ./build/pronamic-pay-adyen/ --plugin-dirname=pronamic-pay-adyen --force"
 		],
 		"build-docs": "vendor/bin/wp-documentor parse . --exclude=build --exclude=tests --exclude=vendor --exclude=wordpress --exclude=wp-content --format=markdown --relative=docs > docs/hooks.md",
 		"ci": [
@@ -101,6 +99,7 @@
 			"@phpstan",
 			"@psalm"
 		],
+		"coverage": "XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover build/logs/clover.xml --coverage-text",
 		"coveralls": "vendor/bin/php-coveralls -v",
 		"phpcbf": "vendor/bin/phpcbf",
 		"phpcs": "XDEBUG_MODE=off vendor/bin/phpcs -s -v",
@@ -110,15 +109,37 @@
 		"phpunit": "vendor/bin/phpunit",
 		"post-install-cmd": "echo 'Optionally run: composer bin all install'",
 		"post-update-cmd": "echo 'Optionally run: composer bin all update'",
-		"psalm": "vendor/bin/psalm",
+		"psalm": [
+			"@composer bin psalm install --no-interaction --no-progress",
+			"vendor/bin/psalm"
+		],
+		"rector": "vendor/bin/rector",
 		"xmllint-phpcs": "xmllint --noout --schema vendor/squizlabs/php_codesniffer/phpcs.xsd phpcs.xml.dist",
 		"xmllint": [
 			"@xmllint-phpcs"
 		],
-		"translate": [
+		"make-pot": [
 			"@build",
-			"rsync --recursive --delete --verbose ./build/stage-2/languages/ ./languages/",
+			"rsync --recursive --delete --verbose ./build/pronamic-pay-adyen/languages/ ./languages/",
 			"vendor/bin/wp i18n update-po ./languages/pronamic-pay-adyen.pot"
 		]
-	}
+	},
+	"extra": {
+		"installer-paths": {
+			"vendor/{$vendor}/{$name}/": [
+				"type:wordpress-plugin"
+			]
+		}
+	},
+	"repositories": [
+		{
+			"name": "wp-packages",
+			"type": "composer",
+			"url": "https://repo.wp-packages.org",
+			"only": [
+				"wp-plugin/*",
+				"wp-theme/*"
+			]
+		}
+	]
 }

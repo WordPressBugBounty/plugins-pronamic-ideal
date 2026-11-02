@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInita8be091b36e145dd4e0cc0614ebbacb2
+class ComposerStaticInitc96b78ed8f827a93705c93c4899a149a
 {
     public static $files = array (
         '509f66d930a3f0b7d9b65b22aa319565' => __DIR__ . '/../..' . '/packages/wp-pay/core/includes/functions.php',
@@ -405,6 +405,7 @@ class ComposerStaticInita8be091b36e145dd4e0cc0614ebbacb2
         'Pronamic\\PronamicForms\\PostTypesController' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/PostTypesController.php',
         'Pronamic\\PronamicForms\\RenderFormBlockController' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/RenderFormBlockController.php',
         'Pronamic\\PronamicForms\\RenderFormBlockUpdater' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/RenderFormBlockUpdater.php',
+        'Pronamic\\PronamicForms\\SubmissionsRestController' => __DIR__ . '/../..' . '/packages/pronamic/wp-pronamic-forms/psr-4/SubmissionsRestController.php',
         'Pronamic\\PronamicPayAdminReports\\Plugin' => __DIR__ . '/../..' . '/packages/pronamic/pronamic-pay-admin-reports/php/classes/Plugin.php',
         'Pronamic\\PronamicPayDefaultPaymentMethods\\Plugin' => __DIR__ . '/../..' . '/packages/pronamic/pronamic-pay-default-payment-methods/psr-4/Plugin.php',
         'Pronamic\\WordPress\\DateTime\\DateTime' => __DIR__ . '/../..' . '/packages/pronamic/wp-datetime/src/DateTime.php',
@@ -769,6 +770,7 @@ class ComposerStaticInita8be091b36e145dd4e0cc0614ebbacb2
         'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\LineItem' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/LineItem.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\LineItems' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/LineItems.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Name' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/Name.php',
+        'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\NotificationHmac' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/NotificationHmac.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\NotificationRequest' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/NotificationRequest.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\NotificationRequestItem' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/NotificationRequestItem.php',
         'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\NotificationsController' => __DIR__ . '/../..' . '/packages/wp-pay-gateways/adyen/src/NotificationsController.php',
@@ -1482,9 +1484,9 @@ class ComposerStaticInita8be091b36e145dd4e0cc0614ebbacb2
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInita8be091b36e145dd4e0cc0614ebbacb2::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInita8be091b36e145dd4e0cc0614ebbacb2::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInita8be091b36e145dd4e0cc0614ebbacb2::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitc96b78ed8f827a93705c93c4899a149a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitc96b78ed8f827a93705c93c4899a149a::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitc96b78ed8f827a93705c93c4899a149a::$classMap;
 
         }, null, ClassLoader::class);
     }

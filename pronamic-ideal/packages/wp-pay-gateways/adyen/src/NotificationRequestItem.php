@@ -19,41 +19,6 @@ use DateTime;
  */
 class NotificationRequestItem extends ResponseObject {
 	/**
-	 * Amount.
-	 *
-	 * @var Amount
-	 */
-	private $amount;
-
-	/**
-	 * Adyen's 16-character unique reference associated with the transaction/the request. This value is globally unique; quote it when communicating with us about this request.
-	 *
-	 * @var string
-	 */
-	private $psp_reference;
-
-	/**
-	 * The type of event the notification item refers to.
-	 *
-	 * @var string
-	 */
-	private $event_code;
-
-	/**
-	 * The time when the event was generated.
-	 *
-	 * @var DateTime
-	 */
-	private $event_date;
-
-	/**
-	 * The merchant account identifier used in the transaction the notification item refers to.
-	 *
-	 * @var string
-	 */
-	private $merchant_account_code;
-
-	/**
 	 * This field holds a list of the modification operations supported by the transaction the notification item refers to.
 	 *
 	 * This field is populated only in authorisation notifications.
@@ -65,13 +30,6 @@ class NotificationRequestItem extends ResponseObject {
 	private $operations;
 
 	/**
-	 * A reference to uniquely identify the payment.
-	 *
-	 * @var string
-	 */
-	private $merchant_reference;
-
-	/**
 	 * The payment method used in the transaction the notification item refers to.
 	 *
 	 * This field is populated only in authorisation notifications.
@@ -81,14 +39,18 @@ class NotificationRequestItem extends ResponseObject {
 	private $payment_method;
 
 	/**
-	 * Informs about the outcome of the event (`eventCode`) the notification refers to:
+	 * The original reference, populated for modification notifications (for example `REFUND`).
 	 *
-	 * - `true`: the event (`eventCode`) the notification refers to was executed successfully.
-	 * - `false`: the event was not executed successfully.
-	 *
-	 * @var boolean
+	 * @var string|null
 	 */
-	private $success;
+	private $original_reference;
+
+	/**
+	 * Additional data.
+	 *
+	 * @var array<string, mixed>
+	 */
+	private $additional_data = [];
 
 	/**
 	 * Construct notification request item.
@@ -104,21 +66,38 @@ class NotificationRequestItem extends ResponseObject {
 	 * @param boolean  $success               Success.
 	 */
 	public function __construct(
-		Amount $amount,
-		$psp_reference,
-		$event_code,
-		DateTime $event_date,
-		$merchant_account_code,
-		$merchant_reference,
-		$success
+		/**
+		 * Amount.
+		 */
+		private readonly Amount $amount,
+		/**
+		 * Adyen's 16-character unique reference associated with the transaction/the request. This value is globally unique; quote it when communicating with us about this request.
+		 */
+		private $psp_reference,
+		/**
+		 * The type of event the notification item refers to.
+		 */
+		private $event_code,
+		/**
+		 * The time when the event was generated.
+		 */
+		private readonly DateTime $event_date,
+		/**
+		 * The merchant account identifier used in the transaction the notification item refers to.
+		 */
+		private $merchant_account_code,
+		/**
+		 * A reference to uniquely identify the payment.
+		 */
+		private $merchant_reference,
+		/**
+		 * Informs about the outcome of the event (`eventCode`) the notification refers to:
+		 *
+		 * - `true`: the event (`eventCode`) the notification refers to was executed successfully.
+		 * - `false`: the event was not executed successfully.
+		 */
+		private $success
 	) {
-		$this->amount                = $amount;
-		$this->psp_reference         = $psp_reference;
-		$this->event_code            = $event_code;
-		$this->event_date            = $event_date;
-		$this->merchant_account_code = $merchant_account_code;
-		$this->merchant_reference    = $merchant_reference;
-		$this->success               = $success;
 	}
 
 	/**
@@ -214,6 +193,64 @@ class NotificationRequestItem extends ResponseObject {
 	}
 
 	/**
+	 * Get original reference.
+	 *
+	 * @return string|null
+	 */
+	public function get_original_reference() {
+		return $this->original_reference;
+	}
+
+	/**
+	 * Set original reference.
+	 *
+	 * @param string|null $original_reference Original reference.
+	 * @return void
+	 */
+	public function set_original_reference( $original_reference ) {
+		$this->original_reference = $original_reference;
+	}
+
+	/**
+	 * Get additional data.
+	 *
+	 * @return array<string, mixed>
+	 */
+	public function get_additional_data() {
+		return $this->additional_data;
+	}
+
+	/**
+	 * Set additional data.
+	 *
+	 * @param array<string, mixed> $additional_data Additional data.
+	 * @return void
+	 */
+	public function set_additional_data( array $additional_data ) {
+		$this->additional_data = $additional_data;
+	}
+
+	/**
+	 * Get HMAC signature.
+	 *
+	 * @link https://docs.adyen.com/development-resources/webhooks/verify-hmac-signatures
+	 * @return string|null
+	 */
+	public function get_hmac_signature() {
+		if ( ! \array_key_exists( 'hmacSignature', $this->additional_data ) ) {
+			return null;
+		}
+
+		$signature = $this->additional_data['hmacSignature'];
+
+		if ( ! \is_string( $signature ) ) {
+			return null;
+		}
+
+		return $signature;
+	}
+
+	/**
 	 * Is success.
 	 *
 	 * @return boolean
@@ -258,6 +295,14 @@ class NotificationRequestItem extends ResponseObject {
 
 		if ( property_exists( $value, 'paymentMethod' ) ) {
 			$item->set_payment_method( $value->paymentMethod );
+		}
+
+		if ( property_exists( $value, 'originalReference' ) ) {
+			$item->set_original_reference( $value->originalReference );
+		}
+
+		if ( property_exists( $value, 'additionalData' ) ) {
+			$item->set_additional_data( (array) $value->additionalData );
 		}
 
 		// phpcs:enable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- Adyen JSON object.
