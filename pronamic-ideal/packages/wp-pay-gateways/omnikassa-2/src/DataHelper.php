@@ -81,7 +81,7 @@ final class DataHelper {
 	 * @throws \Exception Throws exception when PCRE regex execution results in error.
 	 */
 	public static function validate_ans( $value, $max, $field ) {
-		$pattern = '#[^' . \implode( self::$characters_ans ) . ']#';
+		$pattern = '#[^' . \implode( '', self::$characters_ans ) . ']#';
 
 		$result = \preg_match( $pattern, $value );
 
@@ -121,6 +121,19 @@ final class DataHelper {
 		}
 
 		return self::validate_an( $value, $max, $field );
+	}
+
+	/**
+	 * Sanitize string to alphanumeric characters with the specified length.
+	 *
+	 * @param string $value  String.
+	 * @param int    $length Length.
+	 * @return string
+	 */
+	public static function sanitize_alphanumeric( $value, $length ) {
+		$sanitized = (string) \preg_replace( '/[^A-Za-z0-9]/', '', $value );
+
+		return \substr( $sanitized, 0, $length );
 	}
 
 	/**

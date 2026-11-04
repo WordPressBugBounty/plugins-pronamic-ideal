@@ -118,9 +118,7 @@ final class Gateway extends Core_Gateway {
 		$omnikassa_payment_brands = \get_transient( $cache_key );
 
 		if ( false === $omnikassa_payment_brands ) {
-			$this->maybe_update_access_token();
-
-			$omnikassa_payment_brands = $this->client->get_payment_brands( $this->config->access_token );
+			$omnikassa_payment_brands = $this->client->get_payment_brands();
 
 			\set_transient( $cache_key, $omnikassa_payment_brands, \DAY_IN_SECONDS );
 		}
@@ -169,7 +167,7 @@ final class Gateway extends Core_Gateway {
 	 *
 	 * @param Payment $payment Payment.
 	 * @return void
-	 * @throws \Exception Throws exception when payment could not start at Rabobank OmniKassa 2.0.
+	 * @throws \InvalidArgumentException Throws exception when a payment line has no quantity.
 	 * @see Core_Gateway::start()
 	 */
 	public function start( Payment $payment ) {
@@ -190,6 +188,18 @@ final class Gateway extends Core_Gateway {
 			MoneyTransformer::transform( $payment->get_total_amount() ),
 			$merchant_return_url
 		);
+
+		// Shopper bank statement reference.
+		if ( '' !== $this->config->shopper_bankstatement_reference ) {
+			$shopper_bankstatement_reference = DataHelper::sanitize_alphanumeric(
+				$payment->format_string( $this->config->shopper_bankstatement_reference ),
+				24
+			);
+
+			if ( '' !== $shopper_bankstatement_reference ) {
+				$order->set_shopper_bankstatement_reference( $shopper_bankstatement_reference );
+			}
+		}
 
 		// Shipping address.
 		$order->set_shipping_detail( AddressTransformer::transform( $payment->get_shipping_address() ) );
@@ -220,6 +230,12 @@ final class Gateway extends Core_Gateway {
 
 			if ( null !== $name ) {
 				$customer_information->set_initials( $name->get_initials() );
+
+				$full_name = (string) $name;
+
+				if ( '' !== $full_name ) {
+					$customer_information->set_full_name( DataHelper::sanitize_an( $full_name, 128 ) );
+				}
 			}
 
 			$order->set_customer_information( $customer_information );
@@ -265,9 +281,7 @@ final class Gateway extends Core_Gateway {
 
 				$unit_price = $line->get_unit_price();
 
-				if ( null === $unit_price ) {
-					$unit_price = new Money();
-				}
+				$unit_price ??= new Money();
 
 				$quantity = $line->get_quantity();
 
@@ -319,9 +333,6 @@ final class Gateway extends Core_Gateway {
 		// Skip hosted result page.
 		$order->set_skip_hosted_result_page( $this->config->skip_hosted_result_page );
 
-		// Maybe update access token.
-		$this->maybe_update_access_token();
-
 		// Announce order.
 		$response = $this->client->order_announce( $order );
 
@@ -343,6 +354,24 @@ final class Gateway extends Core_Gateway {
 		$payment = $refund->get_payment();
 
 		$transaction_id = (string) $payment->get_transaction_id();
+
+		if ( '' === $transaction_id ) {
+			throw new \Exception(
+				\esc_html__(
+					'Cannot refund: the payment has no Rabo Smart Pay transaction ID. The Rabo Smart Pay webhook may not have been processed for this payment.',
+					'pronamic-ideal'
+				)
+			);
+		}
+
+		if ( $transaction_id === $payment->get_meta( 'omnikassa_order_id' ) ) {
+			throw new \Exception(
+				\esc_html__(
+					'Cannot refund: the payment transaction ID is a Rabo Smart Pay order ID instead of a transaction ID. The Rabo Smart Pay webhook may not have been processed for this payment.',
+					'pronamic-ideal'
+				)
+			);
+		}
 
 		$amount = MoneyTransformer::transform( $refund->get_amount() );
 
@@ -409,7 +438,7 @@ final class Gateway extends Core_Gateway {
 		 * in the slug of the payment so that the payment can be requested
 		 * efficiently.
 		 *
-		 * @link https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/issues/21
+		 * @link https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/issues/21
 		 * @link https://github.com/pronamic/wp-pay-core/issues/146
 		 */
 		$slug = $this->get_payment_slug_for_omnikassa_order_id( $omnikassa_order_id );
@@ -445,7 +474,7 @@ final class Gateway extends Core_Gateway {
 		 * the transaction ID. This piece of code is still in this library for
 		 * backward compatibility and may be removed in the future.
 		 *
-		 * @link https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/issues/21
+		 * @link https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/issues/21
 		 */
 		$payment = \get_pronamic_payment_by_transaction_id( $omnikassa_order_id );
 
@@ -579,40 +608,5 @@ final class Gateway extends Core_Gateway {
 		}
 
 		$payment->set_transaction_id( $transaction->get_id() );
-	}
-
-	/**
-	 * Maybe update access token.
-	 *
-	 * @return void
-	 */
-	private function maybe_update_access_token() {
-		if ( $this->config->is_access_token_valid() ) {
-			return;
-		}
-
-		$data = $this->client->get_access_token_data();
-
-		$object_access = new ObjectAccess( $data );
-
-		if ( $object_access->has_property( 'token' ) ) {
-			$this->config->access_token = $object_access->get_string( 'token' );
-
-			\update_post_meta(
-				$this->config->post_id,
-				'_pronamic_gateway_omnikassa_2_access_token',
-				$this->config->access_token
-			);
-		}
-
-		if ( $object_access->has_property( 'validUntil' ) ) {
-			$this->config->access_token_valid_until = $object_access->get_string( 'validUntil' );
-
-			\update_post_meta(
-				$this->config->post_id,
-				'_pronamic_gateway_omnikassa_2_access_token_valid_until',
-				$this->config->access_token_valid_until
-			);
-		}
 	}
 }

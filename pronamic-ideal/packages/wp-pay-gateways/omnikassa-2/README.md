@@ -14,6 +14,7 @@
 
 - [Status](#status)
 - [WordPress Filters](#wordpress-filters)
+- [WordPress Actions](#wordpress-actions)
 - [Errors](#errors)
 - [Simulate Requests](#simulate-requests)
 - [Webhook](#webhook)
@@ -21,23 +22,13 @@
 
 ## Status
 
-[![GitHub Stars](https://img.shields.io/github/tag/wp-pay-gateways/omnikassa-2.svg?style=social&label=Star)](https://github.com/wp-pay-gateways/omnikassa-2)
-[![Build Status](https://travis-ci.org/wp-pay-gateways/omnikassa-2.svg?branch=master)](https://travis-ci.org/wp-pay-gateways/omnikassa-2)
-[![Coverage Status](https://coveralls.io/repos/wp-pay-gateways/omnikassa-2/badge.svg?branch=master&service=github)](https://coveralls.io/github/wp-pay-gateways/omnikassa-2?branch=master)
+[![GitHub Stars](https://img.shields.io/github/tag/pronamic/wp-pronamic-pay-rabo-smart-pay.svg?style=social&label=Star)](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay)
+[![CI](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/actions/workflows/ci.yaml/badge.svg)](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/actions/workflows/ci.yaml)
 [![Latest Stable Version](https://img.shields.io/packagist/v/wp-pay-gateways/omnikassa-2.svg)](https://packagist.org/packages/wp-pay-gateways/omnikassa-2)
 [![PHP from Packagist](https://img.shields.io/packagist/php-v/wp-pay-gateways/omnikassa-2.svg)](https://packagist.org/packages/wp-pay-gateways/omnikassa-2)
 [![Total Downloads](https://img.shields.io/packagist/dt/wp-pay-gateways/omnikassa-2.svg)](https://packagist.org/packages/wp-pay-gateways/omnikassa-2)
 [![Packagist Pre Release](https://img.shields.io/packagist/vpre/wp-pay-gateways/omnikassa-2.svg)](https://packagist.org/packages/wp-pay-gateways/omnikassa-2)
 [![License](https://img.shields.io/packagist/l/wp-pay-gateways/omnikassa-2.svg)](https://packagist.org/packages/wp-pay-gateways/omnikassa-2)
-[![Built with Grunt](https://gruntjs.com/cdn/builtwith.svg)](http://gruntjs.com/)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/wp-pay-gateways/omnikassa-2/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/wp-pay-gateways/omnikassa-2/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/wp-pay-gateways/omnikassa-2/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/wp-pay-gateways/omnikassa-2/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/wp-pay-gateways/omnikassa-2/badges/build.png?b=master)](https://scrutinizer-ci.com/g/wp-pay-gateways/omnikassa-2/build-status/master)
-[![Code Intelligence Status](https://scrutinizer-ci.com/g/wp-pay-gateways/omnikassa-2/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
-[![Maintainability](https://api.codeclimate.com/v1/badges/d115fb4e5c1ae697a0cf/maintainability)](https://codeclimate.com/github/wp-pay-gateways/omnikassa-2/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/d115fb4e5c1ae697a0cf/test_coverage)](https://codeclimate.com/github/wp-pay-gateways/omnikassa-2/test_coverage)
-[![CircleCI](https://circleci.com/gh/wp-pay-gateways/omnikassa-2/tree/master.svg)](https://circleci.com/gh/wp-pay-gateways/omnikassa-2/tree/master)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwp-pay-gateways%2Fomnikassa-2.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwp-pay-gateways%2Fomnikassa-2?ref=badge_shield)
 
 ## WordPress Filters
 
@@ -61,6 +52,18 @@ add_filter( 'pronamic_pay_omnikassa_2_merchant_return_url', function( $url ) {
 } );
 ```
 
+## WordPress Actions
+
+### pronamic_pay_omnikassa_2_access_token_refreshed
+
+The client refreshes the Rabo Smart Pay access token itself when it is missing or expired. After a refresh it fires this action with the `Config` object that holds the new access token. The plugin uses it to store the access token in the gateway configuration post meta.
+
+```php
+add_action( 'pronamic_pay_omnikassa_2_access_token_refreshed', function( $config ) {
+	error_log( 'Rabo Smart Pay access token valid until: ' . $config->access_token_valid_until );
+} );
+```
+
 ## Errors
 
 | Request                  | Response Status Code              | Code   | Property          | Message                                                                                    |
@@ -77,7 +80,7 @@ add_filter( 'pronamic_pay_omnikassa_2_merchant_return_url', function( $url ) {
 ### Refresh
 
 ```
-curl --request GET https://betalen.rabobank.nl/omnikassa-api/gatekeeper/refresh \
+curl --request GET https://api.pay.rabobank.nl/omnikassa-api/gatekeeper/refresh \
 	--header "Authorization: Bearer __refresh_token__" \
 	--connect-timeout 5 \
 	--max-time 5 \
@@ -88,7 +91,7 @@ curl --request GET https://betalen.rabobank.nl/omnikassa-api/gatekeeper/refresh 
 ### Order
 
 ```
-curl --request POST https://betalen.rabobank.nl/omnikassa-api-sandbox/order/server/api/order \
+curl --request POST https://api.pay-sandbox.rabobank.nl/omnikassa-api/order/server/api/order \
 	--header "Authorization: Bearer __refresh_token__" \
 	--connect-timeout 5 \
 	--max-time 5 \
@@ -112,7 +115,7 @@ http POST https://example.com/wp-json/pronamic-pay/omnikassa-2/v1/webhook @tests
 ### Event
 
 ```
-curl --request GET https://betalen.rabobank.nl/omnikassa-api-sandbox/order/server/api/events/results/merchant.order.status.changed \
+curl --request GET https://api.pay-sandbox.rabobank.nl/omnikassa-api/order/server/api/events/results/merchant.order.status.changed \
 	--header "Authorization: Bearer __refresh_token__" \
 	--connect-timeout 5 \
 	--max-time 5 \
@@ -121,7 +124,7 @@ curl --request GET https://betalen.rabobank.nl/omnikassa-api-sandbox/order/serve
 ```
 
 ```
-curl --request GET https://betalen.rabobank.nl/omnikassa-api/order/server/api/events/results/merchant.order.status.changed \
+curl --request GET https://api.pay.rabobank.nl/omnikassa-api/order/server/api/events/results/merchant.order.status.changed \
 	--header "Authorization: Bearer __refresh_token__" \
 	--connect-timeout 5 \
 	--max-time 5 \
@@ -145,4 +148,5 @@ However, the WordPress REST API has the option to override the HTTP method via t
 https://developer.wordpress.org/rest-api/using-the-rest-api/global-parameters/#_method-or-x-http-method-override-header
 
 ## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fwp-pay-gateways%2Fomnikassa-2.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fwp-pay-gateways%2Fomnikassa-2?ref=badge_large)
+
+GPL-3.0-or-later

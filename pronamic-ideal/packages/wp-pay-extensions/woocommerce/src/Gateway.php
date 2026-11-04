@@ -10,21 +10,25 @@
 
 namespace Pronamic\WordPress\Pay\Extensions\WooCommerce;
 
+use DateTimeZone;
 use Pronamic\WordPress\DateTime\DateTime;
+use Pronamic\WordPress\DateTime\DateTimeImmutable;
 use Pronamic\WordPress\Money\Money;
 use Pronamic\WordPress\Money\TaxedMoney;
 use Pronamic\WordPress\Number\Number;
 use Pronamic\WordPress\Pay\Address;
-use Pronamic\WordPress\Pay\Core\Field;
+use Pronamic\WordPress\Pay\Fields\Field;
 use Pronamic\WordPress\Pay\ContactName;
 use Pronamic\WordPress\Pay\Core\PaymentMethods;
 use Pronamic\WordPress\Pay\Payments\Payment;
 use Pronamic\WordPress\Pay\Payments\PaymentLines;
 use Pronamic\WordPress\Pay\Payments\PaymentLineType;
+use Pronamic\WordPress\Pay\Payments\PaymentStatus;
 use Pronamic\WordPress\Pay\Refunds\Refund;
 use Pronamic\WordPress\Pay\Plugin;
 use Pronamic\WordPress\Pay\Region;
 use Pronamic\WordPress\Pay\Subscriptions\Subscription;
+use Pronamic\WordPress\Pay\Subscriptions\SubscriptionPeriod;
 use WC_Order;
 use WC_Payment_Gateway;
 
@@ -142,13 +146,8 @@ class Gateway extends WC_Payment_Gateway {
 		// Load the settings.
 		$this->init_settings();
 
-		// Define user set variables.
-		$this->icon                = $this->get_pronamic_option( 'icon' );
-		$this->title               = $this->get_pronamic_option( 'title' );
-		$this->description         = $this->get_pronamic_option( 'description' );
-		$this->enabled             = $this->get_pronamic_option( 'enabled' );
-		$this->config_id           = $this->get_pronamic_option( 'config_id' );
-		$this->payment_description = $this->get_pronamic_option( 'payment_description' );
+		// The config ID is needed to build the form fields.
+		$this->config_id = $this->get_pronamic_option( 'config_id' );
 
 		// Use default config ID if empty.
 		if ( empty( $this->config_id ) ) {
@@ -157,6 +156,19 @@ class Gateway extends WC_Payment_Gateway {
 
 		// Load the form fields.
 		$this->init_form_fields();
+
+		/**
+		 * Reload the settings now the form fields are known, so unsaved
+		 * settings fall back to the form field defaults (e.g. the title).
+		 */
+		$this->init_settings();
+
+		// Define user set variables.
+		$this->icon                = $this->get_pronamic_option( 'icon' );
+		$this->title               = $this->get_pronamic_option( 'title' );
+		$this->description         = $this->get_pronamic_option( 'description' );
+		$this->enabled             = $this->get_pronamic_option( 'enabled' );
+		$this->payment_description = $this->get_pronamic_option( 'payment_description' );
 
 		// Maybe support refunds (uses config ID setting).
 		$this->maybe_add_refunds_support();
@@ -168,6 +180,7 @@ class Gateway extends WC_Payment_Gateway {
 			$update_action = 'woocommerce_update_options_payment_gateways';
 		}
 
+		// @phpstan-ignore return.void (WooCommerce registers this method as action callback the same way.)
 		add_action( $update_action, [ $this, 'process_admin_options' ] );
 
 		add_action( 'woocommerce_after_checkout_validation', $this->after_checkout_validation( ... ), 10, 2 );
@@ -345,13 +358,15 @@ class Gateway extends WC_Payment_Gateway {
 					/* translators: %s: default code */
 					sprintf( __( 'Default: <code>%s</code>', 'pronamic-ideal' ), __( 'Order {order_number}', 'pronamic-ideal' ) ),
 					/* translators: %s: tags */
-					sprintf( __( 'Tags: %s', 'pronamic-ideal' ), sprintf( '<code>%s</code> <code>%s</code> <code>%s</code>', '{order_number}', '{order_date}', '{payment_lines_name}', '{blogname}' ) )
+					sprintf( __( 'Tags: %s', 'pronamic-ideal' ), $this->get_tags_html( [ '{order_number}', '{order_date}', '{payment_lines_name}', '{blogname}' ] ) )
 				),
 				'default'     => __( 'Order {order_number}', 'pronamic-ideal' ),
 			],
 		];
 
 		$this->maybe_add_ideal_issuers_settings_field();
+
+		$this->maybe_add_change_payment_method_settings_fields( $description_prefix );
 
 		if ( isset( $this->gateway_args['icon'] ) ) {
 			$this->form_fields['icon']['default'] = $this->gateway_args['icon'];
@@ -434,6 +449,164 @@ class Gateway extends WC_Payment_Gateway {
 	}
 
 	/**
+	 * Maybe add settings fields for subscription payment method changes.
+	 *
+	 * @link https://github.com/pronamic/wp-pronamic-pay-woocommerce/issues/61
+	 * @param string $description_prefix Description prefix.
+	 * @return void
+	 */
+	private function maybe_add_change_payment_method_settings_fields( $description_prefix ) {
+		if ( ! $this->has_pronamic_subscriptions_support() ) {
+			return;
+		}
+
+		$minimum_amount = \wc_format_localized_price( (string) $this->get_change_payment_method_minimum_amount() );
+
+		$this->form_fields['subscriptions'] = [
+			'title'       => \__( 'Subscriptions', 'pronamic-ideal' ),
+			'type'        => 'title',
+			'description' => \__( 'These settings apply when a customer changes the payment method of a subscription.', 'pronamic-ideal' ),
+		];
+
+		$this->form_fields['change_payment_method_description'] = [
+			'title'       => \__( 'Change Payment Method Description', 'pronamic-ideal' ),
+			'type'        => 'text',
+			'description' => \sprintf(
+				'%s%s<br />%s<br />%s',
+				$description_prefix,
+				\__( 'This controls the payment description when a customer changes the payment method of a subscription.', 'pronamic-ideal' ),
+				/* translators: %s: default code */
+				\sprintf( \__( 'Default: <code>%s</code>', 'pronamic-ideal' ), \__( 'Change payment method for subscription {subscription_number}', 'pronamic-ideal' ) ),
+				/* translators: %s: tags */
+				\sprintf( \__( 'Tags: %s', 'pronamic-ideal' ), $this->get_tags_html( [ '{subscription_number}', '{subscription_date}', '{blogname}' ] ) )
+			),
+			'default'     => \__( 'Change payment method for subscription {subscription_number}', 'pronamic-ideal' ),
+		];
+
+		$this->form_fields['change_payment_method_amount'] = [
+			'title'       => \__( 'Change Payment Method Amount', 'pronamic-ideal' ),
+			'type'        => 'price',
+			'placeholder' => $minimum_amount,
+			'description' => \sprintf(
+				'%s%s<br />%s',
+				$description_prefix,
+				\__( 'Amount charged to verify the new payment method when a customer changes the payment method of a subscription. Leave empty to use the minimum amount of the payment method. Amounts below the minimum are raised to the minimum.', 'pronamic-ideal' ),
+				/* translators: %s: default amount */
+				\sprintf( \__( 'Default: <code>%s</code>', 'pronamic-ideal' ), $minimum_amount )
+			),
+			'default'     => '',
+		];
+	}
+
+	/**
+	 * Get minimum amount for a payment method change verification payment.
+	 *
+	 * @link https://help.mollie.com/hc/en-us/articles/115000667365-What-are-the-minimum-and-maximum-amounts-per-payment-method-
+	 * @link https://github.com/pronamic/wp-pronamic-pay-woocommerce/issues/51
+	 * @return float
+	 */
+	private function get_change_payment_method_minimum_amount() {
+		return match ( $this->payment_method ) {
+			PaymentMethods::BANCONTACT, PaymentMethods::DIRECT_DEBIT_BANCONTACT => 0.02,
+			PaymentMethods::DIRECT_DEBIT_SOFORT, PaymentMethods::SOFORT => 0.10,
+			PaymentMethods::APPLE_PAY, PaymentMethods::CARD, PaymentMethods::CREDIT_CARD, PaymentMethods::PAYPAL => 0.00,
+			default => 0.01,
+		};
+	}
+
+	/**
+	 * Get change payment method amount.
+	 *
+	 * Uses the gateway setting, but never less than the payment method minimum.
+	 *
+	 * @return float
+	 */
+	private function get_change_payment_method_amount() {
+		$minimum = $this->get_change_payment_method_minimum_amount();
+
+		$setting = $this->get_pronamic_option( 'change_payment_method_amount' );
+
+		if ( ! \is_numeric( $setting ) ) {
+			return $minimum;
+		}
+
+		return \max( $minimum, (float) $setting );
+	}
+
+	/**
+	 * Get description replacements for an order.
+	 *
+	 * @link https://github.com/woothemes/woocommerce/blob/v2.0.19/classes/emails/class-wc-email-new-order.php
+	 * @param WC_Order $order Order.
+	 * @return array<string, string>
+	 */
+	private function get_description_replacements( WC_Order $order ) {
+		$blogname = get_option( 'blogname' );
+
+		if ( empty( $blogname ) ) {
+			$blogname = '';
+		}
+
+		// @link https://github.com/WordPress/WordPress/blob/3.8.1/wp-includes/pluggable.php#L1085.
+		// The blogname option is escaped with `esc_html` on the way into the database in sanitize_option
+		// we want to reverse this for the gateways.
+		$blogname = wp_specialchars_decode( $blogname, ENT_QUOTES );
+
+		return [
+			'{blogname}'     => $blogname,
+			'{site_title}'   => $blogname,
+			'{order_date}'   => date_i18n( WooCommerce::get_date_format(), (int) WooCommerce::get_order_date( $order ) ),
+			'{order_number}' => $order->get_order_number(),
+		];
+	}
+
+	/**
+	 * Get tags HTML for a setting description.
+	 *
+	 * @param string[] $tags Tags.
+	 * @return string
+	 */
+	private function get_tags_html( $tags ) {
+		return \implode(
+			' ',
+			\array_map(
+				fn( $tag ) => '<code>' . $tag . '</code>',
+				$tags
+			)
+		);
+	}
+
+	/**
+	 * Get change payment method description.
+	 *
+	 * @param WC_Order $order Order.
+	 * @return string
+	 */
+	private function get_change_payment_method_description( WC_Order $order ) {
+		$template = $this->get_pronamic_option( 'change_payment_method_description' );
+
+		if ( ! \is_string( $template ) || '' === $template ) {
+			$template = \__( 'Change payment method for subscription {subscription_number}', 'pronamic-ideal' );
+		}
+
+		/**
+		 * On a payment method change the order is the subscription itself,
+		 * so the order number and date are those of the subscription.
+		 */
+		$replacements = $this->get_description_replacements( $order );
+
+		return \strtr(
+			$template,
+			[
+				'{blogname}'            => $replacements['{blogname}'],
+				'{site_title}'          => $replacements['{site_title}'],
+				'{subscription_number}' => $replacements['{order_number}'],
+				'{subscription_date}'   => $replacements['{order_date}'],
+			]
+		);
+	}
+
+	/**
 	 * Process the payment and return the result.
 	 *
 	 * @param int $order_id WooCommerce order ID.
@@ -490,14 +663,16 @@ class Gateway extends WC_Payment_Gateway {
 				// Add subscription and period.
 				$payment->add_subscription( $subscription );
 
-				$start_date = $subscription->get_start_date();
+				$period = $this->get_subscription_period_from_order_items( $subscription, $order );
 
-				if ( null !== $start_date ) {
-					$period = $subscription->get_period_for_date( $start_date );
+				if ( null === $period ) {
+					$start_date = $subscription->get_start_date();
 
-					if ( null !== $period ) {
-						$payment->add_period( $period );
-					}
+					$period = ( null === $start_date ) ? null : $subscription->get_period_for_date( $start_date );
+				}
+
+				if ( null !== $period ) {
+					$payment->add_period( $period );
 				}
 
 				$subscription->save();
@@ -538,36 +713,29 @@ class Gateway extends WC_Payment_Gateway {
 			$payment->set_meta( 'woocommerce_subscription_change_payment_method', true );
 
 			/**
-			 * Use payment method minimum amount for verification payment.
+			 * A payment method change is not a regular order payment, so use
+			 * a separate description.
 			 *
-			 * @link https://help.mollie.com/hc/en-us/articles/115000667365-What-are-the-minimum-and-maximum-amounts-per-payment-method-
-			 * @link https://github.com/pronamic/wp-pronamic-pay-woocommerce/issues/51
+			 * @link https://github.com/pronamic/wp-pronamic-pay-woocommerce/issues/61
+			 */
+			$description = $this->get_change_payment_method_description( $order );
+
+			$payment->set_description( $description );
+
+			/**
+			 * Use the change payment method amount for the verification payment.
 			 */
 			$total_amount = $payment->get_total_amount();
 
 			if ( $total_amount->is_zero() ) {
-				$amount = match ( $payment->get_payment_method() ) {
-					PaymentMethods::BANCONTACT, PaymentMethods::DIRECT_DEBIT_BANCONTACT => 0.02,
-					PaymentMethods::DIRECT_DEBIT_SOFORT, PaymentMethods::SOFORT => 0.10,
-					PaymentMethods::APPLE_PAY, PaymentMethods::CARD, PaymentMethods::CREDIT_CARD, PaymentMethods::PAYPAL => 0.00,
-					default => 0.01,
-				};
-
-				$total_amount = new Money( $amount, $total_amount->get_currency() );
+				$total_amount = new Money( $this->get_change_payment_method_amount(), $total_amount->get_currency() );
 
 				$lines = new PaymentLines();
 
 				$line = $lines->new_line();
 
-				// Set line properties.
-				$name = \sprintf(
-					/* translators: %s: order number */
-					\__( 'Change payment method for order %s', 'pronamic-ideal' ),
-					$order->get_order_number()
-				);
-
 				$line->set_type( PaymentLineType::DIGITAL );
-				$line->set_name( $name );
+				$line->set_name( $description );
 				$line->set_quantity( new Number( 1 ) );
 				$line->set_unit_price( $total_amount );
 				$line->set_total_amount( $total_amount );
@@ -582,7 +750,11 @@ class Gateway extends WC_Payment_Gateway {
 		try {
 			$payment = Plugin::start_payment( $payment );
 		} catch ( \Exception $exception ) {
-			$message = $exception->getMessage() ?: Plugin::get_default_error_message();
+			$message = $exception->getMessage();
+
+			if ( '' === $message ) {
+				$message = Plugin::get_default_error_message();
+			}
 
 			WooCommerce::add_notice( $message, 'error' );
 
@@ -622,18 +794,6 @@ class Gateway extends WC_Payment_Gateway {
 	 * @return Payment
 	 */
 	private function new_pronamic_payment_from_wc_order( WC_Order $order ) {
-		// Blog name.
-		$blogname = get_option( 'blogname' );
-
-		if ( empty( $blogname ) ) {
-			$blogname = '';
-		}
-
-		// @link https://github.com/WordPress/WordPress/blob/3.8.1/wp-includes/pluggable.php#L1085.
-		// The blogname option is escaped with `esc_html` on the way into the database in sanitize_option
-		// we want to reverse this for the gateways.
-		$blogname = wp_specialchars_decode( $blogname, ENT_QUOTES );
-
 		// Title.
 		$title = sprintf(
 			/* translators: %s: payment data title */
@@ -646,19 +806,11 @@ class Gateway extends WC_Payment_Gateway {
 		);
 
 		// Description.
-		// @link https://github.com/woothemes/woocommerce/blob/v2.0.19/classes/emails/class-wc-email-new-order.php.
-		$replacements = [
-			'{blogname}'     => $blogname,
-			'{site_title}'   => $blogname,
-			'{order_date}'   => date_i18n( WooCommerce::get_date_format(), (int) WooCommerce::get_order_date( $order ) ),
-			'{order_number}' => $order->get_order_number(),
-		];
-
 		if ( empty( $this->payment_description ) ) {
 			$this->payment_description = $this->form_fields['payment_description']['default'];
 		}
 
-		$description = strtr( $this->payment_description, $replacements );
+		$description = strtr( $this->payment_description, $this->get_description_replacements( $order ) );
 
 		// Order helper.
 		$order_helper = new OrderHelper( $order );
@@ -732,7 +884,7 @@ class Gateway extends WC_Payment_Gateway {
 
 		if ( ! empty( $billing_country ) ) {
 			$billing_address->set_country_code( $billing_country );
-			$billing_address->set_country_name( WC()->countries->countries[ $billing_country ] );
+			$billing_address->set_country_name( WC()->countries->get_countries()[ $billing_country ] ?? null );
 		}
 
 		// Shipping address.
@@ -754,7 +906,7 @@ class Gateway extends WC_Payment_Gateway {
 
 		if ( ! empty( $shipping_country ) ) {
 			$shipping_address->set_country_code( $shipping_country );
-			$shipping_address->set_country_name( WC()->countries->countries[ $shipping_country ] );
+			$shipping_address->set_country_name( WC()->countries->get_countries()[ $shipping_country ] ?? null );
 		}
 
 		$payment = new Payment();
@@ -877,10 +1029,106 @@ class Gateway extends WC_Payment_Gateway {
 
 			$pronamic_subscription = $subscription_helper->get_pronamic_subscription();
 
-			if ( null !== $pronamic_subscription ) {
-				$payment->add_subscription( $pronamic_subscription );
+			if ( null === $pronamic_subscription ) {
+				continue;
+			}
+
+			$payment->add_subscription( $pronamic_subscription );
+
+			$period = $this->get_subscription_period_from_order_items( $pronamic_subscription, $order );
+
+			if ( null !== $period && ! $this->payment_has_period_for_subscription( $payment, $pronamic_subscription ) ) {
+				$payment->add_period( $period );
 			}
 		}
+	}
+
+	/**
+	 * Get subscription period from order items.
+	 *
+	 * The "Pronamic period information for WooCommerce Subscriptions" plugin
+	 * stores the period of subscription (renewal) order items in the
+	 * `_pronamic_start_date` and `_pronamic_end_date` order item meta.
+	 *
+	 * @link https://github.com/pronamic/pronamic-woocommerce-subscriptions-period
+	 * @link https://github.com/pronamic/wp-pronamic-pay-woocommerce/issues/68
+	 * @param Subscription $pronamic_subscription Pronamic subscription.
+	 * @param WC_Order     $order                 WooCommerce order.
+	 * @return SubscriptionPeriod|null
+	 */
+	private function get_subscription_period_from_order_items( Subscription $pronamic_subscription, WC_Order $order ) {
+		if ( ! \function_exists( '\wcs_get_subscription' ) ) {
+			return null;
+		}
+
+		$woocommerce_subscription = \wcs_get_subscription( $pronamic_subscription->get_source_id() );
+
+		if ( false === $woocommerce_subscription ) {
+			return null;
+		}
+
+		$product_ids = [];
+
+		foreach ( $woocommerce_subscription->get_items() as $subscription_item ) {
+			$product_ids[] = \wcs_get_canonical_product_id( $subscription_item );
+		}
+
+		foreach ( $order->get_items() as $order_item ) {
+			if ( ! \in_array( \wcs_get_canonical_product_id( $order_item ), $product_ids, true ) ) {
+				continue;
+			}
+
+			$start_date_string = $order_item->get_meta( '_pronamic_start_date' );
+			$end_date_string   = $order_item->get_meta( '_pronamic_end_date' );
+
+			if ( ! \is_string( $start_date_string ) || '' === $start_date_string ) {
+				continue;
+			}
+
+			if ( ! \is_string( $end_date_string ) || '' === $end_date_string ) {
+				continue;
+			}
+
+			try {
+				$start_date = new DateTimeImmutable( $start_date_string, new DateTimeZone( 'UTC' ) );
+				$end_date   = new DateTimeImmutable( $end_date_string, new DateTimeZone( 'UTC' ) );
+			} catch ( \Exception $exception ) {
+				continue;
+			}
+
+			$phase = $pronamic_subscription->get_phase_for_date( $start_date );
+
+			if ( null === $phase ) {
+				return null;
+			}
+
+			return new SubscriptionPeriod( $phase, $start_date, $end_date, $phase->get_amount() );
+		}
+
+		return null;
+	}
+
+	/**
+	 * Check if payment has a period for the specified subscription.
+	 *
+	 * @param Payment      $payment      Payment.
+	 * @param Subscription $subscription Subscription.
+	 * @return bool
+	 */
+	private function payment_has_period_for_subscription( Payment $payment, Subscription $subscription ) {
+		$periods = $payment->get_periods();
+
+		if ( null === $periods ) {
+			return false;
+		}
+
+		foreach ( $periods as $period ) {
+			if ( $period->get_phase()->get_subscription()->get_id() === $subscription->get_id() ) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	/**
@@ -900,9 +1148,28 @@ class Gateway extends WC_Payment_Gateway {
 
 		$payment->set_meta( 'mollie_sequence_type', 'recurring' );
 
-		Plugin::start_payment( $payment );
+		try {
+			$payment = Plugin::start_payment( $payment );
+		} catch ( \Exception $exception ) {
+			/**
+			 * The payment is already marked as failed by `Plugin::start_payment()`,
+			 * which also updates the renewal order and subscription status. We don't
+			 * rethrow the exception, so the scheduled action doesn't fail.
+			 *
+			 * @link https://github.com/pronamic/wp-pronamic-pay-woocommerce/issues/92
+			 */
+			$order->add_order_note(
+				\sprintf(
+					/* translators: %s: error message */
+					\__( 'Renewal payment could not be started: %s', 'pronamic-ideal' ),
+					\esc_html( $exception->getMessage() )
+				)
+			);
+		}
 
-		$order->set_status( WooCommerce::ORDER_STATUS_ON_HOLD );
+		if ( PaymentStatus::OPEN === $payment->get_status() ) {
+			$order->set_status( WooCommerce::ORDER_STATUS_ON_HOLD );
+		}
 
 		$this->store_payment_details( $order, $payment );
 	}

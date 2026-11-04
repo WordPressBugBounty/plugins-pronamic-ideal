@@ -2,20 +2,22 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Pronamic Pay 11.1.0\n"
+"Project-Id-Version: Pronamic Pay 11.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pronamic-ideal\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-02T12:33:43+00:00\n"
+"POT-Creation-Date: 2026-11-04T18:35:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pronamic-ideal\n"
 
 #. Plugin Name of the plugin
 #: pronamic-ideal.php:3
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:72
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:120
 #: packages/wp-pay-extensions/contact-form-7/views/issuer-tag-generator.php:30
 #: packages/wp-pay-extensions/contact-form-7/views/payment-method-tag-generator.php:42
 #: packages/wp-pay-extensions/formidable-forms/src/PaymentAction.php:35
@@ -62,10 +64,10 @@ msgstr ""
 #: packages/wp-pay-extensions/restrict-content-pro/src/Gateways/Gateway.php:138
 #: packages/wp-pay-extensions/restrict-content-pro/src/Gateways/Gateway.php:163
 #: packages/wp-pay-extensions/woocommerce/src/Extension.php:216
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:120
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:121
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:138
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:289
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:124
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:125
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:142
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:302
 #: packages/wp-pay-extensions/woocommerce/src/PaymentMethodType.php:134
 msgid "Pronamic"
 msgstr ""
@@ -293,6 +295,7 @@ msgid "With iDEAL you can easily pay online in the secure environment of your ow
 msgstr ""
 
 #: packages/pronamic/pronamic-pay-default-payment-methods/payment-methods/ideal.php:18
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:85
 #: packages/pronamic/wp-pronamic-forms/patterns/donation-form.php:66
 #: packages/pronamic/wp-pronamic-forms/psr-4/PaymentMethodBlocksController.php:98
 #: packages/pronamic/wp-pronamic-forms/psr-4/PaymentMethodBlocksController.php:178
@@ -311,6 +314,98 @@ msgstr ""
 
 #: packages/pronamic/pronamic-pay-default-payment-methods/payment-methods/riverty.php:15
 msgid "Riverty (formerly AfterPay) is a payment service that allows customers to pay after receiving the product."
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:73
+msgid "Payment method icons provided by Pronamic Pay."
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:78
+msgid "Apple"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:79
+#: packages/wp-pay/core/src/Core/PaymentMethods.php:552
+msgid "Apple Pay"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:80
+#: packages/pronamic/wp-pronamic-forms/patterns/donation-form.php:58
+#: packages/pronamic/wp-pronamic-forms/psr-4/PaymentMethodBlocksController.php:88
+#: packages/pronamic/wp-pronamic-forms/psr-4/PaymentMethodBlocksController.php:176
+#: packages/wp-pay/core/src/Core/PaymentMethods.php:553
+#: packages/wp-pay/core/src/Core/PaymentMethods.php:570
+msgid "Bancontact"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:81
+msgid "Bancontact ribbon"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:82
+msgid "Google monogram"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:83
+#: packages/wp-pay/core/src/Core/PaymentMethods.php:586
+msgid "Google Pay"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:84
+#: packages/wp-pay-extensions/easy-digital-downloads/psr-4/Extension.php:82
+#: packages/wp-pay-extensions/event-espresso/src/IDealPaymentMethod.php:43
+msgid "iDEAL"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:86
+#: packages/wp-pay/core/src/Core/PaymentMethods.php:590
+msgid "Klarna"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:87
+msgid "Klarna monogram"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:88
+#: packages/wp-pay-gateways/mollie/views/page-mandate.php:182
+#: packages/wp-pay/core/src/Core/PaymentMethods.php:603
+msgid "PayPal"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:89
+msgid "PayPal monogram"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:90
+msgid "SEPA euro outlined"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:91
+msgid "SEPA euro solid"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:92
+msgid "SEPA filled euro"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:93
+msgid "SEPA outlined euro"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:94
+msgid "Wero"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:95
+msgid "Wero monogram"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:127
+msgid "Payment method icons"
+msgstr ""
+
+#: packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php:128
+msgid "A row of icons of the most important payment methods."
 msgstr ""
 
 #: packages/pronamic/wp-datetime/src/DateTimeTrait.php:234
@@ -1210,14 +1305,6 @@ msgstr ""
 msgid "Payment method"
 msgstr ""
 
-#: packages/pronamic/wp-pronamic-forms/patterns/donation-form.php:58
-#: packages/pronamic/wp-pronamic-forms/psr-4/PaymentMethodBlocksController.php:88
-#: packages/pronamic/wp-pronamic-forms/psr-4/PaymentMethodBlocksController.php:176
-#: packages/wp-pay/core/src/Core/PaymentMethods.php:553
-#: packages/wp-pay/core/src/Core/PaymentMethods.php:570
-msgid "Bancontact"
-msgstr ""
-
 #: packages/pronamic/wp-pronamic-forms/patterns/donation-form.php:62
 #: packages/pronamic/wp-pronamic-forms/psr-4/PaymentMethodBlocksController.php:93
 #: packages/pronamic/wp-pronamic-forms/psr-4/PaymentMethodBlocksController.php:177
@@ -1539,7 +1626,7 @@ msgstr ""
 
 #: packages/pronamic/wp-pronamic-pay-forms/src/FormPostType.php:156
 #: packages/wp-pay-extensions/gravityforms/src/AdminPaymentFormPostType.php:57
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:286
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:299
 #: packages/wp-pay/core/src/Admin/AdminGatewayPostType.php:73
 msgid "Title"
 msgstr ""
@@ -1614,7 +1701,7 @@ msgstr ""
 #: packages/wp-pay-extensions/gravityforms/src/Processor.php:243
 #: packages/wp-pay-extensions/memberpress/src/Pronamic.php:53
 #: packages/wp-pay-extensions/ninjaforms/src/PaymentGateway.php:102
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:640
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:800
 #, php-format
 msgid "Payment for %s"
 msgstr ""
@@ -2822,7 +2909,7 @@ msgstr ""
 #: packages/wp-pay-extensions/gravityforms/views/html-admin-feed-settings.php:134
 #: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:865
 #: packages/wp-pay-extensions/ninjaforms/src/PaymentGateway.php:180
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:327
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:340
 #: packages/wp-pay/core/src/Admin/AdminGatewayPostType.php:234
 msgid "Configuration"
 msgstr ""
@@ -3011,11 +3098,6 @@ msgstr ""
 msgid "Company"
 msgstr ""
 
-#: packages/wp-pay-extensions/easy-digital-downloads/psr-4/Extension.php:82
-#: packages/wp-pay-extensions/event-espresso/src/IDealPaymentMethod.php:43
-msgid "iDEAL"
-msgstr ""
-
 #: packages/wp-pay-extensions/easy-digital-downloads/psr-4/Extension.php:263
 msgid "Payment completed."
 msgstr ""
@@ -3072,7 +3154,7 @@ msgstr[1] ""
 
 #. translators: 1: Gateway admin label prefix, 2: Gateway admin label
 #: packages/wp-pay-extensions/easy-digital-downloads/psr-4/Gateway.php:90
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:119
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:123
 #, php-format
 msgid "%1$s - %2$s"
 msgstr ""
@@ -3101,7 +3183,7 @@ msgstr ""
 
 #: packages/wp-pay-extensions/easy-digital-downloads/psr-4/Gateway.php:196
 #: packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php:904
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:292
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:305
 #: packages/wp-pay-gateways/adyen/views/checkout-drop-in.php:62
 #: packages/wp-pay/core/src/Admin/AdminPaymentPostType.php:192
 #: packages/wp-pay/core/views/meta-box-payment-info.php:82
@@ -3292,7 +3374,7 @@ msgstr ""
 #: packages/wp-pay-extensions/gravityforms/views/html-admin-feed-settings.php:161
 #: packages/wp-pay-gateways/ems-e-commerce/src/Gateway.php:230
 #: packages/wp-pay-gateways/ems-e-commerce/src/Integration.php:93
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:154
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:142
 #: packages/wp-pay/core/views/meta-box-payment-info.php:74
 msgid "Order ID"
 msgstr ""
@@ -3780,7 +3862,8 @@ msgstr ""
 #: packages/wp-pay-extensions/gravityforms/views/html-admin-feed-settings.php:260
 #: packages/wp-pay-gateways/adyen/src/Integration.php:346
 #: packages/wp-pay-gateways/ems-e-commerce/src/Integration.php:103
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:140
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:128
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:166
 msgid "Available tags:"
 msgstr ""
 
@@ -3872,7 +3955,7 @@ msgid "Recurring amount"
 msgstr ""
 
 #: packages/wp-pay-extensions/gravityforms/views/html-admin-feed-settings.php:545
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:306
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:319
 #: packages/wp-pay/core/src/Admin/AdminHealth.php:112
 #: packages/wp-pay/core/src/Admin/AdminHealth.php:153
 msgid "None"
@@ -4538,146 +4621,186 @@ msgid "WooCommerce Order"
 msgstr ""
 
 #. translators: %s: payment method title
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:137
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:141
 #: packages/wp-pay-extensions/woocommerce/src/PaymentMethodType.php:133
 #, php-format
 msgid "Proceed to %s"
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:276
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:289
 msgid "Enable/Disable"
 msgstr ""
 
 #. translators: %s: payment method title
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:280
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:293
 #, php-format
 msgid "Enable %s"
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:288
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:301
 msgid "This controls the title which the user sees during checkout."
 msgstr ""
 
 #. translators: %s: payment method title
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:296
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:309
 #, php-format
 msgid "Give the customer instructions for paying via %s, and let them know that their order won't be shipping until the money is received."
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:302
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:315
 msgid "Icon display"
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:305
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:318
 #: packages/wp-pay/core/src/Admin/AdminGatewayPostType.php:198
 msgid "Default"
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:307
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:320
 msgid "Custom"
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:312
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:325
 msgid "This controls how the payment gateway icon is displayed on the checkout page."
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:317
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:330
 msgid "Custom icon URL"
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:322
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:335
 msgid "Provide a publicly accessible URL for your own payment gateway icon (only used if \"Custom\" is selected in the icon display setting)."
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:333
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:346
 msgid "Payment Options"
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:339
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:352
 msgid "Payment Description"
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:344
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:357
 msgid "This controls the payment description."
 msgstr ""
 
 #. translators: %s: default code
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:346
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:364
+#. translators: %s: default amount
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:359
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:379
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:479
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:495
 #: packages/wp-pay-gateways/adyen/src/Integration.php:354
 #: packages/wp-pay-gateways/buckaroo/src/Integration.php:190
 #: packages/wp-pay-gateways/ems-e-commerce/src/Integration.php:111
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:148
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:136
 #, php-format
 msgid "Default: <code>%s</code>"
 msgstr ""
 
 #. translators: %s: default code
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:346
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:350
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:359
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:363
 msgid "Order {order_number}"
 msgstr ""
 
 #. translators: %s: tags
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:348
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:361
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:481
 #, php-format
 msgid "Tags: %s"
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:362
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:377
 msgid "This controls the icon which the user sees during checkout."
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:429
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:444
 msgid "Show iDEAL issuers"
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:430
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:445
 msgid "Show iDEAL issuer selection field if available"
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:431
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:446
 msgid "With the introduction of the new iDEAL (2.0) in mid-2024, it is recommended to let customers select their bank on the new iDEAL payment screen. As a result, displaying iDEAL banks on your own website is discouraged."
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:448
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:466
+#: packages/wp-pay/core/src/Admin/AdminModule.php:819
+#: packages/wp-pay/core/src/Admin/AdminModule.php:820
+#: packages/wp-pay/core/src/Subscriptions/SubscriptionPostType.php:48
+#: packages/wp-pay/core/src/Subscriptions/SubscriptionPostType.php:50
+#: packages/wp-pay/core/src/Subscriptions/SubscriptionPostType.php:61
+msgid "Subscriptions"
+msgstr ""
+
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:468
+msgid "These settings apply when a customer changes the payment method of a subscription."
+msgstr ""
+
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:472
+msgid "Change Payment Method Description"
+msgstr ""
+
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:477
+msgid "This controls the payment description when a customer changes the payment method of a subscription."
+msgstr ""
+
+#. translators: %s: default code
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:479
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:483
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:589
+msgid "Change payment method for subscription {subscription_number}"
+msgstr ""
+
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:487
+msgid "Change Payment Method Amount"
+msgstr ""
+
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:493
+msgid "Amount charged to verify the new payment method when a customer changes the payment method of a subscription. Leave empty to use the minimum amount of the payment method. Amounts below the minimum are raised to the minimum."
+msgstr ""
+
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:621
 msgid "The payment gateway could not be found."
 msgstr ""
 
 #. translators: %s: WooCommerce checkout settings URL
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:454
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:627
 #, php-format
 msgid "You have to select a gateway configuration on the <a href=\"%s\">WooCommerce checkout settings page</a>."
 msgstr ""
 
-#. translators: %s: order number
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:565
-#, php-format
-msgid "Change payment method for order %s"
-msgstr ""
-
 #. translators: %s: order id
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:643
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:803
 #, php-format
 msgid "WooCommerce order %s"
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:981
+#. translators: %s: error message
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:1164
+#, php-format
+msgid "Renewal payment could not be started: %s"
+msgstr ""
+
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:1248
 msgid "Unable to process refund as gateway configuration does not exist."
 msgstr ""
 
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:997
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:1264
 msgid "Cannot process refund because payment could not be found."
 msgstr ""
 
 #. translators: 1: formatted refund amount, 2: refund gateway reference
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:1058
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:1325
 #, php-format
 msgid "Created refund of %1$s with reference `%2$s`."
 msgstr ""
 
 #. translators: %s: payment method title
-#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:1210
+#: packages/wp-pay-extensions/woocommerce/src/Gateway.php:1477
 #, php-format
 msgid "A required field for the %s payment method is empty."
 msgstr ""
@@ -4828,13 +4951,13 @@ msgstr ""
 
 #: packages/wp-pay-gateways/adyen/src/Integration.php:363
 #: packages/wp-pay-gateways/mollie/src/Integration.php:190
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:193
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:215
 msgid "Webhook URL"
 msgstr ""
 
 #. translators: %s: payment provider name
 #: packages/wp-pay-gateways/adyen/src/Integration.php:370
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:196
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:218
 #, php-format
 msgid "Copy the Webhook URL to the %s dashboard to receive automatic transaction status updates."
 msgstr ""
@@ -4969,7 +5092,7 @@ msgstr ""
 
 #. translators: %s: item index
 #: packages/wp-pay-gateways/adyen/src/PaymentRequestHelper.php:163
-#: packages/wp-pay-gateways/omnikassa-2/src/Gateway.php:256
+#: packages/wp-pay-gateways/omnikassa-2/src/Gateway.php:272
 #, php-format
 msgid "Item %s"
 msgstr ""
@@ -5569,11 +5692,6 @@ msgstr ""
 msgid "Credit card"
 msgstr ""
 
-#: packages/wp-pay-gateways/mollie/views/page-mandate.php:182
-#: packages/wp-pay/core/src/Core/PaymentMethods.php:603
-msgid "PayPal"
-msgstr ""
-
 #: packages/wp-pay-gateways/mollie/views/page-mandate.php:206
 msgid "Reference"
 msgstr ""
@@ -5686,46 +5804,68 @@ msgctxt "Payment method name"
 msgid "Visa"
 msgstr ""
 
-#: packages/wp-pay-gateways/omnikassa-2/src/Gateway.php:510
+#: packages/wp-pay-gateways/omnikassa-2/src/Gateway.php:360
+msgid "Cannot refund: the payment has no Rabo Smart Pay transaction ID. The Rabo Smart Pay webhook may not have been processed for this payment."
+msgstr ""
+
+#: packages/wp-pay-gateways/omnikassa-2/src/Gateway.php:369
+msgid "Cannot refund: the payment transaction ID is a Rabo Smart Pay order ID instead of a transaction ID. The Rabo Smart Pay webhook may not have been processed for this payment."
+msgstr ""
+
+#: packages/wp-pay-gateways/omnikassa-2/src/Gateway.php:539
 msgid "Rabo Smart Pay webhook URL requested:"
 msgstr ""
 
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:112
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:100
 msgctxt "omnikassa"
 msgid "Refresh Token"
 msgstr ""
 
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:121
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:109
 msgctxt "omnikassa"
 msgid "Signing Key"
 msgstr ""
 
 #. translators: %s: <code>merchantOrderId</code>
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:134
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:122
 #, php-format
 msgid "The Rabo Smart Pay %s field must consist strictly of 24 alphanumeric characters, other characters, such as \".\", \"@\", \" \" (space), etc. are not allowed."
 msgstr ""
 
-#. translators: %s: <code>merchantOrderId</code>
-#. translators: %s: <code>skipHppResultPage</code>
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:157
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:182
+#. translators: %s: Rabo Smart Pay field name
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:145
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:179
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:204
 #, php-format
 msgid "This setting defines the Rabo Smart Pay %s field."
 msgstr ""
 
+#. translators: %s: <code>shopperBankstatementReference</code>
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:160
+#, php-format
+msgid "The Rabo Smart Pay %s field is the reference a customer will find on their bank statement. Only alphanumeric characters are used, other characters are removed, and the value is shortened to 24 characters."
+msgstr ""
+
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:172
+msgid "Default: empty, the field is not sent."
+msgstr ""
+
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:176
+msgid "Bank statement reference"
+msgstr ""
+
 #. translators: %s: <code>skipHppResultPage</code>
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:170
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:192
 #, php-format
 msgid "The Rabo Smart Pay %s field makes it possible to skip the hosted result page (also referred to as the \"Success\" or \"Thank you\" page)."
 msgstr ""
 
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:176
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:179
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:198
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:201
 msgid "Skip hosted result page"
 msgstr ""
 
-#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:200
+#: packages/wp-pay-gateways/omnikassa-2/src/Integration.php:222
 msgid "Rabo Smart Pay"
 msgstr ""
 
@@ -5746,12 +5886,12 @@ msgid "OmniKassa order status."
 msgstr ""
 
 #. translators: %s: Payment ID.
-#: packages/wp-pay-gateways/omnikassa-2/src/ReturnController.php:123
+#: packages/wp-pay-gateways/omnikassa-2/src/ReturnController.php:122
 #, php-format
 msgid "No payment found by `payment_id` variable: %s."
 msgstr ""
 
-#: packages/wp-pay-gateways/omnikassa-2/src/ReturnController.php:157
+#: packages/wp-pay-gateways/omnikassa-2/src/ReturnController.php:156
 msgid "Rabo Smart Pay return URL requested:"
 msgstr ""
 
@@ -5759,15 +5899,15 @@ msgstr ""
 msgid "Unique identifier for the gateway configuration post."
 msgstr ""
 
-#: packages/wp-pay-gateways/omnikassa-2/src/WebhookController.php:132
+#: packages/wp-pay-gateways/omnikassa-2/src/WebhookController.php:135
 msgid "Invalid Rabo Smart Pay notification."
 msgstr ""
 
-#: packages/wp-pay-gateways/omnikassa-2/src/WebhookController.php:146
+#: packages/wp-pay-gateways/omnikassa-2/src/WebhookController.php:149
 msgid "No gateway ID given in `id` parameter."
 msgstr ""
 
-#: packages/wp-pay-gateways/omnikassa-2/src/WebhookController.php:156
+#: packages/wp-pay-gateways/omnikassa-2/src/WebhookController.php:159
 msgid "Invalid Rabo Smart Pay gateway."
 msgstr ""
 
@@ -5976,14 +6116,6 @@ msgid "%d subscription on hold"
 msgid_plural "%d subscriptions on hold"
 msgstr[0] ""
 msgstr[1] ""
-
-#: packages/wp-pay/core/src/Admin/AdminModule.php:819
-#: packages/wp-pay/core/src/Admin/AdminModule.php:820
-#: packages/wp-pay/core/src/Subscriptions/SubscriptionPostType.php:48
-#: packages/wp-pay/core/src/Subscriptions/SubscriptionPostType.php:50
-#: packages/wp-pay/core/src/Subscriptions/SubscriptionPostType.php:61
-msgid "Subscriptions"
-msgstr ""
 
 #: packages/wp-pay/core/src/Admin/AdminModule.php:827
 #: packages/wp-pay/core/src/Admin/AdminModule.php:828
@@ -6364,10 +6496,6 @@ msgstr ""
 msgid "Alipay"
 msgstr ""
 
-#: packages/wp-pay/core/src/Core/PaymentMethods.php:552
-msgid "Apple Pay"
-msgstr ""
-
 #: packages/wp-pay/core/src/Core/PaymentMethods.php:554
 msgid "BANCOMAT Pay"
 msgstr ""
@@ -6436,20 +6564,12 @@ msgstr ""
 msgid "Giropay"
 msgstr ""
 
-#: packages/wp-pay/core/src/Core/PaymentMethods.php:586
-msgid "Google Pay"
-msgstr ""
-
 #: packages/wp-pay/core/src/Core/PaymentMethods.php:588
 msgid "iDEAL QR"
 msgstr ""
 
 #: packages/wp-pay/core/src/Core/PaymentMethods.php:589
 msgid "KBC/CBC Payment Button"
-msgstr ""
-
-#: packages/wp-pay/core/src/Core/PaymentMethods.php:590
-msgid "Klarna"
 msgstr ""
 
 #: packages/wp-pay/core/src/Core/PaymentMethods.php:591

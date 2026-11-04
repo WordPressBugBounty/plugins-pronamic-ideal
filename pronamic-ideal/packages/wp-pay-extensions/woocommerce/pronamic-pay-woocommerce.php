@@ -4,9 +4,9 @@
  * Plugin URI: https://www.pronamic.eu/plugins/pronamic-pay-woocommerce/
  * Description: Extend the Pronamic Pay plugin with WooCommerce support to receive payments through a variety of payment providers.
  *
- * Version: 4.15.0
+ * Version: 4.16.0
  * Requires at least: 6.8
- * Requires PHP: 7.4
+ * Requires PHP: 8.3
  *
  * Author: Pronamic
  * Author URI: https://www.pronamic.eu/
@@ -36,13 +36,6 @@ require_once __DIR__ . '/vendor/autoload_packages.php';
 /**
  * Bootstrap.
  */
-add_action(
-	'init',
-	function () {
-		load_plugin_textdomain( 'pronamic-ideal', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-	}
-);
-
 \Pronamic\WordPress\Pay\Plugin::instance(
 	[
 		'file'             => __FILE__,
@@ -64,14 +57,3 @@ add_filter(
 		return $integrations;
 	}
 );
-
-if ( class_exists( \Pronamic\WordPress\Pay\Gateways\Mollie\Integration::class ) ) {
-	add_filter(
-		'pronamic_pay_gateways',
-		function ( $gateways ) {
-			$gateways[] = new \Pronamic\WordPress\Pay\Gateways\Mollie\Integration();
-
-			return $gateways;
-		}
-	);
-}

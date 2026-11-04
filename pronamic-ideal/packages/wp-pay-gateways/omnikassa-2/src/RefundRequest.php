@@ -33,8 +33,7 @@ final class RefundRequest implements IdempotenceInterface, JsonSerializable {
 	/**
 	 * Description.
 	 *
-	 * Reason for refund request. This field is required for partial refunds of payment
-	 * transactions with payment brand Riverty/AfterPay.
+	 * Reason for refund request.
 	 *
 	 * @var string|null
 	 */
@@ -44,12 +43,20 @@ final class RefundRequest implements IdempotenceInterface, JsonSerializable {
 	 * VAT Category.
 	 *
 	 * The VAT category of the product. The values refer to the different rates used in
-	 * the Netherlands. This field is required for partial refunds of payment transactions
-	 * with payment brand Riverty/AfterPay.
+	 * the Netherlands.
 	 *
 	 * @var string|null
 	 */
 	public ?string $vat_category = null;
+
+	/**
+	 * Idempotence ID.
+	 *
+	 * Sent as `Request-ID` header, generated once so retries of this request reuse it.
+	 *
+	 * @var string
+	 */
+	private readonly string $idempotence_id;
 
 	/**
 	 * Construct refund request.
@@ -60,6 +67,7 @@ final class RefundRequest implements IdempotenceInterface, JsonSerializable {
 	public function __construct( string $transaction_id, Money $amount ) {
 		$this->transaction_id = $transaction_id;
 		$this->amount         = $amount;
+		$this->idempotence_id = \wp_generate_uuid4();
 	}
 
 	/**
@@ -86,10 +94,8 @@ final class RefundRequest implements IdempotenceInterface, JsonSerializable {
 
 	/**
 	 * Get idempotence ID.
-	 *
-	 * @return string
 	 */
 	public function get_idempotence_id(): string {
-		return \wp_unique_id();
+		return $this->idempotence_id;
 	}
 }

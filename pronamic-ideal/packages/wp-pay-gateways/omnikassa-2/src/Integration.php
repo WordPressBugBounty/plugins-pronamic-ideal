@@ -21,10 +21,8 @@ use Pronamic\WordPress\Pay\AbstractGatewayIntegration;
 final class Integration extends AbstractGatewayIntegration {
 	/**
 	 * REST route namespace.
-	 *
-	 * @var string
 	 */
-	const REST_ROUTE_NAMESPACE = 'pronamic-pay/omnikassa-2/v1';
+	public const string REST_ROUTE_NAMESPACE = 'pronamic-pay/omnikassa-2/v1';
 
 	/**
 	 * API URL.
@@ -42,7 +40,7 @@ final class Integration extends AbstractGatewayIntegration {
 		$args = \wp_parse_args(
 			$args,
 			[
-				'api_url'       => 'https://betalen.rabobank.nl/omnikassa-api/',
+				'api_url'       => 'https://api.pay.rabobank.nl/omnikassa-api/',
 				'dashboard_url' => 'https://bankieren.rabobank.nl/smartpay/dashboard/home',
 				'id'            => 'rabobank-omnikassa-2',
 				'manual_url'    => 'https://www.pronamicpay.com/en/manuals/how-to-connect-rabo-smart-pay-to-wordpress-with-pronamic-pay/',
@@ -60,18 +58,6 @@ final class Integration extends AbstractGatewayIntegration {
 		parent::__construct( $args );
 
 		$this->api_url = $args['api_url'];
-
-		/**
-		 * Save post.
-		 *
-		 * @link https://github.com/WordPress/WordPress/blob/5.0/wp-includes/post.php#L3724-L3736
-		 * @var callable $delete_access_token_meta_function
-		 */
-		$delete_access_token_meta_function = [ $this, 'delete_access_token_meta' ];
-
-		if ( ! \has_action( 'save_post_pronamic_gateway', $delete_access_token_meta_function ) ) {
-			\add_action( 'save_post_pronamic_gateway', $delete_access_token_meta_function );
-		}
 	}
 
 	/**
@@ -80,6 +66,8 @@ final class Integration extends AbstractGatewayIntegration {
 	 * @return void
 	 */
 	public function setup() {
+		AccessTokenController::instance();
+
 		// Check if dependencies are met and integration is active.
 		if ( ! $this->is_active() ) {
 			return;
@@ -153,7 +141,41 @@ final class Integration extends AbstractGatewayIntegration {
 			'section'     => 'advanced',
 			'title'       => \__( 'Order ID', 'pronamic-ideal' ),
 			'tooltip'     => \sprintf(
-				/* translators: %s: <code>merchantOrderId</code> */
+				/* translators: %s: Rabo Smart Pay field name */
+				\__( 'This setting defines the Rabo Smart Pay %s field.', 'pronamic-ideal' ),
+				$code_field
+			),
+			'type'        => 'text',
+		];
+
+		// Shopper bank statement reference.
+		$code_field = \sprintf( '<code>%s</code>', 'shopperBankstatementReference' );
+
+		$fields[] = [
+			'classes'     => [ 'regular-text', 'code' ],
+			'description' => \sprintf(
+				'%s<br />%s %s<br />%s',
+				\sprintf(
+					/* translators: %s: <code>shopperBankstatementReference</code> */
+					\__(
+						'The Rabo Smart Pay %s field is the reference a customer will find on their bank statement. Only alphanumeric characters are used, other characters are removed, and the value is shortened to 24 characters.',
+						'pronamic-ideal'
+					),
+					$code_field
+				),
+				\__( 'Available tags:', 'pronamic-ideal' ),
+				\sprintf(
+					'<code>%s</code> <code>%s</code>',
+					'{order_id}',
+					'{payment_id}'
+				),
+				\__( 'Default: empty, the field is not sent.', 'pronamic-ideal' )
+			),
+			'meta_key'    => '_pronamic_gateway_omnikassa_2_shopper_bankstatement_reference',
+			'section'     => 'advanced',
+			'title'       => \__( 'Bank statement reference', 'pronamic-ideal' ),
+			'tooltip'     => \sprintf(
+				/* translators: %s: Rabo Smart Pay field name */
 				\__( 'This setting defines the Rabo Smart Pay %s field.', 'pronamic-ideal' ),
 				$code_field
 			),
@@ -178,7 +200,7 @@ final class Integration extends AbstractGatewayIntegration {
 			'section'     => 'advanced',
 			'title'       => \__( 'Skip hosted result page', 'pronamic-ideal' ),
 			'tooltip'     => \sprintf(
-				/* translators: %s: <code>skipHppResultPage</code> */
+				/* translators: %s: Rabo Smart Pay field name */
 				\__( 'This setting defines the Rabo Smart Pay %s field.', 'pronamic-ideal' ),
 				$code_field
 			),
@@ -224,24 +246,16 @@ final class Integration extends AbstractGatewayIntegration {
 		$config->access_token_valid_until = $this->get_meta( $post_id, 'omnikassa_2_access_token_valid_until' );
 		$config->order_id                 = $this->get_meta( $post_id, 'omnikassa_2_order_id' );
 
+		$config->shopper_bankstatement_reference = $this->get_meta(
+			$post_id,
+			'omnikassa_2_shopper_bankstatement_reference'
+		);
+
 		$skip_hosted_result_page = $this->get_meta( $post_id, 'omnikassa_2_skip_hosted_result_page' );
 
 		$config->skip_hosted_result_page = 1 === \intval( $skip_hosted_result_page );
 
 		return $config;
-	}
-
-	/**
-	 * Delete access token meta for the specified post ID.
-	 *
-	 * @link https://github.com/WordPress/WordPress/blob/5.0/wp-includes/post.php#L3724-L3736
-	 * @link https://codex.wordpress.org/Function_Reference/delete_post_meta
-	 * @param int $post_id Post ID.
-	 * @return void
-	 */
-	public static function delete_access_token_meta( $post_id ) {
-		\delete_post_meta( $post_id, '_pronamic_gateway_omnikassa_2_access_token' );
-		\delete_post_meta( $post_id, '_pronamic_gateway_omnikassa_2_access_token_valid_until' );
 	}
 
 	/**

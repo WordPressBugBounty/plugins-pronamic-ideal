@@ -1,0 +1,153 @@
+<?php
+/**
+ * Plugin
+ *
+ * @author    Pronamic
+ * @copyright 2026 Pronamic
+ * @license   GPL-2.0-or-later
+ * @package   Pronamic\PronamicPayIcons
+ */
+
+declare(strict_types=1);
+
+namespace Pronamic\PronamicPayIcons;
+
+/**
+ * Plugin class
+ */
+final class Plugin {
+	/**
+	 * Instance.
+	 *
+	 * @var self|null
+	 */
+	private static ?self $instance = null;
+
+	/**
+	 * Return instance of this class.
+	 *
+	 * @return self A single instance of this class.
+	 */
+	public static function instance(): self {
+		if ( null === self::$instance ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+	}
+
+	/**
+	 * Construct.
+	 */
+	private function __construct() {
+		\add_action( 'init', $this->init( ... ) );
+	}
+
+	/**
+	 * Initialize.
+	 *
+	 * The Icon API was introduced in WordPress 7.1, when this package is used
+	 * as a library on older WordPress versions nothing is registered.
+	 *
+	 * @return void
+	 */
+	private function init(): void {
+		if ( ! \function_exists( 'wp_register_icon' ) ) {
+			return;
+		}
+
+		$this->register_icons();
+		$this->register_block_patterns();
+	}
+
+	/**
+	 * Register icon collection and icons.
+	 *
+	 * @return void
+	 */
+	private function register_icons(): void {
+		\wp_register_icon_collection(
+			'pronamic-pay',
+			[
+				'label'       => \__( 'Pronamic Pay', 'pronamic-ideal' ),
+				'description' => \__( 'Payment method icons provided by Pronamic Pay.', 'pronamic-ideal' ),
+			]
+		);
+
+		$icons = [
+			'apple'              => \__( 'Apple', 'pronamic-ideal' ),
+			'apple-pay'          => \__( 'Apple Pay', 'pronamic-ideal' ),
+			'bancontact'         => \__( 'Bancontact', 'pronamic-ideal' ),
+			'bancontact-ribbon'  => \__( 'Bancontact ribbon', 'pronamic-ideal' ),
+			'google-monogram'    => \__( 'Google monogram', 'pronamic-ideal' ),
+			'google-pay'         => \__( 'Google Pay', 'pronamic-ideal' ),
+			'ideal'              => \__( 'iDEAL', 'pronamic-ideal' ),
+			'ideal-wero'         => \__( 'iDEAL | Wero', 'pronamic-ideal' ),
+			'klarna'             => \__( 'Klarna', 'pronamic-ideal' ),
+			'klarna-monogram'    => \__( 'Klarna monogram', 'pronamic-ideal' ),
+			'paypal'             => \__( 'PayPal', 'pronamic-ideal' ),
+			'paypal-monogram'    => \__( 'PayPal monogram', 'pronamic-ideal' ),
+			'sepa-euro-outline'  => \__( 'SEPA euro outlined', 'pronamic-ideal' ),
+			'sepa-euro-solid'    => \__( 'SEPA euro solid', 'pronamic-ideal' ),
+			'sepa-filled-euro'   => \__( 'SEPA filled euro', 'pronamic-ideal' ),
+			'sepa-outlined-euro' => \__( 'SEPA outlined euro', 'pronamic-ideal' ),
+			'wero'               => \__( 'Wero', 'pronamic-ideal' ),
+			'wero-monogram'      => \__( 'Wero monogram', 'pronamic-ideal' ),
+		];
+
+		$icons_dir = \dirname( __DIR__ ) . '/icons/';
+
+		foreach ( $icons as $slug => $label ) {
+			\wp_register_icon(
+				'pronamic-pay/' . $slug,
+				[
+					'label'     => $label,
+					'file_path' => $icons_dir . $slug . '/' . $slug . '.svg',
+				]
+			);
+		}
+	}
+
+	/**
+	 * Register block patterns.
+	 *
+	 * @return void
+	 */
+	private function register_block_patterns(): void {
+		\register_block_pattern_category(
+			'pronamic-pay',
+			[
+				'label' => \__( 'Pronamic Pay', 'pronamic-ideal' ),
+			]
+		);
+
+		\register_block_pattern(
+			'pronamic-pay/payment-method-icons',
+			[
+				'title'         => \__( 'Payment method icons', 'pronamic-ideal' ),
+				'description'   => \__( 'A row of icons of the most important payment methods.', 'pronamic-ideal' ),
+				'categories'    => [ 'pronamic-pay', 'footer' ],
+				'keywords'      => [ 'ideal', 'wero', 'payment', 'icons' ],
+				// A narrow viewport enlarges the small icons in the inserter preview.
+				'viewportWidth' => 400,
+				'content'       => <<<'HTML'
+					<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"}} -->
+					<div class="wp-block-group">
+					<!-- wp:icon {"icon":"pronamic-pay/ideal-wero","ariaLabel":"iDEAL | Wero","style":{"dimensions":{"width":"32px"}}} /-->
+
+					<!-- wp:icon {"icon":"pronamic-pay/bancontact","ariaLabel":"Bancontact","style":{"dimensions":{"width":"32px"}}} /-->
+
+					<!-- wp:icon {"icon":"pronamic-pay/paypal","ariaLabel":"PayPal","style":{"dimensions":{"width":"32px"}}} /-->
+
+					<!-- wp:icon {"icon":"pronamic-pay/apple-pay","ariaLabel":"Apple Pay","style":{"dimensions":{"width":"32px"}}} /-->
+
+					<!-- wp:icon {"icon":"pronamic-pay/google-pay","ariaLabel":"Google Pay","style":{"dimensions":{"width":"32px"}}} /-->
+
+					<!-- wp:icon {"icon":"pronamic-pay/klarna","ariaLabel":"Klarna","style":{"dimensions":{"width":"32px"}}} /-->
+					</div>
+					<!-- /wp:group -->
+					HTML,
+			]
+		);
+	}
+}

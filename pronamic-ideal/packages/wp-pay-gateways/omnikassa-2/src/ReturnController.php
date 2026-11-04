@@ -39,7 +39,7 @@ final class ReturnController {
 	 * @return void
 	 */
 	public function setup() {
-		\add_action( 'rest_api_init', [ $this, 'rest_api_init' ], 10, 0 );
+		\add_action( 'rest_api_init', $this->rest_api_init( ... ), 10, 0 );
 	}
 
 	/**
@@ -104,7 +104,6 @@ final class ReturnController {
 	 * Get payment.
 	 *
 	 * @param WP_REST_Request $request WordPress REST API request.
-	 * @return Payment
 	 * @throws \InvalidArgumentException Throws exception when REST request does not contain valid payment ID.
 	 */
 	private function get_payment( WP_REST_Request $request ): Payment {

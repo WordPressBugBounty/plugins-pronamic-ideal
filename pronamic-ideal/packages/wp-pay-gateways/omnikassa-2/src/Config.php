@@ -70,6 +70,13 @@ final class Config extends GatewayConfig implements JsonSerializable {
 	public $order_id = '';
 
 	/**
+	 * Shopper bank statement reference.
+	 *
+	 * @var string
+	 */
+	public $shopper_bankstatement_reference = '';
+
+	/**
 	 * Skip hosted result page.
 	 *
 	 * @var bool
@@ -117,8 +124,6 @@ final class Config extends GatewayConfig implements JsonSerializable {
 
 	/**
 	 * Serialize to JSON.
-	 *
-	 * @return object
 	 */
 	public function jsonSerialize(): object {
 		return (object) [

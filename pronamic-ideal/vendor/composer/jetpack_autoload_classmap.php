@@ -7,35 +7,35 @@ $baseDir   = dirname($vendorDir);
 
 return array(
 	'Autoloader' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader.php'
 	),
 	'Autoloader_Handler' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader-handler.php'
 	),
 	'Autoloader_Locator' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader-locator.php'
 	),
 	'Automattic\\Jetpack\\Autoloader\\AutoloadFileWriter' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadFileWriter.php'
 	),
 	'Automattic\\Jetpack\\Autoloader\\AutoloadGenerator' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadGenerator.php'
 	),
 	'Automattic\\Jetpack\\Autoloader\\AutoloadProcessor' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadProcessor.php'
 	),
 	'Automattic\\Jetpack\\Autoloader\\CustomAutoloaderPlugin' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/CustomAutoloaderPlugin.php'
 	),
 	'Automattic\\Jetpack\\Autoloader\\ManifestGenerator' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/ManifestGenerator.php'
 	),
 	'Composer\\Installers\\AglInstaller' => array(
@@ -435,207 +435,687 @@ return array(
 		'path'    => $vendorDir . '/composer/installers/src/Composer/Installers/ZikulaInstaller.php'
 	),
 	'Container' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-container.php'
 	),
 	'Hook_Manager' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-hook-manager.php'
 	),
+	'JsonSchema\\ConstraintError' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/ConstraintError.php'
+	),
 	'JsonSchema\\Constraints\\BaseConstraint' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/BaseConstraint.php'
 	),
 	'JsonSchema\\Constraints\\CollectionConstraint' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/CollectionConstraint.php'
 	),
+	'JsonSchema\\Constraints\\ConstConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/ConstConstraint.php'
+	),
 	'JsonSchema\\Constraints\\Constraint' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Constraint.php'
 	),
 	'JsonSchema\\Constraints\\ConstraintInterface' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/ConstraintInterface.php'
 	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\AdditionalItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/AdditionalItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\AdditionalPropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/AdditionalPropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\AllOfConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/AllOfConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\AnyOfConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/AnyOfConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\ConstConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/ConstConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\ContainsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/ContainsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\DependenciesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/DependenciesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\Draft06Constraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/Draft06Constraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\EnumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/EnumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\ExclusiveMaximumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/ExclusiveMaximumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\ExclusiveMinimumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/ExclusiveMinimumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\Factory' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/Factory.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\FormatConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/FormatConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\ItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/ItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\MaxItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/MaxItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\MaxLengthConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/MaxLengthConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\MaxPropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/MaxPropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\MaximumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/MaximumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\MinItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/MinItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\MinLengthConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/MinLengthConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\MinPropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/MinPropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\MinimumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/MinimumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\MultipleOfConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/MultipleOfConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\NotConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/NotConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\OneOfConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/OneOfConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\PatternConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/PatternConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\PatternPropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/PatternPropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\PropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/PropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\PropertiesNamesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/PropertiesNamesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\RefConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/RefConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\RequiredConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/RequiredConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\TypeConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/TypeConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft06\\UniqueItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft06/UniqueItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\AdditionalItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/AdditionalItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\AdditionalPropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/AdditionalPropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\AllOfConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/AllOfConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\AnyOfConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/AnyOfConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\ConstConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/ConstConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\ContainsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/ContainsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\ContentConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/ContentConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\DependenciesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/DependenciesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\Draft07Constraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/Draft07Constraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\EnumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/EnumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\ExclusiveMaximumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/ExclusiveMaximumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\ExclusiveMinimumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/ExclusiveMinimumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\Factory' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/Factory.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\FormatConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/FormatConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\IfThenElseConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/IfThenElseConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\ItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/ItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\MaxItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/MaxItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\MaxLengthConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/MaxLengthConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\MaxPropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/MaxPropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\MaximumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/MaximumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\MinItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/MinItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\MinLengthConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/MinLengthConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\MinPropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/MinPropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\MinimumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/MinimumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\MultipleOfConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/MultipleOfConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\NotConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/NotConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\OneOfConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/OneOfConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\PatternConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/PatternConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\PatternPropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/PatternPropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\PropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/PropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\PropertiesNamesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/PropertiesNamesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\RefConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/RefConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\RequiredConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/RequiredConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\TypeConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/TypeConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft07\\UniqueItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft07/UniqueItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\AdditionalItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/AdditionalItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\AdditionalPropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/AdditionalPropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\AllOfConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/AllOfConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\AnyOfConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/AnyOfConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\ConstConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/ConstConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\ContainsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/ContainsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\ContentConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/ContentConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\DependentRequiredConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/DependentRequiredConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\DependentSchemasConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/DependentSchemasConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\Draft2019Constraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/Draft2019Constraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\EnumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/EnumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\ExclusiveMaximumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/ExclusiveMaximumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\ExclusiveMinimumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/ExclusiveMinimumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\Factory' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/Factory.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\FormatConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/FormatConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\IfThenElseConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/IfThenElseConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\ItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/ItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\MaxItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/MaxItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\MaxLengthConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/MaxLengthConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\MaxPropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/MaxPropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\MaximumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/MaximumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\MinItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/MinItemsConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\MinLengthConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/MinLengthConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\MinPropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/MinPropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\MinimumConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/MinimumConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\MultipleOfConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/MultipleOfConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\NotConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/NotConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\OneOfConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/OneOfConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\PatternConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/PatternConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\PatternPropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/PatternPropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\PropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/PropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\PropertiesNamesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/PropertiesNamesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\RefConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/RefConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\RequiredConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/RequiredConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\TypeConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/TypeConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\UnevaluatedPropertiesConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/UnevaluatedPropertiesConstraint.php'
+	),
+	'JsonSchema\\Constraints\\Drafts\\Draft2019\\UniqueItemsConstraint' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Drafts/Draft2019/UniqueItemsConstraint.php'
+	),
 	'JsonSchema\\Constraints\\EnumConstraint' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/EnumConstraint.php'
 	),
 	'JsonSchema\\Constraints\\Factory' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/Factory.php'
 	),
 	'JsonSchema\\Constraints\\FormatConstraint' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/FormatConstraint.php'
 	),
 	'JsonSchema\\Constraints\\NumberConstraint' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/NumberConstraint.php'
 	),
 	'JsonSchema\\Constraints\\ObjectConstraint' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/ObjectConstraint.php'
 	),
 	'JsonSchema\\Constraints\\SchemaConstraint' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/SchemaConstraint.php'
 	),
 	'JsonSchema\\Constraints\\StringConstraint' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/StringConstraint.php'
 	),
 	'JsonSchema\\Constraints\\TypeCheck\\LooseTypeCheck' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/TypeCheck/LooseTypeCheck.php'
 	),
 	'JsonSchema\\Constraints\\TypeCheck\\StrictTypeCheck' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/TypeCheck/StrictTypeCheck.php'
 	),
 	'JsonSchema\\Constraints\\TypeCheck\\TypeCheckInterface' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/TypeCheck/TypeCheckInterface.php'
 	),
 	'JsonSchema\\Constraints\\TypeConstraint' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/TypeConstraint.php'
 	),
 	'JsonSchema\\Constraints\\UndefinedConstraint' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Constraints/UndefinedConstraint.php'
 	),
+	'JsonSchema\\DraftIdentifiers' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/DraftIdentifiers.php'
+	),
+	'JsonSchema\\Entity\\ErrorBag' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Entity/ErrorBag.php'
+	),
+	'JsonSchema\\Entity\\ErrorBagProxy' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Entity/ErrorBagProxy.php'
+	),
 	'JsonSchema\\Entity\\JsonPointer' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Entity/JsonPointer.php'
 	),
+	'JsonSchema\\Enum' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Enum.php'
+	),
 	'JsonSchema\\Exception\\ExceptionInterface' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Exception/ExceptionInterface.php'
 	),
 	'JsonSchema\\Exception\\InvalidArgumentException' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Exception/InvalidArgumentException.php'
 	),
 	'JsonSchema\\Exception\\InvalidConfigException' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Exception/InvalidConfigException.php'
 	),
 	'JsonSchema\\Exception\\InvalidSchemaException' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Exception/InvalidSchemaException.php'
 	),
 	'JsonSchema\\Exception\\InvalidSchemaMediaTypeException' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Exception/InvalidSchemaMediaTypeException.php'
 	),
 	'JsonSchema\\Exception\\InvalidSourceUriException' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Exception/InvalidSourceUriException.php'
 	),
 	'JsonSchema\\Exception\\JsonDecodingException' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Exception/JsonDecodingException.php'
 	),
 	'JsonSchema\\Exception\\ResourceNotFoundException' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Exception/ResourceNotFoundException.php'
 	),
 	'JsonSchema\\Exception\\RuntimeException' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Exception/RuntimeException.php'
 	),
 	'JsonSchema\\Exception\\UnresolvableJsonPointerException' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Exception/UnresolvableJsonPointerException.php'
 	),
 	'JsonSchema\\Exception\\UriResolverException' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Exception/UriResolverException.php'
 	),
 	'JsonSchema\\Exception\\ValidationException' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Exception/ValidationException.php'
 	),
 	'JsonSchema\\Iterator\\ObjectIterator' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Iterator/ObjectIterator.php'
 	),
 	'JsonSchema\\Rfc3339' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Rfc3339.php'
 	),
 	'JsonSchema\\SchemaStorage' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/SchemaStorage.php'
 	),
 	'JsonSchema\\SchemaStorageInterface' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/SchemaStorageInterface.php'
 	),
+	'JsonSchema\\Tool\\DeepComparer' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Tool/DeepComparer.php'
+	),
+	'JsonSchema\\Tool\\DeepCopy' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Tool/DeepCopy.php'
+	),
+	'JsonSchema\\Tool\\EcmaPatternConverter' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Tool/EcmaPatternConverter.php'
+	),
+	'JsonSchema\\Tool\\Validator\\RelativeReferenceValidator' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Tool/Validator/RelativeReferenceValidator.php'
+	),
+	'JsonSchema\\Tool\\Validator\\UriValidator' => array(
+		'version' => '6.14.0.0',
+		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Tool/Validator/UriValidator.php'
+	),
 	'JsonSchema\\UriResolverInterface' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/UriResolverInterface.php'
 	),
 	'JsonSchema\\UriRetrieverInterface' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/UriRetrieverInterface.php'
 	),
 	'JsonSchema\\Uri\\Retrievers\\AbstractRetriever' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Uri/Retrievers/AbstractRetriever.php'
 	),
 	'JsonSchema\\Uri\\Retrievers\\Curl' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Uri/Retrievers/Curl.php'
 	),
 	'JsonSchema\\Uri\\Retrievers\\FileGetContents' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Uri/Retrievers/FileGetContents.php'
 	),
 	'JsonSchema\\Uri\\Retrievers\\PredefinedArray' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Uri/Retrievers/PredefinedArray.php'
 	),
 	'JsonSchema\\Uri\\Retrievers\\UriRetrieverInterface' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Uri/Retrievers/UriRetrieverInterface.php'
 	),
 	'JsonSchema\\Uri\\UriResolver' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Uri/UriResolver.php'
 	),
 	'JsonSchema\\Uri\\UriRetriever' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Uri/UriRetriever.php'
 	),
 	'JsonSchema\\Validator' => array(
-		'version' => '5.3.4.0',
+		'version' => '6.14.0.0',
 		'path'    => $vendorDir . '/justinrainbow/json-schema/src/JsonSchema/Validator.php'
 	),
 	'Latest_Autoloader_Guard' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-latest-autoloader-guard.php'
 	),
+	'MabeEnum\\Enum' => array(
+		'version' => '4.7.2.0',
+		'path'    => $vendorDir . '/marc-mabe/php-enum/src/Enum.php'
+	),
+	'MabeEnum\\EnumMap' => array(
+		'version' => '4.7.2.0',
+		'path'    => $vendorDir . '/marc-mabe/php-enum/src/EnumMap.php'
+	),
+	'MabeEnum\\EnumSerializableTrait' => array(
+		'version' => '4.7.2.0',
+		'path'    => $vendorDir . '/marc-mabe/php-enum/src/EnumSerializableTrait.php'
+	),
+	'MabeEnum\\EnumSet' => array(
+		'version' => '4.7.2.0',
+		'path'    => $vendorDir . '/marc-mabe/php-enum/src/EnumSet.php'
+	),
 	'Manifest_Reader' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-manifest-reader.php'
 	),
 	'PHP_Autoloader' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-php-autoloader.php'
 	),
 	'Path_Processor' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-path-processor.php'
 	),
 	'Plugin_Locator' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-plugin-locator.php'
 	),
 	'Plugins_Handler' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-plugins-handler.php'
 	),
 	'Pronamic\\IDealIssuers\\IDealIssuer' => array(
@@ -655,72 +1135,76 @@ return array(
 		'path'    => $vendorDir . '/pronamic/ideal-issuers/src/IDealIssuers.php'
 	),
 	'Pronamic\\PronamicForms\\BlockEditorController' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockEditorController.php'
 	),
 	'Pronamic\\PronamicForms\\BlockPatternCategoriesController' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockPatternCategoriesController.php'
 	),
 	'Pronamic\\PronamicForms\\BlockPatternsController' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockPatternsController.php'
 	),
 	'Pronamic\\PronamicForms\\BlockTypesController' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockTypesController.php'
 	),
 	'Pronamic\\PronamicForms\\BlockUpdater' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockUpdater.php'
 	),
 	'Pronamic\\PronamicForms\\BlockUpdaterCheckField' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockUpdaterCheckField.php'
 	),
 	'Pronamic\\PronamicForms\\BlockUpdaterFormField' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/BlockUpdaterFormField.php'
 	),
 	'Pronamic\\PronamicForms\\FormSubmissionProcessor' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/FormSubmissionProcessor.php'
 	),
 	'Pronamic\\PronamicForms\\PayController' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/PayController.php'
 	),
 	'Pronamic\\PronamicForms\\PaymentMethodBlocksController' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/PaymentMethodBlocksController.php'
 	),
 	'Pronamic\\PronamicForms\\Plugin' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/Plugin.php'
 	),
 	'Pronamic\\PronamicForms\\PostTypesController' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/PostTypesController.php'
 	),
 	'Pronamic\\PronamicForms\\RenderFormBlockController' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/RenderFormBlockController.php'
 	),
 	'Pronamic\\PronamicForms\\RenderFormBlockUpdater' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/RenderFormBlockUpdater.php'
 	),
 	'Pronamic\\PronamicForms\\SubmissionsRestController' => array(
-		'version' => '2.1.1.0',
+		'version' => '2.1.2.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-forms/psr-4/SubmissionsRestController.php'
 	),
 	'Pronamic\\PronamicPayAdminReports\\Plugin' => array(
-		'version' => '1.1.0.0',
+		'version' => '1.1.1.0',
 		'path'    => $baseDir . '/packages/pronamic/pronamic-pay-admin-reports/php/classes/Plugin.php'
 	),
 	'Pronamic\\PronamicPayDefaultPaymentMethods\\Plugin' => array(
 		'version' => '1.1.0.0',
 		'path'    => $baseDir . '/packages/pronamic/pronamic-pay-default-payment-methods/psr-4/Plugin.php'
+	),
+	'Pronamic\\PronamicPayIcons\\Plugin' => array(
+		'version' => '1.0.0.0',
+		'path'    => $baseDir . '/packages/pronamic/pronamic-pay-wp-icons/psr-4/Plugin.php'
 	),
 	'Pronamic\\WordPress\\DateTime\\DateTime' => array(
 		'version' => '2.2.0.0',
@@ -1203,607 +1687,607 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay-extensions/contact-form-7/src/SubmissionHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\CompanyNameController' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/CompanyNameController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\EasyDigitalDownloads' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/EasyDigitalDownloads.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\EasyDigitalDownloadsDependency' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/EasyDigitalDownloadsDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\Extension' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\Gateway' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\PurchaseDataHelper' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/PurchaseDataHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EasyDigitalDownloads\\RefundsManager' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/easy-digital-downloads/psr-4/RefundsManager.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\AddOn' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/AddOn.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\AlipayGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/AlipayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\AlipayPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/AlipayPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\BancontactGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/BancontactGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\BancontactPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/BancontactPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\BankTransferGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/BankTransferGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\BankTransferPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/BankTransferPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\BelfiusGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/BelfiusGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\BelfiusPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/BelfiusPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\BitcoinGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/BitcoinGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\BitcoinPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/BitcoinPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\CreditCardGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/CreditCardGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\CreditCardPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/CreditCardPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\DirectDebitGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/DirectDebitGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\DirectDebitPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/DirectDebitPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\EventEspressoDependency' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/EventEspressoDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\EventEspressoHelper' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/EventEspressoHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\Extension' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\Gateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\GiropayGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/GiropayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\GiropayPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/GiropayPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\IDealGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/IDealGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\IDealPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/IDealPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\IDealQRGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/IDealQRGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\IDealQRPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/IDealQRPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\KBCGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/KBCGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\KBCPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/KBCPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\PayPalGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/PayPalGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\PayPalPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/PayPalPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\PayconiqGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/PayconiqGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\PayconiqPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/PayconiqPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\PaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/PaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\PaymentStatuses' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/PaymentStatuses.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\SofortGateway' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/SofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\EventEspresso\\SofortPaymentMethod' => array(
-		'version' => '4.4.0.0',
+		'version' => '4.4.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/event-espresso/src/SofortPaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\FormidableForms\\BankSelectFieldType' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/formidable-forms/src/BankSelectFieldType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\FormidableForms\\Extension' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/formidable-forms/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\FormidableForms\\FormidableForms' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/formidable-forms/src/FormidableForms.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\FormidableForms\\FormidableFormsDependency' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/formidable-forms/src/FormidableFormsDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\FormidableForms\\FormidableFormsHelper' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/formidable-forms/src/FormidableFormsHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\FormidableForms\\PaymentAction' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/formidable-forms/src/PaymentAction.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\FormidableForms\\PaymentMethodSelectFieldType' => array(
-		'version' => '4.5.0.0',
+		'version' => '4.5.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/formidable-forms/src/PaymentMethodSelectFieldType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Extension' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\GatewayRepository' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/GatewayRepository.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\GatewaySettings' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/GatewaySettings.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\AfterpayComGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/AfterpayComGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\AlipayGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/AlipayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\AmericanExpressGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/AmericanExpressGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\ApplePayGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/ApplePayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BancontactGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/BancontactGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BankTransferGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/BankTransferGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BelfiusGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/BelfiusGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BillieGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/BillieGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BillinkGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/BillinkGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BitcoinGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/BitcoinGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BlikGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/BlikGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\BunqGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/BunqGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\CapayableGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/CapayableGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\CardGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/CardGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\CreditCardGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/CreditCardGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\DirectDebitBancontactGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/DirectDebitBancontactGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\DirectDebitGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/DirectDebitGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\DirectDebitIDealGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/DirectDebitIDealGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\DirectDebitSofortGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/DirectDebitSofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\EpsGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/EpsGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\FocumGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/FocumGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\GiropayGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/GiropayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\GooglePayGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/GooglePayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\IDealGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/IDealGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\IDealQrGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/IDealQrGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\In3Gateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/In3Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\KbcGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/KbcGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\KlarnaGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/KlarnaGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\KlarnaPayLaterGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/KlarnaPayLaterGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\KlarnaPayNowGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/KlarnaPayNowGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\KlarnaPayOverTimeGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/KlarnaPayOverTimeGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\MaestroGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/MaestroGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\MastercardGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/MastercardGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\MbWayGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/MbWayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\MobilepayGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/MobilepayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\MybankGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/MybankGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\PayByBankGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/PayByBankGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\PayPalGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/PayPalGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\PayconiqGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/PayconiqGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\PronamicPayGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/PronamicPayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\Przelewy24Gateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/Przelewy24Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\RivertyGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/RivertyGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\SantanderGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/SantanderGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\SofortGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/SofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\SpraypayGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/SpraypayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\SwishGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/SwishGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\TwintGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/TwintGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\VPayGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/VPayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\VippsGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/VippsGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\Gateways\\VisaGateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/Gateways/VisaGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\GiveDependency' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/GiveDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\Give\\GiveHelper' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.0.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/GiveHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Admin' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Admin.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\AdminPaymentFormPostType' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/AdminPaymentFormPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Entry' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Entry.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Extension' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\FeedsDB' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/FeedsDB.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Fields' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Fields.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\GravityForms' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/GravityForms.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\GravityFormsDependency' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/GravityFormsDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\IssuersField' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/IssuersField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\LeadProperties' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/LeadProperties.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Links' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Links.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PayFeed' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PayFeed.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentAddOn' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentData' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentData.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentFormPostType' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentFormPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentMethodsField' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentMethodsField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentStatuses' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentStatuses.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Processor' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Processor.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Util' => array(
-		'version' => '4.13.2.0',
+		'version' => '4.13.3.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Admin\\AdminSubscriptions' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Admin/AdminSubscriptions.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Admin\\AdminTransactions' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Admin/AdminTransactions.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Extension' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\ApplePayGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/ApplePayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\BancontactGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/BancontactGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\BankTransferGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/BankTransferGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\BitcoinGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/BitcoinGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\CreditCardGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/CreditCardGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\DirectDebitBancontactGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/DirectDebitBancontactGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\DirectDebitGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/DirectDebitGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\DirectDebitIDealGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/DirectDebitIDealGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\DirectDebitSofortGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/DirectDebitSofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\Gateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\GiropayGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/GiropayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\IDealGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/IDealGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\In3Gateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/In3Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\KlarnaPayLaterGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/KlarnaPayLaterGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\KlarnaPayNowGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/KlarnaPayNowGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\KlarnaPayOverTimeGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/KlarnaPayOverTimeGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\PayPalGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/PayPalGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\Przelewy24Gateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/Przelewy24Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Gateways\\SofortGateway' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Gateways/SofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\MemberPress' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/MemberPress.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\MemberPressDependency' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/MemberPressDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Pronamic' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Pronamic.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\SubscriptionStatuses' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/SubscriptionStatuses.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Upgrade310' => array(
-		'version' => '4.11.1.0',
+		'version' => '4.11.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/memberpress/src/Upgrade310.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\NinjaForms\\Extension' => array(
@@ -1831,155 +2315,155 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay-extensions/ninjaforms/src/PaymentMethodsField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Extension' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\ApplePayGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/ApplePayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\BancontactGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/BancontactGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\BankTransferGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/BankTransferGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\BitcoinGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/BitcoinGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\CardGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/CardGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\CreditCardGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/CreditCardGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\DirectDebitBancontactGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/DirectDebitBancontactGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\DirectDebitGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/DirectDebitGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\DirectDebitIDealGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/DirectDebitIDealGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\DirectDebitSofortGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/DirectDebitSofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\EpsGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/EpsGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\Gateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\GiropayGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/GiropayGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\IDealGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/IDealGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\PayByBankGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/PayByBankGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\PayPalGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/PayPalGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Gateways\\SofortGateway' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Gateways/SofortGateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\LengthUnit' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/LengthUnit.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\MembershipStatus' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/MembershipStatus.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\PaymentStatus' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/PaymentStatus.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\RestrictContentProDependency' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/RestrictContentProDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\SubscriptionUpdater' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/SubscriptionUpdater.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Upgrade216' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Upgrade216.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Upgrade450' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Upgrade450.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\RestrictContent\\Util' => array(
-		'version' => '4.11.0.0',
+		'version' => '4.11.1.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\Extension' => array(
-		'version' => '4.15.0.0',
+		'version' => '4.16.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\Gateway' => array(
-		'version' => '4.15.0.0',
+		'version' => '4.16.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\OrderHelper' => array(
-		'version' => '4.15.0.0',
+		'version' => '4.16.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/OrderHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\OrderItemType' => array(
-		'version' => '4.15.0.0',
+		'version' => '4.16.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/OrderItemType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\PaymentMethodType' => array(
-		'version' => '4.15.0.0',
+		'version' => '4.16.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/PaymentMethodType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\SubscriptionHelper' => array(
-		'version' => '4.15.0.0',
+		'version' => '4.16.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/SubscriptionHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\SubscriptionUpdater' => array(
-		'version' => '4.15.0.0',
+		'version' => '4.16.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/SubscriptionUpdater.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\Upgrade420' => array(
-		'version' => '4.15.0.0',
+		'version' => '4.16.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/Upgrade420.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\WooCommerce' => array(
-		'version' => '4.15.0.0',
+		'version' => '4.16.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/WooCommerce.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\WooCommerceDependency' => array(
-		'version' => '4.15.0.0',
+		'version' => '4.16.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/WooCommerceDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\WooCommerceSubscriptionStatus' => array(
-		'version' => '4.15.0.0',
+		'version' => '4.16.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/WooCommerceSubscriptionStatus.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\WooCommerceSubscriptionsController' => array(
-		'version' => '4.15.0.0',
+		'version' => '4.16.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/WooCommerceSubscriptionsController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fields\\CachedCallbackOptions' => array(
@@ -2015,55 +2499,55 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Fields/TextField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\Admin' => array(
-		'version' => '1.3.0.0',
+		'version' => '1.3.1.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/Admin.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\BlocksModule' => array(
-		'version' => '1.3.0.0',
+		'version' => '1.3.1.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/BlocksModule.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\FormPostType' => array(
-		'version' => '1.3.0.0',
+		'version' => '1.3.1.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/FormPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\FormProcessor' => array(
-		'version' => '1.3.0.0',
+		'version' => '1.3.1.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/FormProcessor.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\FormScripts' => array(
-		'version' => '1.3.0.0',
+		'version' => '1.3.1.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/FormScripts.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\FormShortcode' => array(
-		'version' => '1.3.0.0',
+		'version' => '1.3.1.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/FormShortcode.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\FormsSource' => array(
-		'version' => '1.3.0.0',
+		'version' => '1.3.1.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/FormsSource.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\Install' => array(
-		'version' => '1.3.0.0',
+		'version' => '1.3.1.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/Install.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\Integration' => array(
-		'version' => '1.3.0.0',
+		'version' => '1.3.1.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/Integration.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fundraising\\Addon' => array(
-		'version' => '3.2.7.0',
+		'version' => '3.2.8.0',
 		'path'    => $baseDir . '/packages/wp-pay/fundraising/src/Addon.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fundraising\\BlockUpdater' => array(
-		'version' => '3.2.7.0',
+		'version' => '3.2.8.0',
 		'path'    => $baseDir . '/packages/wp-pay/fundraising/src/BlockUpdater.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fundraising\\Blocks' => array(
-		'version' => '3.2.7.0',
+		'version' => '3.2.8.0',
 		'path'    => $baseDir . '/packages/wp-pay/fundraising/src/Blocks.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fundraising\\Util' => array(
-		'version' => '3.2.7.0',
+		'version' => '3.2.8.0',
 		'path'    => $baseDir . '/packages/wp-pay/fundraising/src/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\GatewayIntegrations' => array(
@@ -2075,207 +2559,207 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay/core/src/GatewayPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\AbstractPaymentRequest' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/AbstractPaymentRequest.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\AbstractPaymentResponse' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/AbstractPaymentResponse.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\AdditionalData' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/AdditionalData.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Address' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/Address.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\AddressTransformer' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/AddressTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Amount' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/Amount.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\AmountTransformer' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/AmountTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\ApplicationInfo' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/ApplicationInfo.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\BrowserInformation' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/BrowserInformation.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Channel' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/Channel.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Client' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/Client.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Config' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/Config.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\DetailsInformation' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/DetailsInformation.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Endpoint' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/Endpoint.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Error' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/Error.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\ErrorType' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/ErrorType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\EventCode' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/EventCode.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Gateway' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Gender' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/Gender.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\GenderTransformer' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/GenderTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Integration' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/Integration.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\LineItem' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/LineItem.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\LineItems' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/LineItems.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Name' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/Name.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\NotificationHmac' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/NotificationHmac.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\NotificationRequest' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/NotificationRequest.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\NotificationRequestItem' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/NotificationRequestItem.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\NotificationsController' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/NotificationsController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\ObjectAccess' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/ObjectAccess.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentDetailsRequest' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentDetailsRequest.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentDetailsResponse' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentDetailsResponse.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentMethod' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentMethod.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentMethodDetails' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentMethodDetails.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentMethodIssuer' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentMethodIssuer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentMethodType' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentMethodType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentMethodsRequest' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentMethodsRequest.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentMethodsResponse' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentMethodsResponse.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentRequest' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentRequest.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentRequestHelper' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentRequestHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentResponse' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentResponse.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentResponseAction' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentResponseAction.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentResponseHelper' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentResponseHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentSessionRequest' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentSessionRequest.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\PaymentSessionResponse' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/PaymentSessionResponse.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Request' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/Request.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\ResponseObject' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/ResponseObject.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\ResultCode' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/ResultCode.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\ReturnController' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/ReturnController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\ServiceException' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/ServiceException.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\SiteHealthController' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/SiteHealthController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Adyen\\Util' => array(
-		'version' => '5.0.0.0',
+		'version' => '5.1.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/adyen/src/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Buckaroo\\CLI' => array(
@@ -2343,339 +2827,343 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Gateways/GatewaysDataStoreCPT.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\AddressTransformer' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/AddressTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\Admin' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/Admin.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\CLI' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/CLI.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\CardField' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/CardField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\Config' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/Config.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\CustomerDataStore' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/CustomerDataStore.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\CustomerQuery' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/CustomerQuery.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\Gateway' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\Install' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/Install.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\Integration' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/Integration.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\LineTransformer' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/LineTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\LineTypeTransformer' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/LineTypeTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\LinesTransformer' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/LinesTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\LocaleTransformer' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/LocaleTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\MethodTransformer' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/MethodTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\ProfileDataStore' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/ProfileDataStore.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\RefundTransformer' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/RefundTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\ScriptsController' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/ScriptsController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\StatusTransformer' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/StatusTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\Mollie\\WebhookController' => array(
-		'version' => '4.21.0.0',
+		'version' => '4.22.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/mollie/src/WebhookController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\Client' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/Client.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\Config' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/Config.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\Customer' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/Customer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\Gateway' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\GatewayInfo' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/GatewayInfo.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\Integration' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/Integration.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\Merchant' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/Merchant.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\Methods' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/Methods.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\MultiSafepay' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/MultiSafepay.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\Signature' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/Signature.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\Statuses' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/Statuses.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\Transaction' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/Transaction.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\WooCommerce' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/WooCommerce.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\DirectTransactionRequestMessage' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/XML/DirectTransactionRequestMessage.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\DirectTransactionResponseMessage' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/XML/DirectTransactionResponseMessage.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\GatewaysRequestMessage' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/XML/GatewaysRequestMessage.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\GatewaysResponseMessage' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/XML/GatewaysResponseMessage.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\Message' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/XML/Message.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\RedirectTransactionRequestMessage' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/XML/RedirectTransactionRequestMessage.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\RedirectTransactionResponseMessage' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/XML/RedirectTransactionResponseMessage.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\RequestMessage' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/XML/RequestMessage.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\ResponseMessage' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/XML/ResponseMessage.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\StatusRequestMessage' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/XML/StatusRequestMessage.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\StatusResponseMessage' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/XML/StatusResponseMessage.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\MultiSafepay\\XML\\TransactionParser' => array(
-		'version' => '4.6.3.0',
+		'version' => '4.6.4.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/XML/TransactionParser.php'
 	),
+	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\AccessTokenController' => array(
+		'version' => '5.0.0.0',
+		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/AccessTokenController.php'
+	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Address' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Address.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\AddressTransformer' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/AddressTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Client' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Client.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Config' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Config.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\CustomerInformation' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/CustomerInformation.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\DataHelper' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/DataHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Error' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Error.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Gateway' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Gender' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Gender.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\IdempotenceInterface' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/IdempotenceInterface.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Integration' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Integration.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\InvalidSignatureException' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/InvalidSignatureException.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Message' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Message.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Money' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Money.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\MoneyTransformer' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/MoneyTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Notification' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Notification.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\ObjectAccess' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/ObjectAccess.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Order' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Order.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\OrderAnnounceResponse' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/OrderAnnounceResponse.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\OrderItem' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/OrderItem.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\OrderItems' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/OrderItems.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\OrderResult' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/OrderResult.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\OrderResults' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/OrderResults.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\OrderStatus' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/OrderStatus.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\PaymentBrandForce' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/PaymentBrandForce.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\PaymentBrands' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/PaymentBrands.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\ProductCategories' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/ProductCategories.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\RefundRequest' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/RefundRequest.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\RefundResponse' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/RefundResponse.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\ResponseMessage' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/ResponseMessage.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\ReturnController' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/ReturnController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\ReturnParameters' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/ReturnParameters.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Security' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Security.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Signable' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Signable.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Transaction' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Transaction.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\TransactionStatus' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/TransactionStatus.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\UnknownOrderIdsException' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/UnknownOrderIdsException.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\VatCategories' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/VatCategories.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\WebhookController' => array(
-		'version' => '4.10.0.0',
+		'version' => '5.0.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/WebhookController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\PayNL\\Client' => array(
@@ -2923,7 +3411,7 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Webhooks/WebhookRequestInfo.php'
 	),
 	'Pronamic\\WordPress\\Updater\\Plugin' => array(
-		'version' => '1.0.3.0',
+		'version' => '1.0.4.0',
 		'path'    => $baseDir . '/packages/pronamic/pronamic-wp-updater/src/Plugin.php'
 	),
 	'Pronamic\\WpPayLogos\\ImageService' => array(
@@ -2931,8 +3419,12 @@ return array(
 		'path'    => $vendorDir . '/pronamic/wp-pay-logos/php/ImageService.php'
 	),
 	'Shutdown_Handler' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-shutdown-handler.php'
+	),
+	'Stringable' => array(
+		'version' => '4.7.2.0',
+		'path'    => $vendorDir . '/marc-mabe/php-enum/stubs/Stringable.php'
 	),
 	'Symfony\\Polyfill\\Mbstring\\Mbstring' => array(
 		'version' => '1.43.3.0',
@@ -2947,11 +3439,11 @@ return array(
 		'path'    => $vendorDir . '/viison/address-splitter/src/Exceptions/SplittingException.php'
 	),
 	'Version_Loader' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-version-loader.php'
 	),
 	'Version_Selector' => array(
-		'version' => '5.0.23',
+		'version' => '6.0.3',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-version-selector.php'
 	),
 	'libphonenumber\\CountryCodeSource' => array(

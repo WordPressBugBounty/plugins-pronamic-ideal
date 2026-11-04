@@ -2,11 +2,11 @@
 /**
  * Plugin Name: Pronamic Pay with Rabo Smart Pay
  * Plugin URI: https://www.pronamic.eu/plugins/pronamic-pay-with-rabo-smart-pay/
- * Description:
+ * Description: Accept payments in WordPress via Rabo Smart Pay (formerly Rabo OmniKassa 2.0) with the Pronamic Pay payment processing library.
  *
- * Version: 4.10.0
+ * Version: 5.0.0
  * Requires at least: 5.9
- * Requires PHP: 7.4
+ * Requires PHP: 8.3
  *
  * Author: Pronamic
  * Author URI: https://www.pronamic.eu/
@@ -16,7 +16,7 @@
  *
  * License: GPL-3.0-or-later
  *
- * GitHub URI: https://github.com/wp-pay-gateways/omnikassa-2
+ * GitHub URI: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay
  *
  * @author    Pronamic <info@pronamic.eu>
  * @copyright 2005-2026 Pronamic
@@ -48,7 +48,7 @@ add_filter(
 	static function ( $gateways ) {
 		$gateways[] = new \Pronamic\WordPress\Pay\Gateways\OmniKassa2\Integration(
 			[
-				'api_url' => 'https://betalen.rabobank.nl/omnikassa-api/',
+				'api_url' => 'https://api.pay.rabobank.nl/omnikassa-api/',
 				'id'      => 'rabobank-omnikassa-2',
 				'mode'    => 'live',
 				'name'    => 'Rabobank - Rabo Smart Pay',
@@ -57,7 +57,7 @@ add_filter(
 
 		$gateways[] = new \Pronamic\WordPress\Pay\Gateways\OmniKassa2\Integration(
 			[
-				'api_url' => 'https://betalen.rabobank.nl/omnikassa-api-sandbox/',
+				'api_url' => 'https://api.pay-sandbox.rabobank.nl/omnikassa-api/',
 				'id'      => 'rabobank-omnikassa-2-sandbox',
 				'mode'    => 'test',
 				'name'    => 'Rabobank - Rabo Smart Pay - Sandbox',

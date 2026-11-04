@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the JsonSchema package.
  *
@@ -28,15 +30,15 @@ class UriResolver implements UriResolverInterface
      */
     public function parse($uri)
     {
-        preg_match('|^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?|', $uri, $match);
+        preg_match('|^(([^:/?#]+):)?(//([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?|', (string) $uri, $match);
 
-        $components = array();
+        $components = [];
         if (5 < count($match)) {
-            $components =  array(
+            $components =  [
                 'scheme'    => $match[2],
                 'authority' => $match[4],
                 'path'      => $match[5]
-            );
+            ];
         }
         if (7 < count($match)) {
             $components['query'] = $match[7];
@@ -103,6 +105,11 @@ class UriResolver implements UriResolverInterface
         }
         $baseComponents = $this->parse($baseUri);
         $basePath = $baseComponents['path'];
+        if ($path !== '' && $basePath === '' && $baseComponents['authority'] !== '') {
+            // RFC 3986 section 5.3: when the base uri has an authority but an empty path,
+            // the reference is merged onto '/' rather than being unresolvable.
+            $basePath = '/';
+        }
 
         $baseComponents['path'] = self::combineRelativePathWithBasePath($path, $basePath);
         if (isset($components['fragment'])) {
@@ -125,25 +132,37 @@ class UriResolver implements UriResolverInterface
     public static function combineRelativePathWithBasePath($relativePath, $basePath)
     {
         $relativePath = self::normalizePath($relativePath);
-        if ($relativePath == '') {
+        if (!$relativePath) {
             return $basePath;
         }
-        if ($relativePath[0] == '/') {
+        if ($relativePath[0] === '/') {
             return $relativePath;
         }
-
-        $basePathSegments = explode('/', $basePath);
-
-        preg_match('|^/?(\.\./(?:\./)*)*|', $relativePath, $match);
-        $numLevelUp = strlen($match[0]) /3 + 1;
-        if ($numLevelUp >= count($basePathSegments)) {
+        if (!$basePath) {
             throw new UriResolverException(sprintf("Unable to resolve URI '%s' from base '%s'", $relativePath, $basePath));
         }
 
-        $basePathSegments = array_slice($basePathSegments, 0, -$numLevelUp);
-        $path = preg_replace('|^/?(\.\./(\./)*)*|', '', $relativePath);
+        $dirname = $basePath[strlen($basePath) - 1] === '/' ? $basePath : dirname($basePath);
+        $combined = rtrim($dirname, '/') . '/' . ltrim($relativePath, '/');
+        $combinedSegments = explode('/', $combined);
+        $collapsedSegments = [];
+        while ($combinedSegments) {
+            $segment = array_shift($combinedSegments);
+            if ($segment === '..') {
+                if (count($collapsedSegments) <= 1) {
+                    // Do not remove the top level (domain)
+                    // This is not ideal - the domain should not be part of the path here. parse() and generate()
+                    // should handle the "domain" separately, like the schema.
+                    // Then the if-condition here would be `if (!$collapsedSegments) {`.
+                    throw new UriResolverException(sprintf("Unable to resolve URI '%s' from base '%s'", $relativePath, $basePath));
+                }
+                array_pop($collapsedSegments);
+            } else {
+                $collapsedSegments[] = $segment;
+            }
+        }
 
-        return implode('/', $basePathSegments) . '/' . $path;
+        return implode('/', $collapsedSegments);
     }
 
     /**

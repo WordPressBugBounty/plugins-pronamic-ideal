@@ -5,7 +5,57 @@ All notable changes to this project will be documented in this file.
 This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a CHANGELOG](http://keepachangelog.com/).
 
 ## [Unreleased][unreleased]
--
+
+## [5.0.0] - 2026-11-04
+
+This major release raises the minimum PHP version to 8.3 and changes the text domain. Check your PHP version before updating.
+
+### Added
+
+- Added a Dutch (`nl_NL`) translation and a POT file in the `languages/` folder.
+- Added a `readme.txt` file.
+- Added the customer's full name as `customerInformation.fullName` to the order announcement. Rabo Smart Pay uses this field as the preferred source for the customer name in the dashboard: https://github.com/rabobank-nederland/omnikassa-sdk-doc#customer-name-dashboard
+- Added an optional "Bank statement reference" gateway setting for the Rabo Smart Pay `shopperBankstatementReference` field, the reference a customer finds on their bank statement. It supports the `{order_id}` and `{payment_id}` tags, keeps only alphanumeric characters and is limited to 24 characters. When empty, the field is not sent. See: https://github.com/rabobank-nederland/omnikassa-sdk-doc#field-description
+
+### Changed
+
+- Raised the minimum PHP version from 7.4 to 8.3.
+- Changed the text domain from `pronamic_ideal` to `pronamic-pay-rabo-smart-pay`, the plugin slug. Custom translations for the old `pronamic_ideal` text domain no longer apply to this plugin.
+- Refund error messages can now be translated.
+- Changed the API base URLs to the new Rabo Smart Pay domains: `https://api.pay.rabobank.nl/omnikassa-api/` (production) and `https://api.pay-sandbox.rabobank.nl/omnikassa-api/` (sandbox), replacing `https://betalen.rabobank.nl/omnikassa-api(-sandbox)/`. The Rabobank PHP SDK switched to these domains in version 1.18.0: https://github.com/rabobank-nederland/omnikassa-php-sdk#version-1180
+
+### Fixed
+
+- Fixed refunds failing with `Response is empty, HTTP response: "404 Not Found".` when the access token was missing or expired, for example after reinstalling the plugin. Refunds did not refresh the access token. The client now refreshes the access token itself before every request that needs it and fires the new `pronamic_pay_omnikassa_2_access_token_refreshed` action, which the plugin uses to store the new access token.
+- Refunds for payments without a Rabo Smart Pay transaction ID (or with the Rabo Smart Pay order ID as transaction ID) now fail with a clear message instead of an API error.
+- Rabo Smart Pay API errors with an empty or non-JSON response now mention the request method, endpoint and HTTP status.
+- Fixed the refund `Request-ID` header: it now uses a UUID v4 generated once per refund request instead of the per-request `wp_unique_id()` counter, so refunds are no longer at risk of being treated as duplicates. See also Rabobank PHP SDK 1.18.3: https://github.com/rabobank-nederland/omnikassa-php-sdk/releases/tag/v1.18.3
+
+### Removed
+
+- Removed outdated AfterPay/Riverty references from code comments and the hooks documentation. Rabo Smart Pay no longer supports AfterPay (SDK documentation version 1.18): https://github.com/rabobank-nederland/omnikassa-sdk-doc
+
+### Composer
+
+- Changed `php` from `>=8.1` to `>=8.3`.
+- Changed `justinrainbow/json-schema` from `^6.8` to `^6.14`, locked at `6.14.0`. Versions 6.9 to 6.14 add Draft 2019-09 support and fix many format and error-path validation bugs. An unresolvable `$ref` now throws an error instead of passing silently. Release notes: https://github.com/jsonrainbow/json-schema/releases/tag/6.14.0
+- Changed `wp-pay/core` from `^4.26` to `^4.35`, locked at `v4.35.0`. Pronamic Pay core 4.35.0 changes the default subscription renewal notice period from 1 week to 14 days. It also fixes a currency mismatch exception for payment lines in currencies other than EUR, and errors when loading payments or subscriptions whose post no longer exists. Release notes: https://github.com/pronamic/wp-pay-core/releases/tag/v4.35.0
+- Replaced development dependency `pronamic/wp-documentor` with `solvebeam/wp-hooks-documentor` `^1.5` for generating the hooks documentation in `docs/hooks.md`.
+
+Full set of changes: [`4.11.0...5.0.0`][5.0.0]
+
+[5.0.0]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/v4.11.0...v5.0.0
+
+## [4.11.0] - 2026-11-02
+
+### Composer
+
+- Changed `automattic/jetpack-autoloader` from `^3.0 || ^4.0 || ^5.0` to `^3.0 || ^4.0 || ^5.0 || ^6.0` to allow Jetpack Autoloader 6.x. Jetpack Autoloader 6.0.0 only raises its minimum PHP version to 7.4. Release notes: https://github.com/Automattic/jetpack-autoloader/blob/v6.0.0/CHANGELOG.md
+- Changed `justinrainbow/json-schema` from `^5.2` to `^6.8` for compatibility with Pronamic Pay PayPal 2.4.0. Version 6 is a new major release of the JSON Schema validator with improved type coercion, `const` support and centralized error handling. Upstream marks 6.8.0 as broken; 6.8.1 restores its changes. Release notes: https://github.com/jsonrainbow/json-schema/releases/tag/6.0.0 and https://github.com/jsonrainbow/json-schema/releases/tag/6.8.1
+
+Full set of changes: [`4.10.0...4.11.0`][4.11.0]
+
+[4.11.0]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/v4.10.0...v4.11.0
 
 ## [4.10.0] - 2026-01-05
 
@@ -154,38 +204,38 @@ Full set of changes: [`4.5.3...4.5.4`][4.5.4]
 
 ### Commits
 
-- AfterPay specific code for description is no longer required. ([084c6dc](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/084c6dc9b946a56a3de68b1fd8871ed6c8e9d45f))
-- Removed Riverty (formerly AfterPay) because Rabobank no longer supports it ([eda5176](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/eda51760336ac3d162d973a191e7a678076bd775))
+- AfterPay specific code for description is no longer required. ([084c6dc](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/084c6dc9b946a56a3de68b1fd8871ed6c8e9d45f))
+- Removed Riverty (formerly AfterPay) because Rabobank no longer supports it ([eda5176](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/eda51760336ac3d162d973a191e7a678076bd775))
 
 Full set of changes: [`4.5.2...4.5.3`][4.5.3]
 
-[4.5.3]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/v4.5.2...v4.5.3
+[4.5.3]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/v4.5.2...v4.5.3
 
 ## [4.5.2] - 2023-11-08
 
 ### Fixed
 
-- Fixed problem with Rabo Smart Pay notification (webhook) and status pull call requests, due to incorrect documentation from Rabobank. ([27](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/issues/27))
+- Fixed problem with Rabo Smart Pay notification (webhook) and status pull call requests, due to incorrect documentation from Rabobank. ([27](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/issues/27))
 
 Full set of changes: [`4.5.1...4.5.2`][4.5.2]
 
-[4.5.2]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/v4.5.1...v4.5.2
+[4.5.2]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/v4.5.1...v4.5.2
 
 ## [4.5.1] - 2023-11-06
 
 ### Fixed
 
-- Fixed redirect to return redirect URL after updated payment status (#23). ([e09fa36](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/e09fa368998198c71b1b1e8e3cfe91c1b929a536)) ([4afc90d](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/4afc90d4b2789c137acf6f36239891ff06cf6465))
+- Fixed redirect to return redirect URL after updated payment status (#23). ([e09fa36](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/e09fa368998198c71b1b1e8e3cfe91c1b929a536)) ([4afc90d](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/4afc90d4b2789c137acf6f36239891ff06cf6465))
 
 Full set of changes: [`4.5.0...4.5.1`][4.5.1]
 
-[4.5.1]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/v4.5.0...v4.5.1
+[4.5.1]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/v4.5.0...v4.5.1
 
 ## [4.5.0] - 2023-10-30
 
 ### Changed
 
-- Improvements in differences between order and transaction IDs. ([21](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/issues/21))
+- Improvements in differences between order and transaction IDs. ([21](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/issues/21))
 
 ### Composer
 
@@ -193,36 +243,36 @@ Full set of changes: [`4.5.0...4.5.1`][4.5.1]
 
 Full set of changes: [`4.4.5...4.5.0`][4.5.0]
 
-[4.5.0]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/v4.4.5...v4.5.0
+[4.5.0]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/v4.4.5...v4.5.0
 
 ## [4.4.5] - 2023-07-12
 
 ### Commits
 
-- Updated for removed payment ID fallback in formatted payment string (pronamic/wp-pronamic-pay-adyen#23). ([6fe8f00](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/6fe8f00c6c27e5cd29fbf309fd24fb8908ede03f))
-- Updated dashboard URL to new URL, closes #20. ([e8dcb7c](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/e8dcb7c99f74fe7ec9f2b60c6534e6c9dedacbf1))
+- Updated for removed payment ID fallback in formatted payment string (pronamic/wp-pronamic-pay-adyen#23). ([6fe8f00](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/6fe8f00c6c27e5cd29fbf309fd24fb8908ede03f))
+- Updated dashboard URL to new URL, closes #20. ([e8dcb7c](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/e8dcb7c99f74fe7ec9f2b60c6534e6c9dedacbf1))
 
 Full set of changes: [`4.4.4...4.4.5`][4.4.5]
 
-[4.4.5]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/v4.4.4...v4.4.5
+[4.4.5]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/v4.4.4...v4.4.5
 
 ## [4.4.4] - 2023-06-01
 
 ### Commits
 
-- Switch from `pronamic/wp-deployer` to `pronamic/pronamic-cli`. ([c187c0b](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/c187c0b39979779f1ffbdd94529c835124c51061))
-- Updated .gitattributes ([714f64c](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/714f64cf5e3e4579984387056ce0eb6a9355cb3c))
+- Switch from `pronamic/wp-deployer` to `pronamic/pronamic-cli`. ([c187c0b](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/c187c0b39979779f1ffbdd94529c835124c51061))
+- Updated .gitattributes ([714f64c](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/714f64cf5e3e4579984387056ce0eb6a9355cb3c))
 
 Full set of changes: [`4.4.3...4.4.4`][4.4.4]
 
-[4.4.4]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/v4.4.3...v4.4.4
+[4.4.4]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/v4.4.3...v4.4.4
 
 ## [4.4.3] - 2023-03-29
 
 ### Commits
 
-- Set Composer type to `wordpress-plugin`. ([b343ff6](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/b343ff62137eb21f023a3d8dbdc4cc4b5e82d176))
-- Added support for refunds. ([e7e8e98](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/e7e8e9801918e6cf84b8fd45f1be6d658204795f))
+- Set Composer type to `wordpress-plugin`. ([b343ff6](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/b343ff62137eb21f023a3d8dbdc4cc4b5e82d176))
+- Added support for refunds. ([e7e8e98](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/e7e8e9801918e6cf84b8fd45f1be6d658204795f))
 
 ### Composer
 
@@ -230,7 +280,7 @@ Full set of changes: [`4.4.3...4.4.4`][4.4.4]
 	Release notes: https://github.com/pronamic/wp-pay-core/releases/tag/v4.9.0
 Full set of changes: [`4.4.2...4.4.3`][4.4.3]
 
-[4.4.3]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/v4.4.2...v4.4.3
+[4.4.3]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/v4.4.2...v4.4.3
 
 ## [4.4.2] - 2023-01-31
 ### Composer
@@ -238,29 +288,29 @@ Full set of changes: [`4.4.2...4.4.3`][4.4.3]
 - Changed `php` from `>=8.0` to `>=7.4`.
 Full set of changes: [`4.4.1...4.4.2`][4.4.2]
 
-[4.4.2]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/v4.4.1...v4.4.2
+[4.4.2]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/v4.4.1...v4.4.2
 
 ## [4.4.1] - 2023-01-18
 
 ### Commits
 
-- Ignore `documentation` folder in archive files. ([95ed400](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/95ed40087c0f426ef3d88f6839e22bb0e271f042))
-- Happy 2023. ([05a0f18](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/05a0f1834172eeae9b6432a9e01ebefbf800e932))
+- Ignore `documentation` folder in archive files. ([95ed400](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/95ed40087c0f426ef3d88f6839e22bb0e271f042))
+- Happy 2023. ([05a0f18](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/05a0f1834172eeae9b6432a9e01ebefbf800e932))
 
 Full set of changes: [`4.4.0...4.4.1`][4.4.1]
 
-[4.4.1]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/v4.4.0...v4.4.1
+[4.4.1]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/v4.4.0...v4.4.1
 
 ## [4.4.0] - 2022-12-23
 
 ### Commits
 
-- Updated payment method status the other way around. ([6453eeb](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/6453eebed92faa7c8d9c2b6769f5b94313c4830b))
-- Register payment method Riverty. ([61435d4](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/61435d44879fa1cfb905e4a1b8e8441d4039d485))
-- Added support for Riverty payment method. ([ea91ccc](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/ea91ccccff3c840373ddf56cc3c6bda8f046c634))
-- Removed usage of deprecated `\FILTER_SANITIZE_STRING` in gateway settings fields. ([1003d7c](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/1003d7c5f85428f71a4c35ad65b9515dda4f1d30))
-- Fixed text domain. ([1986728](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/198672876fcb78426b42142103a0ab1c094a29ce))
-- Updated manual URL to pronamicpay.com (pronamic/pronamic-pay#15). ([0514c6e](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/commit/0514c6edef6dee8d3615215ec3c29365db1297f1))
+- Updated payment method status the other way around. ([6453eeb](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/6453eebed92faa7c8d9c2b6769f5b94313c4830b))
+- Register payment method Riverty. ([61435d4](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/61435d44879fa1cfb905e4a1b8e8441d4039d485))
+- Added support for Riverty payment method. ([ea91ccc](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/ea91ccccff3c840373ddf56cc3c6bda8f046c634))
+- Removed usage of deprecated `\FILTER_SANITIZE_STRING` in gateway settings fields. ([1003d7c](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/1003d7c5f85428f71a4c35ad65b9515dda4f1d30))
+- Fixed text domain. ([1986728](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/198672876fcb78426b42142103a0ab1c094a29ce))
+- Updated manual URL to pronamicpay.com (pronamic/pronamic-pay#15). ([0514c6e](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/commit/0514c6edef6dee8d3615215ec3c29365db1297f1))
 
 ### Composer
 
@@ -271,12 +321,12 @@ Full set of changes: [`4.4.0...4.4.1`][4.4.1]
 	Release notes: https://github.com/pronamic/wp-pay-core/releases/tag/v4.3.0
 Full set of changes: [`4.3.0...4.4.0`][4.4.0]
 
-[4.4.0]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/v4.3.0...v4.4.0
+[4.4.0]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/v4.3.0...v4.4.0
 
 ## [4.3.0] - 2022-11-07
-- Changed name from "OmniKassa" to "Rabo Smart Pay". [#13](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/issues/13)
-- Enrich payments methods from new `order/server/api/payment-brands` endpoint. [#15](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/issues/15)
-- Added support for SOFORT payment method. [#16](https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/issues/16)
+- Changed name from "OmniKassa" to "Rabo Smart Pay". [#13](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/issues/13)
+- Enrich payments methods from new `order/server/api/payment-brands` endpoint. [#15](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/issues/15)
+- Added support for SOFORT payment method. [#16](https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/issues/16)
 
 ## [4.2.0] - 2022-09-26
 - Updated payment methods registration.
@@ -396,37 +446,37 @@ Full set of changes: [`4.3.0...4.4.0`][4.4.0]
 ## 1.0.0 - 2017-12-13
 - First release.
 
-[unreleased]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/4.3.0...HEAD
-[4.3.0]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/4.2.0...4.3.0
-[4.2.0]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/4.1.1...4.2.0
-[4.1.1]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/4.1.0...4.1.1
-[4.1.0]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/4.0.0...4.1.0
-[4.0.0]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/3.0.1...4.0.0
-[3.0.1]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/3.0.0...3.0.1
-[3.0.0]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.3.4...3.0.0
-[2.3.4]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.3.3...2.3.4
-[2.3.3]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.3.2...2.3.3
-[2.3.2]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.3.1...2.3.2
-[2.3.1]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.3.0...2.3.1
-[2.3.0]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.2.4...2.3.0
-[2.2.4]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.2.3...2.2.4
-[2.2.3]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.2.2...2.2.3
-[2.2.2]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.2.1...2.2.2
-[2.2.1]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.2.0...2.2.1
-[2.2.0]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.1.10...2.2.0
-[2.1.10]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.1.9...2.1.10
-[2.1.9]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.1.8...2.1.9
-[2.1.8]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.1.7...2.1.8
-[2.1.7]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.1.6...2.1.7
-[2.1.6]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.1.5...2.1.6
-[2.1.5]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.1.4...2.1.5
-[2.1.4]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.1.3...2.1.4
-[2.1.3]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.1.2...2.1.3
-[2.1.2]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.1.1...2.1.2
-[2.1.1]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.1.0...2.1.1
-[2.1.0]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.0.4...2.1.0
-[2.0.4]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.0.3...2.0.4
-[2.0.3]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.0.2...2.0.3
-[2.0.2]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.0.1...2.0.2
-[2.0.1]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/2.0.0...2.0.1
-[2.0.0]: https://github.com/pronamic/wp-pronamic-pay-omnikassa-2/compare/1.0.0...2.0.0
+[unreleased]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/v5.0.0...HEAD
+[4.3.0]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/4.2.0...4.3.0
+[4.2.0]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/4.1.1...4.2.0
+[4.1.1]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/4.1.0...4.1.1
+[4.1.0]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/4.0.0...4.1.0
+[4.0.0]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/3.0.1...4.0.0
+[3.0.1]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/3.0.0...3.0.1
+[3.0.0]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.3.4...3.0.0
+[2.3.4]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.3.3...2.3.4
+[2.3.3]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.3.2...2.3.3
+[2.3.2]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.3.1...2.3.2
+[2.3.1]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.3.0...2.3.1
+[2.3.0]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.2.4...2.3.0
+[2.2.4]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.2.3...2.2.4
+[2.2.3]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.2.2...2.2.3
+[2.2.2]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.2.1...2.2.2
+[2.2.1]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.2.0...2.2.1
+[2.2.0]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.1.10...2.2.0
+[2.1.10]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.1.9...2.1.10
+[2.1.9]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.1.8...2.1.9
+[2.1.8]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.1.7...2.1.8
+[2.1.7]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.1.6...2.1.7
+[2.1.6]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.1.5...2.1.6
+[2.1.5]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.1.4...2.1.5
+[2.1.4]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.1.3...2.1.4
+[2.1.3]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.1.2...2.1.3
+[2.1.2]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.1.1...2.1.2
+[2.1.1]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.1.0...2.1.1
+[2.1.0]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.0.4...2.1.0
+[2.0.4]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.0.3...2.0.4
+[2.0.3]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.0.2...2.0.3
+[2.0.2]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.0.1...2.0.2
+[2.0.1]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/2.0.0...2.0.1
+[2.0.0]: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/compare/1.0.0...2.0.0
