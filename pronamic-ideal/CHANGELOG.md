@@ -8,6 +8,23 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 
 <!-- Start changelog -->
 
+## [11.2.1] - 2026-11-11
+
+### Fixed
+
+- Rabo Smart Pay: fixed refunds failing with "Object does not have `refundTransactionId` property." after Rabo Smart Pay created the refund.
+- Rabo Smart Pay: fixed processing order results with a transaction without the optional `confirmedAmount` property.
+
+### Composer
+
+- Changed `wp-pay-gateways/omnikassa-2` from `v5.0.0` to `v5.0.1`.
+  - All properties of the Rabo Smart Pay refund response are now optional, as in the Rabo Smart Pay OpenAPI definition. The refund status is now stored as `rabo_smart_pay_refund_status` refund meta.
+  - Release notes: https://github.com/pronamic/wp-pronamic-pay-rabo-smart-pay/releases/tag/v5.0.1
+
+Full Changelog: [`v11.2.0...v11.2.1`][11.2.1]
+
+[11.2.1]: https://github.com/pronamic/wp-pronamic-pay/compare/v11.2.0...v11.2.1
+
 ## [11.2.0] - 2026-11-04
 
 ### Added
@@ -5369,7 +5386,7 @@ Full set of changes: [`9.1.3...9.2.0`][9.2.0]
 - Improved the feeds repository and the feed model
 - Initial release
 
-[unreleased]: https://github.com/pronamic/wp-pronamic-pay/compare/v11.2.0-rc.2...HEAD
+[unreleased]: https://github.com/pronamic/wp-pronamic-pay/compare/v11.2.0...HEAD
 [9.1.3]: https://github.com/pronamic/wp-pronamic-ideal/compare/9.1.2...9.1.3
 [9.1.2]: https://github.com/pronamic/wp-pronamic-ideal/compare/9.1.1...9.1.2
 [9.1.1]: https://github.com/pronamic/wp-pronamic-ideal/compare/9.1.0...9.1.1
