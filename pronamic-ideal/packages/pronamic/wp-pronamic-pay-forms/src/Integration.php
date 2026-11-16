@@ -39,7 +39,7 @@ class Integration extends AbstractPluginIntegration {
 
 		$upgrades = $this->get_upgrades();
 
-		$upgrades->add( new Install( null === $version ? '1.0.0' : $version ) );
+		$upgrades->add( new Install( $version ?? '1.0.0' ) );
 	}
 
 	/**
@@ -61,11 +61,11 @@ class Integration extends AbstractPluginIntegration {
 		new FormShortcode( $this );
 
 		// Actions.
-		add_filter( 'the_content', [ $this, 'maybe_add_form_to_content' ] );
+		add_filter( 'the_content', $this->maybe_add_form_to_content( ... ) );
 
-		add_filter( 'pronamic_payment_source_url_' . FormsSource::PAYMENT_FORM, [ $this, 'source_url' ], 10, 2 );
-		add_filter( 'pronamic_payment_source_text_' . FormsSource::PAYMENT_FORM, [ $this, 'source_text' ], 10, 2 );
-		add_filter( 'pronamic_payment_source_description_' . FormsSource::PAYMENT_FORM, [ $this, 'source_description' ], 10, 2 );
+		add_filter( 'pronamic_payment_source_url_' . FormsSource::PAYMENT_FORM, $this->source_url( ... ), 10, 2 );
+		add_filter( 'pronamic_payment_source_text_' . FormsSource::PAYMENT_FORM, $this->source_text( ... ), 10, 2 );
+		add_filter( 'pronamic_payment_source_description_' . FormsSource::PAYMENT_FORM, $this->source_description( ... ), 10, 2 );
 
 		// Blocks module.
 		if ( function_exists( 'register_block_type' ) ) {
@@ -167,6 +167,15 @@ class Integration extends AbstractPluginIntegration {
 		];
 
 		$settings = wp_parse_args( $args, $defaults );
+
+		/**
+		 * Enqueue the form style when a form is rendered, this works for
+		 * the shortcode, the block and the form post type content. Styles
+		 * enqueued after `wp_head` are printed late or hoisted to the head.
+		 *
+		 * @link https://github.com/pronamic/wp-pronamic-pay-forms/issues/2
+		 */
+		wp_enqueue_style( 'pronamic-pay-forms' );
 
 		// Load template.
 		ob_start();

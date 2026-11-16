@@ -27,19 +27,16 @@ use WP_Error;
  */
 class BlocksModule {
 	/**
-	 * Forms integration.
-	 *
-	 * @var Integration
-	 */
-	private $integration;
-
-	/**
 	 * Constructs and initializes a blocks module.
 	 *
 	 * @param Integration $integration Reference to the forms integration.
 	 */
-	public function __construct( Integration $integration ) {
-		$this->integration = $integration;
+	public function __construct(
+		/**
+		 * Forms integration.
+		 */
+		private readonly Integration $integration
+	) {
 	}
 
 	/**
@@ -51,44 +48,14 @@ class BlocksModule {
 		global $wp_version;
 
 		// Initialize.
-		add_action( 'init', [ $this, 'register_scripts' ] );
-		add_action( 'init', [ $this, 'register_block_types' ] );
+		add_action( 'init', $this->register_block_types( ... ) );
 
-		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_styles' ] );
+		add_action( 'enqueue_block_editor_assets', $this->enqueue_styles( ... ) );
 
 		// Source text and description.
-		add_filter( 'pronamic_payment_source_url_' . FormsSource::BLOCK_PAYMENT_FORM, [ $this, 'source_url' ], 10, 2 );
-		add_filter( 'pronamic_payment_source_text_' . FormsSource::BLOCK_PAYMENT_FORM, [ $this, 'source_text' ], 10, 2 );
-		add_filter( 'pronamic_payment_source_description_' . FormsSource::BLOCK_PAYMENT_FORM, [ $this, 'source_description' ], 10, 2 );
-	}
-
-	/**
-	 * Register blocks.
-	 *
-	 * @return void
-	 */
-	public function register_scripts() {
-		// Register editor script.
-		$min = SCRIPT_DEBUG ? '' : '.min';
-
-		wp_register_script(
-			'pronamic-payment-form-editor',
-			plugins_url( '/blocks/payment-form/index.js', __DIR__ ),
-			[ 'wp-blocks', 'wp-components', 'wp-editor', 'wp-element' ],
-			pronamic_pay_plugin()->get_version(),
-			false
-		);
-
-		// Localize script.
-		wp_localize_script(
-			'pronamic-payment-form-editor',
-			'pronamic_payment_form',
-			[
-				'title'          => _x( 'Payment Form', 'Block', 'pronamic-ideal' ),
-				'label_add_form' => __( 'Add form', 'pronamic-ideal' ),
-				'label_amount'   => __( 'Amount', 'pronamic-ideal' ),
-			]
-		);
+		add_filter( 'pronamic_payment_source_url_' . FormsSource::BLOCK_PAYMENT_FORM, $this->source_url( ... ), 10, 2 );
+		add_filter( 'pronamic_payment_source_text_' . FormsSource::BLOCK_PAYMENT_FORM, $this->source_text( ... ), 10, 2 );
+		add_filter( 'pronamic_payment_source_description_' . FormsSource::BLOCK_PAYMENT_FORM, $this->source_description( ... ) );
 	}
 
 	/**
@@ -97,20 +64,29 @@ class BlocksModule {
 	 * @return void
 	 */
 	public function register_block_types() {
-		register_block_type(
-			'pronamic-pay/payment-form',
+		$block_type = register_block_type(
+			__DIR__ . '/../blocks/payment-form',
 			[
-				'title'           => __( 'Payment Form', 'pronamic-ideal' ),
-				'render_callback' => [ $this, 'render_payment_form_block' ],
-				'editor_script'   => 'pronamic-payment-form-editor',
-				'attributes'      => [
-					'amount' => [
-						'type'    => 'string',
-						'default' => '0',
-					],
-				],
+				'render_callback' => $this->render_payment_form_block( ... ),
 			]
 		);
+
+		if ( false === $block_type ) {
+			return;
+		}
+
+		// Localize editor script.
+		foreach ( $block_type->editor_script_handles as $handle ) {
+			wp_localize_script(
+				$handle,
+				'pronamic_payment_form',
+				[
+					'title'          => _x( 'Payment Form', 'Block', 'pronamic-ideal' ),
+					'label_add_form' => __( 'Add form', 'pronamic-ideal' ),
+					'label_amount'   => __( 'Amount', 'pronamic-ideal' ),
+				]
+			);
+		}
 	}
 
 	/**
@@ -138,7 +114,7 @@ class BlocksModule {
 		if ( ! empty( $attributes['amount'] ) ) {
 			try {
 				$amounts[] = Number::from_mixed( $attributes['amount'] );
-			} catch ( \Exception $e ) {
+			} catch ( \Exception ) {
 				/**
 				 * It is possible that in the past localized numbers were stored in the amount attribute.
 				 */
@@ -146,7 +122,7 @@ class BlocksModule {
 					$parser = new NumberParser();
 
 					$amounts[] = $parser->parse( $attributes['amount'] );
-				} catch ( \Exception $e ) {
+				} catch ( \Exception ) {
 					return '';
 				}
 			}
@@ -168,8 +144,6 @@ class BlocksModule {
 		if ( null === $gateway ) {
 			return \__( 'It is currently not possible to pay via this form, please contact us for more information (error: no payment gateway found).', 'pronamic-ideal' );
 		}
-
-		$this->enqueue_styles();
 
 		// Return form output.
 		return $this->integration->get_form_output( $args );
@@ -210,12 +184,11 @@ class BlocksModule {
 	/**
 	 * Source description filter.
 	 *
-	 * @param string  $text    The source text to filter.
-	 * @param Payment $payment The payment for the specified source text.
+	 * @param string $text The source text to filter.
 	 *
 	 * @return string
 	 */
-	public function source_description( $text, Payment $payment ) {
+	public function source_description( $text ) {
 		$text = __( 'Payment Form Block', 'pronamic-ideal' ) . '<br />';
 
 		return $text;

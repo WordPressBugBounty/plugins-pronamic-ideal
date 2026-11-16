@@ -2499,39 +2499,39 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay/core/src/Fields/TextField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\Admin' => array(
-		'version' => '1.3.1.0',
+		'version' => '1.4.0.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/Admin.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\BlocksModule' => array(
-		'version' => '1.3.1.0',
+		'version' => '1.4.0.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/BlocksModule.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\FormPostType' => array(
-		'version' => '1.3.1.0',
+		'version' => '1.4.0.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/FormPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\FormProcessor' => array(
-		'version' => '1.3.1.0',
+		'version' => '1.4.0.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/FormProcessor.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\FormScripts' => array(
-		'version' => '1.3.1.0',
+		'version' => '1.4.0.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/FormScripts.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\FormShortcode' => array(
-		'version' => '1.3.1.0',
+		'version' => '1.4.0.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/FormShortcode.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\FormsSource' => array(
-		'version' => '1.3.1.0',
+		'version' => '1.4.0.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/FormsSource.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\Install' => array(
-		'version' => '1.3.1.0',
+		'version' => '1.4.0.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/Install.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Forms\\Integration' => array(
-		'version' => '1.3.1.0',
+		'version' => '1.4.0.0',
 		'path'    => $baseDir . '/packages/pronamic/wp-pronamic-pay-forms/src/Integration.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fundraising\\Addon' => array(
