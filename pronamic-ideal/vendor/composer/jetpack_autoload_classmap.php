@@ -2419,51 +2419,51 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay-extensions/restrict-content-pro/src/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\Extension' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.17.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\Gateway' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.17.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\OrderHelper' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.17.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/OrderHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\OrderItemType' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.17.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/OrderItemType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\PaymentMethodType' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.17.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/PaymentMethodType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\SubscriptionHelper' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.17.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/SubscriptionHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\SubscriptionUpdater' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.17.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/SubscriptionUpdater.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\Upgrade420' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.17.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/Upgrade420.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\WooCommerce' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.17.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/WooCommerce.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\WooCommerceDependency' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.17.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/WooCommerceDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\WooCommerceSubscriptionStatus' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.17.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/WooCommerceSubscriptionStatus.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\WooCommerce\\WooCommerceSubscriptionsController' => array(
-		'version' => '4.16.0.0',
+		'version' => '4.17.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/woocommerce/src/WooCommerceSubscriptionsController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Fields\\CachedCallbackOptions' => array(
