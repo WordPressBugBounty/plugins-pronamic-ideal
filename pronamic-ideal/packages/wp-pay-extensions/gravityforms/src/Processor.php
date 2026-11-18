@@ -39,20 +39,6 @@ use Pronamic\WordPress\Pay\Subscriptions\SubscriptionPhase;
  */
 class Processor {
 	/**
-	 * The Pronamic Pay Gravity Forms extension
-	 *
-	 * @var Extension
-	 */
-	private $extension;
-
-	/**
-	 * The Gravity Forms form
-	 *
-	 * @var array
-	 */
-	private $form;
-
-	/**
 	 * The Gravity Forms form ID
 	 *
 	 * @var null|string
@@ -93,10 +79,15 @@ class Processor {
 	 * @param array     $form      Gravity Forms form.
 	 * @param Extension $extension Extension.
 	 */
-	public function __construct( array $form, Extension $extension ) {
-		$this->extension = $extension;
-		$this->form      = $form;
-		$this->form_id   = isset( $form['id'] ) ? $form['id'] : null;
+	public function __construct( /**
+		 * The Gravity Forms form
+		 */
+		private array $form, /**
+		 * The Pronamic Pay Gravity Forms extension
+		 */
+		private readonly Extension $extension 
+	) {
+		$this->form_id = $this->form['id'] ?? null;
 
 		// Determine payment feed for processing.
 		$feeds = FeedsDB::get_active_feeds_by_form_id( $this->form_id );
@@ -104,13 +95,13 @@ class Processor {
 		$entry = [];
 
 		foreach ( $feeds as $feed ) {
-			$gf_feed = $extension->addon->get_feed( $feed->id );
+			$gf_feed = $this->extension->addon->get_feed( $feed->id );
 
 			if ( false === $gf_feed ) {
 				continue;
 			}
 
-			if ( ! $extension->addon->is_feed_condition_met( $gf_feed, $form, $entry ) ) {
+			if ( ! $this->extension->addon->is_feed_condition_met( $gf_feed, $this->form, $entry ) ) {
 				continue;
 			}
 
@@ -131,25 +122,29 @@ class Processor {
 		 */
 
 		// Lead.
-		add_filter( 'gform_entry_post_save', [ $this, 'entry_post_save' ], 10, 2 );
+		add_filter( 'gform_entry_post_save', $this->entry_post_save( ... ), 10, 2 );
 
 		// Delay (@see GFFormDisplay::handle_submission > GFCommon::send_form_submission_notifications).
-		add_filter( 'gform_disable_admin_notification_' . $this->form_id, [ $this, 'maybe_delay_admin_notification' ], 10, 2 );
-		add_filter( 'gform_disable_user_notification_' . $this->form_id, [ $this, 'maybe_delay_user_notification' ], 10, 2 );
-		add_filter( 'gform_disable_post_creation_' . $this->form_id, [ $this, 'maybe_delay_post_creation' ], 10, 2 );
-		add_filter( 'gform_disable_notification_' . $this->form_id, [ $this, 'maybe_delay_notification' ], 10, 3 );
+		add_filter( 'gform_disable_admin_notification_' . $this->form_id, $this->maybe_delay_admin_notification( ... ), 10, 2 );
+		add_filter( 'gform_disable_user_notification_' . $this->form_id, $this->maybe_delay_user_notification( ... ), 10, 2 );
+		add_filter( 'gform_disable_post_creation_' . $this->form_id, $this->maybe_delay_post_creation( ... ), 10, 2 );
+		add_filter( 'gform_disable_notification_' . $this->form_id, $this->maybe_delay_notification( ... ), 10, 3 );
 
 		// Confirmation (@see GFFormDisplay::handle_confirmation).
 		// @link http://www.gravityhelp.com/documentation/page/Gform_confirmation.
-		add_filter( 'gform_confirmation_' . $this->form_id, [ $this, 'confirmation' ], 10, 2 );
+		add_filter( 'gform_confirmation_' . $this->form_id, $this->confirmation( ... ), 10, 2 );
 
 		/*
 		 * After submission.
 		 */
-		add_action( 'gform_after_submission_' . $this->form_id, [ $this, 'after_submission' ], 10, 2 );
+		add_action( 'gform_after_submission_' . $this->form_id, $this->after_submission( ... ), 10, 2 );
 
+		/*
+		 * This callback is removed again for free payments, which requires an
+		 * array callable: each first-class callable is a new `Closure` object.
+		 */
 		add_filter( 'gform_is_delayed_pre_process_feed_' . $this->form_id, [ $this, 'maybe_delay_feed' ], 10, 4 );
-		add_filter( 'gravityflow_is_delayed_pre_process_workflow', [ $this, 'maybe_delay_workflow' ], 10, 3 );
+		add_filter( 'gravityflow_is_delayed_pre_process_workflow', $this->maybe_delay_workflow( ... ), 10, 3 );
 	}
 
 	/**

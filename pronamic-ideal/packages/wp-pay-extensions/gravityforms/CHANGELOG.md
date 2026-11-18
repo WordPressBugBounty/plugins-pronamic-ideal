@@ -6,6 +6,40 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 
 ## [Unreleased][unreleased]
 
+## [4.14.0] - 2026-11-18
+
+### Added
+
+- Added a Dutch (`nl_NL`) translation.
+
+### Changed
+
+- Raised the minimum required PHP version from 8.2 to 8.3.
+- Limited the "Send Notifications Delay" setting to payment feeds that already delay notifications, in preparation for its removal in favour of notification events ([#58](https://github.com/pronamic/wp-pronamic-pay-gravityforms/pull/58)).
+- Changed the text domain from `pronamic_ideal` to `pronamic-pay-gravity-forms`.
+- Changed most hook callbacks to first-class callables. Code that removes these callbacks with an array callable, such as `[ $object, 'method' ]`, no longer works.
+- Moved the admin assets to `assets/dist` and build them with `@wordpress/scripts`.
+
+### Fixed
+
+- Fixed the position of the merge tag selector in the payment feed settings and renamed "Available tags" to "Frequently used tags" ([#75](https://github.com/pronamic/wp-pronamic-pay-gravityforms/pull/75)).
+
+### Removed
+
+- Removed the unused `gf_get_form_data` AJAX action ([#72](https://github.com/pronamic/wp-pronamic-pay-gravityforms/pull/72)).
+
+### Composer
+
+- Changed `composer/installers` from `^2.2` to `^2.3`.
+- Changed `pronamic/wp-money` from `^2.4` to `^2.5`.
+- Changed `wp-pay/core` from `^4.32` to `^4.35`.
+- Upgraded the development tools, including `rector/rector` to `^2.8`, `phpstan/phpstan` to `^2.3` and `vimeo/psalm` to `^6.0`.
+- Removed the development dependencies `pronamic/pronamic-cli` and `wp-pay-gateways/mollie`.
+
+Full set of changes: [`4.13.3...4.14.0`][4.14.0]
+
+[4.14.0]: https://github.com/pronamic/wp-pronamic-pay-gravityforms/compare/v4.13.3...v4.14.0
+
 ## [4.13.3] - 2026-11-02
 
 ### Composer
@@ -784,7 +818,7 @@ Full set of changes: [`4.3.0...4.4.0`][4.4.0]
 ## 1.0.0 - 2015-01-01
 - First release.
 
-[unreleased]: https://github.com/pronamic/wp-pronamic-pay-gravityforms/compare/v4.13.3...HEAD
+[unreleased]: https://github.com/pronamic/wp-pronamic-pay-gravityforms/compare/v4.14.0...HEAD
 [4.3.0]: https://github.com/pronamic/wp-pronamic-pay-gravityforms/compare/4.2.2...4.3.0
 [4.2.2]: https://github.com/pronamic/wp-pronamic-pay-gravityforms/compare/4.2.1...4.2.2
 [4.2.1]: https://github.com/pronamic/wp-pronamic-pay-gravityforms/compare/4.2.0...4.2.1

@@ -2107,79 +2107,79 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay-extensions/give/src/GiveHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Admin' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Admin.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\AdminPaymentFormPostType' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/AdminPaymentFormPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Entry' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Entry.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Extension' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Extension.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\FeedsDB' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/FeedsDB.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Fields' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Fields.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\GravityForms' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/GravityForms.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\GravityFormsDependency' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/GravityFormsDependency.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\IssuersField' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/IssuersField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\LeadProperties' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/LeadProperties.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Links' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Links.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PayFeed' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PayFeed.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentAddOn' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentAddOn.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentData' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentData.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentFormPostType' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentFormPostType.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentMethodsField' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentMethodsField.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\PaymentStatuses' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/PaymentStatuses.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Processor' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Processor.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\GravityForms\\Util' => array(
-		'version' => '4.13.3.0',
+		'version' => '4.14.0.0',
 		'path'    => $baseDir . '/packages/wp-pay-extensions/gravityforms/src/Util.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Extensions\\MemberPress\\Admin\\AdminSubscriptions' => array(

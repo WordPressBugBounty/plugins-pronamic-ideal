@@ -166,7 +166,9 @@ function _pronamic_pay_gravityforms_dropdown_input( $form, $args ) {
 					<td>
 						<input name="_pronamic_pay_gf_entry_id_prefix" value="" type="hidden" />
 
-						<input id="_pronamic_pay_gf_order_id" name="_pronamic_pay_gf_order_id" value="<?php echo esc_attr( $order_id ); ?>" placeholder="{entry_id}" type="text" class="input-text regular-input merge-tag-support mt-position-right mt-hide_all_fields" />
+						<div class="gform-settings-input__container gform-settings-input__container--with-merge-tag">
+							<input id="_pronamic_pay_gf_order_id" name="_pronamic_pay_gf_order_id" value="<?php echo esc_attr( $order_id ); ?>" placeholder="{entry_id}" type="text" class="input-text regular-input merge-tag-support mt-position-right mt-hide_all_fields" />
+						</div>
 
 						<span class="description pronamic-pay-description">
 							<?php
@@ -194,7 +196,7 @@ function _pronamic_pay_gravityforms_dropdown_input( $form, $args ) {
 							echo wp_kses(
 								sprintf(
 									'%s %s',
-									__( 'Available tags:', 'pronamic-ideal' ),
+									__( 'Frequently used tags:', 'pronamic-ideal' ),
 									sprintf(
 										'<code>%s</code> <code>%s</code> <code>%s</code>',
 										'{entry_id}',
@@ -229,7 +231,9 @@ function _pronamic_pay_gravityforms_dropdown_input( $form, $args ) {
 						$transaction_description = get_post_meta( $post_id, '_pronamic_pay_gf_transaction_description', true );
 
 						?>
-						<input id="_pronamic_pay_gf_transaction_description" name="_pronamic_pay_gf_transaction_description" value="<?php echo esc_attr( $transaction_description ); ?>" placeholder="{entry_id}" type="text" class="regular-text merge-tag-support mt-position-right mt-hide_all_fields" />
+						<div class="gform-settings-input__container gform-settings-input__container--with-merge-tag">
+							<input id="_pronamic_pay_gf_transaction_description" name="_pronamic_pay_gf_transaction_description" value="<?php echo esc_attr( $transaction_description ); ?>" placeholder="{entry_id}" type="text" class="regular-text merge-tag-support mt-position-right mt-hide_all_fields" />
+						</div>
 
 						<span class="description pronamic-pay-description">
 							<?php
@@ -257,7 +261,7 @@ function _pronamic_pay_gravityforms_dropdown_input( $form, $args ) {
 							echo wp_kses(
 								sprintf(
 									'%s %s',
-									__( 'Available tags:', 'pronamic-ideal' ),
+									__( 'Frequently used tags:', 'pronamic-ideal' ),
 									sprintf(
 										'<code>%s</code> <code>%s</code> <code>%s</code>',
 										'{entry_id}',
@@ -279,70 +283,6 @@ function _pronamic_pay_gravityforms_dropdown_input( $form, $args ) {
 					</td>
 				</tr>
 
-				<?php
-
-				$notifications = [];
-
-				if ( isset( $form_meta['notifications'] ) && is_array( $form_meta['notifications'] ) ) {
-					$notifications = $form_meta['notifications'];
-				}
-
-				$notifications = \array_filter(
-					$notifications,
-					function ( $notification ) {
-						return 'form_submission' === $notification['event'];
-					}
-				);
-
-				if ( count( $notifications ) > 0 ) :
-					?>
-
-					<tr>
-						<th scope="row">
-							<?php esc_html_e( 'Send Notifications Delay', 'pronamic-ideal' ); ?>
-
-							<span class="dashicons dashicons-editor-help pronamic-pay-tip" title="<?php esc_attr_e( 'Notifications for which sending will be delayed until the payment has been received.', 'pronamic-ideal' ); ?>"></span>
-						</th>
-						<td>
-							<p>
-								<?php esc_html_e( 'Delay sending notifications until payment has been received.', 'pronamic-ideal' ); ?>
-							</p>
-
-							<ul id="gf_ideal_delay_notifications">
-
-								<?php foreach ( $notifications as $notification ) : ?>
-
-									<li>
-										<?php
-
-										$id = $notification['id'];
-
-										printf(
-											'<input id="%s" type="checkbox" value="%s" name="_pronamic_pay_gf_delay_notification_ids[]" %s />',
-											esc_attr( 'pronamic-pay-gf-notification-' . $id ),
-											esc_attr( $id ),
-											checked( in_array( $id, $pay_feed->delay_notification_ids, true ), true, false )
-										);
-
-										printf( ' ' );
-
-										printf(
-											'<label class="inline" for="%s">%s</label>',
-											esc_attr( 'pronamic-pay-gf-notification-' . $id ),
-											esc_html( $notification['name'] )
-										);
-
-										?>
-									</li>
-
-								<?php endforeach; ?>
-
-							</ul>
-						</td>
-					</tr>
-
-				<?php endif; ?>
-
 				<tr>
 					<th scope="row">
 						<?php esc_html_e( 'Delay actions', 'pronamic-ideal' ); ?>
@@ -362,9 +302,7 @@ function _pronamic_pay_gravityforms_dropdown_input( $form, $args ) {
 
 						$delay_actions = array_filter(
 							$delay_actions,
-							function ( $action ) {
-								return $action['active'];
-							}
+							fn( $action ) => $action['active']
 						);
 
 						foreach ( $delay_actions as $slug => $data ) {
@@ -396,6 +334,80 @@ function _pronamic_pay_gravityforms_dropdown_input( $form, $args ) {
 						</ul>
 					</td>
 				</tr>
+
+				<?php
+
+				$notifications = [];
+
+				if ( isset( $form_meta['notifications'] ) && is_array( $form_meta['notifications'] ) ) {
+					$notifications = $form_meta['notifications'];
+				}
+
+				$notifications = \array_filter(
+					$notifications,
+					fn( $notification ) => 'form_submission' === $notification['event']
+				);
+
+				if ( count( $notifications ) > 0 ) :
+					?>
+
+					<tr>
+						<th scope="row">
+							<?php esc_html_e( 'Send Notifications Delay', 'pronamic-ideal' ); ?>
+
+							<span class="dashicons dashicons-editor-help pronamic-pay-tip" title="<?php esc_attr_e( 'Notifications for which sending will be delayed until the payment has been received.', 'pronamic-ideal' ); ?>"></span>
+						</th>
+						<td>
+							<?php if ( $pay_feed->has_delayed_notifications() ) : ?>
+
+								<p>
+									<?php esc_html_e( 'Delay sending notifications until payment has been received.', 'pronamic-ideal' ); ?>
+								</p>
+
+								<ul id="gf_ideal_delay_notifications">
+
+									<?php foreach ( $notifications as $notification ) : ?>
+
+										<li>
+											<?php
+
+											$id = $notification['id'];
+
+											printf(
+												'<input id="%s" type="checkbox" value="%s" name="_pronamic_pay_gf_delay_notification_ids[]" %s />',
+												esc_attr( 'pronamic-pay-gf-notification-' . $id ),
+												esc_attr( $id ),
+												checked( in_array( $id, $pay_feed->delay_notification_ids, true ), true, false )
+											);
+
+											printf( ' ' );
+
+											printf(
+												'<label class="inline" for="%s">%s</label>',
+												esc_attr( 'pronamic-pay-gf-notification-' . $id ),
+												esc_html( $notification['name'] )
+											);
+
+											?>
+										</li>
+
+									<?php endforeach; ?>
+
+								</ul>
+
+							<?php endif; ?>
+
+							<?php if ( ! $pay_feed->has_delayed_notifications() ) : ?>
+
+								<p>
+									<?php esc_html_e( 'To send notifications after a successful payment, choose an event in the notification settings.', 'pronamic-ideal' ); ?>
+								</p>
+
+							<?php endif; ?>
+						</td>
+					</tr>
+
+				<?php endif; ?>
 			</table>
 		</div>
 
@@ -430,10 +442,10 @@ function _pronamic_pay_gravityforms_dropdown_input( $form, $args ) {
 						if ( isset( $pay_feed->links[ $name ] ) ) {
 							$link = $pay_feed->links[ $name ];
 
-							$type            = isset( $link['type'] ) ? $link['type'] : null;
-							$confirmation_id = isset( $link['confirmation_id'] ) ? $link['confirmation_id'] : null;
-							$page_id         = isset( $link['page_id'] ) ? $link['page_id'] : null;
-							$url             = isset( $link['url'] ) ? $link['url'] : null;
+							$type            = $link['type'] ?? null;
+							$confirmation_id = $link['confirmation_id'] ?? null;
+							$page_id         = $link['page_id'] ?? null;
+							$url             = $link['url'] ?? null;
 						}
 
 						?>
