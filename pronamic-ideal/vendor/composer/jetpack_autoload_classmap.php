@@ -3007,163 +3007,163 @@ return array(
 		'path'    => $baseDir . '/packages/wp-pay-gateways/multisafepay/src/XML/TransactionParser.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\AccessTokenController' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/AccessTokenController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Address' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Address.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\AddressTransformer' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/AddressTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Client' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Client.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Config' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Config.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\CustomerInformation' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/CustomerInformation.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\DataHelper' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/DataHelper.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Error' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Error.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Gateway' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Gateway.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Gender' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Gender.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\IdempotenceInterface' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/IdempotenceInterface.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Integration' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Integration.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\InvalidSignatureException' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/InvalidSignatureException.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Message' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Message.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Money' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Money.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\MoneyTransformer' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/MoneyTransformer.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Notification' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Notification.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\ObjectAccess' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/ObjectAccess.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Order' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Order.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\OrderAnnounceResponse' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/OrderAnnounceResponse.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\OrderItem' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/OrderItem.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\OrderItems' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/OrderItems.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\OrderResult' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/OrderResult.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\OrderResults' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/OrderResults.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\OrderStatus' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/OrderStatus.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\PaymentBrandForce' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/PaymentBrandForce.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\PaymentBrands' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/PaymentBrands.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\ProductCategories' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/ProductCategories.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\RefundRequest' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/RefundRequest.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\RefundResponse' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/RefundResponse.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\ResponseMessage' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/ResponseMessage.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\ReturnController' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/ReturnController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\ReturnParameters' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/ReturnParameters.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Security' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Security.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Signable' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Signable.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\Transaction' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/Transaction.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\TransactionStatus' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/TransactionStatus.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\UnknownOrderIdsException' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/UnknownOrderIdsException.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\VatCategories' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/VatCategories.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\OmniKassa2\\WebhookController' => array(
-		'version' => '5.0.1.0',
+		'version' => '5.0.2.0',
 		'path'    => $baseDir . '/packages/wp-pay-gateways/omnikassa-2/src/WebhookController.php'
 	),
 	'Pronamic\\WordPress\\Pay\\Gateways\\PayNL\\Client' => array(
